@@ -1,5 +1,6 @@
-package gr.uoa.di.madgik.cloudsim;
+package gr.uoa.madgik.cloudsim;
 
+import gr.uoa.di.madgik.cloudsim.HypercubeHost;
 import org.cloudbus.cloudsim.*;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.provisioners.BwProvisionerSimple;
