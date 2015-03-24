@@ -8,9 +8,8 @@
 
 package gr.uoa.magdik.cloudslim;
 
-import gr.uoa.di.madgik.cloudsim.HostPowerProfile;
-import gr.uoa.di.madgik.cloudsim.HyperEdgeSwitch;
 import org.cloudbus.cloudsim.*;
+import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.network.datacenter.NetworkDatacenter;
 import org.cloudbus.cloudsim.network.datacenter.NetworkPacket;
 import org.cloudbus.cloudsim.network.datacenter.Switch;
@@ -19,6 +18,7 @@ import org.cloudbus.cloudsim.power.PowerVm;
 import org.cloudbus.cloudsim.power.models.PowerModel;
 import org.cloudbus.cloudsim.provisioners.BwProvisioner;
 import org.cloudbus.cloudsim.provisioners.RamProvisioner;
+import org.cloudbus.cloudsim.util.MathUtil;
 
 import java.util.*;
 
@@ -36,7 +36,7 @@ import java.util.*;
  * @author Anton Beloglazov
  * @since CloudSim Toolkit 2.0
  */
-public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
+public class HyperPowerHost extends PowerHost implements Comparable{
 
 	/** The power model. */
 	private PowerModel p;
@@ -46,7 +46,7 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 	/**
 	 * Contains the hypercube neighbors of this host.
 	 */
-	private Map<Integer, PowerHost> neighbors;
+	private Map<Integer, HyperPowerHost> neighbors;
     /** The utilization mips. */
 	private double utilizationMips;
 
@@ -67,7 +67,6 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 	@Override
 	public int compareTo(Object o) {
 		PowerHost p = (PowerHost) o;
-		//return Double.compare(this.E.getPower(getVmList()), p.E.getPower(p.getVmList()));
 		return Double.compare(this.getPower(), p.getPower());
 	}
 
@@ -116,12 +115,10 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
             List<? extends Pe> peList,
             VmScheduler vmScheduler,
             PowerModel powerModel) {
-		super(id, ramProvisioner, bwProvisioner, storage, peList, vmScheduler);
-		//powerModel = new HostPowerProfile(0,0,0);
-		//E = (HostPowerProfile)powerModel;
+		super(id, ramProvisioner, bwProvisioner, storage, peList, vmScheduler, powerModel);
 		p =  powerModel;
 		setPowerModel(powerModel);
-		neighbors = new HashMap<Integer, PowerHost>();
+		neighbors = new HashMap<>();
 		sw =new Switch("vmswitch",-1,(NetworkDatacenter)this.getDatacenter());
 		packetrecieved = new ArrayList<NetworkPacket>();
 		packetTosendGlobal = new ArrayList<NetworkPacket>();
@@ -132,12 +129,96 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
         s = State.IDLE;
 	}
 
+
+    @Override
+    public double updateVmsProcessing(double currentTime) {
+        double smallerTime = super.updateVmsProcessing(currentTime);
+        setPreviousUtilizationMips(getUtilizationMips());
+        setUtilizationMips(0);
+        double hostTotalRequestedMips = 0;
+
+        for (Vm vm : getVmList()) {
+            getVmScheduler().deallocatePesForVm(vm);
+        }
+
+        for (Vm vm : getVmList()) {
+            getVmScheduler().allocatePesForVm(vm, vm.getCurrentRequestedMips());
+        }
+
+        for (Vm vm : getVmList()) {
+            double totalRequestedMips = vm.getCurrentRequestedTotalMips();
+            double totalAllocatedMips = getVmScheduler().getTotalAllocatedMipsForVm(vm);
+
+            if (!Log.isDisabled()) {
+                Log.formatLine(
+                        "%.2f: [Host #" + getId() + "] Total allocated MIPS for VM #" + vm.getId()
+                                + " (Host #" + vm.getHost().getId()
+                                + ") is %.2f, was requested %.2f out of total %.2f (%.2f%%)",
+                        CloudSim.clock(),
+                        totalAllocatedMips,
+                        totalRequestedMips,
+                        vm.getMips(),
+                        totalRequestedMips / vm.getMips() * 100);
+
+                List<Pe> pes = getVmScheduler().getPesAllocatedForVM(vm);
+                StringBuilder pesString = new StringBuilder();
+                for (Pe pe : pes) {
+                    pesString.append(String.format(" PE #" + pe.getId() + ": %.2f.", pe.getPeProvisioner()
+                            .getTotalAllocatedMipsForVm(vm)));
+                }
+                Log.formatLine(
+                        "%.2f: [Host #" + getId() + "] MIPS for VM #" + vm.getId() + " by PEs ("
+                                + getNumberOfPes() + " * " + getVmScheduler().getPeCapacity() + ")."
+                                + pesString,
+                        CloudSim.clock());
+            }
+
+            if (getVmsMigratingIn().contains(vm)) {
+                Log.formatLine("%.2f: [Host #" + getId() + "] VM #" + vm.getId()
+                        + " is being migrated to Host #" + getId(), CloudSim.clock());
+            } else {
+                if (totalAllocatedMips + 0.1 < totalRequestedMips) {
+                    Log.formatLine("%.2f: [Host #" + getId() + "] Under allocated MIPS for VM #" + vm.getId()
+                            + ": %.2f", CloudSim.clock(), totalRequestedMips - totalAllocatedMips);
+                }
+
+                vm.addStateHistoryEntry(
+                        currentTime,
+                        totalAllocatedMips,
+                        totalRequestedMips,
+                        (vm.isInMigration() && !getVmsMigratingIn().contains(vm)));
+
+                if (vm.isInMigration()) {
+                    Log.formatLine(
+                            "%.2f: [Host #" + getId() + "] VM #" + vm.getId() + " is in migration",
+                            CloudSim.clock());
+                    totalAllocatedMips /= 0.9; // performance degradation due to migration - 10%
+                }
+            }
+
+            setUtilizationMips(getUtilizationMips() + totalAllocatedMips);
+            hostTotalRequestedMips += totalRequestedMips;
+        }
+
+        addStateHistoryEntry(
+                currentTime,
+                getUtilizationMips(),
+                hostTotalRequestedMips,
+                 getState() != State.OFF);
+
+        return smallerTime;
+    }
+
+
+
+
 	/**
 	 * Gets the power. For this moment only consumed by all PEs.
 	 * 
 	 * @return the power
 	 */
-	public double getPower() {
+	@Override
+    public double getPower() {
         if(s == State.OFF)
         {
             return 0;
@@ -146,7 +227,7 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 
 		for(Vm vm: getVmList())
 		{
-			PowerVm pvm = (PowerVm) vm;
+			HyperPowerVm pvm = (HyperPowerVm) vm;
             vm.setHost(this);
 			p += pvm.getPower();
  		}
@@ -154,8 +235,6 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
         {
             p += 20;
         }
-
-		//return getPower(getUtilizationOfCpu());
 		return p;
 	}
 
@@ -165,7 +244,8 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 	 * @param utilization the utilization
 	 * @return the power
 	 */
-	protected double getPower(double utilization) {
+	@Override
+    protected double getPower(double utilization) {
         /*
 		double power = 0;
 		try {
@@ -237,13 +317,12 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 
 	/**
 	 * Sets the neighbor at the specified dimension.
-	 *
-	 * @param dimension
+	 *  @param dimension
 	 * @param hostId
-	 */
+     */
 
 
-	public void setNeighbor(Integer dimension, PowerHost hostId) {
+	public void setNeighbor(Integer dimension, HyperPowerHost hostId) {
 		neighbors.put(dimension, hostId);
 	}
 
@@ -253,7 +332,7 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 	 * @param dimension
 	 * @return
 	 */
-	public PowerHost getNeighbor(Integer dimension) {
+	public HyperPowerHost getNeighbor(Integer dimension) {
 		return neighbors.get(dimension);
 	}
 
@@ -262,7 +341,7 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 	 *
 	 * @return
 	 */
-	public Map<Integer, PowerHost> getNeighbors() {
+	public Map<Integer, HyperPowerHost> getNeighbors() {
 		return neighbors;
 	}
 
@@ -283,17 +362,12 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 			} else {
 				return State.OVERU;
 			}
-			//return State.OFF;
 		}
 		return State.OFF;
 	}
 
 	public void setState(State st) {
 		s = st;
-        //if(s == State.OFF)
-        //{
-        //    switchOff();
-        //}
 	}
 
     public void switchOff()
@@ -301,8 +375,6 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 
         this.setState(State.OFF);
         tobeoff = false;
-        //System.out.println("TURNOFF");
-        //System.exit(-1);
     }
 
     public void switchOn()
@@ -310,8 +382,8 @@ public class HyperPowerHost extends HostDynamicWorkload implements Comparable{
 
         this.setState(State.IDLE);
         tobeon = false;
-        //System.out.println("SWITXHON");
-        //System.exit(-1);
     }
 
 }
+
+

@@ -4,7 +4,6 @@ import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.examples.power.Helper;
 import org.cloudbus.cloudsim.examples.power.RunnerAbstract;
-import org.cloudbus.cloudsim.examples.power.random.RandomConstants;
 import org.cloudbus.cloudsim.examples.power.random.RandomHelper;
 import org.cloudbus.cloudsim.examples.power.random.RandomRunner;
 
@@ -56,12 +55,11 @@ public class HyperRunner extends HyperRunnerAbstract {
         try {
             CloudSim.init(1, Calendar.getInstance(), false);
 
-            broker = Helper.createBroker();
+            broker = HyperHelper.createBroker();
             int brokerId = broker.getId();
-
-            cloudletList = RandomHelper.createCloudletList(brokerId, RandomConstants.NUMBER_OF_VMS);
-            vmList = Helper.createVmList(brokerId, cloudletList.size());
-            hostList = Helper.createHostList(RandomConstants.NUMBER_OF_HOSTS);
+            cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_VMS);
+            vmList = HyperHelper.createVmList(brokerId, cloudletList.size());
+            hostList = HyperHelper.createHostList(HyperConstants.NUMBER_OF_HOSTS);
         } catch (Exception e) {
             e.printStackTrace();
             Log.printLine("The simulation has been terminated due to an unexpected error");

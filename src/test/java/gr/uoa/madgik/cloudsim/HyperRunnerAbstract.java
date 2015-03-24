@@ -1,10 +1,10 @@
 package gr.uoa.madgik.cloudsim;
 
+import gr.uoa.magdik.cloudslim.HyperPowerDatacenter;
+import gr.uoa.magdik.cloudslim.HyperPowerHost;
 import gr.uoa.magdik.cloudslim.HyperVmAllocationPolicy;
 import org.cloudbus.cloudsim.*;
 import org.cloudbus.cloudsim.core.CloudSim;
-import org.cloudbus.cloudsim.examples.power.Constants;
-import org.cloudbus.cloudsim.examples.power.Helper;
 import org.cloudbus.cloudsim.examples.power.RunnerAbstract;
 import org.cloudbus.cloudsim.power.*;
 
@@ -42,7 +42,7 @@ public abstract class HyperRunnerAbstract extends RunnerAbstract{
 	protected static List<Vm> vmList;
 
 	/** The host list. */
-	protected static List<PowerHost> hostList;
+	protected static List<HyperPowerHost> hostList;
 
 	/**
 	 * Run.
@@ -73,7 +73,7 @@ public abstract class HyperRunnerAbstract extends RunnerAbstract{
          vmAllocationPolicy,
          vmSelectionPolicy,
          parameter);
-        try {
+        /*try {
 			initLogOutput(
 					enableOutput,
 					outputToFile,
@@ -91,7 +91,7 @@ public abstract class HyperRunnerAbstract extends RunnerAbstract{
 		start(
 				getExperimentName(workload, vmAllocationPolicy, vmSelectionPolicy, parameter),
 				outputFolder,
-				getVmAllocationPolicy(vmAllocationPolicy, vmSelectionPolicy, parameter));
+				getVmAllocationPolicy(vmAllocationPolicy, vmSelectionPolicy, parameter));*/
 	}
 
 	/**
@@ -153,9 +153,9 @@ public abstract class HyperRunnerAbstract extends RunnerAbstract{
 		System.out.println("Starting " + experimentName);
 
 		try {
-			PowerDatacenter datacenter = (PowerDatacenter) Helper.createDatacenter(
+			HyperPowerDatacenter datacenter = (HyperPowerDatacenter) HyperHelper.createDatacenter(
                     "Datacenter",
-                    PowerDatacenter.class,
+                    HyperPowerDatacenter.class,
                     hostList,
                     vmAllocationPolicy);
 
@@ -164,7 +164,7 @@ public abstract class HyperRunnerAbstract extends RunnerAbstract{
 			broker.submitVmList(vmList);
 			broker.submitCloudletList(cloudletList);
 
-			CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);
+			CloudSim.terminateSimulation(HyperConstants.SIMULATION_LIMIT);
 			double lastClock = CloudSim.startSimulation();
 
 			List<Cloudlet> newList = broker.getCloudletReceivedList();
@@ -172,12 +172,12 @@ public abstract class HyperRunnerAbstract extends RunnerAbstract{
 
 			CloudSim.stopSimulation();
 
-			Helper.printResults(
+			HyperHelper.printResults(
                     datacenter,
                     vmList,
                     lastClock,
                     experimentName,
-                    Constants.OUTPUT_CSV,
+                    HyperConstants.OUTPUT_CSV,
                     outputFolder);
 
 		} catch (Exception e) {
@@ -259,7 +259,7 @@ public abstract class HyperRunnerAbstract extends RunnerAbstract{
 					hostList,
 					vmSelectionPolicy,
 					parameter,
-					Constants.SCHEDULING_INTERVAL,
+					HyperConstants.SCHEDULING_INTERVAL,
 					fallbackVmSelectionPolicy);
 		} else if (vmAllocationPolicyName.equals("lrr")) {
 			PowerVmAllocationPolicyMigrationAbstract fallbackVmSelectionPolicy = new PowerVmAllocationPolicyMigrationStaticThreshold(
@@ -270,7 +270,7 @@ public abstract class HyperRunnerAbstract extends RunnerAbstract{
 					hostList,
 					vmSelectionPolicy,
 					parameter,
-					Constants.SCHEDULING_INTERVAL,
+					HyperConstants.SCHEDULING_INTERVAL,
 					fallbackVmSelectionPolicy);
 		} else if (vmAllocationPolicyName.equals("thr")) {
 			vmAllocationPolicy = new PowerVmAllocationPolicyMigrationStaticThreshold(

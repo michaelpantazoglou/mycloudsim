@@ -308,7 +308,7 @@ public class CloudSim {
 	// ======== SIMULATION METHODS ===============//
 
 	/** The entities. */
-	private static List<SimEntity> entities;
+	protected static List<SimEntity> entities;
 
 	/** The future event queue. */
 	protected static FutureQueue future;
@@ -320,7 +320,7 @@ public class CloudSim {
 	private static double clock;
 
 	/** Flag for checking if the simulation is running. */
-	private static boolean running;
+	protected static boolean running;
 
 	/** The entities by name. */
 	private static Map<String, SimEntity> entitiesByName;
@@ -747,7 +747,7 @@ public class CloudSim {
 	 * 
 	 * @param e the e
 	 */
-	private static void processEvent(SimEvent e) {
+	protected static void processEvent(SimEvent e) {
 		int dest, src;
 		SimEntity dest_ent;
 		// Update the system's clock
@@ -959,7 +959,7 @@ public class CloudSim {
 	 * 
 	 * @param message the message
 	 */
-	private static void printMessage(String message) {
+	protected static void printMessage(String message) {
 		Log.printLine(message);
 	}
 

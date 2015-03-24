@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import gr.uoa.magdik.cloudslim.HyperPowerHost;
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.CloudletSchedulerDynamicWorkload;
 import org.cloudbus.cloudsim.Datacenter;
@@ -85,7 +86,7 @@ public class Helper {
 	 * Creates the host list.
 	 * 
 	 * @param hostsNumber the hosts number
-	 * 
+	 *
 	 * @return the list< power host>
 	 */
 	public static List<PowerHost> createHostList(int hostsNumber) {

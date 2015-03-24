@@ -21,7 +21,7 @@ package org.cloudbus.cloudsim.core;
 public class CloudSimTags {
 
 	/** Starting constant value for cloud-related tags **/
-	private static final int BASE = 0;
+	protected static final int BASE = 0;
 
 	/** Starting constant value for network-related tags **/
 	private static final int NETBASE = 100;
@@ -265,8 +265,9 @@ public class CloudSimTags {
 
 	public static final int NextCycle = BASE + 48;
 
+
 	/** Private Constructor */
-	private CloudSimTags() {
+    protected CloudSimTags() {
 		throw new UnsupportedOperationException("CloudSim Tags cannot be instantiated");
 	}
 

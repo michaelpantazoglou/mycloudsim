@@ -35,7 +35,7 @@ public class Vm {
 	private long size;
 
 	/** The MIPS. */
-	private double mips;
+    protected double mips;
 
 	/** The number of PEs. */
 	private int numberOfPes;

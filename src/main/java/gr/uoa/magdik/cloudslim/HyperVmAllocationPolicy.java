@@ -30,7 +30,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     public boolean allocateHostForVm(Vm vm, Host host, List<Host> visitedHosts, List<Host> offHosts)
     {
-        //System.out.println("Allocating huper vm id =  " + vm.getId());
         if(vm.getHost() != null)
         {
             System.exit(-1);
@@ -43,30 +42,21 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
         if(hs.getState() != State.OVERU)
         {
-            //check if host is ok and add vm
             if(hwReqMet(hs,vm)) {
-                //host.getVmList().add(vm);
-                //System.out.println("Host meets requirments");
-                //if(hs.vmCreate(vm)) {
+
                 if (host.vmCreate(vm))
                 {
                     getVmTable().put(vm.getUid(), host);
                     return true;
                 }
-                /*else
-                {
-                    return false;
-                }*/
             }
         }
-        //System.out.println("Hossssssssssssss");
         visitedHosts.add(hs);
         Iterator it = hs.getNeighbors().entrySet().iterator();
         while (it.hasNext()) {
 
             Map.Entry pairs = (Map.Entry) it.next();
             HyperPowerHost neighbor = (HyperPowerHost) pairs.getValue();
-            //System.out.println("Hossssssssssssss222 " + neighbor.getId());
             if (neighbor.getState() != HyperPowerHost.State.OVERU && neighbor.getState() != HyperPowerHost.State.OFF && !visitedHosts.contains(neighbor)) {
                 return allocateHostForVm(vm, neighbor, visitedHosts, offHosts);
             }
@@ -74,7 +64,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 tobeoffHosts.add(neighbor);
             }
         }
-        //System.out.println("Hossssssssssssss33");
         it = hs.getNeighbors().entrySet().iterator();
         while (it.hasNext())
         {
@@ -85,22 +74,14 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 return allocateHostForVm(vm, neighbor, visitedHosts, offHosts);
             }
         }
-        //System.out.println("Hossssssssssssss444");
 
         if(!offHosts.isEmpty())
         {
-            //System.out.println("Hossssssssssssss555 " + offHosts.size());
             HyperPowerHost h = (HyperPowerHost) offHosts.get(0);
-            PowerDatacenter pd = (PowerDatacenter) h.getDatacenter();
+            HyperPowerDatacenter pd = (HyperPowerDatacenter) h.getDatacenter();
 
             offHosts.remove(h);
-            pd.wakeuphost(h, (PowerVm) vm);
-            //h.switchOn();
-            //tobeonHosts.add(h);
-            //h.tobeon = true;
-            //switch on h
-            //System.exit(-1);
-            //return allocateHostForVm(vm, h, visitedHosts, offHosts);
+            pd.wakeuphost(h, (HyperPowerVm) vm);
         }
 
         return false;
@@ -117,7 +98,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
 
         int index = (int)(Math.random()*this.getHostList().size());
-        //System.out.println("Allocating random vm with index" + index);
         return allocateHostForVm(vm, getHostList().get(index));
     }
 
@@ -132,7 +112,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
     {
 
         return synchronizeHosts();
-        //return null;
     }
 
     @Override
@@ -169,7 +148,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
      *
      * @return the over utilized hosts
      */
-    protected List<HyperPowerHostUtilizationHistory> getOverUtilizedHosts() {
+    protected List<PowerHostUtilizationHistory> getOverUtilizedHosts() {
         return null;
     }
 
@@ -190,10 +169,8 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             {
                 continue;
             }
-            //System.out.println("SYNCHRONIZE STATE = " +host.getState() );
             if(host.getState() == State.OVERU)
             {
-                //System.out.println("PARTIALM"  );
                 List<Map<String, Object>> mp = partialVmMigration(host);
                 partial++;
 
@@ -207,20 +184,12 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 List<Map<String, Object>> mf = fullVmMigration(host);
                 fl++;
                 flvm += host.getVmList().size();
-                //System.out.println("FULLM"  );
                 //migrate all
                 if(mf!=null) {
                     migrationMap.addAll(mf);
                 }
             }
-            //FSystem.exit(-1);
         }
-        System.out.println(visitedHosts.size());
-        System.out.println(tobeoffHosts.size());
-        System.out.println("partia " + partial);
-        System.out.println("fl "+  fl);
-        System.out.println("fl "+  fl);
-        System.out.println("flvm "+  flvm);
 
         return migrationMap;
     }
@@ -265,14 +234,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 overHosts.add(host);
             }
         }
-        System.out.println("nvm " + nvm);
-        nh = underHosts.size() + idleHosts.size() + okHosts.size() + overHosts.size() + tobeoffHosts.size();
-        System.out.println("underHosts " + underHosts.size());
-        System.out.println("idleHosts " + idleHosts.size());
-        System.out.println("okHosts " + okHosts.size());
-        System.out.println("overHosts " + overHosts.size());
-        System.out.println("tobeoffHosts " + tobeoffHosts.size());
-        System.out.println("offHosts " + currentoffHosts.size());
     }
 
 
@@ -288,7 +249,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                         return Double.compare(e1.getValue().getPower(), e2.getValue().getPower());
                     }
                 });
-        sortedneighbors.addAll(h.getNeighbors().entrySet());
+        sortedneighbors.addAll((Collection<? extends Map.Entry<Integer, HyperPowerHost>>) h.getNeighbors().entrySet());
         //System.out.println("PAPARTM2");
         ArrayList vms = (ArrayList) h.getVmList();
         for(Map.Entry<Integer, HyperPowerHost> entry : sortedneighbors) {
@@ -297,7 +258,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 continue;
             }
             int idx = 0;
-            PowerVm vm;
+            HyperPowerVm vm;
             int vmcount = vms.size();
             while(true)
             {
@@ -305,11 +266,9 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 {
                     break;
                 }
-                vm = (PowerVm) vms.get(idx++);
-                //System.out.println("PAPARTM3");
+                vm = (HyperPowerVm) vms.get(idx++);
                 if(vmcount == 0 ||  h.getState() != State.OVERU)
                 {
-                    //System.out.println("to ret null");
                     return null;
                 }
 
@@ -330,21 +289,14 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                     entry.getValue().waitmigrate++;
                     migrationMap.add(migrate);
                     vmcount--;
-                    //System.out.println("FIND MIGRATING old = " + vm.getHost().getId() + " new = " + entry.getValue().getId());
-
-                    //return migrationMap;
-                    //System.exit(-1);
                 }
-                //test if condition are met and migrate
             }
         }
-        //System.out.println("NOT FIND MIGRATING");
         return migrationMap;
     }
 
     public List<Map<String, Object>> fullVmMigration(HyperPowerHost h)
     {
-        //System.out.println("FULLFULLM");
         List<Map<String, Object>> migrationMap = new ArrayList<>();
         SortedSet<Map.Entry<Integer, HyperPowerHost>> sortedneighbors = new TreeSet<Map.Entry<Integer, HyperPowerHost>>(
                 new Comparator<Map.Entry<Integer, HyperPowerHost>>() {
@@ -354,32 +306,27 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                         return Double.compare(e1.getValue().getPower(), e2.getValue().getPower());
                     }
                 });
-        sortedneighbors.addAll(h.getNeighbors().entrySet());
+        sortedneighbors.addAll((Collection<? extends Map.Entry<Integer, HyperPowerHost>>) h.getNeighbors().entrySet());
         ArrayList vms = (ArrayList) h.getVmList();
         for(Map.Entry<Integer, HyperPowerHost> entry : sortedneighbors) {
-            //System.out.println("ENTRY STATE" + entry.getValue().getState());
             if (entry.getValue().getState() == HyperPowerHost.State.OVERU || entry.getValue().getState() == State.OFF  || tobeoffHosts.contains(entry.getValue())) {
                 continue;
             }
             int idx = 0;
             int vmcount = vms.size();
-            PowerVm vm;
+            HyperPowerVm vm;
             while (true) {
                 if(idx == vms.size())
                 {
                     break;
                 }
-                vm = (PowerVm) vms.get(idx++);
-                if (h.getVmList().size() == 0 || entry.getValue().getState() == State.OVERU)//if(h.getVmList().size() == 0 ||  h.getState() != HyperPowerHost.State.OVERU)
+                vm = (HyperPowerVm) vms.get(idx++);
+                if (h.getVmList().size() == 0 || entry.getValue().getState() == State.OVERU)
                 {
-                    //System.out.println("TO R NULL" + entry.getValue().getVmList().size());
-                    //return null;
                     break;
                 }
 
-
                 if (vm.getPower() >= entry.getValue().Pmax - entry.getValue().getPower()) {
-                    //System.out.println("FULLFULLM VPOW " + vm.getPower() + " MAX " + entry.getValue().Pmax +" HOSTPOW " + entry.getValue().getPower());
                     continue;
                 }
                 //test if condition are met and migrate
@@ -391,22 +338,15 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                     mh.waitmigrate++;
                     migrationMap.add(migrate);
                     vmcount--;
-                    //System.out.println("FULLL MIGRATING old = " + vm.getHost().getId() + " new = " + entry.getValue().getId());
-
-                    //return migrationMap;
-                    //break;
                 }
             }
             if (vmcount == 0 && h.waitmigrate == 0) {
 
-                //h.setState(State.OFF);
                 tobeoffHosts.add(h);
                 h.tobeoff = true;
                 break;
             }
         }
-        //System.out.println("MIGR = "+migrationMap.size());
-
         return migrationMap;
     }
 }
