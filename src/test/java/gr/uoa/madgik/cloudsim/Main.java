@@ -19,7 +19,7 @@ public class Main {
         boolean outputToFile = false;
         String inputFolder = "";
         String outputFolder = "";
-        String workload = "random"; // Random workload
+        String workload = "random";//"random"; // Random workload
         String vmAllocationPolicy = "greenrandom";
         String vmSelectionPolicy = "rs"; // Maximum Correlation (MC) VM selection policy
         String parameter = "1.5"; // the safety parameter of the IQR policy

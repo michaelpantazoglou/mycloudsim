@@ -16,6 +16,7 @@ import org.cloudbus.cloudsim.power.PowerHost;
 import org.cloudbus.cloudsim.power.PowerVm;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -598,6 +599,18 @@ public class HyperPowerDatacenter extends Datacenter {
 	protected void incrementMigrationCount() {
 		setMigrationCount(getMigrationCount() + 1);
 	}
+
+    public Host getHostbyId(int id)
+    {
+        for (Host hp : this.getHostList())
+        {
+            if (hp.getId() == id)
+            {
+                return hp;
+            }
+        }
+        return null;
+    }
 
 
 

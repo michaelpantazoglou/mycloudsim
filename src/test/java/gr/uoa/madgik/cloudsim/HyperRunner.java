@@ -8,6 +8,7 @@ import org.cloudbus.cloudsim.examples.power.random.RandomHelper;
 import org.cloudbus.cloudsim.examples.power.random.RandomRunner;
 
 import java.util.Calendar;
+import java.util.HashMap;
 
 /**
  * Class extended from RundomRunner
@@ -59,13 +60,17 @@ public class HyperRunner extends HyperRunnerAbstract {
             int brokerId = broker.getId();
             cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_VMS);
             vmList = HyperHelper.createVmList(brokerId, cloudletList.size());
-            hostList = HyperHelper.createHostList(HyperConstants.NUMBER_OF_HOSTS);
+            double log2base = Math.log(HyperConstants.NUMBER_OF_HOSTS)/Math.log(2);
+            hostList = HyperHelper.createHostList((int)log2base);
         } catch (Exception e) {
             e.printStackTrace();
             Log.printLine("The simulation has been terminated due to an unexpected error");
             System.exit(0);
         }
     }
+
+
+
 
 
 }

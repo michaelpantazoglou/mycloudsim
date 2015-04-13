@@ -50,7 +50,45 @@ public class HyperHelper  {
 
 	private static int hostId = 0;
 
+    private static HyperPowerDatacenter cd;
 
+
+    public static boolean placeVmsinHosts(HashMap<Integer,Integer> mapvms, int brokerId)
+    {
+        int VM_MIPS = 2600;
+        long VM_SIZE = 25000; // image size (MB)
+        int VM_RAM = 870; // vm memory (MB)
+        long VM_BW = 100000;
+        int VM_PES = 1; // number of cpus
+        int i = 0;
+        Iterator it = mapvms.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            HyperPowerHost hp = (HyperPowerHost) cd.getHostbyId((Integer) pair.getKey());
+            for(int j = 0; j< (int) pair.getValue(); j++)
+            {
+                HyperPowerVm vm = new HyperPowerVm(
+                        i,
+                        brokerId,
+                        VM_MIPS,
+                        VM_PES,
+                        VM_RAM,
+                        VM_BW,
+                        VM_SIZE,
+                        1,
+                        "Xen",
+                        new CloudletSchedulerDynamicWorkload(HyperConstants.VM_MIPS[0], HyperConstants.VM_PES[0]),
+                        HyperConstants.SCHEDULING_INTERVAL);
+                if(cd.getVmAllocationPolicy().allocateHostForVm(vm, hp) == false)
+                {
+                    return false;
+                }
+            }
+
+            i++;
+        }
+        return true;
+    }
 
 	/**
 	 * Creates the vm list.
@@ -224,7 +262,7 @@ public class HyperHelper  {
 			e.printStackTrace();
 			System.exit(0);
 		}
-
+        cd = datacenter;
 		return datacenter;
 	}
 
