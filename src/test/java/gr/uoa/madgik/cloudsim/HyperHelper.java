@@ -3,6 +3,7 @@ package gr.uoa.madgik.cloudsim;
 import gr.uoa.magdik.cloudslim.HyperPowerDatacenter;
 import gr.uoa.magdik.cloudslim.HyperPowerHost;
 import gr.uoa.magdik.cloudslim.HyperPowerVm;
+import gr.uoa.magdik.cloudslim.HyperVmAllocationPolicy;
 import org.cloudbus.cloudsim.*;
 import org.cloudbus.cloudsim.examples.power.Helper;
 import org.cloudbus.cloudsim.power.*;
@@ -33,34 +34,21 @@ import java.util.*;
  */
 public class HyperHelper  {
 
-	/** Hypercube overlay dimension */
-	private static final Integer HYPERCUBE_DIMENSION = 6;
-
-	/** Million instructions per second */
-	private static final Integer MIPS = 4100;
-
-	/** RAM of each host */
-	private static final Integer HOST_RAM = 8192;
-
-	/** Storage capacity of each host */
-	private static final Integer HOST_STORAGE = 1000000;
-
-	/** Bandwidth of each host */
-	private static final Integer HOST_BANDWIDTH = 1000000;
 
 	private static int hostId = 0;
 
     private static HyperPowerDatacenter cd;
 
 
-    public static boolean placeVmsinHosts(HashMap<Integer,Integer> mapvms, int brokerId)
+    public static List<Vm> placeVmsinHosts(HashMap<Integer,Integer> mapvms, int brokerId)
     {
-        int VM_MIPS = 2600;
-        long VM_SIZE = 25000; // image size (MB)
-        int VM_RAM = 870; // vm memory (MB)
-        long VM_BW = 100000;
-        int VM_PES = 1; // number of cpus
+        int VM_MIPS = HyperConstants.VM_MIPS[0];
+        long VM_SIZE = HyperConstants.VM_SIZE; // image size (MB)
+        int VM_RAM = HyperConstants.VM_RAM[0]; // vm memory (MB)
+        long VM_BW = HyperConstants.VM_BW;
+        int VM_PES = HyperConstants.VM_PES[0]; // number of cpus
         int i = 0;
+        List<Vm> vms = new ArrayList<Vm>();
         Iterator it = mapvms.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry)it.next();
@@ -79,15 +67,17 @@ public class HyperHelper  {
                         "Xen",
                         new CloudletSchedulerDynamicWorkload(HyperConstants.VM_MIPS[0], HyperConstants.VM_PES[0]),
                         HyperConstants.SCHEDULING_INTERVAL);
-                if(cd.getVmAllocationPolicy().allocateHostForVm(vm, hp) == false)
+                HyperVmAllocationPolicy hva= (HyperVmAllocationPolicy) cd.getVmAllocationPolicy();
+                if(hva.placeVminHost(vm, hp) == false)
                 {
-                    return false;
+                    return null;
                 }
+                vms.add(vm);
             }
 
             i++;
         }
-        return true;
+        return vms;
     }
 
 	/**
@@ -102,11 +92,11 @@ public class HyperHelper  {
         System.out.println("VM");
         //System.exit(-1);
         // VM description
-        int VM_MIPS = 2600;
-        long VM_SIZE = 25000; // image size (MB)
-        int VM_RAM = 870; // vm memory (MB)
-        long VM_BW = 100000;
-        int VM_PES = 1; // number of cpus
+        int VM_MIPS = HyperConstants.VM_MIPS[0];
+        long VM_SIZE = HyperConstants.VM_SIZE; // image size (MB)
+        int VM_RAM = HyperConstants.VM_RAM[0]; // vm memory (MB)
+        long VM_BW = HyperConstants.VM_BW;
+        int VM_PES = HyperConstants.VM_PES[0]; // number of cpus
         //String vmm = "Xen"; // VMM name
 		List<Vm> vms = new ArrayList<Vm>();
 		for (int i = 0; i < vmsNumber; i++) {
@@ -139,6 +129,12 @@ public class HyperHelper  {
                 for (int j = 0; j < 2; j++) {
                     peList1.add(new Pe(j, new PeProvisionerSimple(6000)));
                 }
+
+                int MIPS = HyperConstants.HOST_MIPS[0];
+
+                int HOST_RAM = HyperConstants.HOST_RAM[0];
+                int HOST_STORAGE = HyperConstants.HOST_STORAGE;
+                int HOST_BANDWIDTH = HyperConstants.HOST_BW;
 
 
 

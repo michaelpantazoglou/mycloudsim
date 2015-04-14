@@ -8,9 +8,12 @@ import org.cloudbus.cloudsim.DatacenterBroker;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
+import org.cloudbus.cloudsim.examples.power.Constants;
+import org.cloudbus.cloudsim.examples.power.Helper;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +47,7 @@ public class VmPlacementTest {
             broker = HyperHelper.createBroker();
             int brokerId = broker.getId();
 
-            cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_VMS);
+            cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
             //vmList = HyperHelper.createVmList(brokerId, cloudletList.size());
             double log2base = Math.log(HyperConstants.NUMBER_OF_HOSTS)/Math.log(2);
             hostList = HyperHelper.createHostList((int)log2base);
@@ -53,15 +56,35 @@ public class VmPlacementTest {
                     HyperPowerDatacenter.class,
                     hostList,
                     new HyperVmAllocationPolicy(hostList));
-            boolean res = HyperHelper.placeVmsinHosts(hostvms, brokerId);
-            System.out.println(res);
-            assertEquals(res, true);
+
+
+            datacenter.setDisableMigrations(false);
+            vmList = new ArrayList<Vm>();
+            broker.submitVmList(vmList);
+            broker.submitCloudletList(cloudletList);
+
+            //CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);
+            double lastClock = CloudSim.startSimulation();
+            CloudSim.pauseSimulation();
+            vmList.addAll(HyperHelper.placeVmsinHosts(hostvms, brokerId));
+            //System.out.println(res);
+            CloudSim.resumeSimulation();
+            assertNotEquals(vmList, null);
+            List<Cloudlet> newList = broker.getCloudletReceivedList();
+            Log.printLine("Received " + newList.size() + " cloudlets");
+
+            CloudSim.stopSimulation();
+
+
 
         } catch (Exception e) {
             e.printStackTrace();
             Log.printLine("The simulation has been terminated due to an unexpected error");
             System.exit(0);
         }
+
+
+
     }
 }
 

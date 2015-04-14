@@ -38,7 +38,7 @@ public class HyperConstants {
 	 *
 	 */
 	public final static int VM_TYPES	= 4;
-	public final static int[] VM_MIPS	= { 2500, 2000, 1000, 500 };
+	public final static int[] VM_MIPS	= { 500, 500, 500, 500 };
 	public final static int[] VM_PES	= { 1, 1, 1, 1 };
 	public final static int[] VM_RAM	= { 870,  1740, 1740, 613 };
 	public final static int VM_BW		= 100000; // 100 Mbit/s
@@ -51,7 +51,7 @@ public class HyperConstants {
 	 *   We increase the memory size to enable over-subscription (x4)
 	 */
 	public final static int HOST_TYPES	 = 2;
-	public final static int[] HOST_MIPS	 = { 1860, 2660 };
+	public final static int[] HOST_MIPS	 = { 6660, 2660 };
 	public final static int[] HOST_PES	 = { 2, 2 };
 	public final static int[] HOST_RAM	 = { 8192, 8192 };
 	public final static int HOST_BW		 = 1000000; // 1 Gbit/s
@@ -62,7 +62,9 @@ public class HyperConstants {
 		new PowerModelSpecPowerIbmX3250XeonX3480()
 	};
 
-    public final static int NUMBER_OF_VMS = 8;
+    public final static int NUMBER_OF_VMS = 49;
+
+    public final static int NUMBER_OF_CLOUDLETS = 4;
 
     public final static int NUMBER_OF_HOSTS = 8;
 

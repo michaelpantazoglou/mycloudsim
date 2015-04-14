@@ -80,7 +80,7 @@ public class HyperPowerVm extends PowerVm {
 	 * @return the power
 	 */
 	public double getPower() {
-		return 10.0;
+		return 5.0;
         //return getPower(getUtilizationOfCpu());
 	}
 

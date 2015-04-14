@@ -119,7 +119,7 @@ public class HyperPowerHost extends PowerHost implements Comparable{
 		p =  powerModel;
 		setPowerModel(powerModel);
 		neighbors = new HashMap<>();
-		sw =new Switch("vmswitch",-1,(NetworkDatacenter)this.getDatacenter());
+		//sw =new Switch("vmswitch",-1,(NetworkDatacenter)this.getDatacenter());
 		packetrecieved = new ArrayList<NetworkPacket>();
 		packetTosendGlobal = new ArrayList<NetworkPacket>();
 		packetTosendLocal = new ArrayList<NetworkPacket>();

@@ -27,6 +27,33 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
     public List<Host> offHosts;
 
 
+    public boolean placeVminHost(Vm vm, Host host)
+    {
+        if(vm.getHost() != null)
+        {
+            System.exit(-1);
+        }
+        HyperPowerHost hs = (HyperPowerHost) host;
+        if(hs.getState() == State.OFF)
+        {
+            System.exit(-2);
+        }
+
+        //if(hs.getState() != State.OVERU)
+        //{
+            if(hwReqMet(hs,vm)) {
+
+                if (host.vmCreate(vm))
+                {
+                    getVmTable().put(vm.getUid(), host);
+                    return true;
+                }
+            }
+       // }
+
+        return false;
+    }
+
 
     public boolean allocateHostForVm(Vm vm, Host host, List<Host> visitedHosts, List<Host> offHosts)
     {
