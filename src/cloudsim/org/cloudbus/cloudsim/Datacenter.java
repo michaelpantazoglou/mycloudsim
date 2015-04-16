@@ -428,7 +428,7 @@ public class Datacenter extends SimEntity {
 	protected void processVmCreate(SimEvent ev, boolean ack) {
 		Vm vm = (Vm) ev.getData();
 
-		boolean result = getVmAllocationPolicy().allocateHostForVm(vm);
+        boolean result = getVmAllocationPolicy().allocateHostForVm(vm);
 
 		if (ack) {
 			int[] data = new int[3];

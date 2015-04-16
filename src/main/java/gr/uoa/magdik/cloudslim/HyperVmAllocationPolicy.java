@@ -25,6 +25,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
     public List<Host> tobeoffHosts;
     public List<Host> tobeonHosts;
     public List<Host> offHosts;
+    HashMap <Integer, Integer> inithostsvm;
 
 
     public boolean placeVminHost(Vm vm, Host host)
@@ -122,10 +123,23 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     @Override
     public boolean allocateHostForVm(Vm vm) {
-
-
-        int index = (int)(Math.random()*this.getHostList().size());
-        return allocateHostForVm(vm, getHostList().get(index));
+        if(inithostsvm != null)
+        {
+            Iterator it = inithostsvm.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry) it.next();
+                HyperPowerHost hp = (HyperPowerHost) getHostList().get((Integer) pair.getKey());
+                if(hp.getVmList().size() < (int) pair.getValue())
+                {
+                     return (placeVminHost(vm, hp));
+                }
+            }
+        }
+        else {
+            int index = (int) (Math.random() * this.getHostList().size());
+            return allocateHostForVm(vm, getHostList().get(index));
+        }
+        return false;
     }
 
     @Override
@@ -184,7 +198,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         int partial = 0;
         int fl = 0;
         int flvm =  0;
-        monitorDatacenter();
+        //monitorDatacenter();
         List<Map<String, Object>> migrationMap = new ArrayList<>();
         System.out.println("SYNCHRONIZE " + getHostList().size());
         int nvm = 0;

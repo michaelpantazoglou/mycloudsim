@@ -41,6 +41,7 @@ public class VmPlacementTest {
         List<Cloudlet> cloudletList;
         List<Vm> vmList;
         List<HyperPowerHost> hostList;
+        HyperPowerDatacenter datacenter;
         try {
             CloudSim.init(1, Calendar.getInstance(), false);
 
@@ -48,10 +49,13 @@ public class VmPlacementTest {
             int brokerId = broker.getId();
 
             cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
-            //vmList = HyperHelper.createVmList(brokerId, cloudletList.size());
+            vmList = HyperHelper.createVmList(brokerId, HyperConstants.NUMBER_OF_VMS);
             double log2base = Math.log(HyperConstants.NUMBER_OF_HOSTS)/Math.log(2);
             hostList = HyperHelper.createHostList((int)log2base);
-            HyperPowerDatacenter datacenter = (HyperPowerDatacenter) HyperHelper.createDatacenter(
+            broker.submitVmList(vmList);
+            broker.submitCloudletList(cloudletList);
+
+            datacenter = (HyperPowerDatacenter) HyperHelper.createDatacenter(
                     "Datacenter",
                     HyperPowerDatacenter.class,
                     hostList,
@@ -59,23 +63,26 @@ public class VmPlacementTest {
 
 
             datacenter.setDisableMigrations(false);
-            vmList = new ArrayList<Vm>();
-            broker.submitVmList(vmList);
-            broker.submitCloudletList(cloudletList);
 
-            //CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);
+            CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);
             double lastClock = CloudSim.startSimulation();
-            CloudSim.pauseSimulation();
-            vmList.addAll(HyperHelper.placeVmsinHosts(hostvms, brokerId));
+            //CloudSim.pauseSimulation();
+            //vmList.addAll(HyperHelper.placeVmsinHosts(hostvms, brokerId));
             //System.out.println(res);
-            CloudSim.resumeSimulation();
-            assertNotEquals(vmList, null);
+            //CloudSim.resumeSimulation();
+            //assertNotEquals(vmList, null);
             List<Cloudlet> newList = broker.getCloudletReceivedList();
             Log.printLine("Received " + newList.size() + " cloudlets");
 
             CloudSim.stopSimulation();
 
-
+            HyperHelper.printResults(
+                    datacenter,
+                    vmList,
+                    lastClock,
+                    "",
+                    Constants.OUTPUT_CSV,
+                    "");
 
         } catch (Exception e) {
             e.printStackTrace();

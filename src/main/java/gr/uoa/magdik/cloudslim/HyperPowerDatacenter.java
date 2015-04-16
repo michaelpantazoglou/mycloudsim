@@ -231,6 +231,7 @@ public class HyperPowerDatacenter extends Datacenter {
         HyperPowerHost h = (HyperPowerHost) ev.getData();
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
         hp.offHosts.add(h);
+        hp.tobeoffHosts.remove(h);
         h.switchOff();
     }
 
@@ -246,6 +247,7 @@ public class HyperPowerDatacenter extends Datacenter {
         HyperPowerHost h = (HyperPowerHost) map.get("host");
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
         hp.offHosts.remove(h);
+        hp.tobeonHosts.remove(h);
         h.switchOn();
         processVmMigrate( ev, false);
     }
@@ -278,7 +280,7 @@ public class HyperPowerDatacenter extends Datacenter {
 			return;
 		}
 		double currentTime = CloudSim.clock();
-
+        HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
 		// if some time passed since last processing
 		if (currentTime > getLastProcessTime()) {
 			System.out.print(currentTime + " ");
@@ -290,7 +292,7 @@ public class HyperPowerDatacenter extends Datacenter {
 				List<Map<String, Object>> migrationMap = getVmAllocationPolicy().optimizeAllocation(
 						getVmList());
 
-                HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
+
 				if (migrationMap != null) {
 					for (Map<String, Object> migrate : migrationMap) {
 						Vm vm = (Vm) migrate.get("vm");
@@ -364,7 +366,7 @@ public class HyperPowerDatacenter extends Datacenter {
 
 			setLastProcessTime(currentTime);
 		}
-
+        hp.monitorDatacenter();
 
 	}
 
