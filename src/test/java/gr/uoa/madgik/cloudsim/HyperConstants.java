@@ -24,7 +24,7 @@ public class HyperConstants {
     public final static double SCHEDULING_INTERVAL = 60;
 	public final static double SIMULATION_LIMIT = 24 * 60 * 60;
 
-	public final static int CLOUDLET_LENGTH	= 150 * (int) SIMULATION_LIMIT;
+	public final static int CLOUDLET_LENGTH	= 1150 * (int) SIMULATION_LIMIT;
 	public final static int CLOUDLET_PES	= 1;
 
 	/*
@@ -41,7 +41,7 @@ public class HyperConstants {
 	public final static int[] VM_MIPS	= { 500, 500, 500, 500 };
 	public final static int[] VM_PES	= { 1, 1, 1, 1 };
 	public final static int[] VM_RAM	= { 870,  1740, 1740, 613 };
-	public final static int VM_BW		= 100000; // 100 Mbit/s
+	public final static int VM_BW		= 10000; // 100 Mbit/s
 	public final static int VM_SIZE		= 2500; // 2.5 GB
 
 	/*
@@ -51,9 +51,9 @@ public class HyperConstants {
 	 *   We increase the memory size to enable over-subscription (x4)
 	 */
 	public final static int HOST_TYPES	 = 2;
-	public final static int[] HOST_MIPS	 = { 6660, 2660 };
+	public final static int[] HOST_MIPS	 = { 12660, 2660 };
 	public final static int[] HOST_PES	 = { 2, 2 };
-	public final static int[] HOST_RAM	 = { 8192, 8192 };
+	public final static int[] HOST_RAM	 = { 32192, 8192 };
 	public final static int HOST_BW		 = 1000000; // 1 Gbit/s
 	public final static int HOST_STORAGE = 1000000; // 1 GB
 

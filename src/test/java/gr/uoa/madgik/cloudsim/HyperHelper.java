@@ -127,7 +127,7 @@ public class HyperHelper  {
 				int hostType = 1;//hostId % HyperConstants.HOST_TYPES;
                 List<Pe> peList1 = new ArrayList<Pe>();
                 for (int j = 0; j < 2; j++) {
-                    peList1.add(new Pe(j, new PeProvisionerSimple(6000)));
+                    peList1.add(new Pe(j, new PeProvisionerSimple(12000)));
                 }
 
                 int MIPS = HyperConstants.HOST_MIPS[0];
@@ -152,7 +152,7 @@ public class HyperHelper  {
 
                 List<Pe> peList2 = new ArrayList<Pe>();
                 for (int j = 0; j < 2; j++) {
-                    peList2.add(new Pe(j, new PeProvisionerSimple(6000)));
+                    peList2.add(new Pe(j, new PeProvisionerSimple(12000)));
                 }
 
                 HyperPowerHost h2 = new HyperPowerHost(
@@ -182,7 +182,8 @@ public class HyperHelper  {
 			}
 
 
-			l = new ArrayList<HyperPowerHost>(l1);
+			//l = new ArrayList<HyperPowerHost>(l1);
+            l.addAll(l1);
 			l.addAll(l2);
 			return l;
 	}

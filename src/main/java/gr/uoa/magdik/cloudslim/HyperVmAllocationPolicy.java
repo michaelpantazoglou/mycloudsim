@@ -11,6 +11,7 @@ import java.util.*;
  * Created by tchalas on 1/22/15.
  */
 public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
+    int vmcount = 0;
     public HyperVmAllocationPolicy(List<? extends Host> list) {
         super(list);
         visitedHosts = new ArrayList<>();
@@ -25,11 +26,13 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
     public List<Host> tobeoffHosts;
     public List<Host> tobeonHosts;
     public List<Host> offHosts;
-    HashMap <Integer, Integer> inithostsvm;
+    public HashMap <Integer, Integer> inithostsvm;
 
 
     public boolean placeVminHost(Vm vm, Host host)
     {
+        vmcount++;
+
         if(vm.getHost() != null)
         {
             System.exit(-1);
@@ -47,10 +50,16 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 if (host.vmCreate(vm))
                 {
                     getVmTable().put(vm.getUid(), host);
+                    if(vmcount == 49)
+                    {
+                        System.out.println("l");
+                        monitorDatacenter();
+                    }
                     return true;
                 }
             }
        // }
+
 
         return false;
     }
@@ -280,6 +289,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     public List<Map<String, Object>> partialVmMigration(HyperPowerHost h)
     {
+        //o algorithnos einai lathos den prepei na kanei olous tous geitones, mporei se kapoion na sthlei dyo fores
         //System.out.println("PAPARTM1");
         List<Map<String, Object>> migrationMap = new ArrayList<>();
         SortedSet<Map.Entry<Integer, HyperPowerHost>> sortedneighbors = new TreeSet<Map.Entry<Integer, HyperPowerHost>>(

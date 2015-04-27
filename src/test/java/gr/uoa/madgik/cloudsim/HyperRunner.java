@@ -59,7 +59,7 @@ public class HyperRunner extends HyperRunnerAbstract {
             broker = HyperHelper.createBroker();
             int brokerId = broker.getId();
             cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
-            vmList = HyperHelper.createVmList(brokerId, cloudletList.size());
+            vmList = HyperHelper.createVmList(brokerId,HyperConstants.NUMBER_OF_VMS);
             double log2base = Math.log(HyperConstants.NUMBER_OF_HOSTS)/Math.log(2);
             hostList = HyperHelper.createHostList((int)log2base);
         } catch (Exception e) {

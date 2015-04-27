@@ -210,7 +210,17 @@ public class HyperPowerHost extends PowerHost implements Comparable{
     }
 
 
+    @Override
+    public boolean isSuitableForVm(Vm vm) {
+        boolean pemips = getVmScheduler().getPeCapacity() >= vm.getCurrentRequestedMaxMips();
+        boolean avaliablerequested = getVmScheduler().getAvailableMips() >= vm.getCurrentRequestedTotalMips();
+        boolean ram =  getRamProvisioner().isSuitableForVm(vm, vm.getCurrentRequestedRam());
+        boolean bw = getBwProvisioner().isSuitableForVm(vm, vm.getCurrentRequestedBw());
 
+        return (pemips
+                && avaliablerequested
+                && ram && bw);
+    }
 
 	/**
 	 * Gets the power. For this moment only consumed by all PEs.

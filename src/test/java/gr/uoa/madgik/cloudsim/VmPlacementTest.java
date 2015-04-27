@@ -61,7 +61,8 @@ public class VmPlacementTest {
                     hostList,
                     new HyperVmAllocationPolicy(hostList));
 
-
+            HyperVmAllocationPolicy hv = (HyperVmAllocationPolicy) datacenter.getVmAllocationPolicy();
+            hv.inithostsvm = hostvms;
             datacenter.setDisableMigrations(false);
 
             CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);

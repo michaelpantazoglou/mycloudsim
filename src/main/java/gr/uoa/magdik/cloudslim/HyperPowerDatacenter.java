@@ -468,13 +468,13 @@ public class HyperPowerDatacenter extends Datacenter {
 
 		/** Remove completed VMs **/
 		System.out.println("Removing completed vms");
-		for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
+		/*for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
 			for (Vm vm : host.getCompletedVms()) {
 				getVmAllocationPolicy().deallocateHostForVm(vm);
 				getVmList().remove(vm);
 				Log.printLine("VM #" + vm.getId() + " has been deallocated from host #" + host.getId());
 			}
-		}
+		}*/
 
 		Log.printLine();
 
