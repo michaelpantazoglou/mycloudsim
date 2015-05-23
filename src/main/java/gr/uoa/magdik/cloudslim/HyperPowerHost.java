@@ -367,7 +367,7 @@ public class HyperPowerHost extends PowerHost implements Comparable{
 				return State.IDLE;
 			} else if (currentpower >= Pidle && currentpower <= Pmin) {
 				return State.UNDERU;
-			} else if (currentpower >= Pmin && currentpower <= Pmax) {
+			} else if (currentpower >= Pmin && currentpower < Pmax) {
 				return State.OK;
 			} else {
 				return State.OVERU;
@@ -375,6 +375,30 @@ public class HyperPowerHost extends PowerHost implements Comparable{
 		}
 		return State.OFF;
 	}
+
+    public double getTempPower(int vms)
+    {
+        return 160.0 + vms * 5;
+    }
+
+    public State getStatebyPower(double temppower) {
+
+        if (getVmList() != null) {
+            if (temppower == 0) {
+                return State.OFF;
+            } else if (temppower <= Pidle) {
+                return State.IDLE;
+            } else if (temppower >= Pidle && temppower <= Pmin) {
+                return State.UNDERU;
+            } else if (temppower >= Pmin && temppower < Pmax) {
+                return State.OK;
+            } else {
+                return State.OVERU;
+            }
+        }
+        return State.OFF;
+    }
+
 
 	public void setState(State st) {
 		s = st;

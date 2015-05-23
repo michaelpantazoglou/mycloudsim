@@ -204,6 +204,10 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     public List<Map<String, Object>> synchronizeHosts()
     {
+
+
+        //PROBLEM WITH MIGRATION DALEY
+
         int partial = 0;
         int fl = 0;
         int flvm =  0;
@@ -289,21 +293,71 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     public List<Map<String, Object>> partialVmMigration(HyperPowerHost h)
     {
-        //o algorithnos einai lathos den prepei na kanei olous tous geitones, mporei se kapoion na sthlei dyo fores
+        //o algorithnos einai lathos den prepei na kanei olous tous geitones, mporei se kapoion na sthlei dyo fores5
         //System.out.println("PAPARTM1");
         List<Map<String, Object>> migrationMap = new ArrayList<>();
-        SortedSet<Map.Entry<Integer, HyperPowerHost>> sortedneighbors = new TreeSet<Map.Entry<Integer, HyperPowerHost>>(
+        SortedSet<Map.Entry<Integer, HyperPowerHost>> descendsortedneighbors = new TreeSet<Map.Entry<Integer, HyperPowerHost>>(
                 new Comparator<Map.Entry<Integer, HyperPowerHost>>() {
                     @Override
                     public int compare(Map.Entry<Integer, HyperPowerHost> e1,
                                        Map.Entry<Integer, HyperPowerHost> e2) {
-                        return Double.compare(e1.getValue().getPower(), e2.getValue().getPower());
+                        int ord = Double.compare(e1.getValue().getPower(), e2.getValue().getPower());
+                        if(ord == 1)
+                            return -1;
+                        return 1;
                     }
                 });
-        sortedneighbors.addAll((Collection<? extends Map.Entry<Integer, HyperPowerHost>>) h.getNeighbors().entrySet());
-        //System.out.println("PAPARTM2");
+        descendsortedneighbors.addAll((Collection<? extends Map.Entry<Integer, HyperPowerHost>>) h.getNeighbors().entrySet());
+
+
+
+
+
         ArrayList vms = (ArrayList) h.getVmList();
-        for(Map.Entry<Integer, HyperPowerHost> entry : sortedneighbors) {
+        int idx = 0;
+        HyperPowerVm vm;
+        int vmcount = vms.size();
+        boolean con = true;
+        State s;
+        while(con) {
+            s = h.getStatebyPower(h.getTempPower(vmcount));
+
+            if (idx == vms.size()) {
+                con = false;
+                break;
+            }
+            vm = (HyperPowerVm) vms.get(idx++);
+            for (Map.Entry<Integer, HyperPowerHost> entry : descendsortedneighbors) {
+
+                if (vmcount == 0 || s != State.OVERU) {
+                    return migrationMap;
+                }
+
+                if (vm.getPower() >= entry.getValue().Pmax - entry.getValue().getPower()) {
+                    continue;
+                }
+                if(hwReqMet(entry.getValue(), vm))
+                {
+                    if(entry.getValue().getState() == State.OFF)
+                    {
+                        entry.getValue().tobeon = true;  // switchOn();
+                        offHosts.remove(entry.getValue());
+                    }
+                    Map<String, Object> migrate = new HashMap<String, Object>();
+                    migrate.put("vm", vm);
+                    migrate.put("host", entry.getValue());
+                    entry.getValue().waitmigrate++;
+                    migrationMap.add(migrate);
+                    vmcount--;
+                    break;
+                }
+            }
+        }
+
+
+
+
+        /*for(Map.Entry<Integer, HyperPowerHost> entry : sortedneighbors) {
             if(entry.getValue().getState() == State.OVERU)
             {
                 continue;
@@ -342,7 +396,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                     vmcount--;
                 }
             }
-        }
+        }*/
         return migrationMap;
     }
 
@@ -354,11 +408,60 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                     @Override
                     public int compare(Map.Entry<Integer, HyperPowerHost> e1,
                                        Map.Entry<Integer, HyperPowerHost> e2) {
-                        return Double.compare(e1.getValue().getPower(), e2.getValue().getPower());
+                        int ord = Double.compare(e1.getValue().getPower(), e2.getValue().getPower());
+                        if(ord == 1)
+                            return -1;
+                        return 1;
                     }
                 });
         sortedneighbors.addAll((Collection<? extends Map.Entry<Integer, HyperPowerHost>>) h.getNeighbors().entrySet());
         ArrayList vms = (ArrayList) h.getVmList();
+
+        int idx = 0;
+        int vmcount = vms.size();
+        HyperPowerVm vm;
+        State s;
+        while (true) {
+            s = h.getStatebyPower(h.getTempPower(vmcount));
+            if (idx == vms.size()) {
+                break;
+            }
+            vm = (HyperPowerVm) vms.get(idx++);
+            for(Map.Entry<Integer, HyperPowerHost> entry : sortedneighbors) {
+                if (entry.getValue().getState() == HyperPowerHost.State.OVERU || entry.getValue().getState() == State.OFF || tobeoffHosts.contains(entry.getValue())) {
+                    continue;
+                }
+                if (h.getVmList().size() == 0 || s == State.OVERU)
+                {
+                    break;
+                }
+
+                if (vm.getPower() >= entry.getValue().Pmax - entry.getValue().getPower()) {
+                    continue;
+                }
+                //test if condition are met and migrate
+                if (hwReqMet(entry.getValue(), vm)) {
+                    HyperPowerHost mh = entry.getValue();
+                    Map<String, Object> migrate = new HashMap<String, Object>();
+                    migrate.put("vm", vm);
+                    migrate.put("host", mh);
+                    mh.waitmigrate++;
+                    migrationMap.add(migrate);
+                    vmcount--;
+                    break;
+                }
+
+
+            }
+            if (vmcount == 0 && h.waitmigrate == 0) {
+
+                tobeoffHosts.add(h);
+                h.tobeoff = true;
+                break;
+            }
+        }
+
+        /*
         for(Map.Entry<Integer, HyperPowerHost> entry : sortedneighbors) {
             if (entry.getValue().getState() == HyperPowerHost.State.OVERU || entry.getValue().getState() == State.OFF  || tobeoffHosts.contains(entry.getValue())) {
                 continue;
@@ -397,7 +500,10 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 h.tobeoff = true;
                 break;
             }
-        }
+        }*/
         return migrationMap;
     }
+
+
+
 }
