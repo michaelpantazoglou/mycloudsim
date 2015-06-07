@@ -47,6 +47,7 @@ public class HyperPowerHost extends PowerHost implements Comparable{
 	 * Contains the hypercube neighbors of this host.
 	 */
 	private Map<Integer, HyperPowerHost> neighbors;
+    private Map<Integer, HyperPowerHost> nodesh;
     /** The utilization mips. */
 	private double utilizationMips;
 
