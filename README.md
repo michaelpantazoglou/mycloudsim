@@ -1,1 +1,1 @@
-# mycloudsim is an extension of the cloudsim simulation tool (http://www.cloudbus.org/cloudsim/). mycloudsim provides inside-datacenter communication, as hosts are treated as entities and sen send messages to each other. 
+# mycloudsim is an extension of the cloudsim simulation tool (http://www.cloudbus.org/cloudsim/). mycloudsim provides inside-datacenter communication, as hosts are treated as entities and can send messages to each other. 
