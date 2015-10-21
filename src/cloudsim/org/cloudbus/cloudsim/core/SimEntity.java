@@ -8,6 +8,7 @@
 
 package org.cloudbus.cloudsim.core;
 
+import gr.uoa.magdik.cloudslim.HyperPowerHost;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.NetworkTopology;
 import org.cloudbus.cloudsim.core.predicates.Predicate;
@@ -34,7 +35,7 @@ public abstract class SimEntity implements Cloneable {
 	private String name;
 
 	/** The id. */
-	private int id;
+	protected int id;
 
 	/** The buffer for selected incoming events. */
 	private SimEvent evbuf;

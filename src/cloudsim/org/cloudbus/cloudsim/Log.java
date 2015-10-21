@@ -10,6 +10,7 @@ package org.cloudbus.cloudsim;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.PrintWriter;
 
 /**
  * The Log class used for performing loggin of the simulation process. It provides the ability to
@@ -28,6 +29,8 @@ public class Log {
 
 	/** The disable output flag. */
 	private static boolean disabled;
+
+	static public PrintWriter writer;
 
 	/**
 	 * Prints the message.
@@ -163,4 +166,8 @@ public class Log {
 		setDisabled(false);
 	}
 
+	public static void write(String message)
+	{
+		writer.println(message);
+	}
 }

@@ -1,19 +1,14 @@
 package gr.uoa.madgik.cloudsim;
 
-import gr.uoa.magdik.cloudslim.HyperPowerDatacenter;
-import gr.uoa.magdik.cloudslim.HyperPowerHost;
-import gr.uoa.magdik.cloudslim.HyperVmAllocationPolicy;
+import gr.uoa.magdik.cloudslim.*;
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.DatacenterBroker;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.examples.power.Constants;
-import org.cloudbus.cloudsim.examples.power.Helper;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;

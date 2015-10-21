@@ -10,6 +10,7 @@ package gr.uoa.magdik.cloudslim;
 
 import org.cloudbus.cloudsim.*;
 import org.cloudbus.cloudsim.core.CloudSim;
+import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEvent;
 import org.cloudbus.cloudsim.core.predicates.PredicateType;
 import org.cloudbus.cloudsim.power.PowerHost;
@@ -47,6 +48,8 @@ public class HyperPowerDatacenter extends Datacenter {
 
 	/** The migration count. */
 	private int migrationCount;
+
+    int round = 0;
 
 	/**
 	 * Instantiates a new datacenter.
@@ -232,6 +235,7 @@ public class HyperPowerDatacenter extends Datacenter {
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
         hp.offHosts.add(h);
         hp.tobeoffHosts.remove(h);
+        //h.shutdownEntity();
         h.switchOff();
     }
 
@@ -245,6 +249,7 @@ public class HyperPowerDatacenter extends Datacenter {
     {
         Map<String, Object> map = (Map<String, Object>) ev.getData();
         HyperPowerHost h = (HyperPowerHost) map.get("host");
+        System.out.println("WAKING UP AND MIGRATE HOST" + (h.getId() - 2));
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
         hp.offHosts.remove(h);
         hp.tobeonHosts.remove(h);
@@ -274,6 +279,25 @@ public class HyperPowerDatacenter extends Datacenter {
 	 */
 	@Override
 	protected void updateCloudletProcessing() {
+
+        for (HyperPowerHost host : this. <HyperPowerHost> getHostList())
+        {
+            if(host.getSynchronizer() != null) {
+                host.getSynchronizer().setSynching(false);
+                try {
+                    if(host.getSynchronizer().isAlive()) {
+                        System.out.println("JOINING THREAD");
+                        host.getSynchronizer().join();
+                        host.setSynchronizer(null);
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            host.sendheartbeats();
+            host.vmsaftercycle = host.getVmList().size();
+        }
+
 		if (getCloudletSubmitted() == -1 || getCloudletSubmitted() == CloudSim.clock()) {
 			CloudSim.cancelAll(getId(), new PredicateType(HyperCloudSimTags.VM_DATACENTER_EVENT));
 			schedule(getId(), getSchedulingInterval(), HyperCloudSimTags.VM_DATACENTER_EVENT);
@@ -287,17 +311,29 @@ public class HyperPowerDatacenter extends Datacenter {
 
 			double minTime = updateCloudetProcessingWithoutSchedulingFutureEventsForce();
 
-			if (!isDisableMigrations()) {
+
+            if (!isDisableMigrations()) {
+                Log.write("-- Datacenter Power - End of Period : " + this.getPower() + " --\n");
+                power = 0;
+                Log.write("");
+                Log.write("Period: " + round++);
+                Log.write("-- Datacenter Power - Start of Period : " + this.getHostPower() + " --");
+
+
+
 
 				List<Map<String, Object>> migrationMap = getVmAllocationPolicy().optimizeAllocation(
 						getVmList());
 
-
+/*
 				if (migrationMap != null) {
 					for (Map<String, Object> migrate : migrationMap) {
-						Vm vm = (Vm) migrate.get("vm");
+						power += 20;
+                        Vm vm = (Vm) migrate.get("vm");
 						HyperPowerHost targetHost = (HyperPowerHost) migrate.get("host");
 						HyperPowerHost oldHost = (HyperPowerHost) vm.getHost();
+
+                        System.out.println("oldhost Host" + (oldHost.getId() - 2) + " newhost Host" + (targetHost.getId() - 2));
 
 						if (oldHost == null) {
 							Log.formatLine(
@@ -322,7 +358,7 @@ public class HyperPowerDatacenter extends Datacenter {
 						// half of BW is for VM communication
 						// around 16 seconds for 1024 MB using 1 Gbit/s network
 
-                        if(targetHost.tobeon)
+    /*                    if(targetHost.tobeon)
                         {
                             send(
                                     getId(),
@@ -342,13 +378,14 @@ public class HyperPowerDatacenter extends Datacenter {
 
                 for(Host ph : hp.tobeoffHosts)
                 {
+                    this.power += 100;
                     send(
                             getId(),
                             10,
                             HyperCloudSimTags.HOST_OFF,
                             ph);
                 }
-                /*for(Host ph : hp.tobeonHosts)
+  */              /*for(Host ph : hp.tobeonHosts)
                 {
                     send(
                             getId(),
@@ -366,9 +403,20 @@ public class HyperPowerDatacenter extends Datacenter {
 
 			setLastProcessTime(currentTime);
 		}
-        hp.monitorDatacenter();
+        hp.tobeoffHosts.clear();
+        hp.tobeonHosts.clear();
 
 	}
+
+    private double getHostPower() {
+        power = 0;
+        for(Host host : getHostList())
+        {
+            HyperPowerHost h = (HyperPowerHost) host;
+            power += h.getPower();
+        }
+        return power;
+    }
 
     public void wakeuphost(HyperPowerHost ph, HyperPowerVm pvm)
     {
@@ -462,7 +510,7 @@ public class HyperPowerDatacenter extends Datacenter {
                     timeFrameDatacenterEnergy);
 		}
 
-		setPower(getPower() + timeFrameDatacenterEnergy);
+		//setPower(getPower() + timeFrameDatacenterEnergy);
 
 		checkCloudletCompletion();
 
@@ -487,7 +535,78 @@ public class HyperPowerDatacenter extends Datacenter {
 	 * @see org.cloudbus.cloudsim.Datacenter#processVmMigrate(org.cloudbus.cloudsim.core.SimEvent,
 	 * boolean)
 	 */
-	@Override
+
+
+    protected void processVmMigrate(SimEvent ev, boolean ack) {
+        Object tmp = ev.getData();
+        if (!(tmp instanceof Map<?, ?>)) {
+            throw new ClassCastException("The data object must be Map<String, Object>");
+        }
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> migrate = (HashMap<String, Object>) tmp;
+
+        Vm vm = (Vm) migrate.get("vm");
+        Host host = (Host) migrate.get("host");
+        Host oldhost = vm.getHost();
+        HyperVmAllocationPolicy h = (HyperVmAllocationPolicy) getVmAllocationPolicy();
+        boolean evaluate = h.evaluatemigration(vm, host);
+        if(!evaluate)
+        {
+            Log.printLine("[Datacenter.processVmMigrate] VM allocation to the destination host failed");
+            vm.setInMigration(false);
+            return;
+        }
+        getVmAllocationPolicy().deallocateHostForVm(vm);
+        oldhost.removeMigratingInVm(vm);
+
+        boolean result = h.placeVminHost(vm,host);
+                //getVmAllocationPolicy().allocateHostForVm(vm, host);
+        if (!result) {
+            Log.printLine("[Datacenter.processVmMigrate] VM allocation to the destination host failed");
+            System.exit(0);
+        }
+        else
+        {
+            if(oldhost.getVmList().size() == 0)
+            {
+                /*send(
+                        getId(),
+                        0,
+                        HyperCloudSimTags.HOST_OFF,
+                        oldhost);*/
+                HyperPowerHost oldh = (HyperPowerHost) oldhost;
+                h.offHosts.add(oldh);
+                oldh.switchOff();
+            }
+        }
+
+        HyperPowerHost hp = (HyperPowerHost) host;
+        //hp.waitmigrate--;
+
+        if (ack) {
+            int[] data = new int[3];
+            data[0] = getId();
+            data[1] = vm.getId();
+
+            if (result) {
+                data[2] = CloudSimTags.TRUE;
+            } else {
+                data[2] = CloudSimTags.FALSE;
+            }
+            sendNow(ev.getSource(), CloudSimTags.VM_CREATE_ACK, data);
+        }
+
+        Log.formatLine(
+                "%.2f: Migration of VM #%d to Host #%d is completed",
+                CloudSim.clock(),
+                vm.getId(),
+                host.getId() - 2);
+        vm.setInMigration(false);
+    }
+
+
+	/*@Override
 	protected void processVmMigrate(SimEvent ev, boolean ack) {
 		updateCloudetProcessingWithoutSchedulingFutureEvents();
 		super.processVmMigrate(ev, ack);
@@ -495,7 +614,7 @@ public class HyperPowerDatacenter extends Datacenter {
 		if (event == null || event.eventTime() > CloudSim.clock()) {
 			updateCloudetProcessingWithoutSchedulingFutureEventsForce();
 		}
-	}
+	}*/
 
 	/*
 	 * (non-Javadoc)

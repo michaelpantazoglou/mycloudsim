@@ -22,8 +22,6 @@ import org.cloudbus.cloudsim.core.CloudSimTags;
  */
 public class HyperCloudSimTags extends CloudSimTags {
 
-
-
     public static final int HOST_ON = BASE + 49;
 
     public static final int HOST_OFF = BASE + 50;
@@ -32,7 +30,15 @@ public class HyperCloudSimTags extends CloudSimTags {
 
     public static final int HOST_ON_ALLOCATE = BASE + 52;
 
-	/** Private Constructor */
+    public static final int HEARTBEAT = BASE + 53;
+
+    public static final int FORWARD_MSG = BASE + 54;
+
+
+
+
+
+    /** Private Constructor */
 	private HyperCloudSimTags() {
         super();
         throw new UnsupportedOperationException("CloudSim Tags cannot be instantiated");

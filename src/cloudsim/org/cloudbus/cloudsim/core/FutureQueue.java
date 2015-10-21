@@ -12,6 +12,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.SortedSet;
 import java.util.TreeSet;
+import java.util.concurrent.ConcurrentSkipListSet;
 
 /**
  * This class implements the future event queue used by {@link Simulation}. The event queue uses a
@@ -25,7 +26,7 @@ import java.util.TreeSet;
 public class FutureQueue {
 
 	/** The sorted set. */
-	private final SortedSet<SimEvent> sortedSet = new TreeSet<SimEvent>();
+	private final SortedSet<SimEvent> sortedSet = new ConcurrentSkipListSet<SimEvent>();
 
 	/** The serial. */
 	private long serial = 0;

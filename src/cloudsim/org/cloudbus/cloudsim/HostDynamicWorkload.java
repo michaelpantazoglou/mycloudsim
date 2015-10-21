@@ -37,7 +37,7 @@ public class HostDynamicWorkload extends Host {
 	/**
 	 * Instantiates a new host.
 	 * 
-	 * @param id the id
+	 * @param hostid the id
 	 * @param ramProvisioner the ram provisioner
 	 * @param bwProvisioner the bw provisioner
 	 * @param storage the storage
@@ -45,13 +45,13 @@ public class HostDynamicWorkload extends Host {
 	 * @param vmScheduler the VM scheduler
 	 */
 	public HostDynamicWorkload(
-			int id,
+			int hostid,
 			RamProvisioner ramProvisioner,
 			BwProvisioner bwProvisioner,
 			long storage,
 			List<? extends Pe> peList,
 			VmScheduler vmScheduler) {
-		super(id, ramProvisioner, bwProvisioner, storage, peList, vmScheduler);
+		super(hostid, ramProvisioner, bwProvisioner, storage, peList, vmScheduler);
 		setUtilizationMips(0);
 		setPreviousUtilizationMips(0);
 	}

@@ -40,6 +40,7 @@ public class HyperPowerVm extends PowerVm {
 
 	PowerModel pm;
 
+
 	/**
 	 * Instantiates a new power vm.
 	 *

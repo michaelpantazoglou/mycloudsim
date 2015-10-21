@@ -1,8 +1,6 @@
 package gr.uoa.madgik.cloudsim;
 
-import gr.uoa.magdik.cloudslim.HyperPowerDatacenter;
-import gr.uoa.magdik.cloudslim.HyperPowerHost;
-import gr.uoa.magdik.cloudslim.HyperVmAllocationPolicy;
+import gr.uoa.magdik.cloudslim.*;
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.DatacenterBroker;
 import org.cloudbus.cloudsim.Log;
@@ -11,6 +9,7 @@ import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.examples.power.Constants;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -22,14 +21,14 @@ public class TestMain {
     public static void main(String[] args) throws IOException
     {
         HashMap<Integer, Integer> hostvms = new HashMap();
-        hostvms.put(0,20);
-        hostvms.put(1,8);
-        hostvms.put(2,16);
-        hostvms.put(3,0);
-        hostvms.put(4,2);
-        hostvms.put(5,3);
-        hostvms.put(6,0);
-        hostvms.put(7,0);
+        hostvms.put(0,2);
+        hostvms.put(1,2);
+        hostvms.put(2,2);
+        hostvms.put(3,2);
+        hostvms.put(4,-1);
+        hostvms.put(5,-1);
+        hostvms.put(6,-1);
+        hostvms.put(7,-1);
 
         DatacenterBroker broker;
         List<Cloudlet> cloudletList;
@@ -43,7 +42,8 @@ public class TestMain {
             int brokerId = broker.getId();
 
             cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
-            vmList = HyperHelper.createVmList(brokerId, HyperConstants.NUMBER_OF_VMS);
+            int vmsnumber = HyperConstants.NUMBER_OF_VMS;
+            vmList = HyperHelper.createVmList(brokerId,8);
             double log2base = Math.log(HyperConstants.NUMBER_OF_HOSTS)/Math.log(2);
             hostList = HyperHelper.createHostList((int)log2base - 1);
             broker.submitVmList(vmList);
@@ -57,7 +57,10 @@ public class TestMain {
 
             HyperVmAllocationPolicy hv = (HyperVmAllocationPolicy) datacenter.getVmAllocationPolicy();
             hv.inithostsvm = hostvms;
+            hv.initoffhosts();
             datacenter.setDisableMigrations(false);
+
+            Log.writer = new PrintWriter("results", "UTF-8");
 
             CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);
             double lastClock = CloudSim.startSimulation();

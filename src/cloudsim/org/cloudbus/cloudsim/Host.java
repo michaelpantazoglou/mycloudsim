@@ -9,8 +9,11 @@ package org.cloudbus.cloudsim;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.cloudbus.cloudsim.core.CloudSim;
+import org.cloudbus.cloudsim.core.SimEntity;
+import org.cloudbus.cloudsim.core.SimEvent;
 import org.cloudbus.cloudsim.lists.PeList;
 import org.cloudbus.cloudsim.provisioners.BwProvisioner;
 import org.cloudbus.cloudsim.provisioners.RamProvisioner;
@@ -24,10 +27,10 @@ import org.cloudbus.cloudsim.provisioners.RamProvisioner;
  * @author Anton Beloglazov
  * @since CloudSim Toolkit 1.0
  */
-public class Host {
+public class Host extends SimEntity{
 
 	/** The id. */
-	private int id;
+	private int hostid;
 
 	/** The storage. */
 	private long storage;
@@ -42,7 +45,7 @@ public class Host {
 	private VmScheduler vmScheduler;
 
 	/** The vm list. */
-	private final List<? extends Vm> vmList = new ArrayList<Vm>();
+	private final CopyOnWriteArrayList<? extends Vm> vmList = new CopyOnWriteArrayList<Vm>();
 
 	/** The pe list. */
 	private List<? extends Pe> peList;
@@ -59,7 +62,7 @@ public class Host {
 	/**
 	 * Instantiates a new host.
 	 * 
-	 * @param id the id
+	 * @param hostid the id
 	 * @param ramProvisioner the ram provisioner
 	 * @param bwProvisioner the bw provisioner
 	 * @param storage the storage
@@ -67,13 +70,14 @@ public class Host {
 	 * @param vmScheduler the vm scheduler
 	 */
 	public Host(
-			int id,
+			int hostid,
 			RamProvisioner ramProvisioner,
 			BwProvisioner bwProvisioner,
 			long storage,
 			List<? extends Pe> peList,
 			VmScheduler vmScheduler) {
-		setId(id);
+		super("host" + hostid);
+		//setId(hostid);
 		setRamProvisioner(ramProvisioner);
 		setBwProvisioner(bwProvisioner);
 		setStorage(storage);
@@ -432,18 +436,20 @@ return (getVmScheduler().getPeCapacity() >= vm.getCurrentRequestedMaxMips()
 	 * 
 	 * @return the id
 	 */
-	public int getId() {
-		return id;
+	public int gethostId() {
+		return hostid;
 	}
+
+
 
 	/**
 	 * Sets the id.
 	 * 
-	 * @param id the new id
+	 * @param hostid the new id
 	 */
-	protected void setId(int id) {
-		this.id = id;
-	}
+	//protected void setId(int id) {
+	//	this.id = id;
+	//}
 
 	/**
 	 * Gets the ram provisioner.
@@ -527,8 +533,8 @@ return (getVmScheduler().getPeCapacity() >= vm.getCurrentRequestedMaxMips()
 	 * @return the vm list
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends Vm> List<T> getVmList() {
-		return (List<T>) vmList;
+	public <T extends Vm> CopyOnWriteArrayList<T> getVmList() {
+		return (CopyOnWriteArrayList<T>) vmList;
 	}
 
 	/**
@@ -619,4 +625,19 @@ return (getVmScheduler().getPeCapacity() >= vm.getCurrentRequestedMaxMips()
 		this.datacenter = datacenter;
 	}
 
+
+	@Override
+	public void startEntity() {
+
+	}
+
+	@Override
+	public void processEvent(SimEvent ev) {
+
+	}
+
+	@Override
+	public void shutdownEntity() {
+
+	}
 }
