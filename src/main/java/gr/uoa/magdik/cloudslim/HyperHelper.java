@@ -76,6 +76,36 @@ public class HyperHelper  {
         return vms;
     }
 
+	public static List<Vm> createVmsDelay(DatacenterBroker broker,int vmsNumber,double delay) {
+		int VM_MIPS = HyperConstants.VM_MIPS[0];
+		long VM_SIZE = HyperConstants.VM_SIZE; // image size (MB)
+		int VM_RAM = HyperConstants.VM_RAM[0]; // vm memory (MB)
+		long VM_BW = HyperConstants.VM_BW;
+		int VM_PES = HyperConstants.VM_PES[0]; // number of cpus
+		//String vmm = "Xen"; // VMM name
+		List<Vm> vms = new ArrayList<Vm>();
+		HyperDatacenterBroker b = (HyperDatacenterBroker) broker;
+		for (int i = 0; i < vmsNumber; i++) {
+			int vmType = i / (int) Math.ceil((double) vmsNumber / HyperConstants.VM_TYPES);
+			HyperPowerVm vm = new HyperPowerVm(
+					broker.getVmList().size() + b.getLateVmList().size() + i,
+					broker.getId(),
+					VM_MIPS,
+					VM_PES,
+					VM_RAM,
+					VM_BW,
+					VM_SIZE,
+					1,
+					"Xen",
+					new CloudletSchedulerDynamicWorkload(HyperConstants.VM_MIPS[vmType], HyperConstants.VM_PES[vmType]),
+					HyperConstants.SCHEDULING_INTERVAL);
+			vm.setDelay(delay);
+			vms.add(vm);
+		}
+		b.submitDelayVmList(vms);
+		return vms;
+	}
+
 	/**
 	 * Creates the vm list.
 	 * 
@@ -84,7 +114,7 @@ public class HyperHelper  {
 	 * 
 	 * @return the list< vm>
 	 */
-	public static List<Vm> createVmList(int brokerId, int vmsNumber) {
+	public static List<Vm> createVmList(DatacenterBroker broker, int vmsNumber) {
         System.out.println("VM");
         //System.exit(-1);
         // VM description
@@ -99,8 +129,8 @@ public class HyperHelper  {
 			int vmType = i / (int) Math.ceil((double) vmsNumber / HyperConstants.VM_TYPES);
 			//int vmType = 3;
 			vms.add(new HyperPowerVm(
-					i,
-					brokerId,
+					broker.getVmList().size() + i,
+					broker.getId(),
 					VM_MIPS,
 					VM_PES,
 					VM_RAM,
@@ -111,8 +141,12 @@ public class HyperHelper  {
 					new CloudletSchedulerDynamicWorkload(HyperConstants.VM_MIPS[vmType], HyperConstants.VM_PES[vmType]),
 					HyperConstants.SCHEDULING_INTERVAL));
 		}
+		broker.submitVmList(vms);
 		return vms;
 	}
+
+
+
 
 
 		public static List<HyperPowerHost> createHostList(int dimension) {
@@ -192,9 +226,9 @@ public class HyperHelper  {
 	 * @return the datacenter broker
 	 */
 	public static DatacenterBroker createBroker() {
-		DatacenterBroker broker = null;
+		HyperDatacenterBroker broker = null;
 		try {
-			broker = new PowerDatacenterBroker("Broker");
+			broker = new HyperDatacenterBroker("Broker");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(0);

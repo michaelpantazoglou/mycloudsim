@@ -60,6 +60,16 @@ public class HyperPowerHost extends PowerHost implements Comparable {
      */
 
     private PowerModel p;
+
+    public boolean isVmstatechange() {
+        return vmstatechange;
+    }
+
+    public void setVmstatechange(boolean vmstatechange) {
+        this.vmstatechange = vmstatechange;
+    }
+
+    public boolean vmstatechange = true;
     public boolean tobeoff = false;
     public boolean tobeon = false;
     public int waitmigrate = 0;
@@ -156,7 +166,15 @@ public class HyperPowerHost extends PowerHost implements Comparable {
 
     @Override
     public double updateVmsProcessing(double currentTime) {
-        double smallerTime = super.updateVmsProcessing(currentTime);
+        //double smallerTime = super.updateVmsProcessing(currentTime);
+        double smallerTime = Double.MAX_VALUE;
+
+        for (Vm vm : getVmList()) {
+            double time = vm.updateVmProcessing(currentTime, getVmScheduler().getAllocatedMipsForVm(vm));
+            if (time > 0.0 && time < smallerTime) {
+                smallerTime = time;
+            }
+        }
         setPreviousUtilizationMips(getUtilizationMips());
         setUtilizationMips(0);
         double hostTotalRequestedMips = 0;
@@ -173,7 +191,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
             double totalRequestedMips = vm.getCurrentRequestedTotalMips();
             double totalAllocatedMips = getVmScheduler().getTotalAllocatedMipsForVm(vm);
 
-            if (!Log.isDisabled()) {
+            /*if (!Log.isDisabled()) {
                 Log.formatLine(
                         "%.2f: [Host #" + getId() + "] Total allocated MIPS for VM #" + vm.getId()
                                 + " (Host #" + vm.getHost().getId()
@@ -195,7 +213,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                                 + getNumberOfPes() + " * " + getVmScheduler().getPeCapacity() + ")."
                                 + pesString,
                         CloudSim.clock());
-            }
+            }*/
 
             if (getVmsMigratingIn().contains(vm)) {
                 Log.formatLine("%.2f: [Host #" + getId() + "] VM #" + vm.getId()
@@ -263,9 +281,9 @@ public class HyperPowerHost extends PowerHost implements Comparable {
             vm.setHost(this);
             p += pvm.getPower();
         }
-        if (tobeoff || tobeon) {
-            p += 20;
-        }
+        //if (tobeoff || tobeon) {
+          //  p += 20;
+        //}
         return p;
     }
 
@@ -390,7 +408,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                 return PowerState.OFF;
             } else if (currentpower <= Pidle) {
                 return PowerState.IDLE;
-            } else if (currentpower >= Pidle && currentpower <= Pmin) {
+            } else if (currentpower >= Pidle && currentpower < Pmin) {
                 return PowerState.UNDERU;
             } else if (currentpower >= Pmin && currentpower < Pmax) {
                 return PowerState.OK;
@@ -412,7 +430,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                 return PowerState.OFF;
             } else if (temppower <= Pidle) {
                 return PowerState.IDLE;
-            } else if (temppower >= Pidle && temppower <= Pmin) {
+            } else if (temppower >= Pidle && temppower < Pmin) {
                 return PowerState.UNDERU;
             } else if (temppower >= Pmin && temppower < Pmax) {
                 return PowerState.OK;
@@ -432,12 +450,16 @@ public class HyperPowerHost extends PowerHost implements Comparable {
 
         this.setState(PowerState.OFF);
         tobeoff = false;
+        HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getDatacenter().getVmAllocationPolicy();
+        hp.getOnHosts().remove(this);
     }
 
     public void switchOn() {
 
         this.setState(PowerState.IDLE);
         tobeon = false;
+        HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getDatacenter().getVmAllocationPolicy();
+        if(!hp.getOnHosts().contains(hp)) hp.getOnHosts().add(this);
     }
 
     @Override
@@ -599,20 +621,23 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                             vmsaftercycle -= 1;
                             //System.out.println("from Host" + (h.getId() - 2) + " with " +
                             //      "" + h.vmsaftercycle + " VMs to Host" + (entry.getKey().getId() - 2) + " with " + entry.getKey().vmsaftercycle + " Vms");
-                            System.out.println("--partial-- from Host" + (getId() - 2) + " with " +
+                            double currentTime = CloudSim.clock();
+                            System.out.println("--partial-- Time " + currentTime+ "from Host" + (getId() - 2) + " with " +
                                     "" + getVmList().size() + " VMs to Host" + (entry.getKey().getId() - 2) + " with " + entry.getKey().getVmList().size() + " Vms");
                             break;
                         }
                     }
                 }
+                break;
             }
+            setVmstatechange(false);
             return null;
         }
 
     public List<Map<String, Object>> fullVmMigration()
     {
         CopyOnWriteArrayList vms = (CopyOnWriteArrayList) getVmList();
-        //System.out.println("HOST" + (getId() - 2) + "UNDER, MIGRATING");
+        //System.out.println("HOST" + (getId() - 2) + "FULL, MIGRATING");
         int idx = 0;
         int vmcount = vms.size();
         //HyperPowerVm vm;
@@ -627,20 +652,20 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                 HyperPowerVm vm = (HyperPowerVm) rvm;
                 if (vm.isInMigration())
                 {
-                    System.out.println("INHOST" + (getId() - 2) +" ONMIGR vm" + vm.getId());
+                    //System.out.println("INHOST" + (getId() - 2) +" ONMIGR vm" + vm.getId());
                     continue;
                 }
                 for (Map.Entry<HyperPowerHost, ArrayList<Integer>> entry : descendsortedneighbors) {
                     double npower = cyclepowers.get(entry.getKey().getId() - 2);
                     PowerState ps = getPowerStatebyPower(npower);//entry.getKey().getPowerState();
                     if (ps == HyperPowerHost.PowerState.OVERU || ps == PowerState.OFF || ps == PowerState.IDLE)// entry.getKey().getVmList().size() == 0) {
-                    {    System.out.println("INHOST" + (getId() - 2) + "OVER OFF host" + (entry.getKey().getId() - 2));
+                    {    //System.out.println("INHOST" + (getId() - 2) + "OVER OFF host" + (entry.getKey().getId() - 2));
 
                         continue;
                     }
                     else if(ps == PowerState.UNDERU && npower < getPower() )//entry.getKey().getVmList().size() < getVmList().size())
                     {
-                        System.out.println("INHOST" + (getId() - 2) +"UNDERU host" + (entry.getKey().getId() - 2));
+                        //System.out.println("INHOST" + (getId() - 2) +"UNDERU host" + (entry.getKey().getId() - 2));
                         //continue;
                     }
                     if (getVmList().size() == 0 || s == PowerState.OVERU) {
@@ -648,7 +673,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                     }
 
                     if (vm.getPower() >= entry.getKey().Pmax - npower){//entry.getKey().getTempPower()) {
-                        System.out.println("INHOST" + (getId() - 2) +"LIMIT POWER" + (entry.getKey().getId() - 2));
+                        //System.out.println("INHOST" + (getId() - 2) +"LIMIT POWER" + (entry.getKey().getId() - 2));
                         continue;
                     }
 
@@ -663,17 +688,16 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                         vmsaftercycle -= 1;
                         vmcount--;
                         vm.setInMigration(true);
-                        System.out.println("from Host" + (getId() - 2) + " with " +
+                        double currentTime = CloudSim.clock();
+                        System.out.println("Time" + currentTime+ "from Host" + (getId() - 2) + " with " +
                                 "" + getVmList().size() + " VMs to Host" + (entry.getKey().getId() - 2) + " with " + entry.getKey().getVmList().size() + " Vms");
                         send(
                                 getDatacenter().getId(),
-                                0,// + (vm.getRam() / ((double) entry.getKey().getBw() / (2 * 8000))),
+                                10,// + (vm.getRam() / ((double) entry.getKey().getBw() / (2 * 8000))),
                                 HyperCloudSimTags.VM_MIGRATE,
                                 migrate);
                         break;
                     }
-
-
                 }
             }
             /*if (vmcount == 0 && waitmigrate == 0) {
@@ -686,8 +710,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
             }*/
             break;
         }
+        System.out.println("ENDING MIG");
         return null;
     }
-
-
 }

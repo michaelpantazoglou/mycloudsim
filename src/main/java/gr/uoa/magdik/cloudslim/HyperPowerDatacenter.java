@@ -279,15 +279,28 @@ public class HyperPowerDatacenter extends Datacenter {
 	 */
 	@Override
 	protected void updateCloudletProcessing() {
-
-        for (HyperPowerHost host : this. <HyperPowerHost> getHostList())
+        HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
+        for (Host h : hp.getOnHosts())//this. <HyperPowerHost> getHostList())
         {
+            HyperPowerHost host = (HyperPowerHost) h;
             if(host.getSynchronizer() != null) {
                 host.getSynchronizer().setSynching(false);
                 try {
                     if(host.getSynchronizer().isAlive()) {
-                        System.out.println("JOINING THREAD");
+                        System.out.println("STATE THREAD OF HOST " + host.getSynchronizer().getState() + " SYNCING " + host.getSynchronizer().isSynching());
+                        /*if(host.getSynchronizer().getState() == Thread.State.WAITING) {
+                            synchronized (host.getSynchronizer()) {
+                                System.out.println("NOTIF THREAD OF HOST" + (host.getId() - 2));
+                                host.getSynchronizer().notify();
+                            }
+                        }*/
+                        System.out.println("JOINING THREAD OF HOST" + (host.getId() - 2));
+                        if(host.getSynchronizer().getState() == Thread.State.RUNNABLE) {
+                            System.out.println("STATE THREAD OF HOST " + host.getSynchronizer().getState());
+                        }
+                        host.getSynchronizer().interrupt();
                         host.getSynchronizer().join();
+                        System.out.println("JOINED THREAD OF HOST" + (host.getId() - 2));
                         host.setSynchronizer(null);
                     }
                 } catch (InterruptedException e) {
@@ -304,7 +317,6 @@ public class HyperPowerDatacenter extends Datacenter {
 			return;
 		}
 		double currentTime = CloudSim.clock();
-        HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
 		// if some time passed since last processing
 		if (currentTime > getLastProcessTime()) {
 			System.out.print(currentTime + " ");
@@ -313,18 +325,16 @@ public class HyperPowerDatacenter extends Datacenter {
 
 
             if (!isDisableMigrations()) {
-                Log.write("-- Datacenter Power - End of Period : " + this.getPower() + " --\n");
-                power = 0;
-                Log.write("");
                 Log.write("Period: " + round++);
-                Log.write("-- Datacenter Power - Start of Period : " + this.getHostPower() + " --");
-
-
-
+                Log.write("Time: " + CloudSim.clock() + " -- Datacenter VMs " + getVmList().size() + "Power - End of Period : " + this.getPower() + " --\n");
+                power = 0;
 
 				List<Map<String, Object>> migrationMap = getVmAllocationPolicy().optimizeAllocation(
 						getVmList());
-
+                Log.write("");
+                Log.write("Time: " + CloudSim.clock() + "-- Datacenter Hosts " + getHostList().size() + " and Power - Start of next Period : "
+                        + this.getHostPower() + "--");
+                //Log.write("");
 /*
 				if (migrationMap != null) {
 					for (Map<String, Object> migrate : migrationMap) {
@@ -395,11 +405,11 @@ public class HyperPowerDatacenter extends Datacenter {
                 }*/
 			}
 
-			// schedules an event to the next time
+            // schedules an event to the next time
 			if (minTime != Double.MAX_VALUE) {
 				CloudSim.cancelAll(getId(), new PredicateType(HyperCloudSimTags.VM_DATACENTER_EVENT));
 				send(getId(), getSchedulingInterval(), HyperCloudSimTags.VM_DATACENTER_EVENT);
-			}
+            }
 
 			setLastProcessTime(currentTime);
 		}
@@ -410,11 +420,11 @@ public class HyperPowerDatacenter extends Datacenter {
 
     private double getHostPower() {
         power = 0;
-        for(Host host : getHostList())
+        /*for(Host host : getHostList())
         {
             HyperPowerHost h = (HyperPowerHost) host;
             power += h.getPower();
-        }
+        }*/
         return power;
     }
 
@@ -456,7 +466,10 @@ public class HyperPowerDatacenter extends Datacenter {
 		Log.printLine("\n\n--------------------------------------------------------------\n\n");
 		Log.formatLine("New resource usage for the time frame starting at %.2f:", currentTime);
 
-		for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
+		//for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
+        HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
+        for (Host h : hp.getOnHosts()) {
+            HyperPowerHost host = (HyperPowerHost) h;
 			Log.printLine();
 
 			double time = host.updateVmsProcessing(currentTime); // inform VMs to update processing
@@ -477,7 +490,7 @@ public class HyperPowerDatacenter extends Datacenter {
                     getLastProcessTime(),
                     currentTime);
 
-			for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
+			/*for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
 				double previousUtilizationOfCpu = host.getPreviousUtilizationOfCpu();
 				double utilizationOfCpu = host.getUtilizationOfCpu();
 				double timeFrameHostEnergy = host.getEnergyLinearInterpolation(
@@ -503,7 +516,7 @@ public class HyperPowerDatacenter extends Datacenter {
                         host.getId(),
                         timeFrameHostEnergy);
 			}
-
+*/
 			Log.formatLine(
                     "\n%.2f: Data center's energy is %.2f W*sec\n",
                     currentTime,

@@ -1,5 +1,7 @@
 package gr.uoa.magdik.cloudslim;
 
+import org.cloudbus.cloudsim.core.CloudSim;
+
 /**
  * Created by tchalas on 10/13/15.
  */
@@ -41,22 +43,40 @@ public class Synchronizer extends Thread {
     boolean synching = false;
     HyperLock lock = new HyperLock();
 
+    public boolean isStarted() {
+        return started;
+    }
+
+    public void setStarted(boolean started) {
+        this.started = started;
+    }
+
+    public boolean started = false;
+
 
     @Override
     public void run() {
         int hs = host.getVmList().size();
-        System.out.println("Starting threaf of host" + (host.getId() - 2));
+        System.out.println("Time:" + CloudSim.clock() + " Starting threaf of host" + (host.getId() - 2));
+        started = true;
         while(synching) {
-
+            //if(host.isVmstatechange()) {
+            try {
                 if (mode == 0) {
                     //HyperVmAllocationPolicy.partialVmMigration(host);
-
                     host.partialVmMigration();
                 } else {
                     host.fullVmMigration();
                 }
                 //hs = host.getVmList().size();
+                //}
+                synchronized (this) {
+                        wait();
+                }
+            } catch (InterruptedException e) {
+                synching = false;
+                e.printStackTrace();
             }
-
+        }
     }
 }

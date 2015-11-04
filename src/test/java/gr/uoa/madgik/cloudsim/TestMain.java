@@ -6,13 +6,14 @@ import org.cloudbus.cloudsim.DatacenterBroker;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
-import org.cloudbus.cloudsim.examples.power.Constants;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+
+import static gr.uoa.magdik.cloudslim.HyperHelper.*;
 
 /**
  * Created by tchalas on 4/25/15.
@@ -21,48 +22,95 @@ public class TestMain {
     public static void main(String[] args) throws IOException
     {
         HashMap<Integer, Integer> hostvms = new HashMap();
-        hostvms.put(0,2);
+/*        hostvms.put(0,2);
         hostvms.put(1,2);
-        hostvms.put(2,2);
-        hostvms.put(3,2);
+        hostvms.put(2,3);
+        hostvms.put(3,-1);
         hostvms.put(4,-1);
         hostvms.put(5,-1);
         hostvms.put(6,-1);
         hostvms.put(7,-1);
-
+*/
         DatacenterBroker broker;
         List<Cloudlet> cloudletList;
         List<Vm> vmList;
         List<HyperPowerHost> hostList;
         HyperPowerDatacenter datacenter;
+
+        File plan = new File("plan");
+        boolean initread = false;
+        boolean incomingread = false;
+        int initvms = 4;
+        /*try (BufferedReader br = new BufferedReader(new FileReader(plan))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+                if(line.equals("")) initread = false;
+                if(initread)
+                {
+                    String linearr[] = line.split("\t");
+                    int hostid = Integer.parseInt(linearr[0]);
+                    int numberofvms = Integer.parseInt(linearr[1]);
+                    if(numberofvms != -1) initvms += numberofvms;
+                    System.out.println("HOST" + hostid + " VMS " + numberofvms);
+                    hostvms.put(hostid - 1,numberofvms);
+                }
+                else if(incomingread)
+                {
+
+                }
+                if(line.equals("HOSTID\tVMS"))  initread = true;
+                if(line.equals("TIME\tVMS"))
+                {
+                    initread = false;
+                    incomingread = true;
+                }
+            }
+        }*/
+        //System.out.println("initvms" + initvms);
+        //System.exit(-1);
+
         try {
             CloudSim.init(1, Calendar.getInstance(), false);
-
-            broker = HyperHelper.createBroker();
+            broker = createBroker();
             int brokerId = broker.getId();
-
+            vmList = new ArrayList<Vm>();
             cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
             int vmsnumber = HyperConstants.NUMBER_OF_VMS;
-            vmList = HyperHelper.createVmList(brokerId,8);
-            double log2base = Math.log(HyperConstants.NUMBER_OF_HOSTS)/Math.log(2);
-            hostList = HyperHelper.createHostList((int)log2base - 1);
-            broker.submitVmList(vmList);
+
+
+            vmList.addAll(createVmList(broker, initvms));
+            for(int j = 0; j < 150; j++)
+            {
+                vmList.addAll(createVmsDelay(broker,1, 10.0*j));
+            }
+            //vmList.addAll(createVmsDelay(broker,7,120.0));
+            //vmList.addAll(createVmsDelay(broker,7,120.0));
+            double log2base = Math.log(1024)/Math.log(2);
+            //broker.submitVmList(vmList);
+            hostList = createHostList((int) log2base - 1);
             broker.submitCloudletList(cloudletList);
 
-            datacenter = (HyperPowerDatacenter) HyperHelper.createDatacenter(
+            datacenter = (HyperPowerDatacenter) createDatacenter(
                     "Datacenter",
                     HyperPowerDatacenter.class,
                     hostList,
                     new HyperVmAllocationPolicy(hostList));
 
             HyperVmAllocationPolicy hv = (HyperVmAllocationPolicy) datacenter.getVmAllocationPolicy();
-            hv.inithostsvm = hostvms;
-            hv.initoffhosts();
+            //hv.inithostsvm = hostvms;
+            //hv.initoffhosts();
+            hv.getOnHosts().addAll(hostList);
             datacenter.setDisableMigrations(false);
 
             Log.writer = new PrintWriter("results", "UTF-8");
 
-            CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);
+            IncomingRequests incomingRequests = new IncomingRequests();
+            incomingRequests.setDatacenterBroker(broker);
+            incomingRequests.setHyperPowerDatacenter(datacenter);
+            incomingRequests.start();
+
+            //CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);
             double lastClock = CloudSim.startSimulation();
             //CloudSim.pauseSimulation();
             //vmList.addAll(HyperHelper.placeVmsinHosts(hostvms, brokerId));
@@ -72,8 +120,8 @@ public class TestMain {
             List<Cloudlet> newList = broker.getCloudletReceivedList();
             Log.printLine("Received " + newList.size() + " cloudlets");
 
-            CloudSim.stopSimulation();
-
+            //CloudSim.stopSimulation();
+/*
             HyperHelper.printResults(
                     datacenter,
                     vmList,
@@ -81,7 +129,7 @@ public class TestMain {
                     "",
                     Constants.OUTPUT_CSV,
                     "");
-
+*/
         } catch (Exception e) {
             e.printStackTrace();
             Log.printLine("The simulation has been terminated due to an unexpected error");

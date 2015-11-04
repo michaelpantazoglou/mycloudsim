@@ -66,7 +66,7 @@ public class HyperConstants {
 
     public final static int NUMBER_OF_CLOUDLETS = 4;
 
-    public final static int NUMBER_OF_HOSTS = 8;
+    public final static int NUMBER_OF_HOSTS = 32;
 
     public final static long CLOUDLET_UTILIZATION_SEED = 1;
 

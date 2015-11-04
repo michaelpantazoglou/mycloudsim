@@ -546,12 +546,12 @@ public class CloudSim {
 			future.removeAll(toRemove);
 
 		} else {
-			queue_empty = true;
-			running = false;
-			printMessage("Simulation: No more future events");
+			//queue_empty = true;
+			//running = false;
+			//printMessage("Simulation: No more future events");
 		}
 
-		return queue_empty;
+		return false;//queue_empty;
 	}
 
 	/**
@@ -908,8 +908,8 @@ public class CloudSim {
 
 		double clock = clock();
 
-		finishSimulation();
-		runStop();
+		//finishSimulation();
+		//runStop();
 
 		return clock;
 	}

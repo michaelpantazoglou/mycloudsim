@@ -275,8 +275,8 @@ public class DatacenterBroker extends SimEntity {
 		cloudletsSubmitted--;
 		if (getCloudletList().size() == 0 && cloudletsSubmitted == 0) { // all cloudlets executed
 			Log.printLine(CloudSim.clock() + ": " + getName() + ": All Cloudlets executed. Finishing...");
-			clearDatacenters();
-			finishExecution();
+			//clearDatacenters();
+			//finishExecution();
 		} else { // some cloudlets haven't finished yet
 			if (getCloudletList().size() > 0 && cloudletsSubmitted == 0) {
 				// all the cloudlets sent finished. It means that some bount
@@ -313,7 +313,8 @@ public class DatacenterBroker extends SimEntity {
 	 * @pre $none
 	 * @post $none
 	 */
-	protected void createVmsInDatacenter(int datacenterId) {
+	//CHANGING TO PUBLIC
+	public void createVmsInDatacenter(int datacenterId) {
 		// send as much vms as possible for this datacenter before trying the next one
 		int requestedVms = 0;
 		String datacenterName = CloudSim.getEntityName(datacenterId);
@@ -584,7 +585,9 @@ public class DatacenterBroker extends SimEntity {
 	 * 
 	 * @return the datacenter ids list
 	 */
-	protected List<Integer> getDatacenterIdsList() {
+
+	//CHANGIN TO PUBLIC
+	public List<Integer> getDatacenterIdsList() {
 		return datacenterIdsList;
 	}
 

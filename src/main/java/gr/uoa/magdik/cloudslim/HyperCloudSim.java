@@ -92,12 +92,12 @@ public class HyperCloudSim extends CloudSim{
 			future.removeAll(toRemove);
 
 		} else {
-			queue_empty = true;
-			running = false;
-			printMessage("Simulation: No more future events");
+			//queue_empty = true;
+			//running = false;
+			//printMessage("Simulation: No more future events");
 		}
-
-		return queue_empty;
+		return false;
+		//return queue_empty;
 	}
 
 

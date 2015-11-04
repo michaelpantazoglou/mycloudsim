@@ -3,6 +3,7 @@ package gr.uoa.magdik.cloudslim;
 import org.cloudbus.cloudsim.Host;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
+import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.power.*;
 import static gr.uoa.magdik.cloudslim.HyperPowerHost.*;
 
@@ -23,6 +24,8 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         tobeoffHosts = new ArrayList<>();
         tobeonHosts = new ArrayList<>();
         offHosts = new ArrayList<>();
+        onHosts = new CopyOnWriteArrayList<>();
+        vmsplaced = false;
         /*try {
             writer = new PrintWriter("results", "UTF-8");
         } catch (FileNotFoundException e) {
@@ -37,8 +40,19 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
     public List<Host> visitedHosts;
     public List<Host> tobeoffHosts;
     public List<Host> tobeonHosts;
+
+    public CopyOnWriteArrayList<Host> getOnHosts() {
+        return onHosts;
+    }
+
+    public void setOnHosts(CopyOnWriteArrayList<Host> onHosts) {
+        this.onHosts = onHosts;
+    }
+
+    public CopyOnWriteArrayList<Host> onHosts;
     public static List<Host> offHosts;
     public HashMap <Integer, Integer> inithostsvm;
+    boolean vmsplaced;
     HyperPowerDatacenter datacenter;
     int round =  0;
 
@@ -53,6 +67,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         HyperPowerHost hs = (HyperPowerHost) host;
         if(hs.getPowerState() == PowerState.OFF)
         {
+            System.out.println("HOSTOF");
             return false;
             //throw new IllegalArgumentException("HOST OFF");
             //System.exit(-2);
@@ -66,6 +81,11 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             if (host.vmCreate(vm))
             {
                 getVmTable().put(vm.getUid(), host);
+                if(hs.getSynchronizer() != null) {
+                    synchronized (hs.getSynchronizer()) {
+                        hs.getSynchronizer().notify();
+                    }
+                }
                 System.out.println("VM" + vm.getId() + " placed in Host" + (host.getId() - 2));
                 return true;
             }
@@ -134,6 +154,10 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 if(hwReqMet(h,vm)) {
                     if (h.vmCreate(vm))
                     {
+                        //h.setVmstatechange(true);
+                        synchronized (h.getSynchronizer()) {
+                            h.getSynchronizer().notify();
+                        }
                         getVmTable().put(vm.getUid(), h);
                         return true;
                     }
@@ -147,7 +171,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             if(idlecache.size() == 0)
             {
                 L = offcache;
-                if(L.size() > 0)
+                if(L.size() == 0)
                     return false;
             }
         }
@@ -155,6 +179,11 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         if(hwReqMet(h,vm)) {
             if (h.vmCreate(vm))
             {
+                if(h.getPowerState() == PowerState.OFF)
+                {
+                    h.switchOn();
+                    offHosts.remove(h);
+                }
                 getVmTable().put(vm.getUid(), h);
                 return true;
             }
@@ -245,7 +274,8 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     @Override
     public boolean allocateHostForVm(Vm vm) {
-        if(inithostsvm != null)
+        HyperPowerVm hvm = (HyperPowerVm) vm;
+        if(inithostsvm != null && hvm.getDelay() == 0)
         {
             Iterator it = inithostsvm.entrySet().iterator();
             while (it.hasNext()) {
@@ -253,20 +283,22 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 HyperPowerHost hp = (HyperPowerHost) getHostList().get((Integer) pair.getKey());
                 if((int) pair.getValue() == -1)
                 {
+                    offHosts.add(hp);
                     hp.switchOff();
                 }
 
                 if(hp.getVmList().size() < (int) pair.getValue())
                 {
+                    if(!onHosts.contains(hp)) onHosts.add(hp);
                     return (placeVminHost(vm, hp));
                 }
             }
         }
-        else {
-            int index = (int) (Math.random() * this.getHostList().size());
-            return allocateHostForVm(vm, getHostList().get(index));
-        }
-        return false;
+
+            //int index = (int) (Math.random() * this.getHostList().size());
+            //return allocateHostForVm(vm, getHostList().get(index));
+        int index = (int) (Math.random() * this.getOnHosts().size());
+        return allocateHostForVm(vm, getOnHosts().get(index));
     }
 
     @Override
@@ -281,7 +313,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
     @Override
     public List<Map<String, Object>> optimizeAllocation(List<? extends Vm> vmList)
     {
-
         return synchronizeHosts();
     }
 
@@ -340,13 +371,20 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         int nvm = 0;
 
         monitorDatacenter();
-        for (HyperPowerHost host : this. <HyperPowerHost> getHostList())
+        for (Host h : getOnHosts())//this. <HyperPowerHost> getHostList())
         {
+            HyperPowerHost host = (HyperPowerHost) h;
             nvm += host.getVmList().size();
             //host.sendheartbeats();
             host.sortNeighbors();
-            if(host.getPowerState() == PowerState.OFF || host.getVmList().size() == 0)
+            if(host.getPowerState() == PowerState.OFF)
             {
+                continue;
+            }
+            if(host.getVmList().size() == 0)
+            {
+                host.switchOff();
+                offHosts.add(host);
                 continue;
             }
             if(host.getPowerState() == PowerState.OVERU)
@@ -360,7 +398,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 host.getSynchronizer().setMode(0);
                 host.getSynchronizer().setSynching(true);
                 if(host.getSynchronizer().getState() == Thread.State.NEW) {
-                    System.out.println("starting threee");
+                    System.out.println("Time:" + CloudSim.clock() +"starting threee");
                     host.getSynchronizer().start();
                 }
                 partial++;
@@ -386,9 +424,19 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 }
                 host.getSynchronizer().setMode(1);
                 host.getSynchronizer().setSynching(true);
+                host.getSynchronizer().setStarted(false);
                 if(host.getSynchronizer().getState() == Thread.State.NEW) {
-                    System.out.println("starting threee2");
+                    System.out.println("Time:" + CloudSim.clock() +"starting threee2");
                     host.getSynchronizer().start();
+                    while (!host.getSynchronizer().started)
+                    {
+                        try {
+                            Thread.sleep(10);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        //System.out.println("edw");
+                    }
                 }
             }
         }
@@ -409,8 +457,9 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         currentoffHosts = new ArrayList<>();
         int nvm = 0;
         int nh = 0;
-        for (HyperPowerHost host : this. <HyperPowerHost> getHostList())
+        for (Host h : getOnHosts())//this. <HyperPowerHost> getHostList())
         {
+            HyperPowerHost host = (HyperPowerHost) h;
             if(!offHosts.contains(host))
             {
                 //Log.write(" --- HOST " + (host.getId()-2) + " : " + host.vmsaftercycle + " VMs and Power " + host.getTempPower() + " ---");
@@ -418,7 +467,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             }
             else
             {
-                Log.write(" --- HOST " + (host.getId()-2) + " is off ");
+                //Log.write(" --- HOST " + (host.getId()-2) + " is off ");
 
             }
             if(host.getPower() == 0)

@@ -40,6 +40,16 @@ public class HyperPowerVm extends PowerVm {
 
 	PowerModel pm;
 
+	public double getDelay() {
+		return delay;
+	}
+
+	public void setDelay(double delay) {
+		this.delay = delay;
+	}
+
+	double delay;
+
 
 	/**
 	 * Instantiates a new power vm.
@@ -71,6 +81,7 @@ public class HyperPowerVm extends PowerVm {
 
 		super(id, userId, mips, pesNumber, ram, bw, size, priority, vmm, cloudletScheduler, schedulingInterval);
 		pm = new PowerModelLinear(0.00, 0.0);
+		delay = 0;
 	}
 
 
