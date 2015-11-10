@@ -87,12 +87,10 @@ public class DatacenterBroker extends SimEntity {
 		setCloudletList(new ArrayList<Cloudlet>());
 		setCloudletSubmittedList(new ArrayList<Cloudlet>());
 		setCloudletReceivedList(new ArrayList<Cloudlet>());
-
 		cloudletsSubmitted = 0;
 		setVmsRequested(0);
 		setVmsAcks(0);
 		setVmsDestroyed(0);
-
 		setDatacenterIdsList(new LinkedList<Integer>());
 		setDatacenterRequestedIdsList(new ArrayList<Integer>());
 		setVmsToDatacentersMap(new HashMap<Integer, Integer>());
@@ -188,6 +186,8 @@ public class DatacenterBroker extends SimEntity {
 			createVmsInDatacenter(getDatacenterIdsList().get(0));
 		}
 	}
+
+
 
 	/**
 	 * Process a request for the characteristics of a PowerDatacenter.

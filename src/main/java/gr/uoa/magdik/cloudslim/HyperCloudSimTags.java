@@ -34,6 +34,8 @@ public class HyperCloudSimTags extends CloudSimTags {
 
     public static final int FORWARD_MSG = BASE + 54;
 
+    public static final int REMOVEVM = BASE + 55;
+
 
 
 

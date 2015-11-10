@@ -1,6 +1,7 @@
 package gr.uoa.magdik.cloudslim;
 
 import org.cloudbus.cloudsim.DatacenterBroker;
+import org.cloudbus.cloudsim.DatacenterCharacteristics;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
@@ -29,10 +30,42 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
     /** The vms created list. */
     protected List<? extends Vm> lateVmList;
 
+    public <T extends Vm> List<T>getRemoveVmList() {
+        return (List<T>) removeVmList;
+    }
+
+    public void setRemoveVmList(List<? extends Vm> removeVmList) {
+        this.removeVmList = removeVmList;
+    }
+
+    /** The vms tobe removed list. */
+    protected List<? extends Vm> removeVmList;
+
     public HyperDatacenterBroker(String name) throws Exception {
         super(name);
         lateVmList = new ArrayList<>();
+        removeVmList = new ArrayList<>();
     }
+
+
+    /**
+     * Process the return of a request for the characteristics of a PowerDatacenter.
+     *
+     * @param ev a SimEvent object
+     * @pre ev != $null
+     * @post $none
+     */
+    protected void processResourceCharacteristics(SimEvent ev) {
+        DatacenterCharacteristics characteristics = (DatacenterCharacteristics) ev.getData();
+        getDatacenterCharacteristicsList().put(characteristics.getId(), characteristics);
+
+        if (getDatacenterCharacteristicsList().size() == getDatacenterIdsList().size()) {
+            setDatacenterRequestedIdsList(new ArrayList<Integer>());
+            createVmsInDatacenter(getDatacenterIdsList().get(0));
+            removeVmsFromDatacenter(getDatacenterIdsList().get(0));
+        }
+    }
+
 
     /**
      * Create the virtual machines in a datacenter.
@@ -73,6 +106,20 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
         getDatacenterRequestedIdsList().add(datacenterId);
         setVmsRequested(requestedVms);
         setVmsAcks(0);
+    }
+
+    private void removeVmsFromDatacenter(Integer datacenterId)
+    {
+        String datacenterName = CloudSim.getEntityName(datacenterId);
+        for(Vm vm : getRemoveVmList())
+        {
+            HyperPowerVm hvm = (HyperPowerVm) vm;
+                Log.printLine(CloudSim.clock() + ": " + getName() + ": Trying to REMOVE VM #" + vm.getId()
+                        + " in " + datacenterName);
+                //sendNow(datacenterId, CloudSimTags.VM_CREATE_ACK, vm);
+                double delay = hvm.getRemovedelay();
+                send(datacenterId, delay, HyperCloudSimTags.REMOVEVM, vm);
+        }
     }
 
     protected void processVmCreate(SimEvent ev) {
@@ -129,5 +176,8 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
 
     public void submitDelayVmList(List<? extends Vm> list) {
         getLateVmList().addAll(list);
+    }
+    public void submitRemoveVmList(List<? extends Vm> list) {
+        getRemoveVmList().addAll(list);
     }
 }

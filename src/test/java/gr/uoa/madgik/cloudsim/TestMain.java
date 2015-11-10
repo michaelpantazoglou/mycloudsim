@@ -79,14 +79,10 @@ public class TestMain {
             int vmsnumber = HyperConstants.NUMBER_OF_VMS;
 
 
-            vmList.addAll(createVmList(broker, initvms));
-            for(int j = 0; j < 150; j++)
-            {
-                vmList.addAll(createVmsDelay(broker,1, 10.0*j));
-            }
+
             //vmList.addAll(createVmsDelay(broker,7,120.0));
             //vmList.addAll(createVmsDelay(broker,7,120.0));
-            double log2base = Math.log(1024)/Math.log(2);
+            double log2base = Math.log(128)/Math.log(2);
             //broker.submitVmList(vmList);
             hostList = createHostList((int) log2base - 1);
             broker.submitCloudletList(cloudletList);
@@ -97,13 +93,31 @@ public class TestMain {
                     hostList,
                     new HyperVmAllocationPolicy(hostList));
 
+            vmList.addAll(createVmList(broker, initvms));
+            for(int j = 0; j < 65; j++)
+            {
+                if(Math.random() > 0.5)
+                {
+                    removeRandomVms((HyperDatacenterBroker) broker, 4, 60.0*j);
+                }
+                else
+                {
+                    vmList.addAll(createVmsDelay(broker,4, 10.0*j));
+                }
+            }
+
             HyperVmAllocationPolicy hv = (HyperVmAllocationPolicy) datacenter.getVmAllocationPolicy();
+            hv.setDatacenter(datacenter);
             //hv.inithostsvm = hostvms;
             //hv.initoffhosts();
             hv.getOnHosts().addAll(hostList);
             datacenter.setDisableMigrations(false);
 
             Log.writer = new PrintWriter("results", "UTF-8");
+            datacenter.vmstimelog = new PrintWriter("vmstime.dat", "UTF-8");
+            datacenter.onhoststimelog = new PrintWriter("onhoststime.dat", "UTF-8");
+            datacenter.powertimelog = new PrintWriter("powertime.dat", "UTF-8");
+
 
             IncomingRequests incomingRequests = new IncomingRequests();
             incomingRequests.setDatacenterBroker(broker);
@@ -119,7 +133,9 @@ public class TestMain {
             //assertNotEquals(vmList, null);
             List<Cloudlet> newList = broker.getCloudletReceivedList();
             Log.printLine("Received " + newList.size() + " cloudlets");
-
+            datacenter.vmstimelog.close();
+            datacenter.powertimelog.close();
+            datacenter.onhoststimelog.close();
             //CloudSim.stopSimulation();
 /*
             HyperHelper.printResults(
@@ -135,8 +151,5 @@ public class TestMain {
             Log.printLine("The simulation has been terminated due to an unexpected error");
             System.exit(0);
         }
-
-
-
     }
 }

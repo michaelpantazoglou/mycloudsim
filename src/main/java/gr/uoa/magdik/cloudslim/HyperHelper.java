@@ -76,7 +76,22 @@ public class HyperHelper  {
         return vms;
     }
 
-	public static List<Vm> createVmsDelay(DatacenterBroker broker,int vmsNumber,double delay) {
+	public static void removeRandomVms(HyperDatacenterBroker broker, int vmsNumber, double delay)
+	{
+		List<Vm> removevms = new ArrayList<Vm>();
+		int size = broker.getLateVmList().size();
+		if(size == 0) return;
+		Random random = new Random();
+		for (int idx = 0; idx < vmsNumber; ++idx){
+			int vmr = generateRandomInteger(0, size - 1, random);
+			HyperPowerVm vm = (HyperPowerVm) broker.getLateVmList().get(vmr);
+			vm.setRemovedelay(delay);
+			removevms.add(vm);
+		}
+		broker.submitRemoveVmList(removevms);
+	}
+
+	public static List<Vm> createVmsDelay(DatacenterBroker broker, int vmsNumber, double delay) {
 		int VM_MIPS = HyperConstants.VM_MIPS[0];
 		long VM_SIZE = HyperConstants.VM_SIZE; // image size (MB)
 		int VM_RAM = HyperConstants.VM_RAM[0]; // vm memory (MB)
@@ -897,4 +912,15 @@ public class HyperHelper  {
 		}
 	}
 
+	private static int generateRandomInteger(int aStart, int aEnd, Random aRandom){
+		if (aStart > aEnd) {
+			throw new IllegalArgumentException("Start cannot exceed End.");
+		}
+		//get the range, casting to long to avoid overflow problems
+		long range = (long)aEnd - (long)aStart + 1;
+		// compute a fraction of the range, 0 <= frac < range
+		long fraction = (long)(range * aRandom.nextDouble());
+		int randomNumber =  (int)(fraction + aStart);
+		return randomNumber;
+	}
 }
