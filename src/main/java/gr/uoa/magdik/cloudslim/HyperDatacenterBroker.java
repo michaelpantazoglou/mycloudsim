@@ -47,13 +47,13 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
         removeVmList = new ArrayList<>();
     }
 
+    public boolean cloudletsumitted = false;
+
 
     /**
      * Process the return of a request for the characteristics of a PowerDatacenter.
      *
      * @param ev a SimEvent object
-     * @pre ev != $null
-     * @post $none
      */
     protected void processResourceCharacteristics(SimEvent ev) {
         DatacenterCharacteristics characteristics = (DatacenterCharacteristics) ev.getData();
@@ -62,7 +62,6 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
         if (getDatacenterCharacteristicsList().size() == getDatacenterIdsList().size()) {
             setDatacenterRequestedIdsList(new ArrayList<Integer>());
             createVmsInDatacenter(getDatacenterIdsList().get(0));
-            removeVmsFromDatacenter(getDatacenterIdsList().get(0));
         }
     }
 
@@ -71,8 +70,6 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
      * Create the virtual machines in a datacenter.
      *
      * @param datacenterId Id of the chosen PowerDatacenter
-     * @pre $none
-     * @post $none
      */
     //CHANGING TO PUBLIC
     public void createVmsInDatacenter(int datacenterId) {
@@ -138,9 +135,9 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
             {
                 getVmsCreatedList().add(VmList.getById(getLateVmList(), vmId));
             }
-            Log.printLine(CloudSim.clock() + ": " + getName() + ": VM #" + vmId
-                    + " has been created in Datacenter #" + datacenterId + ", Host #"
-                    + VmList.getById(getVmsCreatedList(), vmId).getHost().getId());
+            //Log.printLine(CloudSim.clock() + ": " + getName() + ": VM #" + vmId
+              //      + " has been created in Datacenter #" + datacenterId + ", Host #"
+                //    + VmList.getById(getVmsCreatedList(), vmId).getHost().getId());
         } else {
             Log.printLine(CloudSim.clock() + ": " + getName() + ": Creation of VM #" + vmId
                     + " failed in Datacenter #" + datacenterId);
@@ -149,8 +146,9 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
         incrementVmsAcks();
 
         // all the requested VMs have been created
-        if (getVmsCreatedList().size() == getVmList().size() - getVmsDestroyed()) {
+        if (getVmsCreatedList().size() == getVmList().size() - getVmsDestroyed() && !cloudletsumitted) {
             submitCloudlets();
+            cloudletsumitted = true;
         } else {
             // all the acks received, but some VMs were not created
             if (getVmsRequested() == getVmsAcks()) {

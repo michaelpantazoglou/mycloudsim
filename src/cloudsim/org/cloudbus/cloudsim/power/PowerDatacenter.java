@@ -172,7 +172,7 @@ public class PowerDatacenter extends Datacenter {
 		double timeDiff = currentTime - getLastProcessTime();
 		double timeFrameDatacenterEnergy = 0.0;
 
-		Log.printLine("\n\n--------------------------------------------------------------\n\n");
+		//Log.printLine("\n\n--------------------------------------------------------------\n\n");
 		Log.formatLine("New resource usage for the time frame starting at %.2f:", currentTime);
 
 		for (PowerHost host : this.<PowerHost> getHostList()) {

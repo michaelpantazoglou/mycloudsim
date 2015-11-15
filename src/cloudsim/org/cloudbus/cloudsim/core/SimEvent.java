@@ -8,6 +8,11 @@
 
 package org.cloudbus.cloudsim.core;
 
+import gr.uoa.magdik.cloudslim.HyperPowerHost;
+
+import java.util.ArrayList;
+import java.util.Map;
+
 /**
  * This class represents a simulation event which is passed between the entities in the simulation.
  * 
@@ -65,12 +70,21 @@ public class SimEvent implements Cloneable, Comparable<SimEvent> {
 
 	// ------------------- PACKAGE LEVEL METHODS --------------------------
 	SimEvent(int evtype, double time, int src, int dest, int tag, Object edata) {
+
 		etype = evtype;
 		this.time = time;
 		entSrc = src;
 		entDst = dest;
 		this.tag = tag;
 		data = edata;
+		if(tag == 53)
+		{
+			Map<HyperPowerHost, ArrayList<Integer>> heartnodes = (Map<HyperPowerHost, ArrayList<Integer>>) data;
+			if(heartnodes.entrySet().size() == 0)
+			{
+				throw new IllegalArgumentException("maka");
+			}
+		}
 	}
 
 	SimEvent(int evtype, double time, int src) {

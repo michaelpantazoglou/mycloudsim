@@ -108,7 +108,7 @@ public class PowerDatacenterNonPowerAware extends PowerDatacenter {
 
 			Log.formatLine("\n%.2f: Consumed energy is %.2f W*sec\n", CloudSim.clock(), timeframePower);
 
-			Log.printLine("\n\n--------------------------------------------------------------\n\n");
+			//Log.printLine("\n\n--------------------------------------------------------------\n\n");
 
 			for (PowerHost host : this.<PowerHost> getHostList()) {
 				Log.formatLine("\n%.2f: Host #%d", CloudSim.clock(), host.getId());

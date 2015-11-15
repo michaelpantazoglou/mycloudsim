@@ -44,11 +44,11 @@ public class VmPlacementTest {
             int brokerId = broker.getId();
 
             cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
-            vmList = HyperHelper.createVmList(brokerId, HyperConstants.NUMBER_OF_VMS);
+            //vmList = HyperHelper.createVmList(brokerId, HyperConstants.NUMBER_OF_VMS);
             double log2base = Math.log(HyperConstants.NUMBER_OF_HOSTS)/Math.log(2);
             hostList = HyperHelper.createHostList((int)log2base);
-            broker.submitVmList(vmList);
-            broker.submitCloudletList(cloudletList);
+           // broker.submitVmList(vmList);
+           // broker.submitCloudletList(cloudletList);
 
             datacenter = (HyperPowerDatacenter) HyperHelper.createDatacenter(
                     "Datacenter",
@@ -72,13 +72,6 @@ public class VmPlacementTest {
 
             CloudSim.stopSimulation();
 
-            HyperHelper.printResults(
-                    datacenter,
-                    vmList,
-                    lastClock,
-                    "",
-                    Constants.OUTPUT_CSV,
-                    "");
 
         } catch (Exception e) {
             e.printStackTrace();

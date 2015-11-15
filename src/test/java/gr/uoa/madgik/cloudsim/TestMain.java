@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import static gr.uoa.magdik.cloudslim.HyperHelper.*;
+import static gr.uoa.magdik.cloudslim.GenerateCloudlets.*;
 
 /**
  * Created by tchalas on 4/25/15.
@@ -75,14 +76,12 @@ public class TestMain {
             broker = createBroker();
             int brokerId = broker.getId();
             vmList = new ArrayList<Vm>();
-            cloudletList = GenerateCloudlets.createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
+            cloudletList = createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
             int vmsnumber = HyperConstants.NUMBER_OF_VMS;
 
-
-
             //vmList.addAll(createVmsDelay(broker,7,120.0));
             //vmList.addAll(createVmsDelay(broker,7,120.0));
-            double log2base = Math.log(128)/Math.log(2);
+            double log2base = Math.log(64)/Math.log(2);
             //broker.submitVmList(vmList);
             hostList = createHostList((int) log2base - 1);
             broker.submitCloudletList(cloudletList);
@@ -94,18 +93,21 @@ public class TestMain {
                     new HyperVmAllocationPolicy(hostList));
 
             vmList.addAll(createVmList(broker, initvms));
-            for(int j = 0; j < 65; j++)
+            int delayvms = 0;
+            for(int j = 2; j < 670; j++) //17200
             {
+                if(j % 4 == 0 || j % 5 == 0)
+                {
+                    //removeRandomVms((HyperDatacenterBroker) broker, 14 - delayvms, j * 10.0 + 0.3);
+                    delayvms = 0;
+                    //continue;
+                }
                 if(Math.random() > 0.5)
                 {
-                    removeRandomVms((HyperDatacenterBroker) broker, 4, 60.0*j);
-                }
-                else
-                {
-                    vmList.addAll(createVmsDelay(broker,4, 10.0*j));
+                    vmList.addAll(createVmsDelay(broker,4, 1.0*j));
+                    delayvms += 4;
                 }
             }
-
             HyperVmAllocationPolicy hv = (HyperVmAllocationPolicy) datacenter.getVmAllocationPolicy();
             hv.setDatacenter(datacenter);
             //hv.inithostsvm = hostvms;

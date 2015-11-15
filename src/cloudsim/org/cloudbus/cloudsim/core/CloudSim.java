@@ -17,6 +17,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import gr.uoa.magdik.cloudslim.HyperPowerHost;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.core.predicates.Predicate;
 import org.cloudbus.cloudsim.core.predicates.PredicateAny;
@@ -599,7 +600,7 @@ public class CloudSim {
 			throw new IllegalArgumentException("Send delay can't be negative.");
 		}
 
-		SimEvent e = new SimEvent(SimEvent.SEND, clock + delay, src, dest, tag, data);
+			SimEvent e = new SimEvent(SimEvent.SEND, clock + delay, src, dest, tag, data);
 		future.addEvent(e);
 	}
 

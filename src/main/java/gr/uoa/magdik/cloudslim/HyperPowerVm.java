@@ -116,12 +116,7 @@ public class HyperPowerVm extends PowerVm {
 		double power = 0;
 		try {
 			PowerHost ph = (PowerHost) getHost();
-            if(ph == null)
-            {
-                //System.exit(0);
-            }
 			power = ph.getPowerModel().getPower(utilization);
-//			System.out.println("VMpower = " + power);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(0);

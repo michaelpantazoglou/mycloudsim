@@ -12,16 +12,14 @@ public class Synchronizer extends Thread {
         public void release() { }
     }
 
+    //mode defining partial or full migration
     int mode = 0;
-
     public HyperPowerHost getHost() {
         return host;
     }
-
     public void setHost(HyperPowerHost host) {
         this.host = host;
     }
-
     HyperPowerHost host;
 
     public void setSynching(boolean synching) {
@@ -57,25 +55,23 @@ public class Synchronizer extends Thread {
     @Override
     public void run() {
         int hs = host.getVmList().size();
-        System.out.println("Time:" + CloudSim.clock() + " Starting threaf of host" + (host.getId() - 2));
+        //System.out.println("Time:" + CloudSim.clock() + " Starting threaf of host" + (host.getId() - 2));
         started = true;
         while(synching) {
             //if(host.isVmstatechange()) {
             try {
                 if (mode == 0) {
-                    //HyperVmAllocationPolicy.partialVmMigration(host);
-                    host.partialVmMigration();
+                    if(host.partialVmMigration() == 2)  synching = false;
                 } else {
-                    host.fullVmMigration();
+                    if(host.fullVmMigration() == 2)  synching = false;
                 }
-                //hs = host.getVmList().size();
-                //}
                 synchronized (this) {
-                        wait();
+                    //wait for a signal that the new vm was created in the host
+                    wait();
                 }
             } catch (InterruptedException e) {
                 synching = false;
-                e.printStackTrace();
+                //e.printStackTrace();
             }
         }
     }

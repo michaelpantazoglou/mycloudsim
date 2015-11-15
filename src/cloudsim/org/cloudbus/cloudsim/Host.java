@@ -235,6 +235,7 @@ return (getVmScheduler().getPeCapacity() >= vm.getCurrentRequestedMaxMips()
 		setStorage(getStorage() - vm.getSize());
 		getVmList().add(vm);
 		vm.setHost(this);
+		System.out.println(CloudSim.clock() + " VM" + vm.getId() + " CREATED IN HOST: " + (this.getId() - 2));
 		return true;
 	}
 

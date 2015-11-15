@@ -17,10 +17,9 @@ import org.cloudbus.cloudsim.power.PowerHost;
 import org.cloudbus.cloudsim.power.PowerVm;
 
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
+import static gr.uoa.magdik.cloudslim.HyperHelper.generateRandomInteger;
 
 /**
  * PowerDatacenter is a class that enables simulation of power-aware data centers.
@@ -69,6 +68,27 @@ public class HyperPowerDatacenter extends Datacenter {
 
     int oldmigrationcount = 0;
     int oldhostonoffcount = 0;
+    int oldvmcount = 0;
+
+
+    public int getHostoncount() {
+        return hostoncount;
+    }
+
+    public void setHostoncount(int hostoncount) {
+        this.hostoncount = hostoncount;
+    }
+
+    public int getHostoffcount() {
+        return hostoffcount;
+    }
+
+    public void setHostoffcount(int hostoffcount) {
+        this.hostoffcount = hostoffcount;
+    }
+
+    int hostoncount = 0;
+    int hostoffcount = 0;
 	/**
 	 * Instantiates a new datacenter.
 	 *
@@ -126,13 +146,11 @@ public class HyperPowerDatacenter extends Datacenter {
 
             // New Cloudlet arrives
             case HyperCloudSimTags.CLOUDLET_SUBMIT:
-                //System.out.println("PROCESSEVENTCLOUDLET1");
                 processCloudletSubmit(ev, false);
                 break;
 
             // New Cloudlet arrives, but the sender asks for an ack
             case HyperCloudSimTags.CLOUDLET_SUBMIT_ACK:
-                //System.out.println("PROCESSEVENTCLOUDLET2");
                 processCloudletSubmit(ev, true);
                 break;
 
@@ -270,7 +288,6 @@ public class HyperPowerDatacenter extends Datacenter {
     {
         Map<String, Object> map = (Map<String, Object>) ev.getData();
         HyperPowerHost h = (HyperPowerHost) map.get("host");
-        System.out.println("WAKING UP AND MIGRATE HOST" + (h.getId() - 2));
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
         hp.offHosts.remove(h);
         hp.tobeonHosts.remove(h);
@@ -300,37 +317,42 @@ public class HyperPowerDatacenter extends Datacenter {
 	 */
 	@Override
 	protected void updateCloudletProcessing() {
-        System.out.println("MIGCOUNT:" + migrationCount);
-        System.out.println("ONOFFCOUNT:" + hostonoffCount);
-        long power = 0;
-        power += (migrationCount - oldmigrationcount) * 20;
-        power += (hostonoffCount - oldhostonoffcount) * 100;
-        power += getVmList().size() * 5;
-        oldhostonoffcount = hostonoffCount;
-        oldmigrationcount = migrationCount;
+        //System.out.println("MIGCOUNT:" + migrationCount);
+        //System.out.println("ONOFFCOUNT:" + hostonoffCount);
+        System.out.println("TIME :" + CloudSim.clock() + " - End of Period");
+
+
+
         vmstimelog.println(CloudSim.clock() + " " + getVmList().size());
         powertimelog.println(CloudSim.clock() + " " + power);
         //log
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
-        for (Host h : hp.getOnHosts())//this. <HyperPowerHost> getHostList())
+        for (Host h :  getHostList())//this. <HyperPowerHost> getHostList())
         {
             HyperPowerHost host = (HyperPowerHost) h;
+
             if(host.getSynchronizer() != null) {
                 host.getSynchronizer().setSynching(false);
                 try {
                     if(host.getSynchronizer().isAlive()) {
-                        System.out.println("STATE THREAD OF HOST " + host.getSynchronizer().getState() + " SYNCING " + host.getSynchronizer().isSynching());
+                        //System.out.println("STATE THREAD OF HOST " + host.getSynchronizer().getState() + " SYNCING " + host.getSynchronizer().isSynching());
                         /*if(host.getSynchronizer().getState() == Thread.State.WAITING) {
                             synchronized (host.getSynchronizer()) {
                                 System.out.println("NOTIF THREAD OF HOST" + (host.getId() - 2));
                                 host.getSynchronizer().notify();
                             }
                         }*/
-                        System.out.println("JOINING THREAD OF HOST" + (host.getId() - 2));
+                       // System.out.println("JOINING THREAD OF HOST" + (host.getId() - 2));
                         if(host.getSynchronizer().getState() == Thread.State.RUNNABLE) {
                             //System.out.println("STATE THREAD OF HOST " + host.getSynchronizer().getState());
                         }
+                        System.out.println(CloudSim.clock());
                         host.getSynchronizer().interrupt();
+                        host.getSynchronizer().join();
+                        host.setSynchronizer(null);
+                    }
+                    else
+                    {
                         host.getSynchronizer().join();
                         host.setSynchronizer(null);
                     }
@@ -339,10 +361,23 @@ public class HyperPowerDatacenter extends Datacenter {
                 }
             }
             host.sendheartbeats();
+
             host.vmsaftercycle = host.getVmList().size();
+
         }
 
-		if (getCloudletSubmitted() == -1 || getCloudletSubmitted() == CloudSim.clock()) {
+        //here remove vms
+        long power = 0;
+        power += (migrationCount - oldmigrationcount) * 20;
+        power += (hostonoffCount - oldhostonoffcount) * 100;
+        power += getVmList().size() * 5;
+        int newvms = getVmList().size() - oldvmcount;
+        oldvmcount = getVmList().size();
+        oldhostonoffcount = hostonoffCount;
+        oldmigrationcount = migrationCount;
+
+
+        if (getCloudletSubmitted() == -1 || getCloudletSubmitted() == CloudSim.clock()) {
 			CloudSim.cancelAll(getId(), new PredicateType(HyperCloudSimTags.VM_DATACENTER_EVENT));
 			schedule(getId(), getSchedulingInterval(), HyperCloudSimTags.VM_DATACENTER_EVENT);
 			return;
@@ -350,9 +385,25 @@ public class HyperPowerDatacenter extends Datacenter {
 		double currentTime = CloudSim.clock();
 		// if some time passed since last processing
 		if (currentTime > getLastProcessTime()) {
-			System.out.print(currentTime + " ");
-
 			double minTime = updateCloudetProcessingWithoutSchedulingFutureEventsForce();
+
+            //removing vms
+            CloudSim.pauseSimulation();
+            if(getVmList().size() > 20 && newvms > 0) {
+                Random random = new Random();
+                int rvms = 20 - newvms;
+                for (int idx = 0; idx < rvms; idx++) {
+                    int vmr = generateRandomInteger(0, getVmList().size() - 1, random);
+                    HyperPowerVm vm = (HyperPowerVm) getVmList().get(vmr);
+                    getVmAllocationPolicy().deallocateHostForVm(vm);
+                    getVmList().remove(vm);
+                    System.out.println(CloudSim.clock() + " DELETED: " + vm.getId());
+                }
+            }
+            CloudSim.resumeSimulation();
+
+
+
 
 
             if (!isDisableMigrations()) {
@@ -437,7 +488,7 @@ public class HyperPowerDatacenter extends Datacenter {
 			}
 
             // schedules an event to the next time
-			if (minTime != Double.MAX_VALUE) {
+            if (minTime != Double.MAX_VALUE) {
 				CloudSim.cancelAll(getId(), new PredicateType(HyperCloudSimTags.VM_DATACENTER_EVENT));
 				send(getId(), getSchedulingInterval(), HyperCloudSimTags.VM_DATACENTER_EVENT);
             }
@@ -494,8 +545,8 @@ public class HyperPowerDatacenter extends Datacenter {
 		double timeDiff = currentTime - getLastProcessTime();
 		double timeFrameDatacenterEnergy = 0.0;
 
-		Log.printLine("\n\n--------------------------------------------------------------\n\n");
-		Log.formatLine("New resource usage for the time frame starting at %.2f:", currentTime);
+		//Log.printLine("\n\n--------------------------------------------------------------\n\n");
+		//Log.formatLine("New resource usage for the time frame starting at %.2f:", currentTime);
 
 		//for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
@@ -548,18 +599,11 @@ public class HyperPowerDatacenter extends Datacenter {
                         timeFrameHostEnergy);
 			}
 */
-			Log.formatLine(
-                    "\n%.2f: Data center's energy is %.2f W*sec\n",
-                    currentTime,
-                    timeFrameDatacenterEnergy);
 		}
-
 		//setPower(getPower() + timeFrameDatacenterEnergy);
-
 		checkCloudletCompletion();
 
 		/** Remove completed VMs **/
-		System.out.println("Removing completed vms");
 		/*for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
 			for (Vm vm : host.getCompletedVms()) {
 				getVmAllocationPolicy().deallocateHostForVm(vm);
@@ -601,7 +645,13 @@ public class HyperPowerDatacenter extends Datacenter {
             vm.setInMigration(false);
             return;
         }
+        if(oldhost == null)
+        {
+            //vm.setInMigration(false);
+            //return;
+        }
         getVmAllocationPolicy().deallocateHostForVm(vm);
+        if(oldhost == null) System.out.println("CC " + CloudSim.clock() + " VM:" + vm.getId());
         oldhost.removeMigratingInVm(vm);
 
         boolean result = h.placeVminHost(vm,host);
@@ -643,12 +693,12 @@ public class HyperPowerDatacenter extends Datacenter {
             sendNow(ev.getSource(), CloudSimTags.VM_CREATE_ACK, data);
         }
 
-        Log.formatLine(
+        /*Log.formatLine(
                 "%.2f: Migration of VM #%d to Host #%d is completed",
                 CloudSim.clock(),
                 vm.getId(),
                 host.getId() - 2);
-        vm.setInMigration(false);
+        */vm.setInMigration(false);
     }
 
 
@@ -774,6 +824,17 @@ public class HyperPowerDatacenter extends Datacenter {
         setHostonoffCount(getHostonoffCount() + 1);
     }
 
+    public void incrementhostoffCount() {
+        incrementhostonoffCount();
+        setHostoffcount(getHostoffcount() + 1);
+    }
+
+    public void incrementhostonCount() {
+        incrementhostonoffCount();
+        setHostoncount(getHostoncount() + 1);
+    }
+
+
     public Host getHostbyId(int id)
     {
         for (Host hp : this.getHostList())
@@ -789,6 +850,20 @@ public class HyperPowerDatacenter extends Datacenter {
     public void removeVm(SimEvent ev)
     {
         processVmDestroy(ev, true);
+    }
+
+    protected void checkCloudletCompletion() {
+        HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
+        for (Host host : hp.getOnHosts()) {
+            for (Vm vm : host.getVmList()) {
+                while (vm.getCloudletScheduler().isFinishedCloudlets()) {
+                    Cloudlet cl = vm.getCloudletScheduler().getNextFinishedCloudlet();
+                    if (cl != null) {
+                        sendNow(cl.getUserId(), CloudSimTags.CLOUDLET_RETURN, cl);
+                    }
+                }
+            }
+        }
     }
 
 }

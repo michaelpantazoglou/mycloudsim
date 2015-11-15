@@ -130,8 +130,6 @@ public class HyperHelper  {
 	 * @return the list< vm>
 	 */
 	public static List<Vm> createVmList(DatacenterBroker broker, int vmsNumber) {
-        System.out.println("VM");
-        //System.exit(-1);
         // VM description
         int VM_MIPS = HyperConstants.VM_MIPS[0];
         long VM_SIZE = HyperConstants.VM_SIZE; // image size (MB)
@@ -208,10 +206,7 @@ public class HyperHelper  {
                         peList2,
                         new VmSchedulerTimeSharedOverSubscription(peList2),
                         HyperConstants.HOST_POWER[hostType]);
-
-
 				l.add(h2);
-
 				h1.setNeighbor(dimension, h2);
 				h2.setNeighbor(dimension, h1);
 				h1.startEntity();
@@ -912,7 +907,7 @@ public class HyperHelper  {
 		}
 	}
 
-	private static int generateRandomInteger(int aStart, int aEnd, Random aRandom){
+	public static int generateRandomInteger(int aStart, int aEnd, Random aRandom){
 		if (aStart > aEnd) {
 			throw new IllegalArgumentException("Start cannot exceed End.");
 		}
