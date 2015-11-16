@@ -24,7 +24,7 @@ public class HyperConstants {
     public final static double SCHEDULING_INTERVAL = 60;
 	public final static double SIMULATION_LIMIT = 24 * 60 * 60;
 
-	public final static int CLOUDLET_LENGTH	= 600 * (int) SIMULATION_LIMIT;
+	public final static int CLOUDLET_LENGTH	= 200 * (int) SIMULATION_LIMIT;
 	public final static int CLOUDLET_PES	= 1;
 
 	/*

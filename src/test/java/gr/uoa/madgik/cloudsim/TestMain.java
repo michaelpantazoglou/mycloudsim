@@ -81,7 +81,7 @@ public class TestMain {
 
             //vmList.addAll(createVmsDelay(broker,7,120.0));
             //vmList.addAll(createVmsDelay(broker,7,120.0));
-            double log2base = Math.log(64)/Math.log(2);
+            double log2base = Math.log(1024)/Math.log(2);
             //broker.submitVmList(vmList);
             hostList = createHostList((int) log2base - 1);
             broker.submitCloudletList(cloudletList);
@@ -94,7 +94,7 @@ public class TestMain {
 
             vmList.addAll(createVmList(broker, initvms));
             int delayvms = 0;
-            for(int j = 2; j < 670; j++) //17200
+            for(int j = 2; j < 1790; j++) //17200
             {
                 if(j % 4 == 0 || j % 5 == 0)
                 {

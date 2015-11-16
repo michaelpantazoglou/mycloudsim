@@ -61,8 +61,10 @@ public class Synchronizer extends Thread {
             //if(host.isVmstatechange()) {
             try {
                 if (mode == 0) {
+                  //  System.out.println("PPPP");
                     if(host.partialVmMigration() == 2)  synching = false;
                 } else {
+                 //   System.out.println("FFFFF");
                     if(host.fullVmMigration() == 2)  synching = false;
                 }
                 synchronized (this) {

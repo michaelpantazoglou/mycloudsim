@@ -515,6 +515,10 @@ public class CloudSim {
 
 		for (int i = 0; i < entities_size; i++) {
 			ent = entities.get(i);
+			if(ent.getName().equals("Datacenter"))
+			{
+				System.out.println("tt");
+			}
 			if (ent.getState() == SimEntity.RUNNABLE) {
 				ent.run();
 			}
@@ -526,6 +530,11 @@ public class CloudSim {
 			Iterator<SimEvent> fit = future.iterator();
 			queue_empty = false;
 			SimEvent first = fit.next();
+			if(first != null)
+			{
+				System.out.println("FUTURE " + first.getTag() + " DATA " );
+
+			}
 			processEvent(first);
 			future.remove(first);
 
@@ -543,7 +552,7 @@ public class CloudSim {
 					trymore = false;
 				}
 			}
-
+			System.out.println("ALLLL " + toRemove.size() + " FUTERE " + future.size());
 			future.removeAll(toRemove);
 
 		} else {

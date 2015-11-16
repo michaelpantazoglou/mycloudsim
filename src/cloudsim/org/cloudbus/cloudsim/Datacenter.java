@@ -476,7 +476,7 @@ public class Datacenter extends SimEntity {
 			data[1] = vm.getId();
 			data[2] = CloudSimTags.TRUE;
 
-			//sendNow(vm.getUserId(), CloudSimTags.VM_DESTROY_ACK, data);
+			sendNow(vm.getUserId(), CloudSimTags.VM_DESTROY_ACK, data);
 		}
 
 		getVmList().remove(vm);

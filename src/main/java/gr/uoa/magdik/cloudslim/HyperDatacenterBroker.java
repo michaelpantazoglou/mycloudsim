@@ -124,7 +124,6 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
         int datacenterId = data[0];
         int vmId = data[1];
         int result = data[2];
-
         if (result == CloudSimTags.TRUE) {
             getVmsToDatacentersMap().put(vmId, datacenterId);
             if(VmList.getById(getVmList(), vmId) != null)
@@ -142,14 +141,18 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
             Log.printLine(CloudSim.clock() + ": " + getName() + ": Creation of VM #" + vmId
                     + " failed in Datacenter #" + datacenterId);
         }
-
         incrementVmsAcks();
 
         // all the requested VMs have been created
         if (getVmsCreatedList().size() == getVmList().size() - getVmsDestroyed() && !cloudletsumitted) {
             submitCloudlets();
             cloudletsumitted = true;
-        } else {
+        }
+        else
+        {
+           // submitCloudlets();
+        }
+        /*else {
             // all the acks received, but some VMs were not created
             if (getVmsRequested() == getVmsAcks()) {
                 // find id of the next datacenter that has not been tried
@@ -161,15 +164,15 @@ public class HyperDatacenterBroker extends PowerDatacenterBroker{
                 }
 
                 // all datacenters already queried
-                if (getVmsCreatedList().size() > 0) { // if some vm were created
+                if (getVmsCreatedList().size() > 0 && !cloudletsumitted) { // if some vm were created
                     submitCloudlets();
-                } else { // no vms created. abort
-                    Log.printLine(CloudSim.clock() + ": " + getName()
-                            + ": none of the required VMs could be created. Aborting");
-                    finishExecution();
-                }
+               } //else { // no vms created. abort
+                  //  Log.printLine(CloudSim.clock() + ": " + getName()
+                   //         + ": none of the required VMs could be created. Aborting");
+                   // finishExecution();
+               // }
             }
-        }
+        }*/
     }
 
     public void submitDelayVmList(List<? extends Vm> list) {

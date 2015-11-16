@@ -512,7 +512,7 @@ public class HyperHelper  {
 
 		} else {
 			Log.setDisabled(false);
-			Log.printLine();
+			//Log.printLine();
 			Log.printLine(String.format("Experiment name: " + experimentName));
 			Log.printLine(String.format("Number of hosts: " + numberOfHosts));
 			Log.printLine(String.format("Number of VMs: " + numberOfVms));

@@ -404,17 +404,11 @@ public abstract class SimEntity implements Cloneable {
 	public abstract void shutdownEntity();
 
 	public void run() {
+
 		SimEvent ev = evbuf != null ? evbuf : getNextEvent();
 
 		while (ev != null) {
-			if(ev.getTag() == 53)
-			{
-				Map<HyperPowerHost, ArrayList<Integer>> heartnodes = (Map<HyperPowerHost, ArrayList<Integer>>) ev.getData();
-				if(heartnodes.entrySet().size() == 0)
-				{
-					//throw new IllegalArgumentException("maka");
-				}
-			}
+
 			processEvent(ev);
 			if (state != RUNNABLE) {
 				break;
@@ -422,6 +416,7 @@ public abstract class SimEntity implements Cloneable {
 
 			ev = getNextEvent();
 		}
+
 
 		evbuf = null;
 	}

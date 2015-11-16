@@ -508,8 +508,15 @@ public class HyperPowerHost extends PowerHost implements Comparable {
     public void processEvent(SimEvent ev) {
         int srcId = -1;
         switch (ev.getTag()) {
+            case HyperCloudSimTags.REMOVEVM:
+                Vm vm = (Vm) ev.getData();
+                vmDestroy(vm);
+                //getDatacenter().getVmList().remove(vm);
+                //sendNow(getDatacenter().getId(), CloudSimTags.VM_DESTROY, vm);
+                break;
             case HyperCloudSimTags.HEARTBEAT:
                 processhearbeat(ev);
+                break;
             case HyperCloudSimTags.FORWARD_MSG:
         }
     }
@@ -523,10 +530,6 @@ public class HyperPowerHost extends PowerHost implements Comparable {
        // System.out.println("host" + (this.getId() - 2) + " RECEIVING HB TIME:" + CloudSim.clock());
         Map<? extends HyperPowerHost, ? extends ArrayList<Integer>> nnodes = (Map<? extends HyperPowerHost, ? extends ArrayList<Integer>>) ev.getData();
         heartnodes.putAll((Map<? extends HyperPowerHost, ? extends ArrayList<Integer>>) ev.getData());
-        Map<HyperPowerHost, ArrayList<Integer>> lola = (Map<HyperPowerHost, ArrayList<Integer>>) ev.getData();
-        if(lola.entrySet().size() == 0) {
-            throw new IllegalArgumentException("eee");
-        }
         //for (Map.Entry<? extends HyperPowerHost, ? extends ArrayList<Integer>> entry : nnodes.entrySet()) {
            // System.out.println("host" + (this.getId() - 2) + " receiving new host:" + (entry.getKey().getId() - 2));
         //}
@@ -660,7 +663,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                         double currentTime = CloudSim.clock();
                         if(currentTime - getStartsynchtime() > 45)
                         {
-                            //return 2;
+                            return 2;
                         }
                         s = getPowerStatebyPower(getTempPower());
                         double npower = cyclepowers.get(entry.getKey().getId() - 2);
@@ -741,14 +744,10 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                         return 2;
                     }
                     double npower = cyclepowers.get(entry.getKey().getId() - 2);
-                    if(npower > 250)
-                    {
-                        System.out.println("EEEE");
-                    }
                     PowerState ps = getPowerStatebyPower(npower);//entry.getKey().getPowerState();
                     if (ps == PowerState.OVERU || ps == PowerState.OFF || ps == PowerState.IDLE)// entry.getKey().getVmList().size() == 0) {
                     {
-                        System.out.println("EEEE");
+                        //System.out.println("EEEE");
                         continue;
                     }
                     else if(ps == PowerState.UNDERU && npower < getPower() )//entry.getKey().getVmList().size() < getVmList().size())
@@ -773,7 +772,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                         vmsaftercycle -= 1;
                         vmcount--;
                         vm.setInMigration(true);
-                        System.out.println("Time" + currentTime + "from Host" + (getId() - 2) + " with " +
+                        System.out.println("Time" + currentTime + " VM " + vm.getId() + "from Host" + (getId() - 2) + " with " +
                                         "" + getVmList().size() + " VMs to Host" + (entry.getKey().getId() - 2) + " with " + entry.getKey().getVmList().size() + " Vms and PPOWER:" + npower);
                                 send(
                                         getDatacenter().getId(),
@@ -797,5 +796,56 @@ public class HyperPowerHost extends PowerHost implements Comparable {
         return 1;
     }
 
+    /**
+     * Allocates PEs and memory to a new VM in the Host.
+     *
+     * @param vm Vm being started
+     * @return $true if the VM could be started in the host; $false otherwise
+     * @pre $none
+     * @post $none
+     */
+    public boolean vmCreate(Vm vm) {
+        if (getStorage() < vm.getSize()) {
+            Log.printLine("[VmScheduler.vmCreate] Allocation of VM #" + vm.getId() + " to Host #" + getId()
+                    + " failed by storage");
+            return false;
+        }
 
+        if (!getRamProvisioner().allocateRamForVm(vm, vm.getCurrentRequestedRam())) {
+            Log.printLine("[VmScheduler.vmCreate] Allocation of VM #" + vm.getId() + " to Host #" + getId()
+                    + " failed by RAM");
+            return false;
+        }
+
+        if (!getBwProvisioner().allocateBwForVm(vm, vm.getCurrentRequestedBw())) {
+            Log.printLine("[VmScheduler.vmCreate] Allocation of VM #" + vm.getId() + " to Host #" + getId()
+                    + " failed by BW");
+            getRamProvisioner().deallocateRamForVm(vm);
+            return false;
+        }
+
+        if (!getVmScheduler().allocatePesForVm(vm, vm.getCurrentRequestedMips())) {
+            Log.printLine("[VmScheduler.vmCreate] Allocation of VM #" + vm.getId() + " to Host #" + getId()
+                    + " failed by MIPS");
+            getRamProvisioner().deallocateRamForVm(vm);
+            getBwProvisioner().deallocateBwForVm(vm);
+            return false;
+        }
+
+        HyperPowerHost oldhost = (HyperPowerHost) vm.getHost();
+        if(oldhost != null)
+        {
+            HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getDatacenter().getVmAllocationPolicy();
+            hp.getVmTable().remove(vm.getUid());
+            oldhost.vmDestroy(vm);
+            oldhost.removeMigratingInVm(vm);
+            if(oldhost.getVmList().size() == 0) oldhost.switchOff();
+        }
+
+        setStorage(getStorage() - vm.getSize());
+        getVmList().add(vm);
+        vm.setHost(this);
+       // System.out.println(CloudSim.clock() + " VM" + vm.getId() + " CREATED IN HOST: " + (this.getId() - 2));
+        return true;
+    }
 }

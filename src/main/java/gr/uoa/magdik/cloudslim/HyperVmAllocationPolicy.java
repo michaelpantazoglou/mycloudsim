@@ -73,7 +73,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         //System.out.println("pLACING " + vm.getId() + " to HOST" + (host.getId() - 2));
         if(vm.getHost() != null)
         {
-            throw new IllegalArgumentException("VM " + vm.getId() + " ALready assigned");
+          //  throw new IllegalArgumentException("VM " + vm.getId() + " ALready assigned");
         }
         HyperPowerHost hs = (HyperPowerHost) host;
         if(hs.getPowerState() == PowerState.OFF)
@@ -385,20 +385,21 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         int flvm =  0;
         List<Map<String, Object>> migrationMap = new ArrayList<>();
         int nvm = 0;
-        monitorDatacenter();
+     //  monitorDatacenter();
         getDatacenter().onhoststimelog.println(CloudSim.clock() + "\t" + getOnHosts().size());
         for (Host h : getOnHosts())
         {
             if(h.getVmList().size() > 70)
             {
-                System.out.println("ddd " + CloudSim.clock());
+              //  System.out.println("ddd " + CloudSim.clock());
             }
             HyperPowerHost host = (HyperPowerHost) h;
-            /*if(!offHosts.contains(host))
+            if(!offHosts.contains(host))
             {
                 //Log.write(" --- HOST " + (host.getId()-2) + " : " + host.vmsaftercycle + " VMs and Power " + host.getTempPower() + " ---");
-                Log.write(" --- HOST " + (host.getId()-2) + " : " + host.getVmList().size() + " VMs and Power " + host.getTempPower() + " ---");
-            }*/
+                Log.write(" --- HOST " + (host.getId()-2) + " : " + host.getVmList().size() + " VMs and Power " + host.getPower() + " ---");
+            }
+            host.buildpowermap();
             nvm += host.getVmList().size();
             host.sortNeighbors();
             if(host.getPowerState() == PowerState.OFF)
@@ -424,7 +425,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                     host.getSynchronizer().start();
                     while (!host.getSynchronizer().started)
                     {
-                        System.out.println("ESWWW");
                         try {
                             Thread.sleep(10);
                         } catch (InterruptedException e) {
@@ -448,7 +448,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                     host.getSynchronizer().start();
                     while (!host.getSynchronizer().started)
                     {
-                        System.out.println("ESWWW");
                         try {
                             Thread.sleep(10);
                         } catch (InterruptedException e) {

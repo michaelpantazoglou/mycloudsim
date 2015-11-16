@@ -69,7 +69,6 @@ public class HyperCloudSim extends CloudSim{
 			Iterator<SimEvent> fit = future.iterator();
 			queue_empty = false;
 			SimEvent first = fit.next();
-            System.out.println(first.getTag());
 			processEvent(first);
 			future.remove(first);
 
@@ -88,7 +87,6 @@ public class HyperCloudSim extends CloudSim{
 					trymore = false;
 				}
 			}
-
 			future.removeAll(toRemove);
 
 		} else {
