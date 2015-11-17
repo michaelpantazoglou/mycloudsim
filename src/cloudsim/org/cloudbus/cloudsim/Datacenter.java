@@ -444,6 +444,10 @@ public class Datacenter extends SimEntity {
 		}
 
 		if (result) {
+			if(vm.getHost() == null)
+			{
+				System.out.println("nh");
+			}
 			getVmList().add(vm);
 
 			if (vm.isBeingInstantiated()) {

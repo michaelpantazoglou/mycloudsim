@@ -8,10 +8,7 @@ import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import static gr.uoa.magdik.cloudslim.HyperHelper.*;
 import static gr.uoa.magdik.cloudslim.GenerateCloudlets.*;
@@ -41,7 +38,7 @@ public class TestMain {
         File plan = new File("plan");
         boolean initread = false;
         boolean incomingread = false;
-        int initvms = 4;
+        int initvms =933;
         /*try (BufferedReader br = new BufferedReader(new FileReader(plan))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -85,27 +82,39 @@ public class TestMain {
             //broker.submitVmList(vmList);
             hostList = createHostList((int) log2base - 1);
             broker.submitCloudletList(cloudletList);
-
+            int rate = 4;
+            int mode = 2;
             datacenter = (HyperPowerDatacenter) createDatacenter(
                     "Datacenter",
                     HyperPowerDatacenter.class,
                     hostList,
                     new HyperVmAllocationPolicy(hostList));
 
+            datacenter.setMode(mode);
+            datacenter.setRate(rate);
             vmList.addAll(createVmList(broker, initvms));
             int delayvms = 0;
-            for(int j = 2; j < 1790; j++) //17200
-            {
-                if(j % 4 == 0 || j % 5 == 0)
+
+            if(mode != 2) {
+                for (int j = 2; j < 29790; j++) //17200
                 {
-                    //removeRandomVms((HyperDatacenterBroker) broker, 14 - delayvms, j * 10.0 + 0.3);
-                    delayvms = 0;
-                    //continue;
-                }
-                if(Math.random() > 0.5)
-                {
-                    vmList.addAll(createVmsDelay(broker,4, 1.0*j));
-                    delayvms += 4;
+                    if (j % 4 == 0 || j % 5 == 0) {
+                        //removeRandomVms((HyperDatacenterBroker) broker, 14 - delayvms, j * 10.0 + 0.3);
+                        delayvms = 0;
+                        //continue;
+                    }
+                    if(mode == 1)
+                    {
+                        if (Math.random() > 0.5) {
+                            vmList.addAll(createVmsDelay(broker, 4, 1.0 * j));
+                            delayvms += 4;
+                        }
+                    }
+                    else
+                    {
+                        vmList.addAll(createVmsDelay(broker, 4, 1.0 * j));
+                        delayvms += 4;
+                    }
                 }
             }
             HyperVmAllocationPolicy hv = (HyperVmAllocationPolicy) datacenter.getVmAllocationPolicy();
@@ -114,12 +123,14 @@ public class TestMain {
             //hv.initoffhosts();
             hv.getOnHosts().addAll(hostList);
             datacenter.setDisableMigrations(false);
-
-            Log.writer = new PrintWriter("results", "UTF-8");
-            datacenter.vmstimelog = new PrintWriter("vmstime.dat", "UTF-8");
-            datacenter.onhoststimelog = new PrintWriter("onhoststime.dat", "UTF-8");
-            datacenter.powertimelog = new PrintWriter("powertime.dat", "UTF-8");
-
+            Date date = new java.util.Date();
+            new File("logs-plots/" + date).mkdir();
+            Log.writer = new PrintWriter("logs-plots/" + date + "/results ", "UTF-8");
+            datacenter.vmstimelog = new PrintWriter("logs-plots/" + date + "/vmstime.dat", "UTF-8");
+            datacenter.onhoststimelog = new PrintWriter("logs-plots/" + date + "/onhoststime.dat", "UTF-8");
+            datacenter.powertimelog = new PrintWriter("logs-plots/" + date + "/powertime.dat", "UTF-8");
+            int hours = 2;
+            CloudSim.terminateSimulation(24 * 3600);
 
             IncomingRequests incomingRequests = new IncomingRequests();
             incomingRequests.setDatacenterBroker(broker);

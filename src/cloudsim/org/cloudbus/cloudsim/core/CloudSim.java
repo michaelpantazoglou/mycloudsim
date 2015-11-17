@@ -530,11 +530,6 @@ public class CloudSim {
 			Iterator<SimEvent> fit = future.iterator();
 			queue_empty = false;
 			SimEvent first = fit.next();
-			if(first != null)
-			{
-				System.out.println("FUTURE " + first.getTag() + " DATA " );
-
-			}
 			processEvent(first);
 			future.remove(first);
 

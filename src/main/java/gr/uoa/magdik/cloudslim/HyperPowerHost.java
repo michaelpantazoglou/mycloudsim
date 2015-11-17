@@ -298,7 +298,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
 
         for (Vm vm : getVmList()) {
             HyperPowerVm pvm = (HyperPowerVm) vm;
-            vm.setHost(this);
+           // vm.setHost(this);
             p += pvm.getPower();
         }
         //if (tobeoff || tobeon) {

@@ -8,36 +8,21 @@
     <list default="true" id="65084740-5aad-4c19-98d5-4d268dde4bc5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/core/CloudSim.class" afterPath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/core/CloudSim.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/Datacenter.class" afterPath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/Datacenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/GenerateCloudlets.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/GenerateCloudlets.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperCloudSim.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperCloudSim.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperConstants.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperDatacenterBroker.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperDatacenterBroker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperHelper.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperPowerHost$1.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperPowerHost$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperPowerHost$2.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperPowerHost$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperPowerHost.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperPowerHost.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/core/SimEntity.class" afterPath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/core/SimEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/Synchronizer.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudslim/Synchronizer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/gr/uoa/madgik/cloudsim/TestMain.class" afterPath="$PROJECT_DIR$/build/classes/test/gr/uoa/madgik/cloudsim/TestMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/onhoststime.dat" afterPath="$PROJECT_DIR$/onhoststime.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/powertime.dat" afterPath="$PROJECT_DIR$/powertime.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results" afterPath="$PROJECT_DIR$/results" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vmstime.dat" afterPath="$PROJECT_DIR$/vmstime.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java" afterPath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java" afterPath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperCloudSim.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperCloudSim.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperConstants.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperDatacenterBroker.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperDatacenterBroker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperHelper.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerHost.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerHost.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/SimEntity.java" afterPath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/SimEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/Synchronizer.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/Synchronizer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/TestMain.java" afterPath="$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/TestMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console" afterPath="$PROJECT_DIR$/console" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/onhoststime.dat" afterPath="$PROJECT_DIR$/onhoststime.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/powertime.dat" afterPath="$PROJECT_DIR$/powertime.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vmstime.dat" afterPath="$PROJECT_DIR$/vmstime.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mycloudsim.iws" />
@@ -92,65 +77,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/TestMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.69711536">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HyperCloudSim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperCloudSim.java">
+      <file leaf-file-name="HyperHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="16" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
+              <caret line="265" column="49" selection-start-line="265" selection-start-column="49" selection-end-line="265" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HyperPowerDatacenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java">
+      <file leaf-file-name="CloudSim.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0">
-              <caret line="513" column="0" selection-start-line="513" selection-start-column="0" selection-end-line="513" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.9354838">
+              <caret line="892" column="0" selection-start-line="892" selection-start-column="0" selection-end-line="892" selection-end-column="0" />
               <folding>
-                <element signature="e#23600#23630#1" expanded="true" />
-                <element signature="e#26908#26909#0" expanded="true" />
-                <element signature="e#26927#26928#0" expanded="true" />
-                <element signature="e#27035#27036#0" expanded="true" />
-                <element signature="e#27060#27061#0" expanded="true" />
-                <element signature="e#27493#27494#0" expanded="true" />
-                <element signature="e#27524#27525#0" expanded="true" />
-                <element signature="e#27692#27693#0" expanded="true" />
-                <element signature="e#27741#27742#0" expanded="true" />
-                <element signature="e#27878#27879#0" expanded="true" />
-                <element signature="e#27909#27910#0" expanded="true" />
-                <element signature="e#28077#28078#0" expanded="true" />
-                <element signature="e#28126#28127#0" expanded="true" />
-                <element signature="e#28238#28239#0" expanded="true" />
-                <element signature="e#28266#28267#0" expanded="true" />
-                <element signature="e#28418#28419#0" expanded="true" />
-                <element signature="e#28461#28462#0" expanded="true" />
-                <element signature="e#28547#28548#0" expanded="true" />
-                <element signature="e#28596#28597#0" expanded="true" />
-                <element signature="e#28694#28695#0" expanded="true" />
-                <element signature="e#28752#28753#0" expanded="true" />
-                <element signature="e#29281#29282#0" expanded="true" />
-                <element signature="e#29323#29324#0" expanded="true" />
+                <element signature="e#16449#16450#0" expanded="true" />
+                <element signature="e#16493#16494#0" expanded="true" />
+                <element signature="e#25827#25828#0" expanded="true" />
+                <element signature="e#25856#25857#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HyperVmAllocationPolicy.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HyperVmAllocationPolicy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3315508">
-              <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="353" column="62" selection-start-line="353" selection-start-column="62" selection-end-line="353" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -159,14 +125,32 @@
       <file leaf-file-name="Datacenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0689654">
+              <caret line="450" column="12" selection-start-line="450" selection-start-column="12" selection-end-line="450" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatacenterBroker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/DatacenterBroker.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1165" column="21" selection-start-line="1165" selection-start-column="21" selection-end-line="1165" selection-end-column="21" />
+              <caret line="108" column="8" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
               <folding>
-                <element signature="e#30431#30432#0" expanded="true" />
-                <element signature="e#30463#30464#0" expanded="true" />
-                <element signature="e#31844#31845#0" expanded="true" />
-                <element signature="e#31876#31877#0" expanded="true" />
+                <element signature="e#3193#3194#0" expanded="true" />
+                <element signature="e#3224#3225#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Host.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Host.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="206" column="27" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,27 +158,12 @@
       <file leaf-file-name="HyperPowerHost.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerHost.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.096774">
+              <caret line="839" column="26" selection-start-line="839" selection-start-column="26" selection-end-line="839" selection-end-column="26" />
               <folding>
-                <element signature="e#0#31322#0" expanded="true" />
+                <element signature="e#0#31324#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#13786#13787#0" expanded="true" />
-                <element signature="e#13839#13840#0" expanded="true" />
-                <element signature="e#19984#20020#0" expanded="true" />
-                <element signature="e#23668#23684#0" expanded="true" />
-                <element signature="e#27817#27833#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PowerVm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/power/PowerVm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -203,35 +172,31 @@
         <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Vm.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+              <caret line="432" column="0" selection-start-line="432" selection-start-column="0" selection-end-line="432" selection-end-column="0" />
               <folding>
-                <element signature="e#5860#5861#0" expanded="true" />
-                <element signature="e#5877#5878#0" expanded="true" />
-                <element signature="e#8743#8744#0" expanded="true" />
-                <element signature="e#8774#8775#0" expanded="true" />
+                <element signature="e#8521#8522#0" expanded="true" />
+                <element signature="e#8602#8603#0" expanded="true" />
+                <element signature="e#8620#8621#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CloudletSchedulerDynamicWorkload.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/CloudletSchedulerDynamicWorkload.java">
+      <file leaf-file-name="HyperPowerDatacenter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.483871">
+              <caret line="406" column="26" selection-start-line="406" selection-start-column="26" selection-end-line="406" selection-end-column="26" />
               <folding>
-                <element signature="e#2213#2226#0" expanded="true" />
+                <element signature="e#2184#2185#0" expanded="true" />
+                <element signature="e#2211#2212#0" expanded="true" />
+                <element signature="e#2248#2249#0" expanded="true" />
+                <element signature="e#2280#2281#0" expanded="true" />
+                <element signature="e#2323#2324#0" expanded="true" />
+                <element signature="e#2350#2351#0" expanded="true" />
+                <element signature="e#2387#2388#0" expanded="true" />
+                <element signature="e#2419#2420#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HyperDatacenterBroker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperDatacenterBroker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -539,18 +504,18 @@
         <option value="$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/VmPlacementTest.java" />
         <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/SimEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/Synchronizer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperConstants.java" />
-        <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerHost.java" />
         <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/SimEntity.java" />
         <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Host.java" />
-        <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/TestMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperCloudSim.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperDatacenterBroker.java" />
+        <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java" />
+        <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerHost.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/TestMain.java" />
       </list>
     </option>
   </component>
@@ -601,6 +566,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -708,10 +674,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mycloudsim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mycloudsim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloudsim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloudsim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1184,11 +1175,12 @@
       <workItem from="1447445052589" duration="28962000" />
       <workItem from="1447533435858" duration="34619000" />
       <workItem from="1447605850363" duration="60546000" />
+      <workItem from="1447711313537" duration="23213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="869700000" />
+    <option name="totallyTimeSpent" value="892913000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1215,11 +1207,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23484848" sideWeight="0.6527778" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22839506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23484848" sideWeight="0.35148516" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23484848" sideWeight="0.3472222" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37654322" sideWeight="0.48181817" order="3" side_tool="false" content_ui="tabs" />
@@ -1264,7 +1256,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
-          <line>451</line>
+          <line>488</line>
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
@@ -1281,26 +1273,14 @@
           <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java</url>
-          <line>892</line>
-          <properties />
-          <option name="timeStamp" value="140" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java</url>
-          <line>899</line>
-          <properties />
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java</url>
-          <line>886</line>
+          <line>890</line>
           <properties />
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java</url>
-          <line>797</line>
+          <line>801</line>
           <properties />
           <option name="timeStamp" value="157" />
         </line-breakpoint>
@@ -1312,13 +1292,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java</url>
-          <line>764</line>
+          <line>759</line>
           <properties />
           <option name="timeStamp" value="234" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java</url>
-          <line>216</line>
+          <line>222</line>
           <properties />
           <option name="timeStamp" value="262" />
         </line-breakpoint>
@@ -1342,19 +1322,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java</url>
-          <line>667</line>
+          <line>662</line>
           <properties />
           <option name="timeStamp" value="453" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java</url>
-          <line>148</line>
+          <line>149</line>
           <properties />
           <option name="timeStamp" value="455" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java</url>
-          <line>195</line>
+          <line>199</line>
           <properties />
           <option name="timeStamp" value="456" />
         </line-breakpoint>
@@ -1366,31 +1346,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
-          <line>161</line>
+          <line>180</line>
           <properties />
           <option name="timeStamp" value="499" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
-          <line>167</line>
+          <line>186</line>
           <properties />
           <option name="timeStamp" value="500" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
-          <line>172</line>
+          <line>191</line>
           <properties />
           <option name="timeStamp" value="501" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
-          <line>178</line>
+          <line>197</line>
           <properties />
           <option name="timeStamp" value="502" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
-          <line>183</line>
+          <line>202</line>
           <properties />
           <option name="timeStamp" value="503" />
         </line-breakpoint>
@@ -1407,16 +1387,40 @@
           <option name="timeStamp" value="527" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java</url>
-          <line>416</line>
+          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
+          <line>460</line>
           <properties />
-          <option name="timeStamp" value="557" />
+          <option name="timeStamp" value="564" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
+          <line>432</line>
+          <properties />
+          <option name="timeStamp" value="565" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java</url>
+          <line>448</line>
+          <properties />
+          <option name="timeStamp" value="566" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Host.java</url>
+          <line>237</line>
+          <properties />
+          <option name="timeStamp" value="569" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java</url>
+          <line>467</line>
+          <properties />
+          <option name="timeStamp" value="571" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="558" />
+      <option name="time" value="572" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1425,20 +1429,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperRunnerAbstract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="26" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1666,7 +1656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1690,14 +1679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="911" column="0" selection-start-line="911" selection-start-column="0" selection-end-line="911" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1726,22 +1707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/DatacenterBroker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-130.64516">
-          <caret line="384" column="22" selection-start-line="384" selection-start-column="22" selection-end-line="384" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/provisioners/BwProvisionerSimple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/power/PowerVmAllocationPolicyAbstract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1763,17 +1728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/SimEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="420" column="0" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
-          <folding>
-            <element signature="e#14055#14056#0" expanded="true" />
-            <element signature="e#14074#14075#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperCloudSimTags.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1790,36 +1744,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7333333">
-          <caret line="527" column="0" selection-start-line="527" selection-start-column="0" selection-end-line="527" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#15540#15550#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Host.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="496" column="0" selection-start-line="496" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15251#0" expanded="true" />
-            <element signature="e#12157#12158#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/VmScheduler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
-            <element signature="e#2830#2831#0" expanded="true" />
-            <element signature="e#4319#4320#0" expanded="true" />
-            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#2830#2831#0" expanded="false" />
+            <element signature="e#4319#4320#0" expanded="false" />
+            <element signature="e#4340#4341#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1829,42 +1761,31 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
           <folding>
-            <element signature="e#2213#2226#0" expanded="true" />
+            <element signature="e#0#9686#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3413#3414#0" expanded="false" />
+            <element signature="e#3448#3449#0" expanded="false" />
+            <element signature="e#7757#7758#0" expanded="false" />
+            <element signature="e#7780#7781#0" expanded="false" />
+            <element signature="e#7880#7881#0" expanded="false" />
+            <element signature="e#7903#7904#0" expanded="false" />
+            <element signature="e#8029#8030#0" expanded="false" />
+            <element signature="e#8059#8060#0" expanded="false" />
+            <element signature="e#8158#8159#0" expanded="false" />
+            <element signature="e#8183#8184#0" expanded="false" />
+            <element signature="e#8283#8284#0" expanded="false" />
+            <element signature="e#8306#8307#0" expanded="false" />
+            <element signature="e#8389#8390#0" expanded="false" />
+            <element signature="e#8407#8408#0" expanded="false" />
+            <element signature="e#8783#8784#0" expanded="false" />
+            <element signature="e#8815#8816#0" expanded="false" />
+            <element signature="e#8944#8945#0" expanded="false" />
+            <element signature="e#8975#8976#0" expanded="false" />
+            <element signature="e#9147#9148#0" expanded="false" />
+            <element signature="e#9196#9197#0" expanded="false" />
+            <element signature="e#9357#9358#0" expanded="false" />
+            <element signature="e#9396#9397#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Vm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          <folding>
-            <element signature="e#5860#5861#0" expanded="true" />
-            <element signature="e#5877#5878#0" expanded="true" />
-            <element signature="e#8743#8744#0" expanded="true" />
-            <element signature="e#8774#8775#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1165" column="21" selection-start-line="1165" selection-start-column="21" selection-end-line="1165" selection-end-column="21" />
-          <folding>
-            <element signature="e#30431#30432#0" expanded="true" />
-            <element signature="e#30463#30464#0" expanded="true" />
-            <element signature="e#31844#31845#0" expanded="true" />
-            <element signature="e#31876#31877#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/TestMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1872,7 +1793,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="16" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#0#3019#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1880,7 +1804,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#655#656#0" expanded="false" />
+            <element signature="e#698#699#0" expanded="false" />
+            <element signature="e#762#763#0" expanded="false" />
+            <element signature="e#806#807#0" expanded="false" />
+            <element signature="e#939#940#0" expanded="false" />
+            <element signature="e#984#985#0" expanded="false" />
+            <element signature="e#1052#1053#0" expanded="false" />
+            <element signature="e#1100#1101#0" expanded="false" />
+            <element signature="e#6761#6762#0" expanded="false" />
+            <element signature="e#6805#6806#0" expanded="false" />
+            <element signature="e#6867#6868#0" expanded="false" />
+            <element signature="e#6913#6914#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1888,62 +1826,158 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#6085#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5334#5335#0" expanded="false" />
+            <element signature="e#5366#5367#0" expanded="false" />
+            <element signature="e#5475#5476#0" expanded="false" />
+            <element signature="e#5501#5502#0" expanded="false" />
+            <element signature="e#5649#5650#0" expanded="false" />
+            <element signature="e#5688#5689#0" expanded="false" />
+            <element signature="e#5814#5815#0" expanded="false" />
+            <element signature="e#5846#5847#0" expanded="false" />
+            <element signature="e#6029#6030#0" expanded="false" />
+            <element signature="e#6080#6081#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="e#3028#3029#0" expanded="false" />
+            <element signature="e#3050#3051#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/SimEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="22" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9354838">
+          <caret line="892" column="0" selection-start-line="892" selection-start-column="0" selection-end-line="892" selection-end-column="0" />
+          <folding>
+            <element signature="e#16449#16450#0" expanded="true" />
+            <element signature="e#16493#16494#0" expanded="true" />
+            <element signature="e#25827#25828#0" expanded="true" />
+            <element signature="e#25856#25857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0689654">
+          <caret line="450" column="12" selection-start-line="450" selection-start-column="12" selection-end-line="450" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/DatacenterBroker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="8" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
+          <folding>
+            <element signature="e#3193#3194#0" expanded="true" />
+            <element signature="e#3224#3225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/network/datacenter/NetworkDatacenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3319149">
+          <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Host.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="206" column="27" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerHost.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.096774">
+          <caret line="839" column="26" selection-start-line="839" selection-start-column="26" selection-end-line="839" selection-end-column="26" />
           <folding>
-            <element signature="e#0#31322#0" expanded="true" />
+            <element signature="e#0#31324#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#13786#13787#0" expanded="true" />
-            <element signature="e#13839#13840#0" expanded="true" />
-            <element signature="e#19984#20020#0" expanded="true" />
-            <element signature="e#23668#23684#0" expanded="true" />
-            <element signature="e#27817#27833#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java">
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Vm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="513" column="0" selection-start-line="513" selection-start-column="0" selection-end-line="513" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="432" column="0" selection-start-line="432" selection-start-column="0" selection-end-line="432" selection-end-column="0" />
           <folding>
-            <element signature="e#23600#23630#1" expanded="true" />
-            <element signature="e#26908#26909#0" expanded="true" />
-            <element signature="e#26927#26928#0" expanded="true" />
-            <element signature="e#27035#27036#0" expanded="true" />
-            <element signature="e#27060#27061#0" expanded="true" />
-            <element signature="e#27493#27494#0" expanded="true" />
-            <element signature="e#27524#27525#0" expanded="true" />
-            <element signature="e#27692#27693#0" expanded="true" />
-            <element signature="e#27741#27742#0" expanded="true" />
-            <element signature="e#27878#27879#0" expanded="true" />
-            <element signature="e#27909#27910#0" expanded="true" />
-            <element signature="e#28077#28078#0" expanded="true" />
-            <element signature="e#28126#28127#0" expanded="true" />
-            <element signature="e#28238#28239#0" expanded="true" />
-            <element signature="e#28266#28267#0" expanded="true" />
-            <element signature="e#28418#28419#0" expanded="true" />
-            <element signature="e#28461#28462#0" expanded="true" />
-            <element signature="e#28547#28548#0" expanded="true" />
-            <element signature="e#28596#28597#0" expanded="true" />
-            <element signature="e#28694#28695#0" expanded="true" />
-            <element signature="e#28752#28753#0" expanded="true" />
-            <element signature="e#29281#29282#0" expanded="true" />
-            <element signature="e#29323#29324#0" expanded="true" />
+            <element signature="e#8521#8522#0" expanded="true" />
+            <element signature="e#8602#8603#0" expanded="true" />
+            <element signature="e#8620#8621#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3315508">
-          <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="353" column="62" selection-start-line="353" selection-start-column="62" selection-end-line="353" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/provisioners/BwProvisionerSimple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5096154">
+          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="265" column="49" selection-start-line="265" selection-start-column="49" selection-end-line="265" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperPowerDatacenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.483871">
+          <caret line="406" column="26" selection-start-line="406" selection-start-column="26" selection-end-line="406" selection-end-column="26" />
+          <folding>
+            <element signature="e#2184#2185#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+            <element signature="e#2280#2281#0" expanded="true" />
+            <element signature="e#2323#2324#0" expanded="true" />
+            <element signature="e#2350#2351#0" expanded="true" />
+            <element signature="e#2387#2388#0" expanded="true" />
+            <element signature="e#2419#2420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/TestMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69711536">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding />
         </state>
       </provider>

@@ -145,8 +145,10 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             else if(h.getPowerState() == PowerState.OFF)
                 offcache.add(h);
         }
-        if(overnodes)
+        if(overnodes) {
+            System.out.println(CloudSim.clock() + " VM" + vm.getId() + " FAILED OVERNODES ");
             return false;
+        }
         if(okcache.size() > 0) {
             for (HyperPowerHost h : okcache)
             {
@@ -156,6 +158,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
                         if (h.vmCreate(vm))
                         {
+                            System.out.println(CloudSim.clock() + " VM" + vm.getId() + " CREATED IN HOST: " + (h.getId() - 2));
                             getVmTable().put(vm.getUid(), h);
                             if(h.getSynchronizer() != null) {
                                 synchronized (h.getSynchronizer()) {
@@ -192,8 +195,10 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             if(idlecache.size() == 0)
             {
                 L = offcache;
-                if(L.size() == 0)
+                if(L.size() == 0) {
+                    System.out.println(CloudSim.clock() + " VM" + vm.getId() + " FAILED lsize ");
                     return false;
+                }
             }
         }
         HyperPowerHost h = L.get(0);
@@ -205,6 +210,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                     h.switchOn();
                     offHosts.remove(h);
                 }
+                System.out.println(CloudSim.clock() + " VM" + vm.getId() + " CREATED IN HOST: " + (h.getId() - 2));
                 getVmTable().put(vm.getUid(), h);
                 if(h.getSynchronizer() != null) {
                     synchronized (h.getSynchronizer()) {
@@ -342,9 +348,10 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     @Override
     public void deallocateHostForVm(Vm vm) {
-        Host host = getVmTable().remove(vm.getUid());
+        HyperPowerHost host = (HyperPowerHost) getVmTable().remove(vm.getUid());
         if (host != null) {
             host.vmDestroy(vm);
+            if(host.getVmList().size() == 0) host.switchOff();
         }
     }
 

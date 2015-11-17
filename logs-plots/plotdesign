@@ -1,0 +1,1 @@
+plot "vmstime.dat" using 1:2 w linesp 

@@ -1,0 +1,4019 @@
+Period: 0
+Time: 60.1 -- Datacenter VMs 58Power - End of Period : 0.0 --
+
+ --- HOST 2 : 0 VMs and Power 160.0 ---
+ --- HOST 3 : 0 VMs and Power 160.0 ---
+ --- HOST 4 : 0 VMs and Power 160.0 ---
+ --- HOST 5 : 0 VMs and Power 160.0 ---
+ --- HOST 6 : 0 VMs and Power 160.0 ---
+ --- HOST 7 : 0 VMs and Power 160.0 ---
+ --- HOST 8 : 1 VMs and Power 165.0 ---
+ --- HOST 9 : 0 VMs and Power 160.0 ---
+ --- HOST 10 : 0 VMs and Power 160.0 ---
+ --- HOST 11 : 1 VMs and Power 165.0 ---
+ --- HOST 12 : 0 VMs and Power 160.0 ---
+ --- HOST 13 : 0 VMs and Power 160.0 ---
+ --- HOST 14 : 0 VMs and Power 160.0 ---
+ --- HOST 15 : 0 VMs and Power 160.0 ---
+ --- HOST 16 : 0 VMs and Power 160.0 ---
+ --- HOST 17 : 0 VMs and Power 160.0 ---
+ --- HOST 19 : 0 VMs and Power 160.0 ---
+ --- HOST 20 : 0 VMs and Power 160.0 ---
+ --- HOST 21 : 1 VMs and Power 165.0 ---
+ --- HOST 22 : 0 VMs and Power 160.0 ---
+ --- HOST 23 : 0 VMs and Power 160.0 ---
+ --- HOST 24 : 0 VMs and Power 160.0 ---
+ --- HOST 25 : 0 VMs and Power 160.0 ---
+ --- HOST 26 : 1 VMs and Power 165.0 ---
+ --- HOST 27 : 0 VMs and Power 160.0 ---
+ --- HOST 28 : 0 VMs and Power 160.0 ---
+ --- HOST 29 : 0 VMs and Power 160.0 ---
+ --- HOST 30 : 1 VMs and Power 165.0 ---
+ --- HOST 31 : 0 VMs and Power 160.0 ---
+ --- HOST 32 : 0 VMs and Power 160.0 ---
+ --- HOST 33 : 0 VMs and Power 160.0 ---
+ --- HOST 34 : 0 VMs and Power 160.0 ---
+ --- HOST 35 : 0 VMs and Power 160.0 ---
+ --- HOST 36 : 0 VMs and Power 160.0 ---
+ --- HOST 37 : 0 VMs and Power 160.0 ---
+ --- HOST 38 : 0 VMs and Power 160.0 ---
+ --- HOST 39 : 0 VMs and Power 160.0 ---
+ --- HOST 40 : 0 VMs and Power 160.0 ---
+ --- HOST 41 : 0 VMs and Power 160.0 ---
+ --- HOST 42 : 0 VMs and Power 160.0 ---
+ --- HOST 43 : 0 VMs and Power 160.0 ---
+ --- HOST 44 : 0 VMs and Power 160.0 ---
+ --- HOST 45 : 0 VMs and Power 160.0 ---
+ --- HOST 46 : 0 VMs and Power 160.0 ---
+ --- HOST 47 : 0 VMs and Power 160.0 ---
+ --- HOST 48 : 0 VMs and Power 160.0 ---
+ --- HOST 49 : 0 VMs and Power 160.0 ---
+ --- HOST 50 : 0 VMs and Power 160.0 ---
+ --- HOST 51 : 0 VMs and Power 160.0 ---
+ --- HOST 52 : 0 VMs and Power 160.0 ---
+ --- HOST 53 : 0 VMs and Power 160.0 ---
+ --- HOST 54 : 0 VMs and Power 160.0 ---
+ --- HOST 55 : 0 VMs and Power 160.0 ---
+ --- HOST 56 : 0 VMs and Power 160.0 ---
+ --- HOST 57 : 0 VMs and Power 160.0 ---
+ --- HOST 58 : 0 VMs and Power 160.0 ---
+ --- HOST 60 : 0 VMs and Power 160.0 ---
+ --- HOST 61 : 0 VMs and Power 160.0 ---
+ --- HOST 62 : 0 VMs and Power 160.0 ---
+ --- HOST 63 : 0 VMs and Power 160.0 ---
+ --- HOST 64 : 0 VMs and Power 160.0 ---
+ --- HOST 65 : 0 VMs and Power 160.0 ---
+ --- HOST 66 : 0 VMs and Power 160.0 ---
+ --- HOST 67 : 0 VMs and Power 160.0 ---
+ --- HOST 68 : 0 VMs and Power 160.0 ---
+ --- HOST 69 : 0 VMs and Power 160.0 ---
+ --- HOST 70 : 2 VMs and Power 170.0 ---
+ --- HOST 71 : 0 VMs and Power 160.0 ---
+ --- HOST 72 : 0 VMs and Power 160.0 ---
+ --- HOST 73 : 0 VMs and Power 160.0 ---
+ --- HOST 74 : 0 VMs and Power 160.0 ---
+ --- HOST 75 : 0 VMs and Power 160.0 ---
+ --- HOST 76 : 0 VMs and Power 160.0 ---
+ --- HOST 77 : 0 VMs and Power 160.0 ---
+ --- HOST 78 : 0 VMs and Power 160.0 ---
+ --- HOST 79 : 0 VMs and Power 160.0 ---
+ --- HOST 80 : 0 VMs and Power 160.0 ---
+ --- HOST 81 : 0 VMs and Power 160.0 ---
+ --- HOST 82 : 0 VMs and Power 160.0 ---
+ --- HOST 83 : 0 VMs and Power 160.0 ---
+ --- HOST 84 : 0 VMs and Power 160.0 ---
+ --- HOST 85 : 0 VMs and Power 160.0 ---
+ --- HOST 86 : 0 VMs and Power 160.0 ---
+ --- HOST 87 : 0 VMs and Power 160.0 ---
+ --- HOST 88 : 0 VMs and Power 160.0 ---
+ --- HOST 89 : 0 VMs and Power 160.0 ---
+ --- HOST 90 : 0 VMs and Power 160.0 ---
+ --- HOST 91 : 0 VMs and Power 160.0 ---
+ --- HOST 92 : 0 VMs and Power 160.0 ---
+ --- HOST 93 : 0 VMs and Power 160.0 ---
+ --- HOST 94 : 0 VMs and Power 160.0 ---
+ --- HOST 96 : 1 VMs and Power 165.0 ---
+ --- HOST 97 : 0 VMs and Power 160.0 ---
+ --- HOST 98 : 0 VMs and Power 160.0 ---
+ --- HOST 99 : 0 VMs and Power 160.0 ---
+ --- HOST 100 : 0 VMs and Power 160.0 ---
+ --- HOST 101 : 0 VMs and Power 160.0 ---
+ --- HOST 102 : 0 VMs and Power 160.0 ---
+ --- HOST 103 : 0 VMs and Power 160.0 ---
+ --- HOST 104 : 0 VMs and Power 160.0 ---
+ --- HOST 105 : 0 VMs and Power 160.0 ---
+ --- HOST 106 : 0 VMs and Power 160.0 ---
+ --- HOST 107 : 0 VMs and Power 160.0 ---
+ --- HOST 108 : 0 VMs and Power 160.0 ---
+ --- HOST 109 : 0 VMs and Power 160.0 ---
+ --- HOST 110 : 0 VMs and Power 160.0 ---
+ --- HOST 111 : 0 VMs and Power 160.0 ---
+ --- HOST 112 : 0 VMs and Power 160.0 ---
+ --- HOST 113 : 0 VMs and Power 160.0 ---
+ --- HOST 114 : 0 VMs and Power 160.0 ---
+ --- HOST 115 : 1 VMs and Power 165.0 ---
+ --- HOST 116 : 0 VMs and Power 160.0 ---
+ --- HOST 117 : 0 VMs and Power 160.0 ---
+ --- HOST 118 : 0 VMs and Power 160.0 ---
+ --- HOST 119 : 0 VMs and Power 160.0 ---
+ --- HOST 120 : 0 VMs and Power 160.0 ---
+ --- HOST 121 : 0 VMs and Power 160.0 ---
+ --- HOST 122 : 0 VMs and Power 160.0 ---
+ --- HOST 123 : 0 VMs and Power 160.0 ---
+ --- HOST 124 : 0 VMs and Power 160.0 ---
+ --- HOST 125 : 0 VMs and Power 160.0 ---
+ --- HOST 126 : 0 VMs and Power 160.0 ---
+ --- HOST 127 : 0 VMs and Power 160.0 ---
+ --- HOST 128 : 0 VMs and Power 160.0 ---
+ --- HOST 129 : 0 VMs and Power 160.0 ---
+ --- HOST 130 : 0 VMs and Power 160.0 ---
+ --- HOST 131 : 0 VMs and Power 160.0 ---
+ --- HOST 132 : 0 VMs and Power 160.0 ---
+ --- HOST 133 : 0 VMs and Power 160.0 ---
+ --- HOST 134 : 0 VMs and Power 160.0 ---
+ --- HOST 135 : 0 VMs and Power 160.0 ---
+ --- HOST 136 : 0 VMs and Power 160.0 ---
+ --- HOST 137 : 0 VMs and Power 160.0 ---
+ --- HOST 138 : 0 VMs and Power 160.0 ---
+ --- HOST 139 : 0 VMs and Power 160.0 ---
+ --- HOST 140 : 0 VMs and Power 160.0 ---
+ --- HOST 141 : 0 VMs and Power 160.0 ---
+ --- HOST 142 : 0 VMs and Power 160.0 ---
+ --- HOST 143 : 0 VMs and Power 160.0 ---
+ --- HOST 144 : 0 VMs and Power 160.0 ---
+ --- HOST 145 : 0 VMs and Power 160.0 ---
+ --- HOST 146 : 0 VMs and Power 160.0 ---
+ --- HOST 147 : 0 VMs and Power 160.0 ---
+ --- HOST 148 : 0 VMs and Power 160.0 ---
+ --- HOST 149 : 0 VMs and Power 160.0 ---
+ --- HOST 150 : 0 VMs and Power 160.0 ---
+ --- HOST 151 : 0 VMs and Power 160.0 ---
+ --- HOST 152 : 0 VMs and Power 160.0 ---
+ --- HOST 153 : 0 VMs and Power 160.0 ---
+ --- HOST 154 : 0 VMs and Power 160.0 ---
+ --- HOST 155 : 0 VMs and Power 160.0 ---
+ --- HOST 156 : 0 VMs and Power 160.0 ---
+ --- HOST 157 : 0 VMs and Power 160.0 ---
+ --- HOST 158 : 0 VMs and Power 160.0 ---
+ --- HOST 159 : 0 VMs and Power 160.0 ---
+ --- HOST 160 : 0 VMs and Power 160.0 ---
+ --- HOST 161 : 0 VMs and Power 160.0 ---
+ --- HOST 162 : 2 VMs and Power 170.0 ---
+ --- HOST 163 : 0 VMs and Power 160.0 ---
+ --- HOST 164 : 0 VMs and Power 160.0 ---
+ --- HOST 165 : 0 VMs and Power 160.0 ---
+ --- HOST 166 : 0 VMs and Power 160.0 ---
+ --- HOST 167 : 2 VMs and Power 170.0 ---
+ --- HOST 168 : 0 VMs and Power 160.0 ---
+ --- HOST 169 : 0 VMs and Power 160.0 ---
+ --- HOST 170 : 0 VMs and Power 160.0 ---
+ --- HOST 171 : 0 VMs and Power 160.0 ---
+ --- HOST 172 : 0 VMs and Power 160.0 ---
+ --- HOST 173 : 0 VMs and Power 160.0 ---
+ --- HOST 174 : 0 VMs and Power 160.0 ---
+ --- HOST 175 : 0 VMs and Power 160.0 ---
+ --- HOST 176 : 1 VMs and Power 165.0 ---
+ --- HOST 177 : 0 VMs and Power 160.0 ---
+ --- HOST 179 : 0 VMs and Power 160.0 ---
+ --- HOST 180 : 0 VMs and Power 160.0 ---
+ --- HOST 181 : 0 VMs and Power 160.0 ---
+ --- HOST 182 : 0 VMs and Power 160.0 ---
+ --- HOST 183 : 0 VMs and Power 160.0 ---
+ --- HOST 184 : 0 VMs and Power 160.0 ---
+ --- HOST 185 : 0 VMs and Power 160.0 ---
+ --- HOST 186 : 0 VMs and Power 160.0 ---
+ --- HOST 187 : 0 VMs and Power 160.0 ---
+ --- HOST 188 : 0 VMs and Power 160.0 ---
+ --- HOST 189 : 0 VMs and Power 160.0 ---
+ --- HOST 190 : 0 VMs and Power 160.0 ---
+ --- HOST 191 : 0 VMs and Power 160.0 ---
+ --- HOST 192 : 0 VMs and Power 160.0 ---
+ --- HOST 193 : 0 VMs and Power 160.0 ---
+ --- HOST 194 : 0 VMs and Power 160.0 ---
+ --- HOST 195 : 0 VMs and Power 160.0 ---
+ --- HOST 196 : 0 VMs and Power 160.0 ---
+ --- HOST 197 : 0 VMs and Power 160.0 ---
+ --- HOST 198 : 0 VMs and Power 160.0 ---
+ --- HOST 199 : 1 VMs and Power 165.0 ---
+ --- HOST 200 : 0 VMs and Power 160.0 ---
+ --- HOST 201 : 0 VMs and Power 160.0 ---
+ --- HOST 202 : 0 VMs and Power 160.0 ---
+ --- HOST 203 : 0 VMs and Power 160.0 ---
+ --- HOST 204 : 0 VMs and Power 160.0 ---
+ --- HOST 205 : 0 VMs and Power 160.0 ---
+ --- HOST 206 : 0 VMs and Power 160.0 ---
+ --- HOST 207 : 0 VMs and Power 160.0 ---
+ --- HOST 208 : 0 VMs and Power 160.0 ---
+ --- HOST 209 : 0 VMs and Power 160.0 ---
+ --- HOST 210 : 0 VMs and Power 160.0 ---
+ --- HOST 211 : 0 VMs and Power 160.0 ---
+ --- HOST 212 : 0 VMs and Power 160.0 ---
+ --- HOST 213 : 0 VMs and Power 160.0 ---
+ --- HOST 214 : 0 VMs and Power 160.0 ---
+ --- HOST 215 : 0 VMs and Power 160.0 ---
+ --- HOST 216 : 0 VMs and Power 160.0 ---
+ --- HOST 217 : 0 VMs and Power 160.0 ---
+ --- HOST 218 : 0 VMs and Power 160.0 ---
+ --- HOST 219 : 0 VMs and Power 160.0 ---
+ --- HOST 220 : 0 VMs and Power 160.0 ---
+ --- HOST 221 : 0 VMs and Power 160.0 ---
+ --- HOST 222 : 0 VMs and Power 160.0 ---
+ --- HOST 223 : 1 VMs and Power 165.0 ---
+ --- HOST 225 : 0 VMs and Power 160.0 ---
+ --- HOST 226 : 0 VMs and Power 160.0 ---
+ --- HOST 227 : 0 VMs and Power 160.0 ---
+ --- HOST 228 : 0 VMs and Power 160.0 ---
+ --- HOST 229 : 0 VMs and Power 160.0 ---
+ --- HOST 230 : 0 VMs and Power 160.0 ---
+ --- HOST 231 : 0 VMs and Power 160.0 ---
+ --- HOST 232 : 0 VMs and Power 160.0 ---
+ --- HOST 233 : 0 VMs and Power 160.0 ---
+ --- HOST 234 : 0 VMs and Power 160.0 ---
+ --- HOST 235 : 0 VMs and Power 160.0 ---
+ --- HOST 236 : 0 VMs and Power 160.0 ---
+ --- HOST 237 : 0 VMs and Power 160.0 ---
+ --- HOST 238 : 0 VMs and Power 160.0 ---
+ --- HOST 239 : 0 VMs and Power 160.0 ---
+ --- HOST 240 : 0 VMs and Power 160.0 ---
+ --- HOST 241 : 0 VMs and Power 160.0 ---
+ --- HOST 242 : 0 VMs and Power 160.0 ---
+ --- HOST 243 : 0 VMs and Power 160.0 ---
+ --- HOST 244 : 0 VMs and Power 160.0 ---
+ --- HOST 245 : 0 VMs and Power 160.0 ---
+ --- HOST 246 : 0 VMs and Power 160.0 ---
+ --- HOST 247 : 0 VMs and Power 160.0 ---
+ --- HOST 248 : 1 VMs and Power 165.0 ---
+ --- HOST 249 : 0 VMs and Power 160.0 ---
+ --- HOST 250 : 0 VMs and Power 160.0 ---
+ --- HOST 251 : 0 VMs and Power 160.0 ---
+ --- HOST 252 : 0 VMs and Power 160.0 ---
+ --- HOST 253 : 0 VMs and Power 160.0 ---
+ --- HOST 254 : 0 VMs and Power 160.0 ---
+ --- HOST 255 : 0 VMs and Power 160.0 ---
+ --- HOST 256 : 0 VMs and Power 160.0 ---
+ --- HOST 257 : 0 VMs and Power 160.0 ---
+ --- HOST 258 : 0 VMs and Power 160.0 ---
+ --- HOST 259 : 0 VMs and Power 160.0 ---
+ --- HOST 260 : 0 VMs and Power 160.0 ---
+ --- HOST 261 : 0 VMs and Power 160.0 ---
+ --- HOST 262 : 0 VMs and Power 160.0 ---
+ --- HOST 263 : 0 VMs and Power 160.0 ---
+ --- HOST 264 : 0 VMs and Power 160.0 ---
+ --- HOST 266 : 0 VMs and Power 160.0 ---
+ --- HOST 267 : 0 VMs and Power 160.0 ---
+ --- HOST 268 : 0 VMs and Power 160.0 ---
+ --- HOST 269 : 0 VMs and Power 160.0 ---
+ --- HOST 270 : 0 VMs and Power 160.0 ---
+ --- HOST 271 : 0 VMs and Power 160.0 ---
+ --- HOST 272 : 0 VMs and Power 160.0 ---
+ --- HOST 273 : 0 VMs and Power 160.0 ---
+ --- HOST 274 : 0 VMs and Power 160.0 ---
+ --- HOST 275 : 0 VMs and Power 160.0 ---
+ --- HOST 276 : 0 VMs and Power 160.0 ---
+ --- HOST 277 : 0 VMs and Power 160.0 ---
+ --- HOST 278 : 0 VMs and Power 160.0 ---
+ --- HOST 279 : 0 VMs and Power 160.0 ---
+ --- HOST 280 : 0 VMs and Power 160.0 ---
+ --- HOST 281 : 0 VMs and Power 160.0 ---
+ --- HOST 282 : 0 VMs and Power 160.0 ---
+ --- HOST 283 : 0 VMs and Power 160.0 ---
+ --- HOST 284 : 1 VMs and Power 165.0 ---
+ --- HOST 285 : 1 VMs and Power 165.0 ---
+ --- HOST 286 : 0 VMs and Power 160.0 ---
+ --- HOST 287 : 0 VMs and Power 160.0 ---
+ --- HOST 288 : 0 VMs and Power 160.0 ---
+ --- HOST 289 : 0 VMs and Power 160.0 ---
+ --- HOST 290 : 1 VMs and Power 165.0 ---
+ --- HOST 291 : 0 VMs and Power 160.0 ---
+ --- HOST 292 : 0 VMs and Power 160.0 ---
+ --- HOST 293 : 0 VMs and Power 160.0 ---
+ --- HOST 294 : 0 VMs and Power 160.0 ---
+ --- HOST 295 : 0 VMs and Power 160.0 ---
+ --- HOST 296 : 0 VMs and Power 160.0 ---
+ --- HOST 297 : 0 VMs and Power 160.0 ---
+ --- HOST 298 : 0 VMs and Power 160.0 ---
+ --- HOST 299 : 0 VMs and Power 160.0 ---
+ --- HOST 300 : 0 VMs and Power 160.0 ---
+ --- HOST 301 : 0 VMs and Power 160.0 ---
+ --- HOST 302 : 0 VMs and Power 160.0 ---
+ --- HOST 304 : 0 VMs and Power 160.0 ---
+ --- HOST 305 : 0 VMs and Power 160.0 ---
+ --- HOST 306 : 0 VMs and Power 160.0 ---
+ --- HOST 307 : 0 VMs and Power 160.0 ---
+ --- HOST 308 : 0 VMs and Power 160.0 ---
+ --- HOST 309 : 0 VMs and Power 160.0 ---
+ --- HOST 310 : 0 VMs and Power 160.0 ---
+ --- HOST 311 : 0 VMs and Power 160.0 ---
+ --- HOST 312 : 0 VMs and Power 160.0 ---
+ --- HOST 313 : 0 VMs and Power 160.0 ---
+ --- HOST 314 : 0 VMs and Power 160.0 ---
+ --- HOST 315 : 0 VMs and Power 160.0 ---
+ --- HOST 316 : 0 VMs and Power 160.0 ---
+ --- HOST 317 : 0 VMs and Power 160.0 ---
+ --- HOST 318 : 0 VMs and Power 160.0 ---
+ --- HOST 319 : 0 VMs and Power 160.0 ---
+ --- HOST 320 : 0 VMs and Power 160.0 ---
+ --- HOST 321 : 0 VMs and Power 160.0 ---
+ --- HOST 322 : 0 VMs and Power 160.0 ---
+ --- HOST 323 : 0 VMs and Power 160.0 ---
+ --- HOST 324 : 0 VMs and Power 160.0 ---
+ --- HOST 325 : 0 VMs and Power 160.0 ---
+ --- HOST 326 : 0 VMs and Power 160.0 ---
+ --- HOST 327 : 0 VMs and Power 160.0 ---
+ --- HOST 328 : 0 VMs and Power 160.0 ---
+ --- HOST 330 : 0 VMs and Power 160.0 ---
+ --- HOST 331 : 0 VMs and Power 160.0 ---
+ --- HOST 332 : 0 VMs and Power 160.0 ---
+ --- HOST 333 : 0 VMs and Power 160.0 ---
+ --- HOST 334 : 0 VMs and Power 160.0 ---
+ --- HOST 335 : 0 VMs and Power 160.0 ---
+ --- HOST 336 : 0 VMs and Power 160.0 ---
+ --- HOST 337 : 0 VMs and Power 160.0 ---
+ --- HOST 338 : 0 VMs and Power 160.0 ---
+ --- HOST 339 : 0 VMs and Power 160.0 ---
+ --- HOST 341 : 0 VMs and Power 160.0 ---
+ --- HOST 342 : 0 VMs and Power 160.0 ---
+ --- HOST 343 : 0 VMs and Power 160.0 ---
+ --- HOST 344 : 0 VMs and Power 160.0 ---
+ --- HOST 345 : 0 VMs and Power 160.0 ---
+ --- HOST 346 : 0 VMs and Power 160.0 ---
+ --- HOST 347 : 0 VMs and Power 160.0 ---
+ --- HOST 348 : 0 VMs and Power 160.0 ---
+ --- HOST 349 : 0 VMs and Power 160.0 ---
+ --- HOST 350 : 0 VMs and Power 160.0 ---
+ --- HOST 351 : 0 VMs and Power 160.0 ---
+ --- HOST 352 : 0 VMs and Power 160.0 ---
+ --- HOST 353 : 0 VMs and Power 160.0 ---
+ --- HOST 354 : 0 VMs and Power 160.0 ---
+ --- HOST 355 : 0 VMs and Power 160.0 ---
+ --- HOST 356 : 0 VMs and Power 160.0 ---
+ --- HOST 357 : 0 VMs and Power 160.0 ---
+ --- HOST 358 : 0 VMs and Power 160.0 ---
+ --- HOST 359 : 0 VMs and Power 160.0 ---
+ --- HOST 360 : 0 VMs and Power 160.0 ---
+ --- HOST 361 : 0 VMs and Power 160.0 ---
+ --- HOST 362 : 0 VMs and Power 160.0 ---
+ --- HOST 363 : 0 VMs and Power 160.0 ---
+ --- HOST 364 : 0 VMs and Power 160.0 ---
+ --- HOST 365 : 0 VMs and Power 160.0 ---
+ --- HOST 366 : 2 VMs and Power 170.0 ---
+ --- HOST 367 : 0 VMs and Power 160.0 ---
+ --- HOST 368 : 1 VMs and Power 165.0 ---
+ --- HOST 369 : 0 VMs and Power 160.0 ---
+ --- HOST 370 : 0 VMs and Power 160.0 ---
+ --- HOST 372 : 1 VMs and Power 165.0 ---
+ --- HOST 373 : 0 VMs and Power 160.0 ---
+ --- HOST 374 : 0 VMs and Power 160.0 ---
+ --- HOST 375 : 0 VMs and Power 160.0 ---
+ --- HOST 376 : 0 VMs and Power 160.0 ---
+ --- HOST 377 : 0 VMs and Power 160.0 ---
+ --- HOST 378 : 0 VMs and Power 160.0 ---
+ --- HOST 379 : 0 VMs and Power 160.0 ---
+ --- HOST 380 : 0 VMs and Power 160.0 ---
+ --- HOST 381 : 0 VMs and Power 160.0 ---
+ --- HOST 382 : 0 VMs and Power 160.0 ---
+ --- HOST 383 : 0 VMs and Power 160.0 ---
+ --- HOST 384 : 0 VMs and Power 160.0 ---
+ --- HOST 385 : 0 VMs and Power 160.0 ---
+ --- HOST 386 : 0 VMs and Power 160.0 ---
+ --- HOST 387 : 0 VMs and Power 160.0 ---
+ --- HOST 388 : 0 VMs and Power 160.0 ---
+ --- HOST 389 : 0 VMs and Power 160.0 ---
+ --- HOST 390 : 0 VMs and Power 160.0 ---
+ --- HOST 391 : 0 VMs and Power 160.0 ---
+ --- HOST 392 : 0 VMs and Power 160.0 ---
+ --- HOST 393 : 0 VMs and Power 160.0 ---
+ --- HOST 394 : 0 VMs and Power 160.0 ---
+ --- HOST 395 : 0 VMs and Power 160.0 ---
+ --- HOST 396 : 0 VMs and Power 160.0 ---
+ --- HOST 397 : 0 VMs and Power 160.0 ---
+ --- HOST 399 : 0 VMs and Power 160.0 ---
+ --- HOST 400 : 0 VMs and Power 160.0 ---
+ --- HOST 401 : 0 VMs and Power 160.0 ---
+ --- HOST 402 : 0 VMs and Power 160.0 ---
+ --- HOST 403 : 0 VMs and Power 160.0 ---
+ --- HOST 404 : 0 VMs and Power 160.0 ---
+ --- HOST 405 : 0 VMs and Power 160.0 ---
+ --- HOST 406 : 0 VMs and Power 160.0 ---
+ --- HOST 407 : 0 VMs and Power 160.0 ---
+ --- HOST 408 : 0 VMs and Power 160.0 ---
+ --- HOST 409 : 0 VMs and Power 160.0 ---
+ --- HOST 410 : 0 VMs and Power 160.0 ---
+ --- HOST 411 : 1 VMs and Power 165.0 ---
+ --- HOST 412 : 0 VMs and Power 160.0 ---
+ --- HOST 413 : 0 VMs and Power 160.0 ---
+ --- HOST 414 : 0 VMs and Power 160.0 ---
+ --- HOST 415 : 1 VMs and Power 165.0 ---
+ --- HOST 416 : 0 VMs and Power 160.0 ---
+ --- HOST 417 : 0 VMs and Power 160.0 ---
+ --- HOST 418 : 0 VMs and Power 160.0 ---
+ --- HOST 419 : 1 VMs and Power 165.0 ---
+ --- HOST 420 : 0 VMs and Power 160.0 ---
+ --- HOST 421 : 0 VMs and Power 160.0 ---
+ --- HOST 422 : 0 VMs and Power 160.0 ---
+ --- HOST 423 : 0 VMs and Power 160.0 ---
+ --- HOST 424 : 0 VMs and Power 160.0 ---
+ --- HOST 425 : 0 VMs and Power 160.0 ---
+ --- HOST 426 : 0 VMs and Power 160.0 ---
+ --- HOST 427 : 0 VMs and Power 160.0 ---
+ --- HOST 428 : 2 VMs and Power 170.0 ---
+ --- HOST 429 : 0 VMs and Power 160.0 ---
+ --- HOST 430 : 0 VMs and Power 160.0 ---
+ --- HOST 431 : 0 VMs and Power 160.0 ---
+ --- HOST 432 : 0 VMs and Power 160.0 ---
+ --- HOST 433 : 0 VMs and Power 160.0 ---
+ --- HOST 434 : 0 VMs and Power 160.0 ---
+ --- HOST 435 : 0 VMs and Power 160.0 ---
+ --- HOST 436 : 0 VMs and Power 160.0 ---
+ --- HOST 437 : 0 VMs and Power 160.0 ---
+ --- HOST 438 : 0 VMs and Power 160.0 ---
+ --- HOST 439 : 0 VMs and Power 160.0 ---
+ --- HOST 440 : 0 VMs and Power 160.0 ---
+ --- HOST 441 : 0 VMs and Power 160.0 ---
+ --- HOST 442 : 0 VMs and Power 160.0 ---
+ --- HOST 443 : 0 VMs and Power 160.0 ---
+ --- HOST 444 : 0 VMs and Power 160.0 ---
+ --- HOST 445 : 0 VMs and Power 160.0 ---
+ --- HOST 446 : 0 VMs and Power 160.0 ---
+ --- HOST 447 : 0 VMs and Power 160.0 ---
+ --- HOST 448 : 0 VMs and Power 160.0 ---
+ --- HOST 449 : 0 VMs and Power 160.0 ---
+ --- HOST 450 : 0 VMs and Power 160.0 ---
+ --- HOST 451 : 0 VMs and Power 160.0 ---
+ --- HOST 452 : 0 VMs and Power 160.0 ---
+ --- HOST 453 : 0 VMs and Power 160.0 ---
+ --- HOST 454 : 0 VMs and Power 160.0 ---
+ --- HOST 455 : 0 VMs and Power 160.0 ---
+ --- HOST 456 : 0 VMs and Power 160.0 ---
+ --- HOST 457 : 0 VMs and Power 160.0 ---
+ --- HOST 458 : 0 VMs and Power 160.0 ---
+ --- HOST 459 : 0 VMs and Power 160.0 ---
+ --- HOST 460 : 0 VMs and Power 160.0 ---
+ --- HOST 461 : 2 VMs and Power 170.0 ---
+ --- HOST 462 : 0 VMs and Power 160.0 ---
+ --- HOST 463 : 0 VMs and Power 160.0 ---
+ --- HOST 464 : 0 VMs and Power 160.0 ---
+ --- HOST 465 : 0 VMs and Power 160.0 ---
+ --- HOST 466 : 0 VMs and Power 160.0 ---
+ --- HOST 467 : 0 VMs and Power 160.0 ---
+ --- HOST 468 : 0 VMs and Power 160.0 ---
+ --- HOST 469 : 0 VMs and Power 160.0 ---
+ --- HOST 470 : 0 VMs and Power 160.0 ---
+ --- HOST 471 : 0 VMs and Power 160.0 ---
+ --- HOST 472 : 0 VMs and Power 160.0 ---
+ --- HOST 473 : 0 VMs and Power 160.0 ---
+ --- HOST 474 : 0 VMs and Power 160.0 ---
+ --- HOST 475 : 0 VMs and Power 160.0 ---
+ --- HOST 476 : 0 VMs and Power 160.0 ---
+ --- HOST 477 : 0 VMs and Power 160.0 ---
+ --- HOST 478 : 0 VMs and Power 160.0 ---
+ --- HOST 479 : 0 VMs and Power 160.0 ---
+ --- HOST 480 : 0 VMs and Power 160.0 ---
+ --- HOST 481 : 0 VMs and Power 160.0 ---
+ --- HOST 482 : 0 VMs and Power 160.0 ---
+ --- HOST 483 : 0 VMs and Power 160.0 ---
+ --- HOST 484 : 0 VMs and Power 160.0 ---
+ --- HOST 485 : 0 VMs and Power 160.0 ---
+ --- HOST 486 : 0 VMs and Power 160.0 ---
+ --- HOST 487 : 0 VMs and Power 160.0 ---
+ --- HOST 488 : 0 VMs and Power 160.0 ---
+ --- HOST 489 : 0 VMs and Power 160.0 ---
+ --- HOST 490 : 0 VMs and Power 160.0 ---
+ --- HOST 491 : 0 VMs and Power 160.0 ---
+ --- HOST 492 : 0 VMs and Power 160.0 ---
+ --- HOST 493 : 0 VMs and Power 160.0 ---
+ --- HOST 494 : 0 VMs and Power 160.0 ---
+ --- HOST 495 : 0 VMs and Power 160.0 ---
+ --- HOST 496 : 0 VMs and Power 160.0 ---
+ --- HOST 497 : 0 VMs and Power 160.0 ---
+ --- HOST 498 : 0 VMs and Power 160.0 ---
+ --- HOST 499 : 0 VMs and Power 160.0 ---
+ --- HOST 500 : 0 VMs and Power 160.0 ---
+ --- HOST 501 : 0 VMs and Power 160.0 ---
+ --- HOST 502 : 0 VMs and Power 160.0 ---
+ --- HOST 503 : 0 VMs and Power 160.0 ---
+ --- HOST 504 : 0 VMs and Power 160.0 ---
+ --- HOST 505 : 0 VMs and Power 160.0 ---
+ --- HOST 506 : 0 VMs and Power 160.0 ---
+ --- HOST 507 : 0 VMs and Power 160.0 ---
+ --- HOST 508 : 0 VMs and Power 160.0 ---
+ --- HOST 509 : 0 VMs and Power 160.0 ---
+ --- HOST 510 : 0 VMs and Power 160.0 ---
+ --- HOST 511 : 0 VMs and Power 160.0 ---
+ --- HOST 512 : 0 VMs and Power 160.0 ---
+ --- HOST 513 : 0 VMs and Power 160.0 ---
+ --- HOST 514 : 0 VMs and Power 160.0 ---
+ --- HOST 515 : 0 VMs and Power 160.0 ---
+ --- HOST 516 : 0 VMs and Power 160.0 ---
+ --- HOST 517 : 0 VMs and Power 160.0 ---
+ --- HOST 518 : 0 VMs and Power 160.0 ---
+ --- HOST 519 : 0 VMs and Power 160.0 ---
+ --- HOST 520 : 1 VMs and Power 165.0 ---
+ --- HOST 521 : 0 VMs and Power 160.0 ---
+ --- HOST 522 : 1 VMs and Power 165.0 ---
+ --- HOST 523 : 0 VMs and Power 160.0 ---
+ --- HOST 524 : 1 VMs and Power 165.0 ---
+ --- HOST 525 : 0 VMs and Power 160.0 ---
+ --- HOST 526 : 0 VMs and Power 160.0 ---
+ --- HOST 527 : 0 VMs and Power 160.0 ---
+ --- HOST 528 : 0 VMs and Power 160.0 ---
+ --- HOST 529 : 0 VMs and Power 160.0 ---
+ --- HOST 530 : 0 VMs and Power 160.0 ---
+ --- HOST 531 : 0 VMs and Power 160.0 ---
+ --- HOST 533 : 0 VMs and Power 160.0 ---
+ --- HOST 534 : 0 VMs and Power 160.0 ---
+ --- HOST 535 : 0 VMs and Power 160.0 ---
+ --- HOST 536 : 0 VMs and Power 160.0 ---
+ --- HOST 537 : 0 VMs and Power 160.0 ---
+ --- HOST 538 : 1 VMs and Power 165.0 ---
+ --- HOST 539 : 0 VMs and Power 160.0 ---
+ --- HOST 540 : 1 VMs and Power 165.0 ---
+ --- HOST 541 : 0 VMs and Power 160.0 ---
+ --- HOST 542 : 0 VMs and Power 160.0 ---
+ --- HOST 543 : 0 VMs and Power 160.0 ---
+ --- HOST 544 : 0 VMs and Power 160.0 ---
+ --- HOST 545 : 0 VMs and Power 160.0 ---
+ --- HOST 546 : 0 VMs and Power 160.0 ---
+ --- HOST 547 : 0 VMs and Power 160.0 ---
+ --- HOST 548 : 0 VMs and Power 160.0 ---
+ --- HOST 549 : 0 VMs and Power 160.0 ---
+ --- HOST 550 : 0 VMs and Power 160.0 ---
+ --- HOST 551 : 0 VMs and Power 160.0 ---
+ --- HOST 552 : 0 VMs and Power 160.0 ---
+ --- HOST 553 : 0 VMs and Power 160.0 ---
+ --- HOST 554 : 0 VMs and Power 160.0 ---
+ --- HOST 555 : 0 VMs and Power 160.0 ---
+ --- HOST 556 : 0 VMs and Power 160.0 ---
+ --- HOST 557 : 0 VMs and Power 160.0 ---
+ --- HOST 558 : 0 VMs and Power 160.0 ---
+ --- HOST 559 : 0 VMs and Power 160.0 ---
+ --- HOST 560 : 0 VMs and Power 160.0 ---
+ --- HOST 561 : 0 VMs and Power 160.0 ---
+ --- HOST 562 : 0 VMs and Power 160.0 ---
+ --- HOST 563 : 0 VMs and Power 160.0 ---
+ --- HOST 564 : 0 VMs and Power 160.0 ---
+ --- HOST 565 : 0 VMs and Power 160.0 ---
+ --- HOST 566 : 0 VMs and Power 160.0 ---
+ --- HOST 567 : 0 VMs and Power 160.0 ---
+ --- HOST 568 : 0 VMs and Power 160.0 ---
+ --- HOST 569 : 0 VMs and Power 160.0 ---
+ --- HOST 570 : 0 VMs and Power 160.0 ---
+ --- HOST 571 : 0 VMs and Power 160.0 ---
+ --- HOST 572 : 0 VMs and Power 160.0 ---
+ --- HOST 573 : 0 VMs and Power 160.0 ---
+ --- HOST 574 : 0 VMs and Power 160.0 ---
+ --- HOST 575 : 0 VMs and Power 160.0 ---
+ --- HOST 576 : 0 VMs and Power 160.0 ---
+ --- HOST 577 : 0 VMs and Power 160.0 ---
+ --- HOST 578 : 0 VMs and Power 160.0 ---
+ --- HOST 579 : 0 VMs and Power 160.0 ---
+ --- HOST 580 : 0 VMs and Power 160.0 ---
+ --- HOST 582 : 0 VMs and Power 160.0 ---
+ --- HOST 583 : 0 VMs and Power 160.0 ---
+ --- HOST 584 : 1 VMs and Power 165.0 ---
+ --- HOST 585 : 0 VMs and Power 160.0 ---
+ --- HOST 586 : 0 VMs and Power 160.0 ---
+ --- HOST 587 : 0 VMs and Power 160.0 ---
+ --- HOST 588 : 0 VMs and Power 160.0 ---
+ --- HOST 589 : 0 VMs and Power 160.0 ---
+ --- HOST 590 : 0 VMs and Power 160.0 ---
+ --- HOST 591 : 0 VMs and Power 160.0 ---
+ --- HOST 592 : 0 VMs and Power 160.0 ---
+ --- HOST 593 : 0 VMs and Power 160.0 ---
+ --- HOST 594 : 0 VMs and Power 160.0 ---
+ --- HOST 595 : 0 VMs and Power 160.0 ---
+ --- HOST 596 : 0 VMs and Power 160.0 ---
+ --- HOST 598 : 0 VMs and Power 160.0 ---
+ --- HOST 599 : 0 VMs and Power 160.0 ---
+ --- HOST 600 : 0 VMs and Power 160.0 ---
+ --- HOST 601 : 0 VMs and Power 160.0 ---
+ --- HOST 602 : 0 VMs and Power 160.0 ---
+ --- HOST 604 : 0 VMs and Power 160.0 ---
+ --- HOST 605 : 0 VMs and Power 160.0 ---
+ --- HOST 606 : 0 VMs and Power 160.0 ---
+ --- HOST 607 : 0 VMs and Power 160.0 ---
+ --- HOST 608 : 0 VMs and Power 160.0 ---
+ --- HOST 609 : 0 VMs and Power 160.0 ---
+ --- HOST 610 : 0 VMs and Power 160.0 ---
+ --- HOST 611 : 0 VMs and Power 160.0 ---
+ --- HOST 612 : 1 VMs and Power 165.0 ---
+ --- HOST 613 : 0 VMs and Power 160.0 ---
+ --- HOST 614 : 0 VMs and Power 160.0 ---
+ --- HOST 615 : 1 VMs and Power 165.0 ---
+ --- HOST 616 : 0 VMs and Power 160.0 ---
+ --- HOST 618 : 0 VMs and Power 160.0 ---
+ --- HOST 619 : 0 VMs and Power 160.0 ---
+ --- HOST 620 : 0 VMs and Power 160.0 ---
+ --- HOST 621 : 0 VMs and Power 160.0 ---
+ --- HOST 622 : 0 VMs and Power 160.0 ---
+ --- HOST 623 : 0 VMs and Power 160.0 ---
+ --- HOST 624 : 0 VMs and Power 160.0 ---
+ --- HOST 625 : 0 VMs and Power 160.0 ---
+ --- HOST 626 : 0 VMs and Power 160.0 ---
+ --- HOST 627 : 0 VMs and Power 160.0 ---
+ --- HOST 628 : 0 VMs and Power 160.0 ---
+ --- HOST 629 : 0 VMs and Power 160.0 ---
+ --- HOST 630 : 0 VMs and Power 160.0 ---
+ --- HOST 631 : 0 VMs and Power 160.0 ---
+ --- HOST 632 : 0 VMs and Power 160.0 ---
+ --- HOST 633 : 0 VMs and Power 160.0 ---
+ --- HOST 634 : 0 VMs and Power 160.0 ---
+ --- HOST 635 : 0 VMs and Power 160.0 ---
+ --- HOST 636 : 0 VMs and Power 160.0 ---
+ --- HOST 637 : 0 VMs and Power 160.0 ---
+ --- HOST 638 : 0 VMs and Power 160.0 ---
+ --- HOST 639 : 0 VMs and Power 160.0 ---
+ --- HOST 640 : 0 VMs and Power 160.0 ---
+ --- HOST 641 : 0 VMs and Power 160.0 ---
+ --- HOST 642 : 0 VMs and Power 160.0 ---
+ --- HOST 643 : 0 VMs and Power 160.0 ---
+ --- HOST 644 : 0 VMs and Power 160.0 ---
+ --- HOST 645 : 0 VMs and Power 160.0 ---
+ --- HOST 646 : 0 VMs and Power 160.0 ---
+ --- HOST 647 : 0 VMs and Power 160.0 ---
+ --- HOST 648 : 0 VMs and Power 160.0 ---
+ --- HOST 649 : 0 VMs and Power 160.0 ---
+ --- HOST 650 : 0 VMs and Power 160.0 ---
+ --- HOST 651 : 0 VMs and Power 160.0 ---
+ --- HOST 652 : 0 VMs and Power 160.0 ---
+ --- HOST 653 : 0 VMs and Power 160.0 ---
+ --- HOST 654 : 0 VMs and Power 160.0 ---
+ --- HOST 655 : 0 VMs and Power 160.0 ---
+ --- HOST 656 : 0 VMs and Power 160.0 ---
+ --- HOST 657 : 0 VMs and Power 160.0 ---
+ --- HOST 658 : 0 VMs and Power 160.0 ---
+ --- HOST 659 : 0 VMs and Power 160.0 ---
+ --- HOST 660 : 0 VMs and Power 160.0 ---
+ --- HOST 661 : 0 VMs and Power 160.0 ---
+ --- HOST 662 : 0 VMs and Power 160.0 ---
+ --- HOST 665 : 0 VMs and Power 160.0 ---
+ --- HOST 666 : 0 VMs and Power 160.0 ---
+ --- HOST 667 : 0 VMs and Power 160.0 ---
+ --- HOST 668 : 0 VMs and Power 160.0 ---
+ --- HOST 670 : 0 VMs and Power 160.0 ---
+ --- HOST 671 : 0 VMs and Power 160.0 ---
+ --- HOST 672 : 0 VMs and Power 160.0 ---
+ --- HOST 673 : 0 VMs and Power 160.0 ---
+ --- HOST 674 : 0 VMs and Power 160.0 ---
+ --- HOST 675 : 2 VMs and Power 170.0 ---
+ --- HOST 676 : 0 VMs and Power 160.0 ---
+ --- HOST 678 : 0 VMs and Power 160.0 ---
+ --- HOST 679 : 0 VMs and Power 160.0 ---
+ --- HOST 680 : 0 VMs and Power 160.0 ---
+ --- HOST 681 : 0 VMs and Power 160.0 ---
+ --- HOST 682 : 0 VMs and Power 160.0 ---
+ --- HOST 683 : 0 VMs and Power 160.0 ---
+ --- HOST 684 : 0 VMs and Power 160.0 ---
+ --- HOST 685 : 0 VMs and Power 160.0 ---
+ --- HOST 686 : 0 VMs and Power 160.0 ---
+ --- HOST 687 : 0 VMs and Power 160.0 ---
+ --- HOST 688 : 2 VMs and Power 170.0 ---
+ --- HOST 689 : 0 VMs and Power 160.0 ---
+ --- HOST 691 : 0 VMs and Power 160.0 ---
+ --- HOST 692 : 0 VMs and Power 160.0 ---
+ --- HOST 693 : 0 VMs and Power 160.0 ---
+ --- HOST 694 : 0 VMs and Power 160.0 ---
+ --- HOST 695 : 0 VMs and Power 160.0 ---
+ --- HOST 696 : 0 VMs and Power 160.0 ---
+ --- HOST 697 : 0 VMs and Power 160.0 ---
+ --- HOST 698 : 0 VMs and Power 160.0 ---
+ --- HOST 699 : 0 VMs and Power 160.0 ---
+ --- HOST 700 : 0 VMs and Power 160.0 ---
+ --- HOST 701 : 0 VMs and Power 160.0 ---
+ --- HOST 702 : 0 VMs and Power 160.0 ---
+ --- HOST 703 : 0 VMs and Power 160.0 ---
+ --- HOST 704 : 0 VMs and Power 160.0 ---
+ --- HOST 705 : 0 VMs and Power 160.0 ---
+ --- HOST 706 : 0 VMs and Power 160.0 ---
+ --- HOST 707 : 1 VMs and Power 165.0 ---
+ --- HOST 709 : 0 VMs and Power 160.0 ---
+ --- HOST 710 : 0 VMs and Power 160.0 ---
+ --- HOST 711 : 0 VMs and Power 160.0 ---
+ --- HOST 712 : 0 VMs and Power 160.0 ---
+ --- HOST 713 : 0 VMs and Power 160.0 ---
+ --- HOST 714 : 0 VMs and Power 160.0 ---
+ --- HOST 715 : 1 VMs and Power 165.0 ---
+ --- HOST 716 : 0 VMs and Power 160.0 ---
+ --- HOST 717 : 0 VMs and Power 160.0 ---
+ --- HOST 718 : 0 VMs and Power 160.0 ---
+ --- HOST 719 : 0 VMs and Power 160.0 ---
+ --- HOST 720 : 0 VMs and Power 160.0 ---
+ --- HOST 721 : 0 VMs and Power 160.0 ---
+ --- HOST 722 : 0 VMs and Power 160.0 ---
+ --- HOST 723 : 0 VMs and Power 160.0 ---
+ --- HOST 724 : 0 VMs and Power 160.0 ---
+ --- HOST 725 : 0 VMs and Power 160.0 ---
+ --- HOST 726 : 0 VMs and Power 160.0 ---
+ --- HOST 727 : 0 VMs and Power 160.0 ---
+ --- HOST 728 : 0 VMs and Power 160.0 ---
+ --- HOST 729 : 1 VMs and Power 165.0 ---
+ --- HOST 730 : 1 VMs and Power 165.0 ---
+ --- HOST 731 : 0 VMs and Power 160.0 ---
+ --- HOST 732 : 0 VMs and Power 160.0 ---
+ --- HOST 733 : 0 VMs and Power 160.0 ---
+ --- HOST 734 : 0 VMs and Power 160.0 ---
+ --- HOST 735 : 0 VMs and Power 160.0 ---
+ --- HOST 736 : 0 VMs and Power 160.0 ---
+ --- HOST 737 : 0 VMs and Power 160.0 ---
+ --- HOST 738 : 0 VMs and Power 160.0 ---
+ --- HOST 739 : 0 VMs and Power 160.0 ---
+ --- HOST 740 : 0 VMs and Power 160.0 ---
+ --- HOST 741 : 0 VMs and Power 160.0 ---
+ --- HOST 742 : 0 VMs and Power 160.0 ---
+ --- HOST 743 : 0 VMs and Power 160.0 ---
+ --- HOST 744 : 0 VMs and Power 160.0 ---
+ --- HOST 745 : 1 VMs and Power 165.0 ---
+ --- HOST 746 : 0 VMs and Power 160.0 ---
+ --- HOST 747 : 0 VMs and Power 160.0 ---
+ --- HOST 748 : 0 VMs and Power 160.0 ---
+ --- HOST 749 : 0 VMs and Power 160.0 ---
+ --- HOST 750 : 0 VMs and Power 160.0 ---
+ --- HOST 751 : 0 VMs and Power 160.0 ---
+ --- HOST 752 : 1 VMs and Power 165.0 ---
+ --- HOST 754 : 0 VMs and Power 160.0 ---
+ --- HOST 755 : 0 VMs and Power 160.0 ---
+ --- HOST 756 : 0 VMs and Power 160.0 ---
+ --- HOST 757 : 0 VMs and Power 160.0 ---
+ --- HOST 759 : 0 VMs and Power 160.0 ---
+ --- HOST 760 : 0 VMs and Power 160.0 ---
+ --- HOST 761 : 0 VMs and Power 160.0 ---
+ --- HOST 762 : 0 VMs and Power 160.0 ---
+ --- HOST 763 : 0 VMs and Power 160.0 ---
+ --- HOST 764 : 0 VMs and Power 160.0 ---
+ --- HOST 765 : 0 VMs and Power 160.0 ---
+ --- HOST 766 : 0 VMs and Power 160.0 ---
+ --- HOST 767 : 0 VMs and Power 160.0 ---
+ --- HOST 768 : 0 VMs and Power 160.0 ---
+ --- HOST 769 : 0 VMs and Power 160.0 ---
+ --- HOST 770 : 0 VMs and Power 160.0 ---
+ --- HOST 771 : 0 VMs and Power 160.0 ---
+ --- HOST 772 : 1 VMs and Power 165.0 ---
+ --- HOST 773 : 0 VMs and Power 160.0 ---
+ --- HOST 774 : 0 VMs and Power 160.0 ---
+ --- HOST 775 : 0 VMs and Power 160.0 ---
+ --- HOST 776 : 0 VMs and Power 160.0 ---
+ --- HOST 777 : 1 VMs and Power 165.0 ---
+ --- HOST 778 : 0 VMs and Power 160.0 ---
+ --- HOST 779 : 0 VMs and Power 160.0 ---
+ --- HOST 780 : 0 VMs and Power 160.0 ---
+ --- HOST 782 : 0 VMs and Power 160.0 ---
+ --- HOST 783 : 0 VMs and Power 160.0 ---
+ --- HOST 784 : 0 VMs and Power 160.0 ---
+ --- HOST 785 : 0 VMs and Power 160.0 ---
+ --- HOST 786 : 0 VMs and Power 160.0 ---
+ --- HOST 787 : 0 VMs and Power 160.0 ---
+ --- HOST 788 : 0 VMs and Power 160.0 ---
+ --- HOST 789 : 0 VMs and Power 160.0 ---
+ --- HOST 790 : 0 VMs and Power 160.0 ---
+ --- HOST 791 : 0 VMs and Power 160.0 ---
+ --- HOST 792 : 0 VMs and Power 160.0 ---
+ --- HOST 793 : 0 VMs and Power 160.0 ---
+ --- HOST 794 : 1 VMs and Power 165.0 ---
+ --- HOST 795 : 0 VMs and Power 160.0 ---
+ --- HOST 796 : 0 VMs and Power 160.0 ---
+ --- HOST 797 : 0 VMs and Power 160.0 ---
+ --- HOST 798 : 0 VMs and Power 160.0 ---
+ --- HOST 799 : 0 VMs and Power 160.0 ---
+ --- HOST 800 : 0 VMs and Power 160.0 ---
+ --- HOST 801 : 0 VMs and Power 160.0 ---
+ --- HOST 802 : 0 VMs and Power 160.0 ---
+ --- HOST 803 : 0 VMs and Power 160.0 ---
+ --- HOST 804 : 0 VMs and Power 160.0 ---
+ --- HOST 805 : 0 VMs and Power 160.0 ---
+ --- HOST 806 : 0 VMs and Power 160.0 ---
+ --- HOST 808 : 0 VMs and Power 160.0 ---
+ --- HOST 809 : 0 VMs and Power 160.0 ---
+ --- HOST 810 : 0 VMs and Power 160.0 ---
+ --- HOST 811 : 0 VMs and Power 160.0 ---
+ --- HOST 812 : 0 VMs and Power 160.0 ---
+ --- HOST 813 : 0 VMs and Power 160.0 ---
+ --- HOST 814 : 0 VMs and Power 160.0 ---
+ --- HOST 815 : 0 VMs and Power 160.0 ---
+ --- HOST 816 : 0 VMs and Power 160.0 ---
+ --- HOST 817 : 0 VMs and Power 160.0 ---
+ --- HOST 818 : 0 VMs and Power 160.0 ---
+ --- HOST 819 : 0 VMs and Power 160.0 ---
+ --- HOST 820 : 0 VMs and Power 160.0 ---
+ --- HOST 821 : 0 VMs and Power 160.0 ---
+ --- HOST 822 : 0 VMs and Power 160.0 ---
+ --- HOST 823 : 0 VMs and Power 160.0 ---
+ --- HOST 824 : 0 VMs and Power 160.0 ---
+ --- HOST 826 : 0 VMs and Power 160.0 ---
+ --- HOST 827 : 0 VMs and Power 160.0 ---
+ --- HOST 828 : 0 VMs and Power 160.0 ---
+ --- HOST 829 : 0 VMs and Power 160.0 ---
+ --- HOST 830 : 0 VMs and Power 160.0 ---
+ --- HOST 831 : 0 VMs and Power 160.0 ---
+ --- HOST 833 : 0 VMs and Power 160.0 ---
+ --- HOST 834 : 0 VMs and Power 160.0 ---
+ --- HOST 835 : 0 VMs and Power 160.0 ---
+ --- HOST 836 : 0 VMs and Power 160.0 ---
+ --- HOST 837 : 0 VMs and Power 160.0 ---
+ --- HOST 838 : 0 VMs and Power 160.0 ---
+ --- HOST 839 : 0 VMs and Power 160.0 ---
+ --- HOST 840 : 0 VMs and Power 160.0 ---
+ --- HOST 841 : 0 VMs and Power 160.0 ---
+ --- HOST 842 : 0 VMs and Power 160.0 ---
+ --- HOST 843 : 0 VMs and Power 160.0 ---
+ --- HOST 844 : 0 VMs and Power 160.0 ---
+ --- HOST 845 : 0 VMs and Power 160.0 ---
+ --- HOST 846 : 0 VMs and Power 160.0 ---
+ --- HOST 847 : 0 VMs and Power 160.0 ---
+ --- HOST 848 : 0 VMs and Power 160.0 ---
+ --- HOST 849 : 0 VMs and Power 160.0 ---
+ --- HOST 850 : 0 VMs and Power 160.0 ---
+ --- HOST 851 : 0 VMs and Power 160.0 ---
+ --- HOST 852 : 0 VMs and Power 160.0 ---
+ --- HOST 853 : 0 VMs and Power 160.0 ---
+ --- HOST 854 : 0 VMs and Power 160.0 ---
+ --- HOST 855 : 0 VMs and Power 160.0 ---
+ --- HOST 856 : 1 VMs and Power 165.0 ---
+ --- HOST 857 : 0 VMs and Power 160.0 ---
+ --- HOST 858 : 0 VMs and Power 160.0 ---
+ --- HOST 859 : 0 VMs and Power 160.0 ---
+ --- HOST 860 : 0 VMs and Power 160.0 ---
+ --- HOST 861 : 0 VMs and Power 160.0 ---
+ --- HOST 862 : 0 VMs and Power 160.0 ---
+ --- HOST 863 : 0 VMs and Power 160.0 ---
+ --- HOST 864 : 0 VMs and Power 160.0 ---
+ --- HOST 865 : 0 VMs and Power 160.0 ---
+ --- HOST 866 : 1 VMs and Power 165.0 ---
+ --- HOST 867 : 0 VMs and Power 160.0 ---
+ --- HOST 868 : 0 VMs and Power 160.0 ---
+ --- HOST 869 : 0 VMs and Power 160.0 ---
+ --- HOST 870 : 0 VMs and Power 160.0 ---
+ --- HOST 871 : 0 VMs and Power 160.0 ---
+ --- HOST 872 : 0 VMs and Power 160.0 ---
+ --- HOST 873 : 0 VMs and Power 160.0 ---
+ --- HOST 874 : 1 VMs and Power 165.0 ---
+ --- HOST 875 : 0 VMs and Power 160.0 ---
+ --- HOST 876 : 0 VMs and Power 160.0 ---
+ --- HOST 877 : 0 VMs and Power 160.0 ---
+ --- HOST 878 : 0 VMs and Power 160.0 ---
+ --- HOST 879 : 0 VMs and Power 160.0 ---
+ --- HOST 880 : 0 VMs and Power 160.0 ---
+ --- HOST 881 : 0 VMs and Power 160.0 ---
+ --- HOST 882 : 0 VMs and Power 160.0 ---
+ --- HOST 884 : 0 VMs and Power 160.0 ---
+ --- HOST 885 : 0 VMs and Power 160.0 ---
+ --- HOST 886 : 0 VMs and Power 160.0 ---
+ --- HOST 887 : 0 VMs and Power 160.0 ---
+ --- HOST 888 : 0 VMs and Power 160.0 ---
+ --- HOST 889 : 0 VMs and Power 160.0 ---
+ --- HOST 890 : 0 VMs and Power 160.0 ---
+ --- HOST 891 : 0 VMs and Power 160.0 ---
+ --- HOST 892 : 0 VMs and Power 160.0 ---
+ --- HOST 894 : 0 VMs and Power 160.0 ---
+ --- HOST 895 : 0 VMs and Power 160.0 ---
+ --- HOST 896 : 0 VMs and Power 160.0 ---
+ --- HOST 897 : 0 VMs and Power 160.0 ---
+ --- HOST 898 : 0 VMs and Power 160.0 ---
+ --- HOST 899 : 0 VMs and Power 160.0 ---
+ --- HOST 900 : 0 VMs and Power 160.0 ---
+ --- HOST 901 : 0 VMs and Power 160.0 ---
+ --- HOST 902 : 0 VMs and Power 160.0 ---
+ --- HOST 903 : 0 VMs and Power 160.0 ---
+ --- HOST 904 : 0 VMs and Power 160.0 ---
+ --- HOST 905 : 0 VMs and Power 160.0 ---
+ --- HOST 906 : 0 VMs and Power 160.0 ---
+ --- HOST 907 : 0 VMs and Power 160.0 ---
+ --- HOST 908 : 0 VMs and Power 160.0 ---
+ --- HOST 909 : 0 VMs and Power 160.0 ---
+ --- HOST 910 : 0 VMs and Power 160.0 ---
+ --- HOST 911 : 0 VMs and Power 160.0 ---
+ --- HOST 912 : 0 VMs and Power 160.0 ---
+ --- HOST 913 : 0 VMs and Power 160.0 ---
+ --- HOST 914 : 0 VMs and Power 160.0 ---
+ --- HOST 915 : 0 VMs and Power 160.0 ---
+ --- HOST 916 : 0 VMs and Power 160.0 ---
+ --- HOST 917 : 0 VMs and Power 160.0 ---
+ --- HOST 919 : 0 VMs and Power 160.0 ---
+ --- HOST 920 : 0 VMs and Power 160.0 ---
+ --- HOST 921 : 0 VMs and Power 160.0 ---
+ --- HOST 922 : 0 VMs and Power 160.0 ---
+ --- HOST 923 : 0 VMs and Power 160.0 ---
+ --- HOST 925 : 0 VMs and Power 160.0 ---
+ --- HOST 926 : 0 VMs and Power 160.0 ---
+ --- HOST 927 : 0 VMs and Power 160.0 ---
+ --- HOST 928 : 0 VMs and Power 160.0 ---
+ --- HOST 929 : 0 VMs and Power 160.0 ---
+ --- HOST 930 : 0 VMs and Power 160.0 ---
+ --- HOST 931 : 0 VMs and Power 160.0 ---
+ --- HOST 932 : 0 VMs and Power 160.0 ---
+ --- HOST 933 : 0 VMs and Power 160.0 ---
+ --- HOST 934 : 0 VMs and Power 160.0 ---
+ --- HOST 935 : 0 VMs and Power 160.0 ---
+ --- HOST 936 : 0 VMs and Power 160.0 ---
+ --- HOST 937 : 0 VMs and Power 160.0 ---
+ --- HOST 938 : 0 VMs and Power 160.0 ---
+ --- HOST 939 : 0 VMs and Power 160.0 ---
+ --- HOST 940 : 0 VMs and Power 160.0 ---
+ --- HOST 941 : 0 VMs and Power 160.0 ---
+ --- HOST 942 : 0 VMs and Power 160.0 ---
+ --- HOST 943 : 0 VMs and Power 160.0 ---
+ --- HOST 944 : 0 VMs and Power 160.0 ---
+ --- HOST 945 : 0 VMs and Power 160.0 ---
+ --- HOST 946 : 0 VMs and Power 160.0 ---
+ --- HOST 947 : 0 VMs and Power 160.0 ---
+ --- HOST 948 : 0 VMs and Power 160.0 ---
+ --- HOST 949 : 0 VMs and Power 160.0 ---
+ --- HOST 950 : 0 VMs and Power 160.0 ---
+ --- HOST 951 : 0 VMs and Power 160.0 ---
+ --- HOST 952 : 0 VMs and Power 160.0 ---
+ --- HOST 953 : 0 VMs and Power 160.0 ---
+ --- HOST 954 : 0 VMs and Power 160.0 ---
+ --- HOST 955 : 0 VMs and Power 160.0 ---
+ --- HOST 956 : 0 VMs and Power 160.0 ---
+ --- HOST 957 : 0 VMs and Power 160.0 ---
+ --- HOST 958 : 0 VMs and Power 160.0 ---
+ --- HOST 959 : 0 VMs and Power 160.0 ---
+ --- HOST 960 : 0 VMs and Power 160.0 ---
+ --- HOST 961 : 0 VMs and Power 160.0 ---
+ --- HOST 962 : 0 VMs and Power 160.0 ---
+ --- HOST 963 : 0 VMs and Power 160.0 ---
+ --- HOST 964 : 0 VMs and Power 160.0 ---
+ --- HOST 967 : 0 VMs and Power 160.0 ---
+ --- HOST 968 : 0 VMs and Power 160.0 ---
+ --- HOST 969 : 0 VMs and Power 160.0 ---
+ --- HOST 970 : 0 VMs and Power 160.0 ---
+ --- HOST 971 : 0 VMs and Power 160.0 ---
+ --- HOST 972 : 0 VMs and Power 160.0 ---
+ --- HOST 973 : 0 VMs and Power 160.0 ---
+ --- HOST 974 : 0 VMs and Power 160.0 ---
+ --- HOST 975 : 0 VMs and Power 160.0 ---
+ --- HOST 976 : 0 VMs and Power 160.0 ---
+ --- HOST 977 : 0 VMs and Power 160.0 ---
+ --- HOST 978 : 0 VMs and Power 160.0 ---
+ --- HOST 979 : 0 VMs and Power 160.0 ---
+ --- HOST 980 : 0 VMs and Power 160.0 ---
+ --- HOST 981 : 0 VMs and Power 160.0 ---
+ --- HOST 982 : 0 VMs and Power 160.0 ---
+ --- HOST 984 : 0 VMs and Power 160.0 ---
+ --- HOST 985 : 1 VMs and Power 165.0 ---
+ --- HOST 986 : 0 VMs and Power 160.0 ---
+ --- HOST 987 : 0 VMs and Power 160.0 ---
+ --- HOST 988 : 0 VMs and Power 160.0 ---
+ --- HOST 989 : 0 VMs and Power 160.0 ---
+ --- HOST 990 : 0 VMs and Power 160.0 ---
+ --- HOST 991 : 0 VMs and Power 160.0 ---
+ --- HOST 992 : 0 VMs and Power 160.0 ---
+ --- HOST 993 : 0 VMs and Power 160.0 ---
+ --- HOST 994 : 0 VMs and Power 160.0 ---
+ --- HOST 995 : 0 VMs and Power 160.0 ---
+ --- HOST 996 : 0 VMs and Power 160.0 ---
+ --- HOST 997 : 0 VMs and Power 160.0 ---
+ --- HOST 998 : 0 VMs and Power 160.0 ---
+ --- HOST 999 : 0 VMs and Power 160.0 ---
+ --- HOST 1000 : 0 VMs and Power 160.0 ---
+ --- HOST 1001 : 0 VMs and Power 160.0 ---
+ --- HOST 1002 : 0 VMs and Power 160.0 ---
+ --- HOST 1003 : 0 VMs and Power 160.0 ---
+ --- HOST 1004 : 0 VMs and Power 160.0 ---
+ --- HOST 1005 : 1 VMs and Power 165.0 ---
+ --- HOST 1006 : 0 VMs and Power 160.0 ---
+ --- HOST 1007 : 0 VMs and Power 160.0 ---
+ --- HOST 1008 : 0 VMs and Power 160.0 ---
+ --- HOST 1009 : 0 VMs and Power 160.0 ---
+ --- HOST 1010 : 0 VMs and Power 160.0 ---
+ --- HOST 1011 : 0 VMs and Power 160.0 ---
+ --- HOST 1012 : 0 VMs and Power 160.0 ---
+ --- HOST 1013 : 0 VMs and Power 160.0 ---
+ --- HOST 1014 : 0 VMs and Power 160.0 ---
+ --- HOST 1015 : 0 VMs and Power 160.0 ---
+ --- HOST 1016 : 0 VMs and Power 160.0 ---
+ --- HOST 1017 : 0 VMs and Power 160.0 ---
+ --- HOST 1018 : 0 VMs and Power 160.0 ---
+ --- HOST 1019 : 0 VMs and Power 160.0 ---
+ --- HOST 1020 : 0 VMs and Power 160.0 ---
+ --- HOST 1021 : 1 VMs and Power 165.0 ---
+ --- HOST 1023 : 0 VMs and Power 160.0 ---
+ --- HOST 1024 : 0 VMs and Power 160.0 ---
+
+Time: 60.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 1
+Time: 120.1 -- Datacenter VMs 86Power - End of Period : 0.0 --
+
+ --- HOST 70 : 3 VMs and Power 175.0 ---
+ --- HOST 167 : 5 VMs and Power 185.0 ---
+ --- HOST 248 : 1 VMs and Power 165.0 ---
+ --- HOST 366 : 1 VMs and Power 165.0 ---
+ --- HOST 368 : 2 VMs and Power 170.0 ---
+ --- HOST 372 : 4 VMs and Power 180.0 ---
+ --- HOST 411 : 7 VMs and Power 195.0 ---
+ --- HOST 415 : 7 VMs and Power 195.0 ---
+ --- HOST 522 : 9 VMs and Power 205.0 ---
+ --- HOST 524 : 9 VMs and Power 205.0 ---
+ --- HOST 538 : 3 VMs and Power 175.0 ---
+ --- HOST 612 : 1 VMs and Power 165.0 ---
+ --- HOST 675 : 3 VMs and Power 175.0 ---
+ --- HOST 772 : 3 VMs and Power 175.0 ---
+ --- HOST 1005 : 7 VMs and Power 195.0 ---
+ --- HOST 440 : 2 VMs and Power 170.0 ---
+ --- HOST 328 : 6 VMs and Power 190.0 ---
+ --- HOST 112 : 3 VMs and Power 175.0 ---
+ --- HOST 546 : 5 VMs and Power 185.0 ---
+ --- HOST 436 : 2 VMs and Power 170.0 ---
+ --- HOST 943 : 3 VMs and Power 175.0 ---
+
+Time: 120.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 2
+Time: 180.1 -- Datacenter VMs 113Power - End of Period : 0.0 --
+
+ --- HOST 167 : 6 VMs and Power 190.0 ---
+ --- HOST 372 : 11 VMs and Power 215.0 ---
+ --- HOST 411 : 8 VMs and Power 200.0 ---
+ --- HOST 415 : 7 VMs and Power 195.0 ---
+ --- HOST 522 : 8 VMs and Power 200.0 ---
+ --- HOST 524 : 4 VMs and Power 180.0 ---
+ --- HOST 1005 : 9 VMs and Power 205.0 ---
+ --- HOST 328 : 8 VMs and Power 200.0 ---
+ --- HOST 112 : 7 VMs and Power 195.0 ---
+ --- HOST 546 : 5 VMs and Power 185.0 ---
+ --- HOST 560 : 8 VMs and Power 200.0 ---
+ --- HOST 943 : 2 VMs and Power 170.0 ---
+ --- HOST 2 : 15 VMs and Power 235.0 ---
+ --- HOST 295 : 7 VMs and Power 195.0 ---
+ --- HOST 584 : 5 VMs and Power 185.0 ---
+ --- HOST 8 : 1 VMs and Power 165.0 ---
+ --- HOST 175 : 2 VMs and Power 170.0 ---
+
+Time: 180.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 3
+Time: 240.1 -- Datacenter VMs 137Power - End of Period : 0.0 --
+
+ --- HOST 167 : 10 VMs and Power 210.0 ---
+ --- HOST 372 : 3 VMs and Power 175.0 ---
+ --- HOST 411 : 6 VMs and Power 190.0 ---
+ --- HOST 415 : 9 VMs and Power 205.0 ---
+ --- HOST 522 : 8 VMs and Power 200.0 ---
+ --- HOST 524 : 5 VMs and Power 185.0 ---
+ --- HOST 1005 : 2 VMs and Power 170.0 ---
+ --- HOST 328 : 8 VMs and Power 200.0 ---
+ --- HOST 112 : 8 VMs and Power 200.0 ---
+ --- HOST 546 : 13 VMs and Power 225.0 ---
+ --- HOST 560 : 8 VMs and Power 200.0 ---
+ --- HOST 2 : 7 VMs and Power 195.0 ---
+ --- HOST 295 : 12 VMs and Power 220.0 ---
+ --- HOST 584 : 7 VMs and Power 195.0 ---
+ --- HOST 425 : 12 VMs and Power 220.0 ---
+ --- HOST 612 : 13 VMs and Power 225.0 ---
+ --- HOST 681 : 4 VMs and Power 180.0 ---
+ --- HOST 100 : 1 VMs and Power 165.0 ---
+ --- HOST 455 : 1 VMs and Power 165.0 ---
+
+Time: 240.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 4
+Time: 300.1 -- Datacenter VMs 139Power - End of Period : 0.0 --
+
+ --- HOST 167 : 10 VMs and Power 210.0 ---
+ --- HOST 411 : 8 VMs and Power 200.0 ---
+ --- HOST 415 : 5 VMs and Power 185.0 ---
+ --- HOST 522 : 7 VMs and Power 195.0 ---
+ --- HOST 524 : 11 VMs and Power 215.0 ---
+ --- HOST 328 : 8 VMs and Power 200.0 ---
+ --- HOST 112 : 6 VMs and Power 190.0 ---
+ --- HOST 546 : 4 VMs and Power 180.0 ---
+ --- HOST 560 : 10 VMs and Power 210.0 ---
+ --- HOST 2 : 7 VMs and Power 195.0 ---
+ --- HOST 295 : 8 VMs and Power 200.0 ---
+ --- HOST 584 : 8 VMs and Power 200.0 ---
+ --- HOST 425 : 6 VMs and Power 190.0 ---
+ --- HOST 612 : 10 VMs and Power 210.0 ---
+ --- HOST 681 : 6 VMs and Power 190.0 ---
+ --- HOST 303 : 11 VMs and Power 215.0 ---
+ --- HOST 47 : 3 VMs and Power 175.0 ---
+ --- HOST 172 : 6 VMs and Power 190.0 ---
+ --- HOST 904 : 1 VMs and Power 165.0 ---
+ --- HOST 652 : 1 VMs and Power 165.0 ---
+ --- HOST 66 : 1 VMs and Power 165.0 ---
+ --- HOST 514 : 2 VMs and Power 170.0 ---
+
+Time: 300.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 5
+Time: 360.1 -- Datacenter VMs 139Power - End of Period : 0.0 --
+
+ --- HOST 167 : 8 VMs and Power 200.0 ---
+ --- HOST 411 : 4 VMs and Power 180.0 ---
+ --- HOST 415 : 10 VMs and Power 210.0 ---
+ --- HOST 522 : 14 VMs and Power 230.0 ---
+ --- HOST 524 : 7 VMs and Power 195.0 ---
+ --- HOST 328 : 5 VMs and Power 185.0 ---
+ --- HOST 112 : 6 VMs and Power 190.0 ---
+ --- HOST 546 : 5 VMs and Power 185.0 ---
+ --- HOST 560 : 11 VMs and Power 215.0 ---
+ --- HOST 2 : 7 VMs and Power 195.0 ---
+ --- HOST 295 : 3 VMs and Power 175.0 ---
+ --- HOST 584 : 9 VMs and Power 205.0 ---
+ --- HOST 425 : 12 VMs and Power 220.0 ---
+ --- HOST 612 : 6 VMs and Power 190.0 ---
+ --- HOST 681 : 10 VMs and Power 210.0 ---
+ --- HOST 303 : 11 VMs and Power 215.0 ---
+ --- HOST 172 : 10 VMs and Power 210.0 ---
+ --- HOST 175 : 1 VMs and Power 165.0 ---
+
+Time: 360.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 6
+Time: 420.1 -- Datacenter VMs 137Power - End of Period : 0.0 --
+
+ --- HOST 167 : 5 VMs and Power 185.0 ---
+ --- HOST 411 : 8 VMs and Power 200.0 ---
+ --- HOST 415 : 10 VMs and Power 210.0 ---
+ --- HOST 522 : 5 VMs and Power 185.0 ---
+ --- HOST 524 : 10 VMs and Power 210.0 ---
+ --- HOST 328 : 11 VMs and Power 215.0 ---
+ --- HOST 112 : 9 VMs and Power 205.0 ---
+ --- HOST 546 : 2 VMs and Power 170.0 ---
+ --- HOST 560 : 8 VMs and Power 200.0 ---
+ --- HOST 2 : 7 VMs and Power 195.0 ---
+ --- HOST 584 : 12 VMs and Power 220.0 ---
+ --- HOST 425 : 9 VMs and Power 205.0 ---
+ --- HOST 612 : 13 VMs and Power 225.0 ---
+ --- HOST 681 : 9 VMs and Power 205.0 ---
+ --- HOST 303 : 5 VMs and Power 185.0 ---
+ --- HOST 172 : 5 VMs and Power 185.0 ---
+ --- HOST 8 : 8 VMs and Power 200.0 ---
+ --- HOST 779 : 1 VMs and Power 165.0 ---
+
+Time: 420.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 7
+Time: 480.1 -- Datacenter VMs 122Power - End of Period : 0.0 --
+
+ --- HOST 167 : 11 VMs and Power 215.0 ---
+ --- HOST 411 : 9 VMs and Power 205.0 ---
+ --- HOST 415 : 9 VMs and Power 205.0 ---
+ --- HOST 522 : 4 VMs and Power 180.0 ---
+ --- HOST 524 : 4 VMs and Power 180.0 ---
+ --- HOST 328 : 6 VMs and Power 190.0 ---
+ --- HOST 112 : 7 VMs and Power 195.0 ---
+ --- HOST 560 : 10 VMs and Power 210.0 ---
+ --- HOST 2 : 4 VMs and Power 180.0 ---
+ --- HOST 584 : 10 VMs and Power 210.0 ---
+ --- HOST 425 : 6 VMs and Power 190.0 ---
+ --- HOST 612 : 5 VMs and Power 185.0 ---
+ --- HOST 681 : 6 VMs and Power 190.0 ---
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 172 : 8 VMs and Power 200.0 ---
+ --- HOST 8 : 10 VMs and Power 210.0 ---
+ --- HOST 904 : 1 VMs and Power 165.0 ---
+ --- HOST 200 : 2 VMs and Power 170.0 ---
+ --- HOST 168 : 1 VMs and Power 165.0 ---
+ --- HOST 655 : 2 VMs and Power 170.0 ---
+
+Time: 480.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 8
+Time: 540.1 -- Datacenter VMs 132Power - End of Period : 0.0 --
+
+ --- HOST 167 : 7 VMs and Power 195.0 ---
+ --- HOST 411 : 1 VMs and Power 165.0 ---
+ --- HOST 415 : 10 VMs and Power 210.0 ---
+ --- HOST 522 : 4 VMs and Power 180.0 ---
+ --- HOST 524 : 12 VMs and Power 220.0 ---
+ --- HOST 328 : 4 VMs and Power 180.0 ---
+ --- HOST 112 : 5 VMs and Power 185.0 ---
+ --- HOST 560 : 5 VMs and Power 185.0 ---
+ --- HOST 2 : 8 VMs and Power 200.0 ---
+ --- HOST 584 : 7 VMs and Power 195.0 ---
+ --- HOST 425 : 13 VMs and Power 225.0 ---
+ --- HOST 612 : 8 VMs and Power 200.0 ---
+ --- HOST 681 : 13 VMs and Power 225.0 ---
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 172 : 8 VMs and Power 200.0 ---
+ --- HOST 8 : 5 VMs and Power 185.0 ---
+ --- HOST 686 : 12 VMs and Power 220.0 ---
+ --- HOST 142 : 1 VMs and Power 165.0 ---
+
+Time: 540.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 9
+Time: 600.1 -- Datacenter VMs 244Power - End of Period : 0.0 --
+
+ --- HOST 167 : 13 VMs and Power 225.0 ---
+ --- HOST 415 : 11 VMs and Power 215.0 ---
+ --- HOST 522 : 13 VMs and Power 225.0 ---
+ --- HOST 524 : 15 VMs and Power 235.0 ---
+ --- HOST 328 : 17 VMs and Power 245.0 ---
+ --- HOST 112 : 17 VMs and Power 245.0 ---
+ --- HOST 560 : 17 VMs and Power 245.0 ---
+ --- HOST 2 : 17 VMs and Power 245.0 ---
+ --- HOST 584 : 10 VMs and Power 210.0 ---
+ --- HOST 425 : 17 VMs and Power 245.0 ---
+ --- HOST 612 : 10 VMs and Power 210.0 ---
+ --- HOST 681 : 17 VMs and Power 245.0 ---
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 172 : 17 VMs and Power 245.0 ---
+ --- HOST 8 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 779 : 1 VMs and Power 165.0 ---
+ --- HOST 299 : 1 VMs and Power 165.0 ---
+
+Time: 600.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 10
+Time: 660.1 -- Datacenter VMs 246Power - End of Period : 0.0 --
+
+ --- HOST 167 : 12 VMs and Power 220.0 ---
+ --- HOST 415 : 14 VMs and Power 230.0 ---
+ --- HOST 522 : 9 VMs and Power 205.0 ---
+ --- HOST 524 : 11 VMs and Power 215.0 ---
+ --- HOST 328 : 12 VMs and Power 220.0 ---
+ --- HOST 112 : 11 VMs and Power 215.0 ---
+ --- HOST 560 : 10 VMs and Power 210.0 ---
+ --- HOST 2 : 12 VMs and Power 220.0 ---
+ --- HOST 584 : 11 VMs and Power 215.0 ---
+ --- HOST 425 : 9 VMs and Power 205.0 ---
+ --- HOST 612 : 9 VMs and Power 205.0 ---
+ --- HOST 681 : 9 VMs and Power 205.0 ---
+ --- HOST 303 : 14 VMs and Power 230.0 ---
+ --- HOST 172 : 9 VMs and Power 205.0 ---
+ --- HOST 8 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 13 VMs and Power 225.0 ---
+ --- HOST 655 : 15 VMs and Power 235.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 263 : 12 VMs and Power 220.0 ---
+ --- HOST 16 : 16 VMs and Power 240.0 ---
+ --- HOST 527 : 7 VMs and Power 195.0 ---
+ --- HOST 43 : 9 VMs and Power 205.0 ---
+ --- HOST 75 : 1 VMs and Power 165.0 ---
+ --- HOST 15 : 1 VMs and Power 165.0 ---
+
+Time: 660.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 11
+Time: 720.1 -- Datacenter VMs 239Power - End of Period : 0.0 --
+
+ --- HOST 167 : 12 VMs and Power 220.0 ---
+ --- HOST 415 : 9 VMs and Power 205.0 ---
+ --- HOST 522 : 9 VMs and Power 205.0 ---
+ --- HOST 524 : 11 VMs and Power 215.0 ---
+ --- HOST 328 : 10 VMs and Power 210.0 ---
+ --- HOST 112 : 7 VMs and Power 195.0 ---
+ --- HOST 560 : 9 VMs and Power 205.0 ---
+ --- HOST 2 : 12 VMs and Power 220.0 ---
+ --- HOST 584 : 13 VMs and Power 225.0 ---
+ --- HOST 425 : 13 VMs and Power 225.0 ---
+ --- HOST 612 : 6 VMs and Power 190.0 ---
+ --- HOST 681 : 10 VMs and Power 210.0 ---
+ --- HOST 303 : 6 VMs and Power 190.0 ---
+ --- HOST 172 : 9 VMs and Power 205.0 ---
+ --- HOST 8 : 8 VMs and Power 200.0 ---
+ --- HOST 686 : 8 VMs and Power 200.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 9 VMs and Power 205.0 ---
+ --- HOST 263 : 14 VMs and Power 230.0 ---
+ --- HOST 16 : 12 VMs and Power 220.0 ---
+ --- HOST 527 : 11 VMs and Power 215.0 ---
+ --- HOST 43 : 10 VMs and Power 210.0 ---
+ --- HOST 299 : 16 VMs and Power 240.0 ---
+ --- HOST 680 : 2 VMs and Power 170.0 ---
+ --- HOST 779 : 2 VMs and Power 170.0 ---
+ --- HOST 176 : 1 VMs and Power 165.0 ---
+
+Time: 720.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 12
+Time: 780.1 -- Datacenter VMs 216Power - End of Period : 0.0 --
+
+ --- HOST 167 : 9 VMs and Power 205.0 ---
+ --- HOST 415 : 13 VMs and Power 225.0 ---
+ --- HOST 522 : 7 VMs and Power 195.0 ---
+ --- HOST 524 : 12 VMs and Power 220.0 ---
+ --- HOST 328 : 10 VMs and Power 210.0 ---
+ --- HOST 112 : 9 VMs and Power 205.0 ---
+ --- HOST 560 : 9 VMs and Power 205.0 ---
+ --- HOST 2 : 6 VMs and Power 190.0 ---
+ --- HOST 584 : 10 VMs and Power 210.0 ---
+ --- HOST 425 : 11 VMs and Power 215.0 ---
+ --- HOST 612 : 10 VMs and Power 210.0 ---
+ --- HOST 681 : 10 VMs and Power 210.0 ---
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 172 : 10 VMs and Power 210.0 ---
+ --- HOST 8 : 7 VMs and Power 195.0 ---
+ --- HOST 686 : 9 VMs and Power 205.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 263 : 6 VMs and Power 190.0 ---
+ --- HOST 16 : 7 VMs and Power 195.0 ---
+ --- HOST 527 : 10 VMs and Power 210.0 ---
+ --- HOST 43 : 9 VMs and Power 205.0 ---
+ --- HOST 299 : 10 VMs and Power 210.0 ---
+ --- HOST 749 : 2 VMs and Power 170.0 ---
+
+Time: 780.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 13
+Time: 840.1 -- Datacenter VMs 161Power - End of Period : 0.0 --
+
+ --- HOST 167 : 11 VMs and Power 215.0 ---
+ --- HOST 415 : 7 VMs and Power 195.0 ---
+ --- HOST 522 : 4 VMs and Power 180.0 ---
+ --- HOST 524 : 4 VMs and Power 180.0 ---
+ --- HOST 328 : 7 VMs and Power 195.0 ---
+ --- HOST 112 : 5 VMs and Power 185.0 ---
+ --- HOST 560 : 7 VMs and Power 195.0 ---
+ --- HOST 2 : 4 VMs and Power 180.0 ---
+ --- HOST 584 : 5 VMs and Power 185.0 ---
+ --- HOST 425 : 11 VMs and Power 215.0 ---
+ --- HOST 612 : 4 VMs and Power 180.0 ---
+ --- HOST 681 : 7 VMs and Power 195.0 ---
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 172 : 7 VMs and Power 195.0 ---
+ --- HOST 8 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 9 VMs and Power 205.0 ---
+ --- HOST 655 : 7 VMs and Power 195.0 ---
+ --- HOST 387 : 9 VMs and Power 205.0 ---
+ --- HOST 263 : 5 VMs and Power 185.0 ---
+ --- HOST 16 : 8 VMs and Power 200.0 ---
+ --- HOST 527 : 4 VMs and Power 180.0 ---
+ --- HOST 43 : 10 VMs and Power 210.0 ---
+ --- HOST 299 : 10 VMs and Power 210.0 ---
+
+Time: 840.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 14
+Time: 900.1 -- Datacenter VMs 144Power - End of Period : 0.0 --
+
+ --- HOST 167 : 11 VMs and Power 215.0 ---
+ --- HOST 415 : 11 VMs and Power 215.0 ---
+ --- HOST 522 : 2 VMs and Power 170.0 ---
+ --- HOST 328 : 8 VMs and Power 200.0 ---
+ --- HOST 112 : 6 VMs and Power 190.0 ---
+ --- HOST 560 : 6 VMs and Power 190.0 ---
+ --- HOST 2 : 1 VMs and Power 165.0 ---
+ --- HOST 584 : 1 VMs and Power 165.0 ---
+ --- HOST 425 : 4 VMs and Power 180.0 ---
+ --- HOST 681 : 10 VMs and Power 210.0 ---
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 172 : 10 VMs and Power 210.0 ---
+ --- HOST 8 : 7 VMs and Power 195.0 ---
+ --- HOST 686 : 8 VMs and Power 200.0 ---
+ --- HOST 655 : 6 VMs and Power 190.0 ---
+ --- HOST 387 : 9 VMs and Power 205.0 ---
+ --- HOST 263 : 2 VMs and Power 170.0 ---
+ --- HOST 16 : 12 VMs and Power 220.0 ---
+ --- HOST 527 : 6 VMs and Power 190.0 ---
+ --- HOST 43 : 9 VMs and Power 205.0 ---
+ --- HOST 299 : 6 VMs and Power 190.0 ---
+
+Time: 900.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 15
+Time: 960.1 -- Datacenter VMs 248Power - End of Period : 0.0 --
+
+ --- HOST 167 : 15 VMs and Power 235.0 ---
+ --- HOST 415 : 17 VMs and Power 245.0 ---
+ --- HOST 328 : 17 VMs and Power 245.0 ---
+ --- HOST 112 : 11 VMs and Power 215.0 ---
+ --- HOST 560 : 6 VMs and Power 190.0 ---
+ --- HOST 425 : 14 VMs and Power 230.0 ---
+ --- HOST 681 : 17 VMs and Power 245.0 ---
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 172 : 11 VMs and Power 215.0 ---
+ --- HOST 8 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 655 : 17 VMs and Power 245.0 ---
+ --- HOST 387 : 17 VMs and Power 245.0 ---
+ --- HOST 16 : 19 VMs and Power 255.0 ---
+ --- HOST 527 : 6 VMs and Power 190.0 ---
+ --- HOST 43 : 17 VMs and Power 245.0 ---
+ --- HOST 299 : 17 VMs and Power 245.0 ---
+
+Time: 960.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 16
+Time: 1020.1 -- Datacenter VMs 299Power - End of Period : 0.0 --
+
+ --- HOST 167 : 13 VMs and Power 225.0 ---
+ --- HOST 415 : 14 VMs and Power 230.0 ---
+ --- HOST 328 : 12 VMs and Power 220.0 ---
+ --- HOST 112 : 12 VMs and Power 220.0 ---
+ --- HOST 560 : 13 VMs and Power 225.0 ---
+ --- HOST 425 : 11 VMs and Power 215.0 ---
+ --- HOST 681 : 15 VMs and Power 235.0 ---
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 172 : 11 VMs and Power 215.0 ---
+ --- HOST 8 : 16 VMs and Power 240.0 ---
+ --- HOST 686 : 14 VMs and Power 230.0 ---
+ --- HOST 655 : 13 VMs and Power 225.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 16 : 13 VMs and Power 225.0 ---
+ --- HOST 527 : 12 VMs and Power 220.0 ---
+ --- HOST 43 : 13 VMs and Power 225.0 ---
+ --- HOST 299 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 271 : 8 VMs and Power 200.0 ---
+ --- HOST 675 : 15 VMs and Power 235.0 ---
+ --- HOST 651 : 3 VMs and Power 175.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 4 VMs and Power 180.0 ---
+ --- HOST 685 : 16 VMs and Power 240.0 ---
+ --- HOST 683 : 5 VMs and Power 185.0 ---
+ --- HOST 143 : 3 VMs and Power 175.0 ---
+ --- HOST 238 : 1 VMs and Power 165.0 ---
+
+Time: 1020.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 17
+Time: 1080.1 -- Datacenter VMs 225Power - End of Period : 0.0 --
+
+ --- HOST 167 : 8 VMs and Power 200.0 ---
+ --- HOST 415 : 6 VMs and Power 190.0 ---
+ --- HOST 328 : 9 VMs and Power 205.0 ---
+ --- HOST 112 : 9 VMs and Power 205.0 ---
+ --- HOST 560 : 12 VMs and Power 220.0 ---
+ --- HOST 425 : 7 VMs and Power 195.0 ---
+ --- HOST 681 : 7 VMs and Power 195.0 ---
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 172 : 10 VMs and Power 210.0 ---
+ --- HOST 8 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 655 : 11 VMs and Power 215.0 ---
+ --- HOST 387 : 9 VMs and Power 205.0 ---
+ --- HOST 16 : 7 VMs and Power 195.0 ---
+ --- HOST 527 : 6 VMs and Power 190.0 ---
+ --- HOST 43 : 9 VMs and Power 205.0 ---
+ --- HOST 299 : 5 VMs and Power 185.0 ---
+ --- HOST 445 : 11 VMs and Power 215.0 ---
+ --- HOST 271 : 15 VMs and Power 235.0 ---
+ --- HOST 675 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 443 : 15 VMs and Power 235.0 ---
+ --- HOST 685 : 11 VMs and Power 215.0 ---
+ --- HOST 683 : 8 VMs and Power 200.0 ---
+ --- HOST 407 : 2 VMs and Power 170.0 ---
+
+Time: 1080.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 18
+Time: 1140.1 -- Datacenter VMs 309Power - End of Period : 0.0 --
+
+ --- HOST 167 : 8 VMs and Power 200.0 ---
+ --- HOST 415 : 8 VMs and Power 200.0 ---
+ --- HOST 328 : 12 VMs and Power 220.0 ---
+ --- HOST 112 : 9 VMs and Power 205.0 ---
+ --- HOST 560 : 12 VMs and Power 220.0 ---
+ --- HOST 425 : 16 VMs and Power 240.0 ---
+ --- HOST 681 : 7 VMs and Power 195.0 ---
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 172 : 10 VMs and Power 210.0 ---
+ --- HOST 8 : 12 VMs and Power 220.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 655 : 17 VMs and Power 245.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 16 : 11 VMs and Power 215.0 ---
+ --- HOST 527 : 6 VMs and Power 190.0 ---
+ --- HOST 43 : 17 VMs and Power 245.0 ---
+ --- HOST 299 : 7 VMs and Power 195.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 271 : 18 VMs and Power 250.0 ---
+ --- HOST 675 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 17 VMs and Power 245.0 ---
+ --- HOST 685 : 17 VMs and Power 245.0 ---
+ --- HOST 683 : 9 VMs and Power 205.0 ---
+
+Time: 1140.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 19
+Time: 1200.1 -- Datacenter VMs 283Power - End of Period : 0.0 --
+
+ --- HOST 167 : 9 VMs and Power 205.0 ---
+ --- HOST 415 : 13 VMs and Power 225.0 ---
+ --- HOST 328 : 14 VMs and Power 230.0 ---
+ --- HOST 112 : 6 VMs and Power 190.0 ---
+ --- HOST 560 : 12 VMs and Power 220.0 ---
+ --- HOST 425 : 15 VMs and Power 235.0 ---
+ --- HOST 681 : 8 VMs and Power 200.0 ---
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 172 : 15 VMs and Power 235.0 ---
+ --- HOST 8 : 12 VMs and Power 220.0 ---
+ --- HOST 686 : 15 VMs and Power 235.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 12 VMs and Power 220.0 ---
+ --- HOST 16 : 14 VMs and Power 230.0 ---
+ --- HOST 527 : 11 VMs and Power 215.0 ---
+ --- HOST 43 : 9 VMs and Power 205.0 ---
+ --- HOST 299 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 271 : 14 VMs and Power 230.0 ---
+ --- HOST 675 : 5 VMs and Power 185.0 ---
+ --- HOST 448 : 13 VMs and Power 225.0 ---
+ --- HOST 443 : 13 VMs and Power 225.0 ---
+ --- HOST 685 : 10 VMs and Power 210.0 ---
+ --- HOST 683 : 16 VMs and Power 240.0 ---
+ --- HOST 439 : 6 VMs and Power 190.0 ---
+
+Time: 1200.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 20
+Time: 1260.1 -- Datacenter VMs 274Power - End of Period : 0.0 --
+
+ --- HOST 167 : 13 VMs and Power 225.0 ---
+ --- HOST 415 : 9 VMs and Power 205.0 ---
+ --- HOST 328 : 13 VMs and Power 225.0 ---
+ --- HOST 112 : 13 VMs and Power 225.0 ---
+ --- HOST 560 : 11 VMs and Power 215.0 ---
+ --- HOST 425 : 9 VMs and Power 205.0 ---
+ --- HOST 681 : 9 VMs and Power 205.0 ---
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 172 : 9 VMs and Power 205.0 ---
+ --- HOST 8 : 10 VMs and Power 210.0 ---
+ --- HOST 686 : 9 VMs and Power 205.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 9 VMs and Power 205.0 ---
+ --- HOST 16 : 11 VMs and Power 215.0 ---
+ --- HOST 527 : 11 VMs and Power 215.0 ---
+ --- HOST 43 : 14 VMs and Power 230.0 ---
+ --- HOST 299 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 271 : 6 VMs and Power 190.0 ---
+ --- HOST 675 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 7 VMs and Power 195.0 ---
+ --- HOST 443 : 11 VMs and Power 215.0 ---
+ --- HOST 685 : 10 VMs and Power 210.0 ---
+ --- HOST 683 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 14 VMs and Power 230.0 ---
+ --- HOST 389 : 2 VMs and Power 170.0 ---
+ --- HOST 407 : 13 VMs and Power 225.0 ---
+ --- HOST 743 : 1 VMs and Power 165.0 ---
+
+Time: 1260.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 21
+Time: 1320.1 -- Datacenter VMs 226Power - End of Period : 0.0 --
+
+ --- HOST 167 : 6 VMs and Power 190.0 ---
+ --- HOST 415 : 5 VMs and Power 185.0 ---
+ --- HOST 328 : 7 VMs and Power 195.0 ---
+ --- HOST 112 : 6 VMs and Power 190.0 ---
+ --- HOST 560 : 5 VMs and Power 185.0 ---
+ --- HOST 425 : 10 VMs and Power 210.0 ---
+ --- HOST 681 : 12 VMs and Power 220.0 ---
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 172 : 9 VMs and Power 205.0 ---
+ --- HOST 8 : 11 VMs and Power 215.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 16 : 5 VMs and Power 185.0 ---
+ --- HOST 527 : 8 VMs and Power 200.0 ---
+ --- HOST 43 : 13 VMs and Power 225.0 ---
+ --- HOST 299 : 5 VMs and Power 185.0 ---
+ --- HOST 445 : 12 VMs and Power 220.0 ---
+ --- HOST 271 : 13 VMs and Power 225.0 ---
+ --- HOST 675 : 6 VMs and Power 190.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 443 : 10 VMs and Power 210.0 ---
+ --- HOST 685 : 8 VMs and Power 200.0 ---
+ --- HOST 683 : 4 VMs and Power 180.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 407 : 13 VMs and Power 225.0 ---
+
+Time: 1320.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 22
+Time: 1380.1 -- Datacenter VMs 179Power - End of Period : 0.0 --
+
+ --- HOST 167 : 2 VMs and Power 170.0 ---
+ --- HOST 415 : 3 VMs and Power 175.0 ---
+ --- HOST 328 : 6 VMs and Power 190.0 ---
+ --- HOST 112 : 3 VMs and Power 175.0 ---
+ --- HOST 425 : 12 VMs and Power 220.0 ---
+ --- HOST 681 : 6 VMs and Power 190.0 ---
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 172 : 5 VMs and Power 185.0 ---
+ --- HOST 8 : 8 VMs and Power 200.0 ---
+ --- HOST 686 : 5 VMs and Power 185.0 ---
+ --- HOST 655 : 11 VMs and Power 215.0 ---
+ --- HOST 387 : 10 VMs and Power 210.0 ---
+ --- HOST 16 : 6 VMs and Power 190.0 ---
+ --- HOST 527 : 11 VMs and Power 215.0 ---
+ --- HOST 43 : 7 VMs and Power 195.0 ---
+ --- HOST 299 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 6 VMs and Power 190.0 ---
+ --- HOST 271 : 7 VMs and Power 195.0 ---
+ --- HOST 675 : 13 VMs and Power 225.0 ---
+ --- HOST 448 : 6 VMs and Power 190.0 ---
+ --- HOST 443 : 8 VMs and Power 200.0 ---
+ --- HOST 685 : 6 VMs and Power 190.0 ---
+ --- HOST 683 : 2 VMs and Power 170.0 ---
+ --- HOST 439 : 10 VMs and Power 210.0 ---
+ --- HOST 407 : 11 VMs and Power 215.0 ---
+
+Time: 1380.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 23
+Time: 1440.1 -- Datacenter VMs 174Power - End of Period : 0.0 --
+
+ --- HOST 328 : 1 VMs and Power 165.0 ---
+ --- HOST 425 : 6 VMs and Power 190.0 ---
+ --- HOST 681 : 10 VMs and Power 210.0 ---
+ --- HOST 303 : 4 VMs and Power 180.0 ---
+ --- HOST 172 : 2 VMs and Power 170.0 ---
+ --- HOST 8 : 10 VMs and Power 210.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 16 : 8 VMs and Power 200.0 ---
+ --- HOST 527 : 9 VMs and Power 205.0 ---
+ --- HOST 43 : 11 VMs and Power 215.0 ---
+ --- HOST 299 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 271 : 10 VMs and Power 210.0 ---
+ --- HOST 675 : 7 VMs and Power 195.0 ---
+ --- HOST 448 : 7 VMs and Power 195.0 ---
+ --- HOST 443 : 9 VMs and Power 205.0 ---
+ --- HOST 685 : 11 VMs and Power 215.0 ---
+ --- HOST 439 : 6 VMs and Power 190.0 ---
+ --- HOST 407 : 10 VMs and Power 210.0 ---
+ --- HOST 331 : 1 VMs and Power 165.0 ---
+
+Time: 1440.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 24
+Time: 1500.1 -- Datacenter VMs 148Power - End of Period : 0.0 --
+
+ --- HOST 425 : 10 VMs and Power 210.0 ---
+ --- HOST 681 : 7 VMs and Power 195.0 ---
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 8 : 8 VMs and Power 200.0 ---
+ --- HOST 686 : 6 VMs and Power 190.0 ---
+ --- HOST 655 : 5 VMs and Power 185.0 ---
+ --- HOST 387 : 7 VMs and Power 195.0 ---
+ --- HOST 16 : 7 VMs and Power 195.0 ---
+ --- HOST 527 : 1 VMs and Power 165.0 ---
+ --- HOST 43 : 11 VMs and Power 215.0 ---
+ --- HOST 299 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 271 : 11 VMs and Power 215.0 ---
+ --- HOST 675 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 443 : 8 VMs and Power 200.0 ---
+ --- HOST 685 : 8 VMs and Power 200.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+ --- HOST 407 : 5 VMs and Power 185.0 ---
+
+Time: 1500.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 25
+Time: 1560.1 -- Datacenter VMs 133Power - End of Period : 0.0 --
+
+ --- HOST 425 : 8 VMs and Power 200.0 ---
+ --- HOST 681 : 5 VMs and Power 185.0 ---
+ --- HOST 303 : 4 VMs and Power 180.0 ---
+ --- HOST 8 : 11 VMs and Power 215.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 16 : 10 VMs and Power 210.0 ---
+ --- HOST 43 : 6 VMs and Power 190.0 ---
+ --- HOST 299 : 4 VMs and Power 180.0 ---
+ --- HOST 445 : 5 VMs and Power 185.0 ---
+ --- HOST 271 : 5 VMs and Power 185.0 ---
+ --- HOST 675 : 5 VMs and Power 185.0 ---
+ --- HOST 448 : 6 VMs and Power 190.0 ---
+ --- HOST 443 : 12 VMs and Power 220.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 6 VMs and Power 190.0 ---
+ --- HOST 407 : 6 VMs and Power 190.0 ---
+
+Time: 1560.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 26
+Time: 1620.1 -- Datacenter VMs 257Power - End of Period : 0.0 --
+
+ --- HOST 425 : 14 VMs and Power 230.0 ---
+ --- HOST 681 : 5 VMs and Power 185.0 ---
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 8 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 17 VMs and Power 245.0 ---
+ --- HOST 16 : 17 VMs and Power 245.0 ---
+ --- HOST 43 : 9 VMs and Power 205.0 ---
+ --- HOST 299 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 271 : 17 VMs and Power 245.0 ---
+ --- HOST 675 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 17 VMs and Power 245.0 ---
+ --- HOST 685 : 17 VMs and Power 245.0 ---
+ --- HOST 439 : 17 VMs and Power 245.0 ---
+ --- HOST 407 : 7 VMs and Power 195.0 ---
+
+Time: 1620.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 27
+Time: 1680.1 -- Datacenter VMs 283Power - End of Period : 0.0 --
+
+ --- HOST 425 : 13 VMs and Power 225.0 ---
+ --- HOST 681 : 14 VMs and Power 230.0 ---
+ --- HOST 303 : 12 VMs and Power 220.0 ---
+ --- HOST 8 : 13 VMs and Power 225.0 ---
+ --- HOST 686 : 14 VMs and Power 230.0 ---
+ --- HOST 655 : 6 VMs and Power 190.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 16 : 12 VMs and Power 220.0 ---
+ --- HOST 43 : 12 VMs and Power 220.0 ---
+ --- HOST 299 : 13 VMs and Power 225.0 ---
+ --- HOST 445 : 14 VMs and Power 230.0 ---
+ --- HOST 271 : 13 VMs and Power 225.0 ---
+ --- HOST 675 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 13 VMs and Power 225.0 ---
+ --- HOST 443 : 12 VMs and Power 220.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 12 VMs and Power 220.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 493 : 15 VMs and Power 235.0 ---
+ --- HOST 775 : 14 VMs and Power 230.0 ---
+ --- HOST 496 : 14 VMs and Power 230.0 ---
+ --- HOST 647 : 15 VMs and Power 235.0 ---
+ --- HOST 491 : 6 VMs and Power 190.0 ---
+ --- HOST 527 : 1 VMs and Power 165.0 ---
+
+Time: 1680.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 28
+Time: 1740.1 -- Datacenter VMs 228Power - End of Period : 0.0 --
+
+ --- HOST 425 : 7 VMs and Power 195.0 ---
+ --- HOST 681 : 8 VMs and Power 200.0 ---
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 8 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 8 VMs and Power 200.0 ---
+ --- HOST 655 : 11 VMs and Power 215.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 16 : 10 VMs and Power 210.0 ---
+ --- HOST 43 : 8 VMs and Power 200.0 ---
+ --- HOST 299 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 12 VMs and Power 220.0 ---
+ --- HOST 271 : 6 VMs and Power 190.0 ---
+ --- HOST 675 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 443 : 10 VMs and Power 210.0 ---
+ --- HOST 685 : 13 VMs and Power 225.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 407 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 7 VMs and Power 195.0 ---
+ --- HOST 775 : 9 VMs and Power 205.0 ---
+ --- HOST 496 : 13 VMs and Power 225.0 ---
+ --- HOST 647 : 7 VMs and Power 195.0 ---
+ --- HOST 491 : 16 VMs and Power 240.0 ---
+ --- HOST 175 : 4 VMs and Power 180.0 ---
+
+Time: 1740.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 29
+Time: 1800.1 -- Datacenter VMs 177Power - End of Period : 0.0 --
+
+ --- HOST 425 : 2 VMs and Power 170.0 ---
+ --- HOST 681 : 5 VMs and Power 185.0 ---
+ --- HOST 303 : 6 VMs and Power 190.0 ---
+ --- HOST 8 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 12 VMs and Power 220.0 ---
+ --- HOST 655 : 10 VMs and Power 210.0 ---
+ --- HOST 387 : 10 VMs and Power 210.0 ---
+ --- HOST 16 : 4 VMs and Power 180.0 ---
+ --- HOST 43 : 5 VMs and Power 185.0 ---
+ --- HOST 299 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 6 VMs and Power 190.0 ---
+ --- HOST 271 : 4 VMs and Power 180.0 ---
+ --- HOST 675 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 6 VMs and Power 190.0 ---
+ --- HOST 443 : 6 VMs and Power 190.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 4 VMs and Power 180.0 ---
+ --- HOST 493 : 7 VMs and Power 195.0 ---
+ --- HOST 775 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 6 VMs and Power 190.0 ---
+ --- HOST 647 : 1 VMs and Power 165.0 ---
+ --- HOST 491 : 8 VMs and Power 200.0 ---
+ --- HOST 175 : 17 VMs and Power 245.0 ---
+ --- HOST 455 : 3 VMs and Power 175.0 ---
+
+Time: 1800.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 30
+Time: 1860.1 -- Datacenter VMs 153Power - End of Period : 0.0 --
+
+ --- HOST 681 : 1 VMs and Power 165.0 ---
+ --- HOST 303 : 12 VMs and Power 220.0 ---
+ --- HOST 8 : 7 VMs and Power 195.0 ---
+ --- HOST 686 : 6 VMs and Power 190.0 ---
+ --- HOST 655 : 8 VMs and Power 200.0 ---
+ --- HOST 387 : 8 VMs and Power 200.0 ---
+ --- HOST 16 : 8 VMs and Power 200.0 ---
+ --- HOST 299 : 5 VMs and Power 185.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 271 : 7 VMs and Power 195.0 ---
+ --- HOST 675 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 443 : 9 VMs and Power 205.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 5 VMs and Power 185.0 ---
+ --- HOST 775 : 8 VMs and Power 200.0 ---
+ --- HOST 496 : 11 VMs and Power 215.0 ---
+ --- HOST 491 : 5 VMs and Power 185.0 ---
+ --- HOST 175 : 8 VMs and Power 200.0 ---
+
+Time: 1860.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 31
+Time: 1920.1 -- Datacenter VMs 273Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 8 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 655 : 8 VMs and Power 200.0 ---
+ --- HOST 387 : 13 VMs and Power 225.0 ---
+ --- HOST 16 : 8 VMs and Power 200.0 ---
+ --- HOST 299 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 271 : 8 VMs and Power 200.0 ---
+ --- HOST 675 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 17 VMs and Power 245.0 ---
+ --- HOST 685 : 17 VMs and Power 245.0 ---
+ --- HOST 439 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 775 : 17 VMs and Power 245.0 ---
+ --- HOST 496 : 17 VMs and Power 245.0 ---
+ --- HOST 491 : 9 VMs and Power 205.0 ---
+ --- HOST 175 : 17 VMs and Power 245.0 ---
+
+Time: 1920.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 32
+Time: 1980.1 -- Datacenter VMs 342Power - End of Period : 0.0 --
+
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 8 : 14 VMs and Power 230.0 ---
+ --- HOST 686 : 13 VMs and Power 225.0 ---
+ --- HOST 655 : 11 VMs and Power 215.0 ---
+ --- HOST 387 : 13 VMs and Power 225.0 ---
+ --- HOST 16 : 11 VMs and Power 215.0 ---
+ --- HOST 299 : 14 VMs and Power 230.0 ---
+ --- HOST 445 : 13 VMs and Power 225.0 ---
+ --- HOST 271 : 14 VMs and Power 230.0 ---
+ --- HOST 675 : 15 VMs and Power 235.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 443 : 14 VMs and Power 230.0 ---
+ --- HOST 685 : 13 VMs and Power 225.0 ---
+ --- HOST 439 : 14 VMs and Power 230.0 ---
+ --- HOST 493 : 16 VMs and Power 240.0 ---
+ --- HOST 775 : 13 VMs and Power 225.0 ---
+ --- HOST 496 : 14 VMs and Power 230.0 ---
+ --- HOST 491 : 14 VMs and Power 230.0 ---
+ --- HOST 175 : 13 VMs and Power 225.0 ---
+ --- HOST 63 : 13 VMs and Power 225.0 ---
+ --- HOST 317 : 16 VMs and Power 240.0 ---
+ --- HOST 455 : 14 VMs and Power 230.0 ---
+ --- HOST 485 : 16 VMs and Power 240.0 ---
+ --- HOST 315 : 17 VMs and Power 245.0 ---
+ --- HOST 779 : 5 VMs and Power 185.0 ---
+ --- HOST 483 : 2 VMs and Power 170.0 ---
+ --- HOST 320 : 5 VMs and Power 185.0 ---
+
+Time: 1980.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 33
+Time: 2040.1 -- Datacenter VMs 309Power - End of Period : 0.0 --
+
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 8 : 8 VMs and Power 200.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 655 : 13 VMs and Power 225.0 ---
+ --- HOST 387 : 9 VMs and Power 205.0 ---
+ --- HOST 16 : 13 VMs and Power 225.0 ---
+ --- HOST 299 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 271 : 11 VMs and Power 215.0 ---
+ --- HOST 675 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 443 : 8 VMs and Power 200.0 ---
+ --- HOST 685 : 12 VMs and Power 220.0 ---
+ --- HOST 439 : 14 VMs and Power 230.0 ---
+ --- HOST 493 : 7 VMs and Power 195.0 ---
+ --- HOST 775 : 10 VMs and Power 210.0 ---
+ --- HOST 496 : 11 VMs and Power 215.0 ---
+ --- HOST 491 : 14 VMs and Power 230.0 ---
+ --- HOST 175 : 11 VMs and Power 215.0 ---
+ --- HOST 63 : 9 VMs and Power 205.0 ---
+ --- HOST 317 : 14 VMs and Power 230.0 ---
+ --- HOST 455 : 8 VMs and Power 200.0 ---
+ --- HOST 485 : 10 VMs and Power 210.0 ---
+ --- HOST 315 : 13 VMs and Power 225.0 ---
+ --- HOST 779 : 16 VMs and Power 240.0 ---
+ --- HOST 320 : 14 VMs and Power 230.0 ---
+ --- HOST 407 : 13 VMs and Power 225.0 ---
+ --- HOST 815 : 5 VMs and Power 185.0 ---
+ --- HOST 487 : 3 VMs and Power 175.0 ---
+
+Time: 2040.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 34
+Time: 2100.1 -- Datacenter VMs 199Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 8 : 8 VMs and Power 200.0 ---
+ --- HOST 686 : 9 VMs and Power 205.0 ---
+ --- HOST 655 : 4 VMs and Power 180.0 ---
+ --- HOST 387 : 5 VMs and Power 185.0 ---
+ --- HOST 16 : 3 VMs and Power 175.0 ---
+ --- HOST 299 : 4 VMs and Power 180.0 ---
+ --- HOST 445 : 11 VMs and Power 215.0 ---
+ --- HOST 271 : 5 VMs and Power 185.0 ---
+ --- HOST 675 : 4 VMs and Power 180.0 ---
+ --- HOST 448 : 6 VMs and Power 190.0 ---
+ --- HOST 443 : 10 VMs and Power 210.0 ---
+ --- HOST 685 : 5 VMs and Power 185.0 ---
+ --- HOST 439 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 775 : 5 VMs and Power 185.0 ---
+ --- HOST 496 : 9 VMs and Power 205.0 ---
+ --- HOST 491 : 4 VMs and Power 180.0 ---
+ --- HOST 175 : 11 VMs and Power 215.0 ---
+ --- HOST 63 : 3 VMs and Power 175.0 ---
+ --- HOST 317 : 10 VMs and Power 210.0 ---
+ --- HOST 455 : 3 VMs and Power 175.0 ---
+ --- HOST 485 : 12 VMs and Power 220.0 ---
+ --- HOST 315 : 5 VMs and Power 185.0 ---
+ --- HOST 779 : 9 VMs and Power 205.0 ---
+ --- HOST 320 : 6 VMs and Power 190.0 ---
+ --- HOST 407 : 12 VMs and Power 220.0 ---
+ --- HOST 815 : 7 VMs and Power 195.0 ---
+
+Time: 2100.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 35
+Time: 2160.1 -- Datacenter VMs 299Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 8 : 10 VMs and Power 210.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 655 : 4 VMs and Power 180.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 299 : 4 VMs and Power 180.0 ---
+ --- HOST 445 : 20 VMs and Power 260.0 ---
+ --- HOST 271 : 5 VMs and Power 185.0 ---
+ --- HOST 675 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 12 VMs and Power 220.0 ---
+ --- HOST 685 : 5 VMs and Power 185.0 ---
+ --- HOST 439 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 19 VMs and Power 255.0 ---
+ --- HOST 775 : 8 VMs and Power 200.0 ---
+ --- HOST 496 : 17 VMs and Power 245.0 ---
+ --- HOST 491 : 5 VMs and Power 185.0 ---
+ --- HOST 175 : 17 VMs and Power 245.0 ---
+ --- HOST 317 : 14 VMs and Power 230.0 ---
+ --- HOST 485 : 17 VMs and Power 245.0 ---
+ --- HOST 315 : 5 VMs and Power 185.0 ---
+ --- HOST 779 : 9 VMs and Power 205.0 ---
+ --- HOST 320 : 6 VMs and Power 190.0 ---
+ --- HOST 407 : 15 VMs and Power 235.0 ---
+ --- HOST 815 : 11 VMs and Power 215.0 ---
+
+Time: 2160.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 36
+Time: 2220.1 -- Datacenter VMs 290Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 8 : 13 VMs and Power 225.0 ---
+ --- HOST 686 : 13 VMs and Power 225.0 ---
+ --- HOST 655 : 9 VMs and Power 205.0 ---
+ --- HOST 387 : 15 VMs and Power 235.0 ---
+ --- HOST 299 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 7 VMs and Power 195.0 ---
+ --- HOST 271 : 6 VMs and Power 190.0 ---
+ --- HOST 675 : 12 VMs and Power 220.0 ---
+ --- HOST 448 : 15 VMs and Power 235.0 ---
+ --- HOST 443 : 11 VMs and Power 215.0 ---
+ --- HOST 685 : 13 VMs and Power 225.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 775 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 12 VMs and Power 220.0 ---
+ --- HOST 491 : 14 VMs and Power 230.0 ---
+ --- HOST 175 : 13 VMs and Power 225.0 ---
+ --- HOST 317 : 15 VMs and Power 235.0 ---
+ --- HOST 485 : 12 VMs and Power 220.0 ---
+ --- HOST 315 : 16 VMs and Power 240.0 ---
+ --- HOST 779 : 13 VMs and Power 225.0 ---
+ --- HOST 320 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 11 VMs and Power 215.0 ---
+ --- HOST 815 : 12 VMs and Power 220.0 ---
+
+Time: 2220.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 37
+Time: 2280.1 -- Datacenter VMs 236Power - End of Period : 0.0 --
+
+ --- HOST 303 : 11 VMs and Power 215.0 ---
+ --- HOST 8 : 10 VMs and Power 210.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 655 : 9 VMs and Power 205.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 299 : 4 VMs and Power 180.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 271 : 8 VMs and Power 200.0 ---
+ --- HOST 675 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 7 VMs and Power 195.0 ---
+ --- HOST 443 : 10 VMs and Power 210.0 ---
+ --- HOST 685 : 11 VMs and Power 215.0 ---
+ --- HOST 439 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 775 : 10 VMs and Power 210.0 ---
+ --- HOST 496 : 8 VMs and Power 200.0 ---
+ --- HOST 491 : 10 VMs and Power 210.0 ---
+ --- HOST 175 : 7 VMs and Power 195.0 ---
+ --- HOST 317 : 8 VMs and Power 200.0 ---
+ --- HOST 485 : 7 VMs and Power 195.0 ---
+ --- HOST 315 : 11 VMs and Power 215.0 ---
+ --- HOST 779 : 13 VMs and Power 225.0 ---
+ --- HOST 320 : 9 VMs and Power 205.0 ---
+ --- HOST 407 : 12 VMs and Power 220.0 ---
+ --- HOST 815 : 10 VMs and Power 210.0 ---
+
+Time: 2280.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 38
+Time: 2340.1 -- Datacenter VMs 186Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 8 : 3 VMs and Power 175.0 ---
+ --- HOST 686 : 7 VMs and Power 195.0 ---
+ --- HOST 655 : 2 VMs and Power 170.0 ---
+ --- HOST 387 : 7 VMs and Power 195.0 ---
+ --- HOST 299 : 3 VMs and Power 175.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 271 : 4 VMs and Power 180.0 ---
+ --- HOST 675 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 443 : 11 VMs and Power 215.0 ---
+ --- HOST 685 : 13 VMs and Power 225.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 775 : 10 VMs and Power 210.0 ---
+ --- HOST 496 : 11 VMs and Power 215.0 ---
+ --- HOST 491 : 2 VMs and Power 170.0 ---
+ --- HOST 175 : 11 VMs and Power 215.0 ---
+ --- HOST 317 : 10 VMs and Power 210.0 ---
+ --- HOST 485 : 10 VMs and Power 210.0 ---
+ --- HOST 315 : 3 VMs and Power 175.0 ---
+ --- HOST 779 : 7 VMs and Power 195.0 ---
+ --- HOST 320 : 4 VMs and Power 180.0 ---
+ --- HOST 407 : 5 VMs and Power 185.0 ---
+ --- HOST 815 : 10 VMs and Power 210.0 ---
+
+Time: 2340.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 39
+Time: 2400.1 -- Datacenter VMs 163Power - End of Period : 0.0 --
+
+ --- HOST 303 : 6 VMs and Power 190.0 ---
+ --- HOST 686 : 11 VMs and Power 215.0 ---
+ --- HOST 387 : 4 VMs and Power 180.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 271 : 4 VMs and Power 180.0 ---
+ --- HOST 675 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 443 : 8 VMs and Power 200.0 ---
+ --- HOST 685 : 7 VMs and Power 195.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 775 : 10 VMs and Power 210.0 ---
+ --- HOST 496 : 8 VMs and Power 200.0 ---
+ --- HOST 175 : 9 VMs and Power 205.0 ---
+ --- HOST 317 : 12 VMs and Power 220.0 ---
+ --- HOST 485 : 9 VMs and Power 205.0 ---
+ --- HOST 779 : 5 VMs and Power 185.0 ---
+ --- HOST 320 : 7 VMs and Power 195.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 815 : 6 VMs and Power 190.0 ---
+
+Time: 2400.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 40
+Time: 2460.1 -- Datacenter VMs 144Power - End of Period : 0.0 --
+
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 686 : 9 VMs and Power 205.0 ---
+ --- HOST 387 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 7 VMs and Power 195.0 ---
+ --- HOST 271 : 3 VMs and Power 175.0 ---
+ --- HOST 675 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 6 VMs and Power 190.0 ---
+ --- HOST 443 : 7 VMs and Power 195.0 ---
+ --- HOST 685 : 5 VMs and Power 185.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 6 VMs and Power 190.0 ---
+ --- HOST 775 : 6 VMs and Power 190.0 ---
+ --- HOST 496 : 10 VMs and Power 210.0 ---
+ --- HOST 175 : 9 VMs and Power 205.0 ---
+ --- HOST 317 : 8 VMs and Power 200.0 ---
+ --- HOST 485 : 11 VMs and Power 215.0 ---
+ --- HOST 779 : 2 VMs and Power 170.0 ---
+ --- HOST 320 : 5 VMs and Power 185.0 ---
+ --- HOST 407 : 6 VMs and Power 190.0 ---
+ --- HOST 815 : 11 VMs and Power 215.0 ---
+
+Time: 2460.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 41
+Time: 2520.1 -- Datacenter VMs 252Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 387 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 675 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 13 VMs and Power 225.0 ---
+ --- HOST 685 : 6 VMs and Power 190.0 ---
+ --- HOST 439 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 775 : 13 VMs and Power 225.0 ---
+ --- HOST 496 : 17 VMs and Power 245.0 ---
+ --- HOST 175 : 17 VMs and Power 245.0 ---
+ --- HOST 317 : 15 VMs and Power 235.0 ---
+ --- HOST 485 : 17 VMs and Power 245.0 ---
+ --- HOST 320 : 5 VMs and Power 185.0 ---
+ --- HOST 407 : 7 VMs and Power 195.0 ---
+ --- HOST 815 : 17 VMs and Power 245.0 ---
+
+Time: 2520.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 42
+Time: 2580.1 -- Datacenter VMs 299Power - End of Period : 0.0 --
+
+ --- HOST 303 : 15 VMs and Power 235.0 ---
+ --- HOST 686 : 14 VMs and Power 230.0 ---
+ --- HOST 387 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 14 VMs and Power 230.0 ---
+ --- HOST 675 : 12 VMs and Power 220.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 443 : 13 VMs and Power 225.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 14 VMs and Power 230.0 ---
+ --- HOST 775 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 16 VMs and Power 240.0 ---
+ --- HOST 175 : 13 VMs and Power 225.0 ---
+ --- HOST 317 : 10 VMs and Power 210.0 ---
+ --- HOST 485 : 12 VMs and Power 220.0 ---
+ --- HOST 320 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 15 VMs and Power 235.0 ---
+ --- HOST 815 : 12 VMs and Power 220.0 ---
+ --- HOST 211 : 16 VMs and Power 240.0 ---
+ --- HOST 168 : 13 VMs and Power 225.0 ---
+ --- HOST 339 : 11 VMs and Power 215.0 ---
+ --- HOST 183 : 15 VMs and Power 235.0 ---
+ --- HOST 491 : 2 VMs and Power 170.0 ---
+ --- HOST 87 : 8 VMs and Power 200.0 ---
+ --- HOST 189 : 8 VMs and Power 200.0 ---
+ --- HOST 181 : 1 VMs and Power 165.0 ---
+
+Time: 2580.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 43
+Time: 2640.1 -- Datacenter VMs 299Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 686 : 9 VMs and Power 205.0 ---
+ --- HOST 387 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 675 : 13 VMs and Power 225.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 443 : 11 VMs and Power 215.0 ---
+ --- HOST 685 : 14 VMs and Power 230.0 ---
+ --- HOST 439 : 11 VMs and Power 215.0 ---
+ --- HOST 493 : 10 VMs and Power 210.0 ---
+ --- HOST 775 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 6 VMs and Power 190.0 ---
+ --- HOST 175 : 7 VMs and Power 195.0 ---
+ --- HOST 317 : 11 VMs and Power 215.0 ---
+ --- HOST 485 : 14 VMs and Power 230.0 ---
+ --- HOST 320 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 9 VMs and Power 205.0 ---
+ --- HOST 815 : 11 VMs and Power 215.0 ---
+ --- HOST 211 : 13 VMs and Power 225.0 ---
+ --- HOST 168 : 16 VMs and Power 240.0 ---
+ --- HOST 339 : 13 VMs and Power 225.0 ---
+ --- HOST 183 : 15 VMs and Power 235.0 ---
+ --- HOST 87 : 13 VMs and Power 225.0 ---
+ --- HOST 189 : 15 VMs and Power 235.0 ---
+ --- HOST 93 : 14 VMs and Power 230.0 ---
+ --- HOST 271 : 8 VMs and Power 200.0 ---
+ --- HOST 96 : 2 VMs and Power 170.0 ---
+ --- HOST 343 : 2 VMs and Power 170.0 ---
+ --- HOST 512 : 2 VMs and Power 170.0 ---
+
+Time: 2640.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 44
+Time: 2700.1 -- Datacenter VMs 258Power - End of Period : 0.0 --
+
+ --- HOST 303 : 6 VMs and Power 190.0 ---
+ --- HOST 686 : 12 VMs and Power 220.0 ---
+ --- HOST 387 : 7 VMs and Power 195.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 675 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 443 : 10 VMs and Power 210.0 ---
+ --- HOST 685 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 11 VMs and Power 215.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 775 : 8 VMs and Power 200.0 ---
+ --- HOST 496 : 9 VMs and Power 205.0 ---
+ --- HOST 175 : 13 VMs and Power 225.0 ---
+ --- HOST 317 : 11 VMs and Power 215.0 ---
+ --- HOST 485 : 9 VMs and Power 205.0 ---
+ --- HOST 320 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 10 VMs and Power 210.0 ---
+ --- HOST 815 : 10 VMs and Power 210.0 ---
+ --- HOST 211 : 9 VMs and Power 205.0 ---
+ --- HOST 168 : 9 VMs and Power 205.0 ---
+ --- HOST 339 : 9 VMs and Power 205.0 ---
+ --- HOST 183 : 7 VMs and Power 195.0 ---
+ --- HOST 87 : 11 VMs and Power 215.0 ---
+ --- HOST 189 : 10 VMs and Power 210.0 ---
+ --- HOST 93 : 11 VMs and Power 215.0 ---
+ --- HOST 271 : 13 VMs and Power 225.0 ---
+ --- HOST 123 : 2 VMs and Power 170.0 ---
+ --- HOST 125 : 2 VMs and Power 170.0 ---
+
+Time: 2700.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 45
+Time: 2760.1 -- Datacenter VMs 194Power - End of Period : 0.0 --
+
+ --- HOST 303 : 11 VMs and Power 215.0 ---
+ --- HOST 686 : 8 VMs and Power 200.0 ---
+ --- HOST 387 : 3 VMs and Power 175.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 675 : 6 VMs and Power 190.0 ---
+ --- HOST 448 : 6 VMs and Power 190.0 ---
+ --- HOST 443 : 7 VMs and Power 195.0 ---
+ --- HOST 685 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 6 VMs and Power 190.0 ---
+ --- HOST 775 : 7 VMs and Power 195.0 ---
+ --- HOST 496 : 13 VMs and Power 225.0 ---
+ --- HOST 175 : 7 VMs and Power 195.0 ---
+ --- HOST 317 : 5 VMs and Power 185.0 ---
+ --- HOST 485 : 4 VMs and Power 180.0 ---
+ --- HOST 320 : 3 VMs and Power 175.0 ---
+ --- HOST 407 : 6 VMs and Power 190.0 ---
+ --- HOST 815 : 11 VMs and Power 215.0 ---
+ --- HOST 211 : 11 VMs and Power 215.0 ---
+ --- HOST 168 : 5 VMs and Power 185.0 ---
+ --- HOST 339 : 6 VMs and Power 190.0 ---
+ --- HOST 183 : 12 VMs and Power 220.0 ---
+ --- HOST 87 : 8 VMs and Power 200.0 ---
+ --- HOST 189 : 3 VMs and Power 175.0 ---
+ --- HOST 93 : 9 VMs and Power 205.0 ---
+ --- HOST 271 : 8 VMs and Power 200.0 ---
+
+Time: 2760.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 46
+Time: 2820.1 -- Datacenter VMs 274Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 675 : 6 VMs and Power 190.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 7 VMs and Power 195.0 ---
+ --- HOST 685 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 775 : 7 VMs and Power 195.0 ---
+ --- HOST 496 : 17 VMs and Power 245.0 ---
+ --- HOST 175 : 17 VMs and Power 245.0 ---
+ --- HOST 317 : 6 VMs and Power 190.0 ---
+ --- HOST 485 : 4 VMs and Power 180.0 ---
+ --- HOST 407 : 6 VMs and Power 190.0 ---
+ --- HOST 815 : 11 VMs and Power 215.0 ---
+ --- HOST 211 : 17 VMs and Power 245.0 ---
+ --- HOST 168 : 5 VMs and Power 185.0 ---
+ --- HOST 339 : 12 VMs and Power 220.0 ---
+ --- HOST 183 : 17 VMs and Power 245.0 ---
+ --- HOST 87 : 13 VMs and Power 225.0 ---
+ --- HOST 93 : 15 VMs and Power 235.0 ---
+ --- HOST 271 : 8 VMs and Power 200.0 ---
+
+Time: 2820.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 47
+Time: 2880.1 -- Datacenter VMs 287Power - End of Period : 0.0 --
+
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 686 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 15 VMs and Power 235.0 ---
+ --- HOST 675 : 16 VMs and Power 240.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 443 : 11 VMs and Power 215.0 ---
+ --- HOST 685 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 775 : 15 VMs and Power 235.0 ---
+ --- HOST 496 : 10 VMs and Power 210.0 ---
+ --- HOST 175 : 12 VMs and Power 220.0 ---
+ --- HOST 317 : 14 VMs and Power 230.0 ---
+ --- HOST 485 : 15 VMs and Power 235.0 ---
+ --- HOST 407 : 13 VMs and Power 225.0 ---
+ --- HOST 815 : 14 VMs and Power 230.0 ---
+ --- HOST 211 : 10 VMs and Power 210.0 ---
+ --- HOST 168 : 12 VMs and Power 220.0 ---
+ --- HOST 339 : 10 VMs and Power 210.0 ---
+ --- HOST 183 : 12 VMs and Power 220.0 ---
+ --- HOST 87 : 11 VMs and Power 215.0 ---
+ --- HOST 93 : 13 VMs and Power 225.0 ---
+ --- HOST 271 : 15 VMs and Power 235.0 ---
+ --- HOST 343 : 1 VMs and Power 165.0 ---
+ --- HOST 31 : 2 VMs and Power 170.0 ---
+
+Time: 2880.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 48
+Time: 2940.1 -- Datacenter VMs 280Power - End of Period : 0.0 --
+
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 686 : 14 VMs and Power 230.0 ---
+ --- HOST 445 : 13 VMs and Power 225.0 ---
+ --- HOST 675 : 7 VMs and Power 195.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 443 : 10 VMs and Power 210.0 ---
+ --- HOST 685 : 12 VMs and Power 220.0 ---
+ --- HOST 439 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 775 : 9 VMs and Power 205.0 ---
+ --- HOST 496 : 10 VMs and Power 210.0 ---
+ --- HOST 175 : 10 VMs and Power 210.0 ---
+ --- HOST 317 : 9 VMs and Power 205.0 ---
+ --- HOST 485 : 9 VMs and Power 205.0 ---
+ --- HOST 407 : 10 VMs and Power 210.0 ---
+ --- HOST 815 : 11 VMs and Power 215.0 ---
+ --- HOST 211 : 15 VMs and Power 235.0 ---
+ --- HOST 168 : 15 VMs and Power 235.0 ---
+ --- HOST 339 : 13 VMs and Power 225.0 ---
+ --- HOST 183 : 10 VMs and Power 210.0 ---
+ --- HOST 87 : 11 VMs and Power 215.0 ---
+ --- HOST 93 : 9 VMs and Power 205.0 ---
+ --- HOST 271 : 10 VMs and Power 210.0 ---
+ --- HOST 256 : 16 VMs and Power 240.0 ---
+ --- HOST 24 : 5 VMs and Power 185.0 ---
+ --- HOST 253 : 9 VMs and Power 205.0 ---
+ --- HOST 30 : 3 VMs and Power 175.0 ---
+
+Time: 2940.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 49
+Time: 3000.1 -- Datacenter VMs 207Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 686 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 5 VMs and Power 185.0 ---
+ --- HOST 675 : 4 VMs and Power 180.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 443 : 12 VMs and Power 220.0 ---
+ --- HOST 685 : 12 VMs and Power 220.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+ --- HOST 493 : 5 VMs and Power 185.0 ---
+ --- HOST 775 : 2 VMs and Power 170.0 ---
+ --- HOST 496 : 9 VMs and Power 205.0 ---
+ --- HOST 175 : 9 VMs and Power 205.0 ---
+ --- HOST 317 : 4 VMs and Power 180.0 ---
+ --- HOST 485 : 4 VMs and Power 180.0 ---
+ --- HOST 407 : 9 VMs and Power 205.0 ---
+ --- HOST 815 : 10 VMs and Power 210.0 ---
+ --- HOST 211 : 9 VMs and Power 205.0 ---
+ --- HOST 168 : 12 VMs and Power 220.0 ---
+ --- HOST 339 : 8 VMs and Power 200.0 ---
+ --- HOST 183 : 7 VMs and Power 195.0 ---
+ --- HOST 87 : 8 VMs and Power 200.0 ---
+ --- HOST 93 : 8 VMs and Power 200.0 ---
+ --- HOST 271 : 1 VMs and Power 165.0 ---
+ --- HOST 256 : 7 VMs and Power 195.0 ---
+ --- HOST 24 : 12 VMs and Power 220.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+
+Time: 3000.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 50
+Time: 3060.1 -- Datacenter VMs 303Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 675 : 4 VMs and Power 180.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 13 VMs and Power 225.0 ---
+ --- HOST 685 : 13 VMs and Power 225.0 ---
+ --- HOST 439 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 496 : 17 VMs and Power 245.0 ---
+ --- HOST 175 : 12 VMs and Power 220.0 ---
+ --- HOST 317 : 4 VMs and Power 180.0 ---
+ --- HOST 485 : 4 VMs and Power 180.0 ---
+ --- HOST 407 : 11 VMs and Power 215.0 ---
+ --- HOST 815 : 12 VMs and Power 220.0 ---
+ --- HOST 211 : 9 VMs and Power 205.0 ---
+ --- HOST 168 : 12 VMs and Power 220.0 ---
+ --- HOST 339 : 11 VMs and Power 215.0 ---
+ --- HOST 183 : 7 VMs and Power 195.0 ---
+ --- HOST 87 : 10 VMs and Power 210.0 ---
+ --- HOST 93 : 11 VMs and Power 215.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 24 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+
+Time: 3060.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 51
+Time: 3120.1 -- Datacenter VMs 298Power - End of Period : 0.0 --
+
+ --- HOST 303 : 12 VMs and Power 220.0 ---
+ --- HOST 686 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 675 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 443 : 12 VMs and Power 220.0 ---
+ --- HOST 685 : 14 VMs and Power 230.0 ---
+ --- HOST 439 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 10 VMs and Power 210.0 ---
+ --- HOST 175 : 13 VMs and Power 225.0 ---
+ --- HOST 317 : 13 VMs and Power 225.0 ---
+ --- HOST 485 : 8 VMs and Power 200.0 ---
+ --- HOST 407 : 9 VMs and Power 205.0 ---
+ --- HOST 815 : 11 VMs and Power 215.0 ---
+ --- HOST 211 : 14 VMs and Power 230.0 ---
+ --- HOST 168 : 13 VMs and Power 225.0 ---
+ --- HOST 339 : 14 VMs and Power 230.0 ---
+ --- HOST 183 : 14 VMs and Power 230.0 ---
+ --- HOST 87 : 13 VMs and Power 225.0 ---
+ --- HOST 93 : 13 VMs and Power 225.0 ---
+ --- HOST 256 : 13 VMs and Power 225.0 ---
+ --- HOST 24 : 12 VMs and Power 220.0 ---
+ --- HOST 253 : 9 VMs and Power 205.0 ---
+ --- HOST 247 : 7 VMs and Power 195.0 ---
+
+Time: 3120.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 52
+Time: 3180.1 -- Datacenter VMs 231Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 9 VMs and Power 205.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 675 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 443 : 8 VMs and Power 200.0 ---
+ --- HOST 685 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 7 VMs and Power 195.0 ---
+ --- HOST 175 : 11 VMs and Power 215.0 ---
+ --- HOST 317 : 9 VMs and Power 205.0 ---
+ --- HOST 485 : 3 VMs and Power 175.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 815 : 8 VMs and Power 200.0 ---
+ --- HOST 211 : 8 VMs and Power 200.0 ---
+ --- HOST 168 : 5 VMs and Power 185.0 ---
+ --- HOST 339 : 5 VMs and Power 185.0 ---
+ --- HOST 183 : 12 VMs and Power 220.0 ---
+ --- HOST 87 : 9 VMs and Power 205.0 ---
+ --- HOST 93 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 8 VMs and Power 200.0 ---
+ --- HOST 24 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 15 VMs and Power 235.0 ---
+
+Time: 3180.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 53
+Time: 3240.1 -- Datacenter VMs 181Power - End of Period : 0.0 --
+
+ --- HOST 303 : 12 VMs and Power 220.0 ---
+ --- HOST 686 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 675 : 4 VMs and Power 180.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 443 : 11 VMs and Power 215.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 7 VMs and Power 195.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 496 : 13 VMs and Power 225.0 ---
+ --- HOST 175 : 9 VMs and Power 205.0 ---
+ --- HOST 317 : 5 VMs and Power 185.0 ---
+ --- HOST 407 : 6 VMs and Power 190.0 ---
+ --- HOST 815 : 9 VMs and Power 205.0 ---
+ --- HOST 211 : 2 VMs and Power 170.0 ---
+ --- HOST 168 : 1 VMs and Power 165.0 ---
+ --- HOST 339 : 6 VMs and Power 190.0 ---
+ --- HOST 183 : 3 VMs and Power 175.0 ---
+ --- HOST 87 : 12 VMs and Power 220.0 ---
+ --- HOST 93 : 5 VMs and Power 185.0 ---
+ --- HOST 256 : 8 VMs and Power 200.0 ---
+ --- HOST 24 : 10 VMs and Power 210.0 ---
+ --- HOST 253 : 7 VMs and Power 195.0 ---
+ --- HOST 247 : 8 VMs and Power 200.0 ---
+
+Time: 3240.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 54
+Time: 3300.1 -- Datacenter VMs 149Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 443 : 12 VMs and Power 220.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 13 VMs and Power 225.0 ---
+ --- HOST 493 : 6 VMs and Power 190.0 ---
+ --- HOST 496 : 6 VMs and Power 190.0 ---
+ --- HOST 175 : 8 VMs and Power 200.0 ---
+ --- HOST 317 : 2 VMs and Power 170.0 ---
+ --- HOST 407 : 1 VMs and Power 165.0 ---
+ --- HOST 815 : 12 VMs and Power 220.0 ---
+ --- HOST 339 : 1 VMs and Power 165.0 ---
+ --- HOST 87 : 3 VMs and Power 175.0 ---
+ --- HOST 93 : 6 VMs and Power 190.0 ---
+ --- HOST 256 : 6 VMs and Power 190.0 ---
+ --- HOST 24 : 7 VMs and Power 195.0 ---
+ --- HOST 253 : 11 VMs and Power 215.0 ---
+ --- HOST 247 : 9 VMs and Power 205.0 ---
+
+Time: 3300.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 55
+Time: 3360.1 -- Datacenter VMs 269Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 16 VMs and Power 240.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 17 VMs and Power 245.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 20 VMs and Power 260.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 496 : 17 VMs and Power 245.0 ---
+ --- HOST 175 : 17 VMs and Power 245.0 ---
+ --- HOST 815 : 17 VMs and Power 245.0 ---
+ --- HOST 93 : 14 VMs and Power 230.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 24 : 12 VMs and Power 220.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 251 : 10 VMs and Power 210.0 ---
+ --- HOST 223 : 1 VMs and Power 165.0 ---
+
+Time: 3360.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 56
+Time: 3420.1 -- Datacenter VMs 277Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 13 VMs and Power 225.0 ---
+ --- HOST 445 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 443 : 10 VMs and Power 210.0 ---
+ --- HOST 685 : 13 VMs and Power 225.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 496 : 15 VMs and Power 235.0 ---
+ --- HOST 175 : 10 VMs and Power 210.0 ---
+ --- HOST 815 : 12 VMs and Power 220.0 ---
+ --- HOST 93 : 14 VMs and Power 230.0 ---
+ --- HOST 256 : 14 VMs and Power 230.0 ---
+ --- HOST 24 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 13 VMs and Power 225.0 ---
+ --- HOST 247 : 11 VMs and Power 215.0 ---
+ --- HOST 251 : 10 VMs and Power 210.0 ---
+ --- HOST 704 : 17 VMs and Power 245.0 ---
+ --- HOST 128 : 15 VMs and Power 235.0 ---
+ --- HOST 807 : 14 VMs and Power 230.0 ---
+ --- HOST 551 : 3 VMs and Power 175.0 ---
+ --- HOST 125 : 9 VMs and Power 205.0 ---
+ --- HOST 701 : 16 VMs and Power 240.0 ---
+ --- HOST 699 : 2 VMs and Power 170.0 ---
+ --- HOST 31 : 6 VMs and Power 190.0 ---
+
+Time: 3420.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 57
+Time: 3480.1 -- Datacenter VMs 254Power - End of Period : 0.0 --
+
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 686 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 7 VMs and Power 195.0 ---
+ --- HOST 448 : 7 VMs and Power 195.0 ---
+ --- HOST 443 : 11 VMs and Power 215.0 ---
+ --- HOST 685 : 9 VMs and Power 205.0 ---
+ --- HOST 439 : 14 VMs and Power 230.0 ---
+ --- HOST 493 : 10 VMs and Power 210.0 ---
+ --- HOST 496 : 8 VMs and Power 200.0 ---
+ --- HOST 175 : 11 VMs and Power 215.0 ---
+ --- HOST 815 : 10 VMs and Power 210.0 ---
+ --- HOST 93 : 7 VMs and Power 195.0 ---
+ --- HOST 256 : 11 VMs and Power 215.0 ---
+ --- HOST 24 : 12 VMs and Power 220.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 11 VMs and Power 215.0 ---
+ --- HOST 251 : 11 VMs and Power 215.0 ---
+ --- HOST 704 : 12 VMs and Power 220.0 ---
+ --- HOST 128 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 5 VMs and Power 185.0 ---
+ --- HOST 125 : 12 VMs and Power 220.0 ---
+ --- HOST 701 : 11 VMs and Power 215.0 ---
+ --- HOST 31 : 15 VMs and Power 235.0 ---
+ --- HOST 512 : 15 VMs and Power 235.0 ---
+ --- HOST 238 : 1 VMs and Power 165.0 ---
+
+Time: 3480.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 58
+Time: 3540.1 -- Datacenter VMs 189Power - End of Period : 0.0 --
+
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 686 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 443 : 6 VMs and Power 190.0 ---
+ --- HOST 685 : 2 VMs and Power 170.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 10 VMs and Power 210.0 ---
+ --- HOST 496 : 12 VMs and Power 220.0 ---
+ --- HOST 175 : 4 VMs and Power 180.0 ---
+ --- HOST 815 : 6 VMs and Power 190.0 ---
+ --- HOST 93 : 2 VMs and Power 170.0 ---
+ --- HOST 256 : 4 VMs and Power 180.0 ---
+ --- HOST 24 : 6 VMs and Power 190.0 ---
+ --- HOST 253 : 7 VMs and Power 195.0 ---
+ --- HOST 247 : 9 VMs and Power 205.0 ---
+ --- HOST 251 : 9 VMs and Power 205.0 ---
+ --- HOST 704 : 10 VMs and Power 210.0 ---
+ --- HOST 128 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 10 VMs and Power 210.0 ---
+ --- HOST 125 : 11 VMs and Power 215.0 ---
+ --- HOST 701 : 7 VMs and Power 195.0 ---
+ --- HOST 31 : 11 VMs and Power 215.0 ---
+ --- HOST 512 : 9 VMs and Power 205.0 ---
+ --- HOST 123 : 1 VMs and Power 165.0 ---
+
+Time: 3540.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 59
+Time: 3600.1 -- Datacenter VMs 163Power - End of Period : 0.0 --
+
+ --- HOST 303 : 11 VMs and Power 215.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 13 VMs and Power 225.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 443 : 6 VMs and Power 190.0 ---
+ --- HOST 439 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 7 VMs and Power 195.0 ---
+ --- HOST 496 : 7 VMs and Power 195.0 ---
+ --- HOST 175 : 2 VMs and Power 170.0 ---
+ --- HOST 815 : 3 VMs and Power 175.0 ---
+ --- HOST 256 : 10 VMs and Power 210.0 ---
+ --- HOST 24 : 2 VMs and Power 170.0 ---
+ --- HOST 253 : 9 VMs and Power 205.0 ---
+ --- HOST 247 : 7 VMs and Power 195.0 ---
+ --- HOST 251 : 12 VMs and Power 220.0 ---
+ --- HOST 704 : 7 VMs and Power 195.0 ---
+ --- HOST 128 : 6 VMs and Power 190.0 ---
+ --- HOST 807 : 4 VMs and Power 180.0 ---
+ --- HOST 125 : 4 VMs and Power 180.0 ---
+ --- HOST 701 : 11 VMs and Power 215.0 ---
+ --- HOST 31 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 5 VMs and Power 185.0 ---
+
+Time: 3600.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 60
+Time: 3660.1 -- Datacenter VMs 156Power - End of Period : 0.0 --
+
+ --- HOST 303 : 6 VMs and Power 190.0 ---
+ --- HOST 686 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 5 VMs and Power 185.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 443 : 15 VMs and Power 235.0 ---
+ --- HOST 439 : 7 VMs and Power 195.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 496 : 11 VMs and Power 215.0 ---
+ --- HOST 256 : 10 VMs and Power 210.0 ---
+ --- HOST 253 : 5 VMs and Power 185.0 ---
+ --- HOST 247 : 7 VMs and Power 195.0 ---
+ --- HOST 251 : 7 VMs and Power 195.0 ---
+ --- HOST 704 : 12 VMs and Power 220.0 ---
+ --- HOST 128 : 2 VMs and Power 170.0 ---
+ --- HOST 807 : 9 VMs and Power 205.0 ---
+ --- HOST 125 : 6 VMs and Power 190.0 ---
+ --- HOST 701 : 6 VMs and Power 190.0 ---
+ --- HOST 31 : 10 VMs and Power 210.0 ---
+ --- HOST 512 : 10 VMs and Power 210.0 ---
+
+Time: 3660.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 61
+Time: 3720.1 -- Datacenter VMs 143Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 686 : 4 VMs and Power 180.0 ---
+ --- HOST 445 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 5 VMs and Power 185.0 ---
+ --- HOST 443 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 6 VMs and Power 190.0 ---
+ --- HOST 496 : 5 VMs and Power 185.0 ---
+ --- HOST 256 : 5 VMs and Power 185.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 7 VMs and Power 195.0 ---
+ --- HOST 251 : 10 VMs and Power 210.0 ---
+ --- HOST 704 : 5 VMs and Power 185.0 ---
+ --- HOST 807 : 6 VMs and Power 190.0 ---
+ --- HOST 125 : 8 VMs and Power 200.0 ---
+ --- HOST 701 : 12 VMs and Power 220.0 ---
+ --- HOST 31 : 10 VMs and Power 210.0 ---
+ --- HOST 512 : 9 VMs and Power 205.0 ---
+
+Time: 3720.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 62
+Time: 3780.1 -- Datacenter VMs 263Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 4 VMs and Power 180.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 443 : 17 VMs and Power 245.0 ---
+ --- HOST 439 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 496 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 251 : 16 VMs and Power 240.0 ---
+ --- HOST 704 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 7 VMs and Power 195.0 ---
+ --- HOST 125 : 11 VMs and Power 215.0 ---
+ --- HOST 701 : 17 VMs and Power 245.0 ---
+ --- HOST 31 : 12 VMs and Power 220.0 ---
+ --- HOST 512 : 17 VMs and Power 245.0 ---
+
+Time: 3780.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 63
+Time: 3840.1 -- Datacenter VMs 291Power - End of Period : 0.0 --
+
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 686 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 443 : 15 VMs and Power 235.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 14 VMs and Power 230.0 ---
+ --- HOST 496 : 10 VMs and Power 210.0 ---
+ --- HOST 256 : 15 VMs and Power 235.0 ---
+ --- HOST 253 : 14 VMs and Power 230.0 ---
+ --- HOST 247 : 15 VMs and Power 235.0 ---
+ --- HOST 251 : 8 VMs and Power 200.0 ---
+ --- HOST 704 : 13 VMs and Power 225.0 ---
+ --- HOST 807 : 13 VMs and Power 225.0 ---
+ --- HOST 125 : 12 VMs and Power 220.0 ---
+ --- HOST 701 : 11 VMs and Power 215.0 ---
+ --- HOST 31 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 15 VMs and Power 235.0 ---
+ --- HOST 479 : 15 VMs and Power 235.0 ---
+ --- HOST 509 : 16 VMs and Power 240.0 ---
+ --- HOST 699 : 17 VMs and Power 245.0 ---
+ --- HOST 503 : 11 VMs and Power 215.0 ---
+ --- HOST 695 : 1 VMs and Power 165.0 ---
+
+Time: 3840.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 64
+Time: 3900.1 -- Datacenter VMs 270Power - End of Period : 0.0 --
+
+ --- HOST 303 : 11 VMs and Power 215.0 ---
+ --- HOST 686 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 443 : 6 VMs and Power 190.0 ---
+ --- HOST 439 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 496 : 14 VMs and Power 230.0 ---
+ --- HOST 256 : 12 VMs and Power 220.0 ---
+ --- HOST 253 : 11 VMs and Power 215.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 251 : 10 VMs and Power 210.0 ---
+ --- HOST 704 : 11 VMs and Power 215.0 ---
+ --- HOST 807 : 11 VMs and Power 215.0 ---
+ --- HOST 125 : 11 VMs and Power 215.0 ---
+ --- HOST 701 : 12 VMs and Power 220.0 ---
+ --- HOST 31 : 13 VMs and Power 225.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 7 VMs and Power 195.0 ---
+ --- HOST 479 : 9 VMs and Power 205.0 ---
+ --- HOST 509 : 11 VMs and Power 215.0 ---
+ --- HOST 699 : 10 VMs and Power 210.0 ---
+ --- HOST 503 : 12 VMs and Power 220.0 ---
+ --- HOST 695 : 13 VMs and Power 225.0 ---
+ --- HOST 639 : 2 VMs and Power 170.0 ---
+ --- HOST 763 : 16 VMs and Power 240.0 ---
+ --- HOST 175 : 1 VMs and Power 165.0 ---
+
+Time: 3900.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 65
+Time: 3960.1 -- Datacenter VMs 223Power - End of Period : 0.0 --
+
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 686 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 443 : 7 VMs and Power 195.0 ---
+ --- HOST 439 : 11 VMs and Power 215.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 496 : 7 VMs and Power 195.0 ---
+ --- HOST 256 : 10 VMs and Power 210.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 9 VMs and Power 205.0 ---
+ --- HOST 251 : 7 VMs and Power 195.0 ---
+ --- HOST 704 : 7 VMs and Power 195.0 ---
+ --- HOST 807 : 10 VMs and Power 210.0 ---
+ --- HOST 125 : 7 VMs and Power 195.0 ---
+ --- HOST 701 : 8 VMs and Power 200.0 ---
+ --- HOST 31 : 6 VMs and Power 190.0 ---
+ --- HOST 512 : 8 VMs and Power 200.0 ---
+ --- HOST 407 : 13 VMs and Power 225.0 ---
+ --- HOST 479 : 9 VMs and Power 205.0 ---
+ --- HOST 509 : 10 VMs and Power 210.0 ---
+ --- HOST 699 : 14 VMs and Power 230.0 ---
+ --- HOST 503 : 5 VMs and Power 185.0 ---
+ --- HOST 695 : 13 VMs and Power 225.0 ---
+ --- HOST 763 : 10 VMs and Power 210.0 ---
+
+Time: 3960.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 66
+Time: 4020.1 -- Datacenter VMs 168Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 686 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 12 VMs and Power 220.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 443 : 4 VMs and Power 180.0 ---
+ --- HOST 439 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 1 VMs and Power 165.0 ---
+ --- HOST 256 : 8 VMs and Power 200.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+ --- HOST 247 : 8 VMs and Power 200.0 ---
+ --- HOST 251 : 5 VMs and Power 185.0 ---
+ --- HOST 704 : 8 VMs and Power 200.0 ---
+ --- HOST 807 : 7 VMs and Power 195.0 ---
+ --- HOST 125 : 2 VMs and Power 170.0 ---
+ --- HOST 701 : 3 VMs and Power 175.0 ---
+ --- HOST 31 : 10 VMs and Power 210.0 ---
+ --- HOST 512 : 8 VMs and Power 200.0 ---
+ --- HOST 407 : 5 VMs and Power 185.0 ---
+ --- HOST 479 : 7 VMs and Power 195.0 ---
+ --- HOST 509 : 2 VMs and Power 170.0 ---
+ --- HOST 699 : 8 VMs and Power 200.0 ---
+ --- HOST 695 : 4 VMs and Power 180.0 ---
+ --- HOST 763 : 1 VMs and Power 165.0 ---
+
+Time: 4020.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 67
+Time: 4080.1 -- Datacenter VMs 272Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 17 VMs and Power 245.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 25 VMs and Power 285.0 ---
+ --- HOST 443 : 4 VMs and Power 180.0 ---
+ --- HOST 439 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 251 : 5 VMs and Power 185.0 ---
+ --- HOST 704 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 17 VMs and Power 245.0 ---
+ --- HOST 31 : 17 VMs and Power 245.0 ---
+ --- HOST 512 : 17 VMs and Power 245.0 ---
+ --- HOST 407 : 5 VMs and Power 185.0 ---
+ --- HOST 479 : 8 VMs and Power 200.0 ---
+ --- HOST 699 : 17 VMs and Power 245.0 ---
+ --- HOST 695 : 4 VMs and Power 180.0 ---
+
+Time: 4080.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 68
+Time: 4140.1 -- Datacenter VMs 310Power - End of Period : 0.0 --
+
+ --- HOST 303 : 15 VMs and Power 235.0 ---
+ --- HOST 686 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 12 VMs and Power 220.0 ---
+ --- HOST 448 : 14 VMs and Power 230.0 ---
+ --- HOST 443 : 11 VMs and Power 215.0 ---
+ --- HOST 439 : 11 VMs and Power 215.0 ---
+ --- HOST 493 : 15 VMs and Power 235.0 ---
+ --- HOST 256 : 12 VMs and Power 220.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+ --- HOST 247 : 13 VMs and Power 225.0 ---
+ --- HOST 251 : 14 VMs and Power 230.0 ---
+ --- HOST 704 : 13 VMs and Power 225.0 ---
+ --- HOST 807 : 14 VMs and Power 230.0 ---
+ --- HOST 31 : 11 VMs and Power 215.0 ---
+ --- HOST 512 : 16 VMs and Power 240.0 ---
+ --- HOST 407 : 11 VMs and Power 215.0 ---
+ --- HOST 479 : 12 VMs and Power 220.0 ---
+ --- HOST 699 : 14 VMs and Power 230.0 ---
+ --- HOST 695 : 10 VMs and Power 210.0 ---
+ --- HOST 238 : 13 VMs and Power 225.0 ---
+ --- HOST 701 : 1 VMs and Power 165.0 ---
+ --- HOST 775 : 14 VMs and Power 230.0 ---
+ --- HOST 175 : 17 VMs and Power 245.0 ---
+ --- HOST 184 : 17 VMs and Power 245.0 ---
+ --- HOST 236 : 2 VMs and Power 170.0 ---
+ --- HOST 232 : 8 VMs and Power 200.0 ---
+
+Time: 4140.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 69
+Time: 4200.1 -- Datacenter VMs 281Power - End of Period : 0.0 --
+
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 443 : 12 VMs and Power 220.0 ---
+ --- HOST 439 : 13 VMs and Power 225.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 256 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+ --- HOST 247 : 9 VMs and Power 205.0 ---
+ --- HOST 251 : 10 VMs and Power 210.0 ---
+ --- HOST 704 : 12 VMs and Power 220.0 ---
+ --- HOST 807 : 7 VMs and Power 195.0 ---
+ --- HOST 31 : 12 VMs and Power 220.0 ---
+ --- HOST 512 : 12 VMs and Power 220.0 ---
+ --- HOST 407 : 12 VMs and Power 220.0 ---
+ --- HOST 479 : 9 VMs and Power 205.0 ---
+ --- HOST 699 : 10 VMs and Power 210.0 ---
+ --- HOST 695 : 11 VMs and Power 215.0 ---
+ --- HOST 238 : 11 VMs and Power 215.0 ---
+ --- HOST 775 : 12 VMs and Power 220.0 ---
+ --- HOST 175 : 14 VMs and Power 230.0 ---
+ --- HOST 184 : 13 VMs and Power 225.0 ---
+ --- HOST 232 : 12 VMs and Power 220.0 ---
+ --- HOST 701 : 17 VMs and Power 245.0 ---
+ --- HOST 236 : 9 VMs and Power 205.0 ---
+
+Time: 4200.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 70
+Time: 4260.1 -- Datacenter VMs 190Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 686 : 7 VMs and Power 195.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 443 : 8 VMs and Power 200.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 4 VMs and Power 180.0 ---
+ --- HOST 253 : 6 VMs and Power 190.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 251 : 3 VMs and Power 175.0 ---
+ --- HOST 704 : 8 VMs and Power 200.0 ---
+ --- HOST 807 : 12 VMs and Power 220.0 ---
+ --- HOST 31 : 8 VMs and Power 200.0 ---
+ --- HOST 512 : 5 VMs and Power 185.0 ---
+ --- HOST 407 : 7 VMs and Power 195.0 ---
+ --- HOST 479 : 2 VMs and Power 170.0 ---
+ --- HOST 699 : 4 VMs and Power 180.0 ---
+ --- HOST 695 : 6 VMs and Power 190.0 ---
+ --- HOST 238 : 7 VMs and Power 195.0 ---
+ --- HOST 775 : 3 VMs and Power 175.0 ---
+ --- HOST 175 : 5 VMs and Power 185.0 ---
+ --- HOST 184 : 12 VMs and Power 220.0 ---
+ --- HOST 232 : 5 VMs and Power 185.0 ---
+ --- HOST 701 : 8 VMs and Power 200.0 ---
+ --- HOST 236 : 14 VMs and Power 230.0 ---
+
+Time: 4260.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 71
+Time: 4320.1 -- Datacenter VMs 162Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 443 : 3 VMs and Power 175.0 ---
+ --- HOST 439 : 1 VMs and Power 165.0 ---
+ --- HOST 493 : 6 VMs and Power 190.0 ---
+ --- HOST 256 : 11 VMs and Power 215.0 ---
+ --- HOST 253 : 13 VMs and Power 225.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 704 : 11 VMs and Power 215.0 ---
+ --- HOST 807 : 8 VMs and Power 200.0 ---
+ --- HOST 31 : 1 VMs and Power 165.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 8 VMs and Power 200.0 ---
+ --- HOST 699 : 2 VMs and Power 170.0 ---
+ --- HOST 695 : 1 VMs and Power 165.0 ---
+ --- HOST 238 : 10 VMs and Power 210.0 ---
+ --- HOST 175 : 3 VMs and Power 175.0 ---
+ --- HOST 184 : 6 VMs and Power 190.0 ---
+ --- HOST 232 : 4 VMs and Power 180.0 ---
+ --- HOST 701 : 8 VMs and Power 200.0 ---
+ --- HOST 236 : 7 VMs and Power 195.0 ---
+
+Time: 4320.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 72
+Time: 4380.1 -- Datacenter VMs 254Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 686 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 25 VMs and Power 285.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 704 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 11 VMs and Power 215.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 16 VMs and Power 240.0 ---
+ --- HOST 238 : 17 VMs and Power 245.0 ---
+ --- HOST 184 : 17 VMs and Power 245.0 ---
+ --- HOST 232 : 4 VMs and Power 180.0 ---
+ --- HOST 701 : 12 VMs and Power 220.0 ---
+ --- HOST 236 : 11 VMs and Power 215.0 ---
+
+Time: 4380.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 73
+Time: 4440.1 -- Datacenter VMs 275Power - End of Period : 0.0 --
+
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 686 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 256 : 14 VMs and Power 230.0 ---
+ --- HOST 253 : 13 VMs and Power 225.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 704 : 12 VMs and Power 220.0 ---
+ --- HOST 807 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 238 : 14 VMs and Power 230.0 ---
+ --- HOST 184 : 11 VMs and Power 215.0 ---
+ --- HOST 232 : 10 VMs and Power 210.0 ---
+ --- HOST 701 : 12 VMs and Power 220.0 ---
+ --- HOST 236 : 13 VMs and Power 225.0 ---
+ --- HOST 699 : 13 VMs and Power 225.0 ---
+ --- HOST 31 : 16 VMs and Power 240.0 ---
+ --- HOST 233 : 15 VMs and Power 235.0 ---
+ --- HOST 567 : 17 VMs and Power 245.0 ---
+ --- HOST 229 : 1 VMs and Power 165.0 ---
+ --- HOST 695 : 2 VMs and Power 170.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+
+Time: 4440.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 74
+Time: 4500.1 -- Datacenter VMs 225Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 7 VMs and Power 195.0 ---
+ --- HOST 256 : 8 VMs and Power 200.0 ---
+ --- HOST 253 : 8 VMs and Power 200.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 704 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 8 VMs and Power 200.0 ---
+ --- HOST 512 : 10 VMs and Power 210.0 ---
+ --- HOST 407 : 8 VMs and Power 200.0 ---
+ --- HOST 238 : 7 VMs and Power 195.0 ---
+ --- HOST 184 : 9 VMs and Power 205.0 ---
+ --- HOST 232 : 10 VMs and Power 210.0 ---
+ --- HOST 701 : 8 VMs and Power 200.0 ---
+ --- HOST 236 : 10 VMs and Power 210.0 ---
+ --- HOST 699 : 10 VMs and Power 210.0 ---
+ --- HOST 31 : 10 VMs and Power 210.0 ---
+ --- HOST 233 : 13 VMs and Power 225.0 ---
+ --- HOST 567 : 15 VMs and Power 235.0 ---
+ --- HOST 439 : 12 VMs and Power 220.0 ---
+ --- HOST 941 : 12 VMs and Power 220.0 ---
+ --- HOST 229 : 2 VMs and Power 170.0 ---
+ --- HOST 479 : 1 VMs and Power 165.0 ---
+
+Time: 4500.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 75
+Time: 4560.1 -- Datacenter VMs 152Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 686 : 2 VMs and Power 170.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 6 VMs and Power 190.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 5 VMs and Power 185.0 ---
+ --- HOST 704 : 3 VMs and Power 175.0 ---
+ --- HOST 807 : 12 VMs and Power 220.0 ---
+ --- HOST 512 : 5 VMs and Power 185.0 ---
+ --- HOST 407 : 4 VMs and Power 180.0 ---
+ --- HOST 238 : 11 VMs and Power 215.0 ---
+ --- HOST 184 : 11 VMs and Power 215.0 ---
+ --- HOST 232 : 5 VMs and Power 185.0 ---
+ --- HOST 701 : 5 VMs and Power 185.0 ---
+ --- HOST 236 : 7 VMs and Power 195.0 ---
+ --- HOST 699 : 5 VMs and Power 185.0 ---
+ --- HOST 31 : 3 VMs and Power 175.0 ---
+ --- HOST 233 : 4 VMs and Power 180.0 ---
+ --- HOST 567 : 3 VMs and Power 175.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 9 VMs and Power 205.0 ---
+
+Time: 4560.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 76
+Time: 4620.1 -- Datacenter VMs 268Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 20 VMs and Power 260.0 ---
+ --- HOST 512 : 17 VMs and Power 245.0 ---
+ --- HOST 407 : 8 VMs and Power 200.0 ---
+ --- HOST 238 : 17 VMs and Power 245.0 ---
+ --- HOST 184 : 17 VMs and Power 245.0 ---
+ --- HOST 232 : 5 VMs and Power 185.0 ---
+ --- HOST 701 : 13 VMs and Power 225.0 ---
+ --- HOST 236 : 17 VMs and Power 245.0 ---
+ --- HOST 699 : 6 VMs and Power 190.0 ---
+ --- HOST 233 : 4 VMs and Power 180.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 17 VMs and Power 245.0 ---
+
+Time: 4620.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 77
+Time: 4680.1 -- Datacenter VMs 312Power - End of Period : 0.0 --
+
+ --- HOST 303 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 16 VMs and Power 240.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 256 : 11 VMs and Power 215.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+ --- HOST 247 : 12 VMs and Power 220.0 ---
+ --- HOST 807 : 14 VMs and Power 230.0 ---
+ --- HOST 512 : 12 VMs and Power 220.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 238 : 16 VMs and Power 240.0 ---
+ --- HOST 184 : 10 VMs and Power 210.0 ---
+ --- HOST 232 : 13 VMs and Power 225.0 ---
+ --- HOST 701 : 15 VMs and Power 235.0 ---
+ --- HOST 236 : 12 VMs and Power 220.0 ---
+ --- HOST 699 : 14 VMs and Power 230.0 ---
+ --- HOST 233 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 14 VMs and Power 230.0 ---
+ --- HOST 941 : 13 VMs and Power 225.0 ---
+ --- HOST 229 : 17 VMs and Power 245.0 ---
+ --- HOST 479 : 15 VMs and Power 235.0 ---
+ --- HOST 775 : 12 VMs and Power 220.0 ---
+ --- HOST 190 : 16 VMs and Power 240.0 ---
+ --- HOST 549 : 3 VMs and Power 175.0 ---
+ --- HOST 1024 : 6 VMs and Power 190.0 ---
+ --- HOST 142 : 1 VMs and Power 165.0 ---
+
+Time: 4680.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 78
+Time: 4740.1 -- Datacenter VMs 238Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 256 : 10 VMs and Power 210.0 ---
+ --- HOST 253 : 9 VMs and Power 205.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 10 VMs and Power 210.0 ---
+ --- HOST 512 : 7 VMs and Power 195.0 ---
+ --- HOST 407 : 7 VMs and Power 195.0 ---
+ --- HOST 238 : 6 VMs and Power 190.0 ---
+ --- HOST 184 : 13 VMs and Power 225.0 ---
+ --- HOST 232 : 11 VMs and Power 215.0 ---
+ --- HOST 701 : 12 VMs and Power 220.0 ---
+ --- HOST 236 : 8 VMs and Power 200.0 ---
+ --- HOST 699 : 10 VMs and Power 210.0 ---
+ --- HOST 233 : 12 VMs and Power 220.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 7 VMs and Power 195.0 ---
+ --- HOST 229 : 12 VMs and Power 220.0 ---
+ --- HOST 479 : 13 VMs and Power 225.0 ---
+ --- HOST 775 : 11 VMs and Power 215.0 ---
+ --- HOST 190 : 14 VMs and Power 230.0 ---
+ --- HOST 1024 : 14 VMs and Power 230.0 ---
+ --- HOST 473 : 1 VMs and Power 165.0 ---
+ --- HOST 31 : 1 VMs and Power 165.0 ---
+
+Time: 4740.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 79
+Time: 4800.1 -- Datacenter VMs 183Power - End of Period : 0.0 --
+
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 6 VMs and Power 190.0 ---
+ --- HOST 493 : 13 VMs and Power 225.0 ---
+ --- HOST 256 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 4 VMs and Power 180.0 ---
+ --- HOST 807 : 8 VMs and Power 200.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 238 : 14 VMs and Power 230.0 ---
+ --- HOST 184 : 6 VMs and Power 190.0 ---
+ --- HOST 232 : 7 VMs and Power 195.0 ---
+ --- HOST 701 : 6 VMs and Power 190.0 ---
+ --- HOST 236 : 5 VMs and Power 185.0 ---
+ --- HOST 699 : 3 VMs and Power 175.0 ---
+ --- HOST 233 : 5 VMs and Power 185.0 ---
+ --- HOST 439 : 4 VMs and Power 180.0 ---
+ --- HOST 941 : 7 VMs and Power 195.0 ---
+ --- HOST 229 : 7 VMs and Power 195.0 ---
+ --- HOST 479 : 4 VMs and Power 180.0 ---
+ --- HOST 775 : 8 VMs and Power 200.0 ---
+ --- HOST 190 : 6 VMs and Power 190.0 ---
+ --- HOST 1024 : 9 VMs and Power 205.0 ---
+
+Time: 4800.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 80
+Time: 4860.1 -- Datacenter VMs 287Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 445 : 13 VMs and Power 225.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 17 VMs and Power 245.0 ---
+ --- HOST 512 : 13 VMs and Power 225.0 ---
+ --- HOST 407 : 17 VMs and Power 245.0 ---
+ --- HOST 238 : 17 VMs and Power 245.0 ---
+ --- HOST 184 : 7 VMs and Power 195.0 ---
+ --- HOST 232 : 7 VMs and Power 195.0 ---
+ --- HOST 701 : 6 VMs and Power 190.0 ---
+ --- HOST 236 : 7 VMs and Power 195.0 ---
+ --- HOST 233 : 5 VMs and Power 185.0 ---
+ --- HOST 439 : 5 VMs and Power 185.0 ---
+ --- HOST 941 : 17 VMs and Power 245.0 ---
+ --- HOST 229 : 14 VMs and Power 230.0 ---
+ --- HOST 479 : 6 VMs and Power 190.0 ---
+ --- HOST 775 : 8 VMs and Power 200.0 ---
+ --- HOST 190 : 17 VMs and Power 245.0 ---
+ --- HOST 1024 : 9 VMs and Power 205.0 ---
+
+Time: 4860.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 81
+Time: 4920.1 -- Datacenter VMs 283Power - End of Period : 0.0 --
+
+ --- HOST 303 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 7 VMs and Power 195.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 10 VMs and Power 210.0 ---
+ --- HOST 256 : 12 VMs and Power 220.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+ --- HOST 247 : 9 VMs and Power 205.0 ---
+ --- HOST 807 : 12 VMs and Power 220.0 ---
+ --- HOST 512 : 10 VMs and Power 210.0 ---
+ --- HOST 407 : 11 VMs and Power 215.0 ---
+ --- HOST 238 : 12 VMs and Power 220.0 ---
+ --- HOST 184 : 13 VMs and Power 225.0 ---
+ --- HOST 232 : 15 VMs and Power 235.0 ---
+ --- HOST 701 : 14 VMs and Power 230.0 ---
+ --- HOST 236 : 14 VMs and Power 230.0 ---
+ --- HOST 233 : 10 VMs and Power 210.0 ---
+ --- HOST 439 : 13 VMs and Power 225.0 ---
+ --- HOST 941 : 11 VMs and Power 215.0 ---
+ --- HOST 229 : 16 VMs and Power 240.0 ---
+ --- HOST 479 : 14 VMs and Power 230.0 ---
+ --- HOST 775 : 13 VMs and Power 225.0 ---
+ --- HOST 190 : 13 VMs and Power 225.0 ---
+ --- HOST 1024 : 14 VMs and Power 230.0 ---
+ --- HOST 31 : 6 VMs and Power 190.0 ---
+
+Time: 4920.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 82
+Time: 4980.1 -- Datacenter VMs 217Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 13 VMs and Power 225.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 8 VMs and Power 200.0 ---
+ --- HOST 253 : 11 VMs and Power 215.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 7 VMs and Power 195.0 ---
+ --- HOST 512 : 12 VMs and Power 220.0 ---
+ --- HOST 407 : 8 VMs and Power 200.0 ---
+ --- HOST 238 : 10 VMs and Power 210.0 ---
+ --- HOST 184 : 7 VMs and Power 195.0 ---
+ --- HOST 232 : 8 VMs and Power 200.0 ---
+ --- HOST 701 : 8 VMs and Power 200.0 ---
+ --- HOST 236 : 11 VMs and Power 215.0 ---
+ --- HOST 233 : 7 VMs and Power 195.0 ---
+ --- HOST 439 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 10 VMs and Power 210.0 ---
+ --- HOST 229 : 5 VMs and Power 185.0 ---
+ --- HOST 479 : 12 VMs and Power 220.0 ---
+ --- HOST 775 : 7 VMs and Power 195.0 ---
+ --- HOST 190 : 9 VMs and Power 205.0 ---
+ --- HOST 1024 : 9 VMs and Power 205.0 ---
+ --- HOST 31 : 6 VMs and Power 190.0 ---
+ --- HOST 473 : 1 VMs and Power 165.0 ---
+
+Time: 4980.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 83
+Time: 5040.1 -- Datacenter VMs 160Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 445 : 12 VMs and Power 220.0 ---
+ --- HOST 448 : 7 VMs and Power 195.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 256 : 10 VMs and Power 210.0 ---
+ --- HOST 253 : 8 VMs and Power 200.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 12 VMs and Power 220.0 ---
+ --- HOST 512 : 10 VMs and Power 210.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 238 : 10 VMs and Power 210.0 ---
+ --- HOST 184 : 4 VMs and Power 180.0 ---
+ --- HOST 232 : 1 VMs and Power 165.0 ---
+ --- HOST 701 : 1 VMs and Power 165.0 ---
+ --- HOST 236 : 7 VMs and Power 195.0 ---
+ --- HOST 233 : 3 VMs and Power 175.0 ---
+ --- HOST 439 : 3 VMs and Power 175.0 ---
+ --- HOST 941 : 5 VMs and Power 185.0 ---
+ --- HOST 229 : 3 VMs and Power 175.0 ---
+ --- HOST 479 : 4 VMs and Power 180.0 ---
+ --- HOST 775 : 1 VMs and Power 165.0 ---
+ --- HOST 190 : 13 VMs and Power 225.0 ---
+ --- HOST 1024 : 1 VMs and Power 165.0 ---
+ --- HOST 31 : 4 VMs and Power 180.0 ---
+
+Time: 5040.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 84
+Time: 5100.1 -- Datacenter VMs 268Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 445 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 17 VMs and Power 245.0 ---
+ --- HOST 512 : 15 VMs and Power 235.0 ---
+ --- HOST 407 : 24 VMs and Power 280.0 ---
+ --- HOST 238 : 17 VMs and Power 245.0 ---
+ --- HOST 184 : 8 VMs and Power 200.0 ---
+ --- HOST 236 : 17 VMs and Power 245.0 ---
+ --- HOST 941 : 17 VMs and Power 245.0 ---
+ --- HOST 479 : 13 VMs and Power 225.0 ---
+ --- HOST 190 : 17 VMs and Power 245.0 ---
+ --- HOST 31 : 4 VMs and Power 180.0 ---
+
+Time: 5100.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 85
+Time: 5160.1 -- Datacenter VMs 314Power - End of Period : 0.0 --
+
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 256 : 15 VMs and Power 235.0 ---
+ --- HOST 253 : 15 VMs and Power 235.0 ---
+ --- HOST 247 : 13 VMs and Power 225.0 ---
+ --- HOST 807 : 10 VMs and Power 210.0 ---
+ --- HOST 512 : 20 VMs and Power 260.0 ---
+ --- HOST 407 : 12 VMs and Power 220.0 ---
+ --- HOST 238 : 14 VMs and Power 230.0 ---
+ --- HOST 184 : 11 VMs and Power 215.0 ---
+ --- HOST 236 : 12 VMs and Power 220.0 ---
+ --- HOST 941 : 12 VMs and Power 220.0 ---
+ --- HOST 479 : 13 VMs and Power 225.0 ---
+ --- HOST 190 : 11 VMs and Power 215.0 ---
+ --- HOST 31 : 13 VMs and Power 225.0 ---
+ --- HOST 233 : 16 VMs and Power 240.0 ---
+ --- HOST 311 : 15 VMs and Power 235.0 ---
+ --- HOST 55 : 16 VMs and Power 240.0 ---
+ --- HOST 151 : 16 VMs and Power 240.0 ---
+ --- HOST 831 : 14 VMs and Power 230.0 ---
+ --- HOST 927 : 13 VMs and Power 225.0 ---
+ --- HOST 23 : 2 VMs and Power 170.0 ---
+ --- HOST 229 : 3 VMs and Power 175.0 ---
+ --- HOST 960 : 3 VMs and Power 175.0 ---
+
+Time: 5160.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 86
+Time: 5220.1 -- Datacenter VMs 303Power - End of Period : 0.0 --
+
+ --- HOST 303 : 11 VMs and Power 215.0 ---
+ --- HOST 445 : 15 VMs and Power 235.0 ---
+ --- HOST 448 : 13 VMs and Power 225.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 256 : 10 VMs and Power 210.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 9 VMs and Power 205.0 ---
+ --- HOST 807 : 12 VMs and Power 220.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 7 VMs and Power 195.0 ---
+ --- HOST 238 : 10 VMs and Power 210.0 ---
+ --- HOST 184 : 12 VMs and Power 220.0 ---
+ --- HOST 236 : 12 VMs and Power 220.0 ---
+ --- HOST 941 : 8 VMs and Power 200.0 ---
+ --- HOST 479 : 12 VMs and Power 220.0 ---
+ --- HOST 190 : 11 VMs and Power 215.0 ---
+ --- HOST 31 : 11 VMs and Power 215.0 ---
+ --- HOST 233 : 16 VMs and Power 240.0 ---
+ --- HOST 311 : 11 VMs and Power 215.0 ---
+ --- HOST 55 : 10 VMs and Power 210.0 ---
+ --- HOST 151 : 12 VMs and Power 220.0 ---
+ --- HOST 831 : 11 VMs and Power 215.0 ---
+ --- HOST 927 : 12 VMs and Power 220.0 ---
+ --- HOST 205 : 16 VMs and Power 240.0 ---
+ --- HOST 229 : 12 VMs and Power 220.0 ---
+ --- HOST 455 : 16 VMs and Power 240.0 ---
+ --- HOST 549 : 1 VMs and Power 165.0 ---
+
+Time: 5220.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 87
+Time: 5280.1 -- Datacenter VMs 239Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 7 VMs and Power 195.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 13 VMs and Power 225.0 ---
+ --- HOST 247 : 11 VMs and Power 215.0 ---
+ --- HOST 807 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 9 VMs and Power 205.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 238 : 13 VMs and Power 225.0 ---
+ --- HOST 184 : 9 VMs and Power 205.0 ---
+ --- HOST 236 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 7 VMs and Power 195.0 ---
+ --- HOST 479 : 12 VMs and Power 220.0 ---
+ --- HOST 190 : 9 VMs and Power 205.0 ---
+ --- HOST 31 : 8 VMs and Power 200.0 ---
+ --- HOST 233 : 8 VMs and Power 200.0 ---
+ --- HOST 311 : 10 VMs and Power 210.0 ---
+ --- HOST 55 : 5 VMs and Power 185.0 ---
+ --- HOST 151 : 8 VMs and Power 200.0 ---
+ --- HOST 831 : 7 VMs and Power 195.0 ---
+ --- HOST 927 : 7 VMs and Power 195.0 ---
+ --- HOST 205 : 7 VMs and Power 195.0 ---
+ --- HOST 229 : 8 VMs and Power 200.0 ---
+ --- HOST 455 : 15 VMs and Power 235.0 ---
+
+Time: 5280.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 88
+Time: 5340.1 -- Datacenter VMs 181Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 445 : 5 VMs and Power 185.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 256 : 11 VMs and Power 215.0 ---
+ --- HOST 253 : 6 VMs and Power 190.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 407 : 8 VMs and Power 200.0 ---
+ --- HOST 238 : 4 VMs and Power 180.0 ---
+ --- HOST 184 : 9 VMs and Power 205.0 ---
+ --- HOST 236 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 11 VMs and Power 215.0 ---
+ --- HOST 479 : 8 VMs and Power 200.0 ---
+ --- HOST 190 : 12 VMs and Power 220.0 ---
+ --- HOST 31 : 4 VMs and Power 180.0 ---
+ --- HOST 233 : 5 VMs and Power 185.0 ---
+ --- HOST 311 : 9 VMs and Power 205.0 ---
+ --- HOST 55 : 1 VMs and Power 165.0 ---
+ --- HOST 151 : 3 VMs and Power 175.0 ---
+ --- HOST 831 : 5 VMs and Power 185.0 ---
+ --- HOST 927 : 2 VMs and Power 170.0 ---
+ --- HOST 205 : 7 VMs and Power 195.0 ---
+ --- HOST 229 : 3 VMs and Power 175.0 ---
+ --- HOST 455 : 1 VMs and Power 165.0 ---
+
+Time: 5340.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 89
+Time: 5400.1 -- Datacenter VMs 285Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 17 VMs and Power 245.0 ---
+ --- HOST 512 : 17 VMs and Power 245.0 ---
+ --- HOST 407 : 14 VMs and Power 230.0 ---
+ --- HOST 238 : 17 VMs and Power 245.0 ---
+ --- HOST 184 : 16 VMs and Power 240.0 ---
+ --- HOST 236 : 10 VMs and Power 210.0 ---
+ --- HOST 941 : 17 VMs and Power 245.0 ---
+ --- HOST 479 : 8 VMs and Power 200.0 ---
+ --- HOST 190 : 17 VMs and Power 245.0 ---
+ --- HOST 31 : 4 VMs and Power 180.0 ---
+ --- HOST 233 : 7 VMs and Power 195.0 ---
+ --- HOST 311 : 15 VMs and Power 235.0 ---
+ --- HOST 831 : 5 VMs and Power 185.0 ---
+ --- HOST 205 : 11 VMs and Power 215.0 ---
+
+Time: 5400.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 90
+Time: 5460.1 -- Datacenter VMs 298Power - End of Period : 0.0 --
+
+ --- HOST 303 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 14 VMs and Power 230.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 11 VMs and Power 215.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+ --- HOST 247 : 11 VMs and Power 215.0 ---
+ --- HOST 807 : 10 VMs and Power 210.0 ---
+ --- HOST 512 : 12 VMs and Power 220.0 ---
+ --- HOST 407 : 11 VMs and Power 215.0 ---
+ --- HOST 238 : 13 VMs and Power 225.0 ---
+ --- HOST 184 : 10 VMs and Power 210.0 ---
+ --- HOST 236 : 15 VMs and Power 235.0 ---
+ --- HOST 941 : 11 VMs and Power 215.0 ---
+ --- HOST 479 : 16 VMs and Power 240.0 ---
+ --- HOST 190 : 13 VMs and Power 225.0 ---
+ --- HOST 31 : 14 VMs and Power 230.0 ---
+ --- HOST 233 : 13 VMs and Power 225.0 ---
+ --- HOST 311 : 12 VMs and Power 220.0 ---
+ --- HOST 831 : 12 VMs and Power 220.0 ---
+ --- HOST 205 : 13 VMs and Power 225.0 ---
+ --- HOST 240 : 16 VMs and Power 240.0 ---
+ --- HOST 944 : 14 VMs and Power 230.0 ---
+ --- HOST 1024 : 3 VMs and Power 175.0 ---
+ --- HOST 335 : 7 VMs and Power 195.0 ---
+ --- HOST 207 : 2 VMs and Power 170.0 ---
+
+Time: 5460.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 91
+Time: 5520.1 -- Datacenter VMs 238Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 7 VMs and Power 195.0 ---
+ --- HOST 448 : 11 VMs and Power 215.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 256 : 8 VMs and Power 200.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 11 VMs and Power 215.0 ---
+ --- HOST 807 : 7 VMs and Power 195.0 ---
+ --- HOST 512 : 10 VMs and Power 210.0 ---
+ --- HOST 407 : 8 VMs and Power 200.0 ---
+ --- HOST 238 : 7 VMs and Power 195.0 ---
+ --- HOST 184 : 9 VMs and Power 205.0 ---
+ --- HOST 236 : 10 VMs and Power 210.0 ---
+ --- HOST 941 : 11 VMs and Power 215.0 ---
+ --- HOST 479 : 8 VMs and Power 200.0 ---
+ --- HOST 190 : 8 VMs and Power 200.0 ---
+ --- HOST 31 : 12 VMs and Power 220.0 ---
+ --- HOST 233 : 10 VMs and Power 210.0 ---
+ --- HOST 311 : 12 VMs and Power 220.0 ---
+ --- HOST 831 : 13 VMs and Power 225.0 ---
+ --- HOST 205 : 9 VMs and Power 205.0 ---
+ --- HOST 240 : 13 VMs and Power 225.0 ---
+ --- HOST 944 : 11 VMs and Power 215.0 ---
+ --- HOST 335 : 12 VMs and Power 220.0 ---
+
+Time: 5520.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 92
+Time: 5580.1 -- Datacenter VMs 174Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 445 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 256 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 9 VMs and Power 205.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 10 VMs and Power 210.0 ---
+ --- HOST 512 : 7 VMs and Power 195.0 ---
+ --- HOST 407 : 6 VMs and Power 190.0 ---
+ --- HOST 238 : 11 VMs and Power 215.0 ---
+ --- HOST 184 : 3 VMs and Power 175.0 ---
+ --- HOST 236 : 3 VMs and Power 175.0 ---
+ --- HOST 941 : 9 VMs and Power 205.0 ---
+ --- HOST 479 : 1 VMs and Power 165.0 ---
+ --- HOST 190 : 11 VMs and Power 215.0 ---
+ --- HOST 31 : 2 VMs and Power 170.0 ---
+ --- HOST 233 : 8 VMs and Power 200.0 ---
+ --- HOST 311 : 7 VMs and Power 195.0 ---
+ --- HOST 831 : 8 VMs and Power 200.0 ---
+ --- HOST 205 : 8 VMs and Power 200.0 ---
+ --- HOST 240 : 2 VMs and Power 170.0 ---
+ --- HOST 944 : 6 VMs and Power 190.0 ---
+ --- HOST 335 : 5 VMs and Power 185.0 ---
+
+Time: 5580.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 93
+Time: 5640.1 -- Datacenter VMs 144Power - End of Period : 0.0 --
+
+ --- HOST 303 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 11 VMs and Power 215.0 ---
+ --- HOST 448 : 7 VMs and Power 195.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 7 VMs and Power 195.0 ---
+ --- HOST 253 : 6 VMs and Power 190.0 ---
+ --- HOST 247 : 11 VMs and Power 215.0 ---
+ --- HOST 807 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 8 VMs and Power 200.0 ---
+ --- HOST 407 : 9 VMs and Power 205.0 ---
+ --- HOST 238 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 9 VMs and Power 205.0 ---
+ --- HOST 190 : 10 VMs and Power 210.0 ---
+ --- HOST 233 : 7 VMs and Power 195.0 ---
+ --- HOST 311 : 7 VMs and Power 195.0 ---
+ --- HOST 831 : 1 VMs and Power 165.0 ---
+ --- HOST 205 : 7 VMs and Power 195.0 ---
+ --- HOST 944 : 12 VMs and Power 220.0 ---
+
+Time: 5640.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 94
+Time: 5700.1 -- Datacenter VMs 143Power - End of Period : 0.0 --
+
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 445 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 7 VMs and Power 195.0 ---
+ --- HOST 256 : 7 VMs and Power 195.0 ---
+ --- HOST 253 : 8 VMs and Power 200.0 ---
+ --- HOST 247 : 5 VMs and Power 185.0 ---
+ --- HOST 807 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 7 VMs and Power 195.0 ---
+ --- HOST 407 : 8 VMs and Power 200.0 ---
+ --- HOST 238 : 10 VMs and Power 210.0 ---
+ --- HOST 941 : 6 VMs and Power 190.0 ---
+ --- HOST 190 : 7 VMs and Power 195.0 ---
+ --- HOST 233 : 12 VMs and Power 220.0 ---
+ --- HOST 311 : 12 VMs and Power 220.0 ---
+ --- HOST 205 : 7 VMs and Power 195.0 ---
+ --- HOST 944 : 9 VMs and Power 205.0 ---
+ --- HOST 567 : 1 VMs and Power 165.0 ---
+
+Time: 5700.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 95
+Time: 5760.1 -- Datacenter VMs 139Power - End of Period : 0.0 --
+
+ --- HOST 303 : 6 VMs and Power 190.0 ---
+ --- HOST 445 : 7 VMs and Power 195.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 10 VMs and Power 210.0 ---
+ --- HOST 256 : 8 VMs and Power 200.0 ---
+ --- HOST 253 : 7 VMs and Power 195.0 ---
+ --- HOST 247 : 10 VMs and Power 210.0 ---
+ --- HOST 807 : 6 VMs and Power 190.0 ---
+ --- HOST 512 : 12 VMs and Power 220.0 ---
+ --- HOST 407 : 10 VMs and Power 210.0 ---
+ --- HOST 238 : 7 VMs and Power 195.0 ---
+ --- HOST 941 : 8 VMs and Power 200.0 ---
+ --- HOST 190 : 10 VMs and Power 210.0 ---
+ --- HOST 233 : 7 VMs and Power 195.0 ---
+ --- HOST 311 : 9 VMs and Power 205.0 ---
+ --- HOST 205 : 7 VMs and Power 195.0 ---
+ --- HOST 944 : 3 VMs and Power 175.0 ---
+
+Time: 5760.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 96
+Time: 5820.1 -- Datacenter VMs 255Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 445 : 14 VMs and Power 230.0 ---
+ --- HOST 448 : 17 VMs and Power 245.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 17 VMs and Power 245.0 ---
+ --- HOST 512 : 17 VMs and Power 245.0 ---
+ --- HOST 407 : 17 VMs and Power 245.0 ---
+ --- HOST 238 : 12 VMs and Power 220.0 ---
+ --- HOST 941 : 17 VMs and Power 245.0 ---
+ --- HOST 190 : 17 VMs and Power 245.0 ---
+ --- HOST 233 : 14 VMs and Power 230.0 ---
+ --- HOST 311 : 14 VMs and Power 230.0 ---
+ --- HOST 205 : 14 VMs and Power 230.0 ---
+
+Time: 5820.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 97
+Time: 5880.1 -- Datacenter VMs 252Power - End of Period : 0.0 --
+
+ --- HOST 303 : 12 VMs and Power 220.0 ---
+ --- HOST 445 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 12 VMs and Power 220.0 ---
+ --- HOST 256 : 10 VMs and Power 210.0 ---
+ --- HOST 253 : 13 VMs and Power 225.0 ---
+ --- HOST 247 : 14 VMs and Power 230.0 ---
+ --- HOST 807 : 11 VMs and Power 215.0 ---
+ --- HOST 512 : 10 VMs and Power 210.0 ---
+ --- HOST 407 : 11 VMs and Power 215.0 ---
+ --- HOST 238 : 11 VMs and Power 215.0 ---
+ --- HOST 941 : 10 VMs and Power 210.0 ---
+ --- HOST 190 : 8 VMs and Power 200.0 ---
+ --- HOST 233 : 9 VMs and Power 205.0 ---
+ --- HOST 311 : 12 VMs and Power 220.0 ---
+ --- HOST 205 : 9 VMs and Power 205.0 ---
+ --- HOST 549 : 11 VMs and Power 215.0 ---
+ --- HOST 653 : 13 VMs and Power 225.0 ---
+ --- HOST 527 : 1 VMs and Power 165.0 ---
+ --- HOST 229 : 17 VMs and Power 245.0 ---
+ --- HOST 496 : 16 VMs and Power 240.0 ---
+ --- HOST 645 : 16 VMs and Power 240.0 ---
+ --- HOST 33 : 3 VMs and Power 175.0 ---
+ --- HOST 519 : 1 VMs and Power 165.0 ---
+
+Time: 5880.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 98
+Time: 5940.1 -- Datacenter VMs 221Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 445 : 7 VMs and Power 195.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 493 : 10 VMs and Power 210.0 ---
+ --- HOST 256 : 10 VMs and Power 210.0 ---
+ --- HOST 253 : 10 VMs and Power 210.0 ---
+ --- HOST 247 : 12 VMs and Power 220.0 ---
+ --- HOST 807 : 7 VMs and Power 195.0 ---
+ --- HOST 512 : 12 VMs and Power 220.0 ---
+ --- HOST 407 : 9 VMs and Power 205.0 ---
+ --- HOST 238 : 9 VMs and Power 205.0 ---
+ --- HOST 941 : 10 VMs and Power 210.0 ---
+ --- HOST 190 : 8 VMs and Power 200.0 ---
+ --- HOST 233 : 12 VMs and Power 220.0 ---
+ --- HOST 311 : 9 VMs and Power 205.0 ---
+ --- HOST 205 : 12 VMs and Power 220.0 ---
+ --- HOST 549 : 8 VMs and Power 200.0 ---
+ --- HOST 653 : 10 VMs and Power 210.0 ---
+ --- HOST 229 : 12 VMs and Power 220.0 ---
+ --- HOST 496 : 11 VMs and Power 215.0 ---
+ --- HOST 645 : 8 VMs and Power 200.0 ---
+ --- HOST 227 : 15 VMs and Power 235.0 ---
+ --- HOST 663 : 2 VMs and Power 170.0 ---
+ --- HOST 151 : 1 VMs and Power 165.0 ---
+
+Time: 5940.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 99
+Time: 6000.1 -- Datacenter VMs 166Power - End of Period : 0.0 --
+
+ --- HOST 303 : 7 VMs and Power 195.0 ---
+ --- HOST 445 : 1 VMs and Power 165.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 9 VMs and Power 205.0 ---
+ --- HOST 256 : 6 VMs and Power 190.0 ---
+ --- HOST 253 : 7 VMs and Power 195.0 ---
+ --- HOST 247 : 8 VMs and Power 200.0 ---
+ --- HOST 807 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 7 VMs and Power 195.0 ---
+ --- HOST 407 : 3 VMs and Power 175.0 ---
+ --- HOST 238 : 10 VMs and Power 210.0 ---
+ --- HOST 941 : 8 VMs and Power 200.0 ---
+ --- HOST 190 : 8 VMs and Power 200.0 ---
+ --- HOST 233 : 9 VMs and Power 205.0 ---
+ --- HOST 311 : 4 VMs and Power 180.0 ---
+ --- HOST 205 : 8 VMs and Power 200.0 ---
+ --- HOST 549 : 10 VMs and Power 210.0 ---
+ --- HOST 653 : 9 VMs and Power 205.0 ---
+ --- HOST 229 : 3 VMs and Power 175.0 ---
+ --- HOST 496 : 9 VMs and Power 205.0 ---
+ --- HOST 645 : 11 VMs and Power 215.0 ---
+ --- HOST 227 : 11 VMs and Power 215.0 ---
+
+Time: 6000.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 100
+Time: 6060.1 -- Datacenter VMs 153Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 8 VMs and Power 200.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 256 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+ --- HOST 247 : 12 VMs and Power 220.0 ---
+ --- HOST 807 : 8 VMs and Power 200.0 ---
+ --- HOST 512 : 11 VMs and Power 215.0 ---
+ --- HOST 238 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 4 VMs and Power 180.0 ---
+ --- HOST 190 : 11 VMs and Power 215.0 ---
+ --- HOST 233 : 11 VMs and Power 215.0 ---
+ --- HOST 311 : 3 VMs and Power 175.0 ---
+ --- HOST 205 : 7 VMs and Power 195.0 ---
+ --- HOST 549 : 10 VMs and Power 210.0 ---
+ --- HOST 653 : 6 VMs and Power 190.0 ---
+ --- HOST 496 : 10 VMs and Power 210.0 ---
+ --- HOST 645 : 7 VMs and Power 195.0 ---
+
+Time: 6060.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 101
+Time: 6120.1 -- Datacenter VMs 253Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 13 VMs and Power 225.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 17 VMs and Power 245.0 ---
+ --- HOST 247 : 17 VMs and Power 245.0 ---
+ --- HOST 807 : 17 VMs and Power 245.0 ---
+ --- HOST 512 : 17 VMs and Power 245.0 ---
+ --- HOST 238 : 12 VMs and Power 220.0 ---
+ --- HOST 941 : 17 VMs and Power 245.0 ---
+ --- HOST 190 : 17 VMs and Power 245.0 ---
+ --- HOST 233 : 17 VMs and Power 245.0 ---
+ --- HOST 205 : 10 VMs and Power 210.0 ---
+ --- HOST 549 : 17 VMs and Power 245.0 ---
+ --- HOST 653 : 12 VMs and Power 220.0 ---
+ --- HOST 496 : 10 VMs and Power 210.0 ---
+ --- HOST 645 : 9 VMs and Power 205.0 ---
+
+Time: 6120.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 102
+Time: 6180.1 -- Datacenter VMs 271Power - End of Period : 0.0 --
+
+ --- HOST 303 : 13 VMs and Power 225.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 10 VMs and Power 210.0 ---
+ --- HOST 256 : 12 VMs and Power 220.0 ---
+ --- HOST 253 : 14 VMs and Power 230.0 ---
+ --- HOST 247 : 12 VMs and Power 220.0 ---
+ --- HOST 807 : 9 VMs and Power 205.0 ---
+ --- HOST 512 : 15 VMs and Power 235.0 ---
+ --- HOST 238 : 12 VMs and Power 220.0 ---
+ --- HOST 941 : 10 VMs and Power 210.0 ---
+ --- HOST 190 : 11 VMs and Power 215.0 ---
+ --- HOST 233 : 12 VMs and Power 220.0 ---
+ --- HOST 205 : 10 VMs and Power 210.0 ---
+ --- HOST 549 : 9 VMs and Power 205.0 ---
+ --- HOST 653 : 12 VMs and Power 220.0 ---
+ --- HOST 496 : 12 VMs and Power 220.0 ---
+ --- HOST 645 : 16 VMs and Power 240.0 ---
+ --- HOST 944 : 13 VMs and Power 225.0 ---
+ --- HOST 567 : 14 VMs and Power 230.0 ---
+ --- HOST 749 : 17 VMs and Power 245.0 ---
+ --- HOST 566 : 15 VMs and Power 235.0 ---
+ --- HOST 747 : 10 VMs and Power 210.0 ---
+ --- HOST 719 : 3 VMs and Power 175.0 ---
+
+Time: 6180.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 103
+Time: 6240.1 -- Datacenter VMs 273Power - End of Period : 0.0 --
+
+ --- HOST 303 : 10 VMs and Power 210.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 256 : 8 VMs and Power 200.0 ---
+ --- HOST 253 : 8 VMs and Power 200.0 ---
+ --- HOST 247 : 13 VMs and Power 225.0 ---
+ --- HOST 807 : 13 VMs and Power 225.0 ---
+ --- HOST 512 : 9 VMs and Power 205.0 ---
+ --- HOST 238 : 7 VMs and Power 195.0 ---
+ --- HOST 941 : 12 VMs and Power 220.0 ---
+ --- HOST 190 : 11 VMs and Power 215.0 ---
+ --- HOST 233 : 10 VMs and Power 210.0 ---
+ --- HOST 205 : 11 VMs and Power 215.0 ---
+ --- HOST 549 : 11 VMs and Power 215.0 ---
+ --- HOST 653 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 10 VMs and Power 210.0 ---
+ --- HOST 645 : 14 VMs and Power 230.0 ---
+ --- HOST 944 : 9 VMs and Power 205.0 ---
+ --- HOST 567 : 12 VMs and Power 220.0 ---
+ --- HOST 749 : 10 VMs and Power 210.0 ---
+ --- HOST 566 : 13 VMs and Power 225.0 ---
+ --- HOST 747 : 15 VMs and Power 235.0 ---
+ --- HOST 662 : 17 VMs and Power 245.0 ---
+ --- HOST 648 : 13 VMs and Power 225.0 ---
+ --- HOST 229 : 8 VMs and Power 200.0 ---
+ --- HOST 646 : 1 VMs and Power 165.0 ---
+
+Time: 6240.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 104
+Time: 6300.1 -- Datacenter VMs 224Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 10 VMs and Power 210.0 ---
+ --- HOST 493 : 11 VMs and Power 215.0 ---
+ --- HOST 256 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 7 VMs and Power 195.0 ---
+ --- HOST 247 : 7 VMs and Power 195.0 ---
+ --- HOST 807 : 7 VMs and Power 195.0 ---
+ --- HOST 512 : 8 VMs and Power 200.0 ---
+ --- HOST 238 : 15 VMs and Power 235.0 ---
+ --- HOST 941 : 9 VMs and Power 205.0 ---
+ --- HOST 190 : 11 VMs and Power 215.0 ---
+ --- HOST 233 : 7 VMs and Power 195.0 ---
+ --- HOST 205 : 7 VMs and Power 195.0 ---
+ --- HOST 549 : 9 VMs and Power 205.0 ---
+ --- HOST 653 : 10 VMs and Power 210.0 ---
+ --- HOST 496 : 7 VMs and Power 195.0 ---
+ --- HOST 645 : 4 VMs and Power 180.0 ---
+ --- HOST 944 : 10 VMs and Power 210.0 ---
+ --- HOST 567 : 10 VMs and Power 210.0 ---
+ --- HOST 749 : 7 VMs and Power 195.0 ---
+ --- HOST 566 : 9 VMs and Power 205.0 ---
+ --- HOST 747 : 8 VMs and Power 200.0 ---
+ --- HOST 662 : 11 VMs and Power 215.0 ---
+ --- HOST 648 : 12 VMs and Power 220.0 ---
+ --- HOST 229 : 8 VMs and Power 200.0 ---
+ --- HOST 646 : 3 VMs and Power 175.0 ---
+
+Time: 6300.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 105
+Time: 6360.1 -- Datacenter VMs 163Power - End of Period : 0.0 --
+
+ --- HOST 303 : 9 VMs and Power 205.0 ---
+ --- HOST 448 : 12 VMs and Power 220.0 ---
+ --- HOST 493 : 10 VMs and Power 210.0 ---
+ --- HOST 256 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 11 VMs and Power 215.0 ---
+ --- HOST 247 : 1 VMs and Power 165.0 ---
+ --- HOST 807 : 10 VMs and Power 210.0 ---
+ --- HOST 512 : 7 VMs and Power 195.0 ---
+ --- HOST 238 : 9 VMs and Power 205.0 ---
+ --- HOST 941 : 7 VMs and Power 195.0 ---
+ --- HOST 190 : 7 VMs and Power 195.0 ---
+ --- HOST 233 : 2 VMs and Power 170.0 ---
+ --- HOST 205 : 2 VMs and Power 170.0 ---
+ --- HOST 549 : 11 VMs and Power 215.0 ---
+ --- HOST 653 : 11 VMs and Power 215.0 ---
+ --- HOST 496 : 4 VMs and Power 180.0 ---
+ --- HOST 944 : 4 VMs and Power 180.0 ---
+ --- HOST 567 : 8 VMs and Power 200.0 ---
+ --- HOST 749 : 6 VMs and Power 190.0 ---
+ --- HOST 566 : 3 VMs and Power 175.0 ---
+ --- HOST 747 : 1 VMs and Power 165.0 ---
+ --- HOST 662 : 9 VMs and Power 205.0 ---
+ --- HOST 648 : 8 VMs and Power 200.0 ---
+ --- HOST 229 : 2 VMs and Power 170.0 ---
+
+Time: 6360.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 106
+Time: 6420.1 -- Datacenter VMs 138Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 4 VMs and Power 180.0 ---
+ --- HOST 493 : 8 VMs and Power 200.0 ---
+ --- HOST 256 : 9 VMs and Power 205.0 ---
+ --- HOST 253 : 8 VMs and Power 200.0 ---
+ --- HOST 807 : 8 VMs and Power 200.0 ---
+ --- HOST 512 : 8 VMs and Power 200.0 ---
+ --- HOST 238 : 7 VMs and Power 195.0 ---
+ --- HOST 941 : 11 VMs and Power 215.0 ---
+ --- HOST 190 : 9 VMs and Power 205.0 ---
+ --- HOST 549 : 5 VMs and Power 185.0 ---
+ --- HOST 653 : 8 VMs and Power 200.0 ---
+ --- HOST 496 : 3 VMs and Power 175.0 ---
+ --- HOST 944 : 6 VMs and Power 190.0 ---
+ --- HOST 567 : 9 VMs and Power 205.0 ---
+ --- HOST 749 : 11 VMs and Power 215.0 ---
+ --- HOST 662 : 11 VMs and Power 215.0 ---
+ --- HOST 648 : 5 VMs and Power 185.0 ---
+
+Time: 6420.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 107
+Time: 6480.1 -- Datacenter VMs 238Power - End of Period : 0.0 --
+
+ --- HOST 303 : 17 VMs and Power 245.0 ---
+ --- HOST 448 : 16 VMs and Power 240.0 ---
+ --- HOST 493 : 17 VMs and Power 245.0 ---
+ --- HOST 256 : 17 VMs and Power 245.0 ---
+ --- HOST 253 : 12 VMs and Power 220.0 ---
+ --- HOST 807 : 17 VMs and Power 245.0 ---
+ --- HOST 512 : 17 VMs and Power 245.0 ---
+ --- HOST 238 : 17 VMs and Power 245.0 ---
+ --- HOST 941 : 17 VMs and Power 245.0 ---
+ --- HOST 190 : 10 VMs and Power 210.0 ---
+ --- HOST 549 : 17 VMs and Power 245.0 ---
+ --- HOST 653 : 12 VMs and Power 220.0 ---
+ --- HOST 944 : 6 VMs and Power 190.0 ---
+ --- HOST 567 : 16 VMs and Power 240.0 ---
+ --- HOST 749 : 14 VMs and Power 230.0 ---
+ --- HOST 662 : 11 VMs and Power 215.0 ---
+ --- HOST 648 : 5 VMs and Power 185.0 ---
+
+Time: 6480.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 108
+Time: 6540.1 -- Datacenter VMs 281Power - End of Period : 0.0 --
+
+ --- HOST 303 : 14 VMs and Power 230.0 ---
+ --- HOST 448 : 14 VMs and Power 230.0 ---
+ --- HOST 493 : 15 VMs and Power 235.0 ---
+ --- HOST 256 : 11 VMs and Power 215.0 ---
+ --- HOST 253 : 13 VMs and Power 225.0 ---
+ --- HOST 807 : 13 VMs and Power 225.0 ---
+ --- HOST 512 : 10 VMs and Power 210.0 ---
+ --- HOST 238 : 13 VMs and Power 225.0 ---
+ --- HOST 941 : 12 VMs and Power 220.0 ---
+ --- HOST 190 : 12 VMs and Power 220.0 ---
+ --- HOST 549 : 13 VMs and Power 225.0 ---
+ --- HOST 653 : 13 VMs and Power 225.0 ---
+ --- HOST 944 : 14 VMs and Power 230.0 ---
+ --- HOST 567 : 10 VMs and Power 210.0 ---
+ --- HOST 749 : 14 VMs and Power 230.0 ---
+ --- HOST 662 : 9 VMs and Power 205.0 ---
+ --- HOST 648 : 13 VMs and Power 225.0 ---
+ --- HOST 184 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 13 VMs and Power 225.0 ---
+ --- HOST 704 : 15 VMs and Power 235.0 ---
+ --- HOST 645 : 17 VMs and Power 245.0 ---
+ --- HOST 566 : 10 VMs and Power 210.0 ---
+ --- HOST 826 : 3 VMs and Power 175.0 ---
+
+Time: 6540.1-- Datacenter Hosts 1024 and Power - Start of next Period : 0.0--
+Period: 109
+Time: 6600.1 -- Datacenter VMs 210Power - End of Period : 0.0 --
+
+ --- HOST 303 : 8 VMs and Power 200.0 ---
+ --- HOST 448 : 9 VMs and Power 205.0 ---
+ --- HOST 493 : 6 VMs and Power 190.0 ---
+ --- HOST 256 : 7 VMs and Power 195.0 ---
+ --- HOST 253 : 9 VMs and Power 205.0 ---
+ --- HOST 807 : 11 VMs and Power 215.0 ---
+ --- HOST 512 : 6 VMs and Power 190.0 ---
+ --- HOST 238 : 8 VMs and Power 200.0 ---
+ --- HOST 941 : 9 VMs and Power 205.0 ---
+ --- HOST 190 : 9 VMs and Power 205.0 ---
+ --- HOST 549 : 6 VMs and Power 190.0 ---
+ --- HOST 653 : 9 VMs and Power 205.0 ---
+ --- HOST 944 : 11 VMs and Power 215.0 ---
+ --- HOST 567 : 12 VMs and Power 220.0 ---
+ --- HOST 749 : 8 VMs and Power 200.0 ---
+ --- HOST 662 : 9 VMs and Power 205.0 ---
+ --- HOST 648 : 12 VMs and Power 220.0 ---
+ --- HOST 184 : 10 VMs and Power 210.0 ---
+ --- HOST 445 : 14 VMs and Power 230.0 ---
+ --- HOST 704 : 12 VMs and Power 220.0 ---
+ --- HOST 645 : 11 VMs and 

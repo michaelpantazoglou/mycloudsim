@@ -69,6 +69,25 @@ public class HyperPowerDatacenter extends Datacenter {
     int oldhostonoffcount = 0;
     int oldvmcount = 0;
 
+    public int getMode() {
+        return mode;
+    }
+
+    public void setMode(int mode) {
+        this.mode = mode;
+    }
+
+    int mode;
+
+    public int getRate() {
+        return rate;
+    }
+
+    public void setRate(int rate) {
+        this.rate = rate;
+    }
+
+    int rate;
 
     public int getHostoncount() {
         return hostoncount;
@@ -318,8 +337,14 @@ public class HyperPowerDatacenter extends Datacenter {
         //System.out.println("MIGCOUNT:" + migrationCount);
         //System.out.println("ONOFFCOUNT:" + hostonoffCount);
         System.out.println("TIME :" + CloudSim.clock() + " - End of Period");
-
-
+        long power = 0;
+        power += (migrationCount - oldmigrationcount) * 20;
+        power += (hostonoffCount - oldhostonoffcount) * 100;
+        power += getVmList().size() * 5;
+        int newvms = getVmList().size() - oldvmcount;
+        oldvmcount = getVmList().size();
+        oldhostonoffcount = hostonoffCount;
+        oldmigrationcount = migrationCount;
 
         vmstimelog.println(CloudSim.clock() + " " + getVmList().size());
         powertimelog.println(CloudSim.clock() + " " + power);
@@ -365,14 +390,7 @@ public class HyperPowerDatacenter extends Datacenter {
         }
 
         //here remove vms
-        long power = 0;
-        power += (migrationCount - oldmigrationcount) * 20;
-        power += (hostonoffCount - oldhostonoffcount) * 100;
-        power += getVmList().size() * 5;
-        int newvms = getVmList().size() - oldvmcount;
-        oldvmcount = getVmList().size();
-        oldhostonoffcount = hostonoffCount;
-        oldmigrationcount = migrationCount;
+
 
 
         if (getCloudletSubmitted() == -1 || getCloudletSubmitted() == CloudSim.clock()) {
@@ -387,18 +405,38 @@ public class HyperPowerDatacenter extends Datacenter {
 
 
             //removing vms
-            if(getVmList().size() > 200 && newvms > 0) {
+            int nohost = 0;
+            int rvms = 0;
+            if(getVmList().size() > 100){ // && newvms > 0) {
                 ArrayList<Vm> removeVms = new ArrayList<>();
-                int rvms = 200 - newvms;
+                if(mode == 1) {
+                    rvms = 240 - newvms;
+                    if(rvms > getVmList().size()) rvms = newvms;
+                }
+                else if(mode == 2)
+                {
+                    rvms = rate * 59;
+                    if(rvms > getVmList().size()) rvms = 0;
+                }
                 int max = getVmList().size() - 1;
-                if(rvms > newvms) rvms = newvms;
                 for (int idx = 0; idx < rvms; idx++) {
                     Random random = new Random();
                     int vmr = generateRandomInteger(0, max, random);
 
                     HyperPowerVm vm = (HyperPowerVm) getVmList().get(vmr);
                     HyperPowerHost oldhost  = (HyperPowerHost) vm.getHost();
-                    if(oldhost == null) continue;
+                    if(oldhost == null)
+                    {
+                        nohost +=1;
+                        System.out.println(CloudSim.clock() + " DELETED: " + vm.getId());
+
+                       // continue;
+                    }
+                    else
+                    {
+                        System.out.println(CloudSim.clock() + " DELETED: " + vm.getId() + " host " + (oldhost.getId() - 2));
+
+                    }
                   //  hp.getVmTable().remove(vm.getUid());
                     //if(oldhost != null)
                     //{
@@ -412,7 +450,6 @@ public class HyperPowerDatacenter extends Datacenter {
                        // sendNow(oldhost.getId(), HyperCloudSimTags.REMOVEVM, vm);
                         max-=1;
 
-                       // System.out.println(CloudSim.clock() + " DELETED: " + vm.getId() + " host " + (oldhost.getId() - 2));
                    // }
                     /*oldhost.removeMigratingInVm(vm);
                       getVmAllocationPolicy().deallocateHostForVm(vm);
@@ -511,11 +548,9 @@ public class HyperPowerDatacenter extends Datacenter {
 
             // schedules an event to the next time
             if (minTime != Double.MAX_VALUE) {
-				CloudSim.cancelAll(getId(), new PredicateType(HyperCloudSimTags.VM_DATACENTER_EVENT));
+                CloudSim.cancelAll(getId(), new PredicateType(HyperCloudSimTags.VM_DATACENTER_EVENT));
                 send(getId(), getSchedulingInterval(), HyperCloudSimTags.VM_DATACENTER_EVENT);
-            }
-            else
-            {
+            } else {
                 send(getId(), getSchedulingInterval(), HyperCloudSimTags.VM_DATACENTER_EVENT);
             }
 
@@ -660,7 +695,7 @@ public class HyperPowerDatacenter extends Datacenter {
         Map<String, Object> migrate = (HashMap<String, Object>) tmp;
 
         Vm vm = (Vm) migrate.get("vm");
-        System.out.println("CC " + CloudSim.clock() + " MIGRATING VM:" + vm.getId());
+        System.out.println("CC " + CloudSim.clock() + " MIGRATING VM" + vm.getId());
         Host host = (Host) migrate.get("host");
         Host oldhost = vm.getHost();
         HyperVmAllocationPolicy h = (HyperVmAllocationPolicy) getVmAllocationPolicy();
@@ -727,7 +762,7 @@ public class HyperPowerDatacenter extends Datacenter {
                 vm.getId(),
                 host.getId() - 2);
         */vm.setInMigration(false);
-        System.out.println("CC " + CloudSim.clock() + " MIG OK VM:" + vm.getId());
+       // System.out.println("CC " + CloudSim.clock() + " MIG OK VM:" + vm.getId());
 
     }
 
