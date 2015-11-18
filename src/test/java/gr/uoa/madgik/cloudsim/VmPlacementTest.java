@@ -1,6 +1,6 @@
 package gr.uoa.madgik.cloudsim;
 
-import gr.uoa.magdik.cloudslim.*;
+import gr.uoa.magdik.cloudsim.*;
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.DatacenterBroker;
 import org.cloudbus.cloudsim.Log;

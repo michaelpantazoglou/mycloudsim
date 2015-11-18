@@ -8,7 +8,7 @@
 
 package org.cloudbus.cloudsim.core;
 
-import gr.uoa.magdik.cloudslim.HyperPowerHost;
+import gr.uoa.magdik.cloudsim.HyperPowerHost;
 
 import java.util.ArrayList;
 import java.util.Map;

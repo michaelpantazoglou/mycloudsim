@@ -8,13 +8,9 @@
 
 package org.cloudbus.cloudsim.core;
 
-import gr.uoa.magdik.cloudslim.HyperPowerHost;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.NetworkTopology;
 import org.cloudbus.cloudsim.core.predicates.Predicate;
-
-import java.util.ArrayList;
-import java.util.Map;
 
 /**
  * This class represents a simulation entity. An entity handles events and can send events to other
@@ -444,7 +440,7 @@ public abstract class SimEntity implements Cloneable {
 	 * 
 	 * @param new_name the new name
 	 */
-	private void setName(String new_name) {
+	protected void setName(String new_name) {
 		name = new_name;
 	}
 

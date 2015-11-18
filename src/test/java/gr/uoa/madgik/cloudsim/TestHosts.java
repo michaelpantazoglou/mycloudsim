@@ -1,6 +1,6 @@
 package gr.uoa.madgik.cloudsim;
 
-import gr.uoa.magdik.cloudslim.HyperHelper;
+import gr.uoa.magdik.cloudsim.HyperHelper;
 import org.junit.Test;
 
 /**

@@ -1,11 +1,14 @@
 apply plugin : 'java'
 apply plugin : 'idea'
 apply plugin : 'eclipse'
+apply plugin: 'application'
 
 task wrapper (type: Wrapper) {
 	gradleVersion = '2.0'
 }
 
+mainClassName = 'gr.uoa.magdik.cloudsim.Main'
+applicationName = 'analyzer'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
@@ -38,4 +41,25 @@ dependencies {
 repositories {
 	mavenCentral()
 	mavenLocal()
+}
+
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+	manifest {
+		attributes 'Implementation-Title': 'Gradle Jar File Example',
+				'Implementation-Version': '1',
+				'Main-Class': 'gr.uoa.magdik.cloudsim.Main'
+	}
+	baseName = project.name + '-all'
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	with jar
+}
+
+task hyperun (type: JavaExec, dependsOn: classes){
+	if(project.hasProperty('myargs')){
+		args(myargs.split(','))
+	}
+	description = "HyperCloudSim"
+	main = "gr.uoa.magdik.cloudsim.Main"
+	classpath = sourceSets.main.runtimeClasspath
 }

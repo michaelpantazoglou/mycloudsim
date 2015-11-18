@@ -1,6 +1,6 @@
 package gr.uoa.madgik.cloudsim;
 
-import gr.uoa.magdik.cloudslim.*;
+import gr.uoa.magdik.cloudsim.*;
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.DatacenterBroker;
 import org.cloudbus.cloudsim.Log;
@@ -10,8 +10,8 @@ import org.cloudbus.cloudsim.core.CloudSim;
 import java.io.*;
 import java.util.*;
 
-import static gr.uoa.magdik.cloudslim.HyperHelper.*;
-import static gr.uoa.magdik.cloudslim.GenerateCloudlets.*;
+import static gr.uoa.magdik.cloudsim.HyperHelper.*;
+import static gr.uoa.magdik.cloudsim.GenerateCloudlets.*;
 
 /**
  * Created by tchalas on 4/25/15.
