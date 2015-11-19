@@ -75,35 +75,7 @@ public class Main {
         boolean initread = false;
         boolean incomingread = false;
 
-        //commented code for ececution plan by file
-        /*try (BufferedReader br = new BufferedReader(new FileReader(plan))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-                if(line.equals("")) initread = false;
-                if(initread)
-                {
-                    String linearr[] = line.split("\t");
-                    int hostid = Integer.parseInt(linearr[0]);
-                    int numberofvms = Integer.parseInt(linearr[1]);
-                    if(numberofvms != -1) initvms += numberofvms;
-                    System.out.println("HOST" + hostid + " VMS " + numberofvms);
-                    hostvms.put(hostid - 1,numberofvms);
-                }
-                else if(incomingread)
-                {
 
-                }
-                if(line.equals("HOSTID\tVMS"))  initread = true;
-                if(line.equals("TIME\tVMS"))
-                {
-                    initread = false;
-                    incomingread = true;
-                }
-            }
-        }*/
-        //System.out.println("initvms" + initvms);
-        //System.exit(-1);
 
         try {
             HyperCloudSim.init(1, Calendar.getInstance(), false);
@@ -149,20 +121,11 @@ public class Main {
                 }
             }
 
-
             HyperVmAllocationPolicy hv = (HyperVmAllocationPolicy) datacenter.getVmAllocationPolicy();
             hv.setDatacenter(datacenter);
-            //hv.inithostsvm = hostvms;
-            //hv.initoffhosts();
             hv.getOnHosts().addAll(hostList);
             datacenter.setDisableMigrations(false);
-           // Calendar cal = Calendar.getInstance();
-           // cal.add(Calendar.DATE, 1);
             int f = new File("logs-plots").list().length;
-            System.out.println(f);
-           // System.exit(-1);
-           // SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-            //String date = format1.format(cal.getTime());
             Date date = new Date();
 
             new File("logs-plots/" + f + "-"  + date).mkdir();
@@ -203,3 +166,38 @@ public class Main {
         }
     }
 }
+
+
+
+//commented code for ececution plan by file
+        /*try (BufferedReader br = new BufferedReader(new FileReader(plan))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+                if(line.equals("")) initread = false;
+                if(initread)
+                {
+                    String linearr[] = line.split("\t");
+                    int hostid = Integer.parseInt(linearr[0]);
+                    int numberofvms = Integer.parseInt(linearr[1]);
+                    if(numberofvms != -1) initvms += numberofvms;
+                    System.out.println("HOST" + hostid + " VMS " + numberofvms);
+                    hostvms.put(hostid - 1,numberofvms);
+                }
+                else if(incomingread)
+                {
+
+                }
+                if(line.equals("HOSTID\tVMS"))  initread = true;
+                if(line.equals("TIME\tVMS"))
+                {
+                    initread = false;
+                    incomingread = true;
+                }
+            }
+        }*/
+
+//hv.inithostsvm = hostvms;
+//hv.initoffhosts();
+//System.out.println("initvms" + initvms);
+//System.exit(-1);

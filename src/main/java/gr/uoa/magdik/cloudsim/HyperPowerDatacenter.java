@@ -492,40 +492,7 @@ public class HyperPowerDatacenter extends Datacenter {
 
 		}
 
-		if (timeDiff > 0) {
-			/*Log.formatLine(
-                    "\nEnergy consumption for the last time frame from %.2f to %.2f:",
-                    getLastProcessTime(),
-                    currentTime);*/
 
-			/*for (HyperPowerHost host : this.<HyperPowerHost> getHostList()) {
-				double previousUtilizationOfCpu = host.getPreviousUtilizationOfCpu();
-				double utilizationOfCpu = host.getUtilizationOfCpu();
-				double timeFrameHostEnergy = host.getEnergyLinearInterpolation(
-						previousUtilizationOfCpu,
-						utilizationOfCpu,
-						timeDiff);
-				//System.out.println("HOSTENERGY = " + timeFrameHostEnergy);
-				//System.out.println("HOSTUTIL = " + utilizationOfCpu);
-				//System.out.println("PREHOSTUTIL = " + previousUtilizationOfCpu);
-				timeFrameDatacenterEnergy += timeFrameHostEnergy;
-
-				Log.printLine();
-				Log.formatLine(
-                        "%.2f: [Host #%d] utilization at %.2f was %.2f%%, now is %.2f%%",
-                        currentTime,
-                        host.getId(),
-                        getLastProcessTime(),
-                        previousUtilizationOfCpu * 100,
-                        utilizationOfCpu * 100);
-				Log.formatLine(
-                        "%.2f: [Host #%d] energy is %.2f W*sec",
-                        currentTime,
-                        host.getId(),
-                        timeFrameHostEnergy);
-			}
-*/
-		}
 		//setPower(getPower() + timeFrameDatacenterEnergy);
 		checkCloudletCompletion();
 
@@ -553,7 +520,6 @@ public class HyperPowerDatacenter extends Datacenter {
         Map<String, Object> migrate = (HashMap<String, Object>) tmp;
 
         Vm vm = (Vm) migrate.get("vm");
-        System.out.println("CC " + CloudSim.clock() + " MIGRATING VM" + vm.getId());
         Host host = (Host) migrate.get("host");
         Host oldhost = vm.getHost();
         HyperVmAllocationPolicy h = (HyperVmAllocationPolicy) getVmAllocationPolicy();
