@@ -9,6 +9,7 @@ import org.cloudbus.cloudsim.core.CloudSim;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static gr.uoa.magdik.cloudsim.GenerateCloudlets.createCloudletList;
@@ -20,24 +21,50 @@ import static gr.uoa.magdik.cloudsim.HyperHelper.*;
 public class Main {
     public static void main(String[] args) throws IOException
     {
-        HashMap<Integer, Integer> hostvms = new HashMap();
+        //HashMap<Integer, Integer> hostvms = new HashMap();
+        int hours = 0;
+        int hypercubesize = 0;
+        int initvms = 0;
+        int rate = 0;
+        int mode = 0;
 
-        System.out.println(args[0] + args[1]);
-        if(args.length < 5)
-            throw new IllegalArgumentException("Plese check the arguments provided");
-        int hours = Integer.parseInt(args[0]);
-        int hypercubesize = Integer.parseInt(args[1]);
-        int initvms = Integer.parseInt(args[2]);
-        int rate = Integer.parseInt(args[4]);
-        int mode = 1;
-        if(args[3].equals("i"))
+        if(args.length == 5)
         {
-            mode = 0;
+            hours = Integer.parseInt(args[0]);
+            hypercubesize = Integer.parseInt(args[1]);
+            initvms = Integer.parseInt(args[2]);
+            rate = Integer.parseInt(args[4]);
+            mode = 1;
+            if(args[3].equals("i"))
+            {
+                mode = 0;
+            }
+            else if(args[3].equals("d"))
+            {
+                mode = 2;
+            }
+            else if(args[3].equals("n"))
+            {
+                mode = 3;
+            }
         }
-        else if(args[3].equals("d"))
+        else
         {
-            mode = 2;
+            hours = 1;
+            hypercubesize = 3;
+            initvms = 20;
+            rate = 0;
+            mode = 1;
+            //throw new IllegalArgumentException("Plese check the arguments provided");
         }
+        System.out.println(hours);
+        System.out.println(hypercubesize);
+        System.out.println(initvms);
+        System.out.println(rate);
+        System.out.println(mode);
+        //System.exit(-1);
+
+        PrintWriter gnuscript;
         DatacenterBroker broker;
         List<Cloudlet> cloudletList;
         List<Vm> vmList;
@@ -79,7 +106,7 @@ public class Main {
         //System.exit(-1);
 
         try {
-            CloudSim.init(1, Calendar.getInstance(), false);
+            HyperCloudSim.init(1, Calendar.getInstance(), false);
             broker = createBroker();
             int brokerId = broker.getId();
             vmList = new ArrayList<Vm>();
@@ -101,13 +128,11 @@ public class Main {
             vmList.addAll(createVmList(broker, initvms));
             int delayvms = 0;
 
-            if(mode != 2) {
+            if(mode < 2) {
                 for (int j = 61; j < 29790; j++) //17200
                 {
                     if (j % 4 == 0 || j % 5 == 0) {
-                        //removeRandomVms((HyperDatacenterBroker) broker, 14 - delayvms, j * 10.0 + 0.3);
                         delayvms = 0;
-                        //continue;
                     }
                     if(mode == 1)
                     {
@@ -123,19 +148,40 @@ public class Main {
                     }
                 }
             }
+
+
             HyperVmAllocationPolicy hv = (HyperVmAllocationPolicy) datacenter.getVmAllocationPolicy();
             hv.setDatacenter(datacenter);
             //hv.inithostsvm = hostvms;
             //hv.initoffhosts();
             hv.getOnHosts().addAll(hostList);
             datacenter.setDisableMigrations(false);
+           // Calendar cal = Calendar.getInstance();
+           // cal.add(Calendar.DATE, 1);
+            int f = new File("logs-plots").list().length;
+            System.out.println(f);
+           // System.exit(-1);
+           // SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+            //String date = format1.format(cal.getTime());
             Date date = new Date();
-            new File("logs-plots/" + date).mkdir();
-            Log.writer = new PrintWriter("logs-plots/" + date + "/results ", "UTF-8");
-            datacenter.vmstimelog = new PrintWriter("logs-plots/" + date + "/vmstime.dat", "UTF-8");
-            datacenter.onhoststimelog = new PrintWriter("logs-plots/" + date + "/onhoststime.dat", "UTF-8");
-            datacenter.powertimelog = new PrintWriter("logs-plots/" + date + "/powertime.dat", "UTF-8");
 
+            new File("logs-plots/" + f + "-"  + date).mkdir();
+            Log.writer = new PrintWriter("logs-plots/" + f + "-" + date + "/results ", "UTF-8");
+            datacenter.vmstimelog = new PrintWriter("logs-plots/" + f + "-" + date + "/vmstime.dat", "UTF-8");
+            datacenter.onhoststimelog = new PrintWriter("logs-plots/" + f + "-" + date + "/onhoststime.dat", "UTF-8");
+            datacenter.powertimelog = new PrintWriter("logs-plots/" + f + "-" + date + "/powertime.dat", "UTF-8");
+            gnuscript = new PrintWriter("logs-plots/" + f + "-" + date + "/gnuscript", "UTF-8");
+            gnuscript.println("set term png");
+            gnuscript.println("set output \"onhoststime.png\"");
+            gnuscript.println("plot \"onhoststime.dat\" using 1:2 w linesp");
+            gnuscript.println("set output \"vmstime.png\"");
+            gnuscript.println("plot \"vmstime.dat\" using 1:2 w linesp");
+            gnuscript.println("set output \"powertime.png\"");
+            gnuscript.println("plot \"powertime.dat\" using 1:2 w linesp");
+
+            gnuscript.close();
+            //Process p = Runtime.getRuntime().exec("gnuplot logs-plots/" + f + "-" + date + "/gnuscript");
+            //p.waitFor();
             CloudSim.terminateSimulation(hours * 3600);
 
             IncomingRequests incomingRequests = new IncomingRequests();
@@ -143,12 +189,12 @@ public class Main {
             incomingRequests.setHyperPowerDatacenter(datacenter);
             incomingRequests.start();
 
-            double lastClock = CloudSim.startSimulation();
-            List<Cloudlet> newList = broker.getCloudletReceivedList();
-            Log.printLine("Received " + newList.size() + " cloudlets");
+            double lastClock = HyperCloudSim.startSimulation();
             datacenter.vmstimelog.close();
             datacenter.powertimelog.close();
             datacenter.onhoststimelog.close();
+            List<Cloudlet> newList = broker.getCloudletReceivedList();
+            Log.printLine("Received " + newList.size() + " cloudlets");
 
         } catch (Exception e) {
             e.printStackTrace();

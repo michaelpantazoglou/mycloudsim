@@ -20,47 +20,8 @@ public class HyperHelper{
 	private static int hostId = 0;
     private static HyperPowerDatacenter cd;
 
-    public static List<Vm> placeVmsinHosts(HashMap<Integer,Integer> mapvms, int brokerId)
-    {
-        int VM_MIPS = HyperConstants.VM_MIPS[0];
-        long VM_SIZE = HyperConstants.VM_SIZE; // image size (MB)
-        int VM_RAM = HyperConstants.VM_RAM[0]; // vm memory (MB)
-        long VM_BW = HyperConstants.VM_BW;
-        int VM_PES = HyperConstants.VM_PES[0]; // number of cpus
-        int i = 0;
-        List<Vm> vms = new ArrayList<Vm>();
-        Iterator it = mapvms.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry)it.next();
-            HyperPowerHost hp = (HyperPowerHost) cd.getHostbyId((Integer) pair.getKey());
-            for(int j = 0; j< (int) pair.getValue(); j++)
-            {
-                HyperPowerVm vm = new HyperPowerVm(
-                        i,
-                        brokerId,
-                        VM_MIPS,
-                        VM_PES,
-                        VM_RAM,
-                        VM_BW,
-                        VM_SIZE,
-                        1,
-                        "Xen",
-                        new CloudletSchedulerDynamicWorkload(HyperConstants.VM_MIPS[0], HyperConstants.VM_PES[0]),
-                        HyperConstants.SCHEDULING_INTERVAL);
-                HyperVmAllocationPolicy hva= (HyperVmAllocationPolicy) cd.getVmAllocationPolicy();
-                if(hva.placeVminHost(vm, hp) == false)
-                {
-                    return null;
-                }
-                vms.add(vm);
-            }
 
-            i++;
-        }
-        return vms;
-    }
-
-	public static void removeRandomVms(HyperDatacenterBroker broker, int vmsNumber, double delay)
+	/*public static void removeRandomVms(HyperDatacenterBroker broker, int vmsNumber, double delay)
 	{
 		List<Vm> removevms = new ArrayList<Vm>();
 		int size = broker.getLateVmList().size();
@@ -73,7 +34,7 @@ public class HyperHelper{
 			removevms.add(vm);
 		}
 		broker.submitRemoveVmList(removevms);
-	}
+	}*/
 
 	public static List<Vm> createVmsDelay(DatacenterBroker broker, int vmsNumber, double delay) {
 		int VM_MIPS = HyperConstants.VM_MIPS[0];
@@ -142,30 +103,21 @@ public class HyperHelper{
 		return vms;
 	}
 
+	public static List<HyperPowerHost> createHostList(int dimension) {
+		List<HyperPowerHost> l = new ArrayList<>();
+		if (dimension == 0) {
+			int hostType = 1;
+			List<Pe> peList1 = new ArrayList<Pe>();
+			for (int j = 0; j < 2; j++) {
+				peList1.add(new Pe(j, new PeProvisionerSimple(12000)));
+			}
 
+			int MIPS = HyperConstants.HOST_MIPS[0];
+			int HOST_RAM = HyperConstants.HOST_RAM[0];
+			int HOST_STORAGE = HyperConstants.HOST_STORAGE;
+			int HOST_BANDWIDTH = HyperConstants.HOST_BW;
 
-
-
-		public static List<HyperPowerHost> createHostList(int dimension) {
-			List<HyperPowerHost> l = new ArrayList<>();
-
-			if (dimension == 0) {
-
-				int hostType = 1;//hostId % HyperConstants.HOST_TYPES;
-                List<Pe> peList1 = new ArrayList<Pe>();
-                for (int j = 0; j < 2; j++) {
-                    peList1.add(new Pe(j, new PeProvisionerSimple(12000)));
-                }
-
-                int MIPS = HyperConstants.HOST_MIPS[0];
-
-                int HOST_RAM = HyperConstants.HOST_RAM[0];
-                int HOST_STORAGE = HyperConstants.HOST_STORAGE;
-                int HOST_BANDWIDTH = HyperConstants.HOST_BW;
-//hostId++,
-
-
-                HyperPowerHost h1 = new HyperPowerHost(
+			HyperPowerHost h1 = new HyperPowerHost(
 						-1,
                         new RamProvisionerSimple(HOST_RAM),
                         new BwProvisionerSimple(HOST_BANDWIDTH),
@@ -195,7 +147,6 @@ public class HyperHelper{
 				h2.setNeighbor(dimension, h1);
 				h1.startEntity();
 				h2.startEntity();
-
 				return l;
 			}
 

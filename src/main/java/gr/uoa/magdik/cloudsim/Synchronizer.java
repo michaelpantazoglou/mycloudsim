@@ -5,20 +5,22 @@ package gr.uoa.magdik.cloudsim;
  */
 public class Synchronizer extends Thread {
 
+    //mode defining partial or full migration
+    int mode = 0;
+    HyperPowerHost host;
+    public boolean started = false;
+
     public class Mutex {
         public void acquire() throws InterruptedException { }
         public void release() { }
     }
 
-    //mode defining partial or full migration
-    int mode = 0;
     public HyperPowerHost getHost() {
         return host;
     }
     public void setHost(HyperPowerHost host) {
         this.host = host;
     }
-    HyperPowerHost host;
 
     public void setSynching(boolean synching) {
         this.synching = synching;
@@ -45,9 +47,6 @@ public class Synchronizer extends Thread {
     public void setStarted(boolean started) {
         this.started = started;
     }
-
-    public boolean started = false;
-
 
     @Override
     public void run() {

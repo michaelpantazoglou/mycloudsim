@@ -60,10 +60,10 @@ public class IncomingRequests implements Runnable{
             for (int i = 0; i < newvms; i++)
             {
                 int VM_MIPS = HyperConstants.VM_MIPS[0];
-                long VM_SIZE = HyperConstants.VM_SIZE; // image size (MB)
-                int VM_RAM = HyperConstants.VM_RAM[0]; // vm memory (MB)
+                long VM_SIZE = HyperConstants.VM_SIZE;
+                int VM_RAM = HyperConstants.VM_RAM[0];
                 long VM_BW = HyperConstants.VM_BW;
-                int VM_PES = HyperConstants.VM_PES[0]; // number of cpus
+                int VM_PES = HyperConstants.VM_PES[0];
                 HyperPowerVm vm = new HyperPowerVm(
                     datacenterBroker.getVmList().size() + i,
                     datacenterBroker.getId(),

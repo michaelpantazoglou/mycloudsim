@@ -16,7 +16,6 @@ import java.util.List;
  */
 public class HyperDatacenterBroker extends DatacenterBroker{
 
-
     public <T extends Vm> List<T> getLateVmList() {
         return (List<T>) lateVmList;
     }
@@ -46,10 +45,6 @@ public class HyperDatacenterBroker extends DatacenterBroker{
     }
 
     public boolean cloudletsumitted = false;
-
-
-
-
 
     /**
      * Create the virtual machines in a datacenter.
@@ -84,7 +79,7 @@ public class HyperDatacenterBroker extends DatacenterBroker{
         setVmsAcks(0);
     }
 
-    private void removeVmsFromDatacenter(Integer datacenterId)
+    /*private void removeVmsFromDatacenter(Integer datacenterId)
     {
         String datacenterName = CloudSim.getEntityName(datacenterId);
         for(Vm vm : getRemoveVmList())
@@ -96,7 +91,7 @@ public class HyperDatacenterBroker extends DatacenterBroker{
                 double delay = hvm.getRemovedelay();
                 send(datacenterId, delay, HyperCloudSimTags.REMOVEVM, vm);
         }
-    }
+    }*/
 
     protected void processVmCreate(SimEvent ev) {
         int[] data = (int[]) ev.getData();
@@ -113,10 +108,9 @@ public class HyperDatacenterBroker extends DatacenterBroker{
             {
                 getVmsCreatedList().add(VmList.getById(getLateVmList(), vmId));
             }
-            //Log.printLine(CloudSim.clock() + ": " + getName() + ": VM #" + vmId
-              //      + " has been created in Datacenter #" + datacenterId + ", Host #"
-                //    + VmList.getById(getVmsCreatedList(), vmId).getHost().getId());
-        } else {
+        }
+        else
+        {
             Log.printLine(CloudSim.clock() + ": " + getName() + ": Creation of VM #" + vmId
                     + " failed in Datacenter #" + datacenterId);
         }

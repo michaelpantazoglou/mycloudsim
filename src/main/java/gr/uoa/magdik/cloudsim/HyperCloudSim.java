@@ -27,38 +27,19 @@ import java.util.*;
  */
 public class HyperCloudSim extends CloudSim{
 
-
-
-	/**
-	 * Internal method used to run one tick of the simulation. This method should <b>not</b> be
-	 * called in simulations.
-	 * 
-	 * @return true, if successful otherwise
-	 */
 	public static boolean runClockTick() {
 		SimEntity ent;
 		boolean queue_empty;
-		
-		int entities_size = entities.size();
-        //System.out.println("CLOCK " + clock);
 
+		int entities_size = entities.size();
 
 		for (int i = 0; i < entities_size; i++) {
 			ent = entities.get(i);
-
-			//checking if entity is a hyperdatacenter. If yes we need to check the hosts
-            if(ent.getClass().equals(PowerDatacenter.class))
-            {
-                PowerDatacenter pd = (PowerDatacenter) ent;
-                HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) pd.getVmAllocationPolicy();
-                hp.monitorDatacenter();
-            }
-
 			if (ent.getState() == SimEntity.RUNNABLE) {
 				ent.run();
 			}
 		}
-				
+
 		// If there are more future events then deal with them
 		if (future.size() > 0) {
 			List<SimEvent> toRemove = new ArrayList<SimEvent>();
@@ -69,7 +50,6 @@ public class HyperCloudSim extends CloudSim{
 			future.remove(first);
 
 			fit = future.iterator();
-
 
 			// Check if next events are at same time...
 			boolean trymore = fit.hasNext();
@@ -85,13 +65,8 @@ public class HyperCloudSim extends CloudSim{
 			}
 			future.removeAll(toRemove);
 
-		} else {
-			//queue_empty = true;
-			//running = false;
-			//printMessage("Simulation: No more future events");
 		}
 		return false;
-		//return queue_empty;
 	}
 
 

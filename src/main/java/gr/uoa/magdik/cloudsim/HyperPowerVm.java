@@ -31,7 +31,6 @@ import org.cloudbus.cloudsim.power.models.PowerModelLinear;
  */
 public class HyperPowerVm extends PowerVm {
 
-
 	PowerModel pm;
 
 	public double getDelay() {
@@ -43,16 +42,8 @@ public class HyperPowerVm extends PowerVm {
 	}
 
 	double delay;
-	double removedelay;
 
 
-	public double getRemovedelay() {
-		return removedelay;
-	}
-
-	public void setRemovedelay(double removedelay) {
-		this.removedelay = removedelay;
-	}
 
 	/**
 	 * Instantiates a new power vm.
@@ -85,10 +76,7 @@ public class HyperPowerVm extends PowerVm {
 		super(id, userId, mips, pesNumber, ram, bw, size, priority, vmm, cloudletScheduler, schedulingInterval);
 		pm = new PowerModelLinear(0.00, 0.0);
 		delay = 0;
-		removedelay = 0;
 	}
-
-
 
 	/**
 	 * Gets the power. For this moment only consumed by all PEs.
