@@ -28,7 +28,15 @@ The rate vms will be add or removed from the datacenter per second.
 For example if we execute
 HyperCloudsim -3 -4 -50 -i -2 , then we are going to run an experiment for 3 hours, with 8 hosts, starting from 50 vms and 2 vms added per second (with propability 50%).
 
+When execution is completed, the files listed below will have been created in the folder logs-plots
+-onhosttime.dat: the hosts that were on at the end of each period
+-powertime.dat: the tolat datacenter power consuption during the last period
+-vmstime.dat: the virual machines in the datacenter at the end of the period
+
+And the following plots
+
 Notice that the creation of the Vm might fail, if no host is avaliable. So when we talk about the vm rate, we talk about the Vm that the tool will try to crate in the datacenter. 
+
 
 
 

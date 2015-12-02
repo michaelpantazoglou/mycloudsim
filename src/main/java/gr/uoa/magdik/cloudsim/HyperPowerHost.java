@@ -510,22 +510,6 @@ public class HyperPowerHost extends PowerHost implements Comparable {
        // System.out.println("host" + (this.getId() - 2) + " RECEIVING HB TIME:" + CloudSim.clock());
         Map<? extends HyperPowerHost, ? extends ArrayList<Integer>> nnodes = (Map<? extends HyperPowerHost, ? extends ArrayList<Integer>>) ev.getData();
         heartnodes.putAll((Map<? extends HyperPowerHost, ? extends ArrayList<Integer>>) ev.getData());
-        //for (Map.Entry<? extends HyperPowerHost, ? extends ArrayList<Integer>> entry : nnodes.entrySet()) {
-           // System.out.println("host" + (this.getId() - 2) + " receiving new host:" + (entry.getKey().getId() - 2));
-        //}
-            /*
-            System.out.println("RECEIVING HB TIME:" + CloudSim.clock());
-            if (!this.nodesh.containsKey(entry.getKey()) && entry.getKey().getId() != getId()) {
-                nodesh.put(entry.getKey(), entry.getValue());
-                nodesh.get(entry.getKey()).add(ev.getSource());
-                cyclepowers.put(entry.getKey().getId() - 2, entry.getKey().getPower());
-            }
-            if(entry.getKey().getVmList().size() > 18)
-            {
-                //System.out.println("OOOO");
-            }
-           cyclepowers.put(entry.getKey().getId() - 2, entry.getKey().getPower());
-        }*/
     }
 
     public void buildpowermap()
@@ -533,10 +517,8 @@ public class HyperPowerHost extends PowerHost implements Comparable {
         setStartsynchtime(CloudSim.clock());
         nodenew.clear();
         HashMap<HyperPowerHost, ArrayList<Integer>> nodedifference = new HashMap<HyperPowerHost, ArrayList<Integer>>();
-        //nodedifference.putAll(nodesh);
         if(heartnodes!= null) {
             for (Map.Entry<HyperPowerHost, ArrayList<Integer>> entry : heartnodes.entrySet()) {
-                //System.out.println("RECEIVING HB TIME:" +
                 if (!this.nodesh.containsKey(entry.getKey()) && entry.getKey().getId() != getId()) {
                     nodedifference.put(entry.getKey(), entry.getValue());
                     nodesh.put(entry.getKey(), entry.getValue());

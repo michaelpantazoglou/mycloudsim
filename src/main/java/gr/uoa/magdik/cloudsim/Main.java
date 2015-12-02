@@ -5,11 +5,11 @@ import org.cloudbus.cloudsim.DatacenterBroker;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
+import org.jfree.data.xy.XYSeries;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static gr.uoa.magdik.cloudsim.GenerateCloudlets.createCloudletList;
@@ -51,9 +51,9 @@ public class Main {
         else
         {
             hours = 1;
-            hypercubesize = 3;
+            hypercubesize = 9;
             initvms = 20;
-            rate = 0;
+            rate = 2;
             mode = 1;
             //throw new IllegalArgumentException("Plese check the arguments provided");
         }
@@ -76,6 +76,8 @@ public class Main {
         boolean incomingread = false;
 
 
+
+        //System.exit(-2);
 
         try {
             HyperCloudSim.init(1, Calendar.getInstance(), false);
@@ -152,10 +154,26 @@ public class Main {
             incomingRequests.setHyperPowerDatacenter(datacenter);
             incomingRequests.start();
 
+            ArrayList<XYSeries> plotseries = new ArrayList<>();
+            plotseries.add(datacenter.getOnhoststime());
+            plotseries.add(datacenter.getVmstime());
+
             double lastClock = HyperCloudSim.startSimulation();
             datacenter.vmstimelog.close();
             datacenter.powertimelog.close();
             datacenter.onhoststimelog.close();
+            createLinePlots(plotseries, "logs-plots/" + f + "-" + date + "/", "hosts+vms-time");
+            plotseries.remove(datacenter.getOnhoststime());
+            plotseries.add(datacenter.getEnergytime());
+            createLinePlots(plotseries, "logs-plots/" + f + "-" + date + "/", "energy+vms-time");
+            plotseries.clear();
+            plotseries.add(hv.getStateIDLE());
+            plotseries.add(hv.getStateOVER());
+            plotseries.add(hv.getStateOK());
+            plotseries.add(hv.getStateOFF());
+            plotseries.add(hv.getStateUNDER());
+
+            createBarPlots(plotseries, "logs-plots/" + f + "-" + date + "/", "hosts state");
             List<Cloudlet> newList = broker.getCloudletReceivedList();
             Log.printLine("Received " + newList.size() + " cloudlets");
 

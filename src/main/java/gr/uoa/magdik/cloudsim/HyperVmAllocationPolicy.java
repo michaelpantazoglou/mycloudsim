@@ -5,6 +5,8 @@ import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.power.*;
+import org.jfree.data.xy.XYSeries;
+
 import static gr.uoa.magdik.cloudsim.HyperPowerHost.*;
 
 import java.io.PrintWriter;
@@ -23,6 +25,12 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         offHosts = new ArrayList<>();
         onHosts = new CopyOnWriteArrayList<>();
         vmsplaced = false;
+        stateOVER = new XYSeries("Overutilized Hosts");
+        stateUNDER = new XYSeries("Underutilized Hosts");
+        stateIDLE = new XYSeries("Idle Hosts");
+        stateOK = new XYSeries("OK Hosts");
+        stateOFF = new XYSeries("OFF Hosts");
+
     }
 
     PrintWriter writer;
@@ -53,6 +61,32 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
     boolean vmsplaced;
     HyperPowerDatacenter datacenter;
     int round =  0;
+    private XYSeries stateOFF;
+
+    public XYSeries getStateOVER() {
+        return stateOVER;
+    }
+
+    public XYSeries getStateOFF() {
+        return stateOFF;
+    }
+
+    public XYSeries getStateIDLE() {
+        return stateIDLE;
+    }
+
+    public XYSeries getStateOK() {
+        return stateOK;
+    }
+
+    public XYSeries getStateUNDER() {
+        return stateUNDER;
+    }
+
+    private XYSeries stateOVER;
+    private XYSeries stateUNDER;
+    private XYSeries stateIDLE;
+    private XYSeries stateOK;
 
     public boolean placeVminHost(Vm vm, Host host)
     {
@@ -267,13 +301,16 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     public List<Map<String, Object>> synchronizeHosts()
     {
+        int overhosts = 0; int underhosts = 0; int idlehosts = 0; int okhosts = 0;
         Thread t = Thread.currentThread();
-        t.setName("Admin Thread");
+        t.setName("Main Thread");
         int partial = 0;
         List<Map<String, Object>> migrationMap = new ArrayList<>();
         int nvm = 0;
+        double time = CloudSim.clock();
      //  monitorDatacenter();
-        getDatacenter().onhoststimelog.println(CloudSim.clock() + "\t" + getOnHosts().size());
+      //  getDatacenter().onhoststimelog.println(CloudSim.clock() + "\t" + getOnHosts().size());
+        getDatacenter().getOnhoststime().add(CloudSim.clock(), getOnHosts().size());
         for (Host h : getOnHosts())
         {
             HyperPowerHost host = (HyperPowerHost) h;
@@ -281,6 +318,14 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             {
                 Log.write(" --- HOST " + (host.getId()-2) + " : " + host.getVmList().size() + " VMs and Power " + host.getPower() + " ---");
             }
+            if(host.getPowerState() == PowerState.OK)
+                okhosts++;
+            else if(host.getPowerState() == PowerState.IDLE)
+                idlehosts++;
+            else if(host.getPowerState() == PowerState.OVERU)
+                overhosts++;
+            else if(host.getPowerState() == PowerState.UNDERU)
+                underhosts++;
             host.buildpowermap();
             nvm += host.getVmList().size();
             host.sortNeighbors();
@@ -339,7 +384,19 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 }
             }
         }
+        stateOVER.add(time, overhosts);
+        stateIDLE.add(time, idlehosts);
+        stateOK.add(time, okhosts);
+        stateUNDER.add(time, underhosts);
+        stateOFF.add(time, offHosts.size());
         return migrationMap;
+    }
+
+    private void addHostState(PowerState ps, double time)
+    {
+       // if(ps == PowerState.OVERU)
+
+
     }
 
     public void monitorDatacenter()

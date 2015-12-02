@@ -14,6 +14,7 @@ import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEvent;
 import org.cloudbus.cloudsim.core.predicates.PredicateType;
 import org.cloudbus.cloudsim.power.PowerVm;
+import org.jfree.data.xy.XYSeries;
 
 import java.io.PrintWriter;
 import java.util.*;
@@ -54,6 +55,35 @@ public class HyperPowerDatacenter extends Datacenter {
     int oldmigrationcount = 0;
     int oldhostonoffcount = 0;
     int oldvmcount = 0;
+    int hours = 0;
+    XYSeries onhoststime;
+
+    public XYSeries getVmstime() {
+        return vmstime;
+    }
+
+    public void setVmstime(XYSeries vmstime) {
+        this.vmstime = vmstime;
+    }
+
+    public XYSeries getEnergytime() {
+        return energytime;
+    }
+
+    public void setEnergytime(XYSeries energytime) {
+        this.energytime = energytime;
+    }
+
+    public XYSeries getOnhoststime() {
+        return onhoststime;
+    }
+
+    public void setOnhoststime(XYSeries onhoststime) {
+        this.onhoststime = onhoststime;
+    }
+
+    XYSeries vmstime;
+    XYSeries energytime;
 
     public int getMode() {
         return mode;
@@ -115,6 +145,10 @@ public class HyperPowerDatacenter extends Datacenter {
 		setDisableMigrations(false);
 		setCloudletSubmitted(-1);
 		setMigrationCount(0);
+        onhoststime = new XYSeries("Active Hosts");
+        vmstime = new XYSeries("VMs");
+        energytime = new XYSeries("Power Consuption");
+
 	}
 
 
@@ -330,8 +364,18 @@ public class HyperPowerDatacenter extends Datacenter {
         oldhostonoffcount = hostonoffCount;
         oldmigrationcount = migrationCount;
 
+
+        if(CloudSim.clock() - 3600 > hours * 3600)
+        {
+            hours++;
+            double kwpower = power/1000;
+            powertimelog.println(CloudSim.clock() + " " + kwpower);
+            energytime.add(CloudSim.clock(), kwpower);
+        }
+
         vmstimelog.println(CloudSim.clock() + " " + getVmList().size());
-        powertimelog.println(CloudSim.clock() + " " + power);
+        vmstime.add(CloudSim.clock(), getVmList().size());
+
         //log
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
         for (Host h :  getHostList())//this. <HyperPowerHost> getHostList())

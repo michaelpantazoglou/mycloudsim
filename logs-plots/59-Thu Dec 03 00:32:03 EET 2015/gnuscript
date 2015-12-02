@@ -1,0 +1,7 @@
+set term png
+set output "onhoststime.png"
+plot "onhoststime.dat" using 1:2 w linesp
+set output "vmstime.png"
+plot "vmstime.dat" using 1:2 w linesp
+set output "powertime.png"
+plot "powertime.dat" using 1:2 w linesp

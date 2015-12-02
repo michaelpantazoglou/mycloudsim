@@ -6,13 +6,29 @@ import org.cloudbus.cloudsim.provisioners.BwProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 import org.cloudbus.cloudsim.util.MathUtil;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartUtilities;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.*;
+import org.jfree.data.xy.XYBarDataset;
+import org.jfree.data.xy.XYDataset;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.ui.Layer;
+import org.jfree.ui.RectangleAnchor;
+import org.jfree.ui.TextAnchor;
 
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
+import java.util.List;
 
 
 public class HyperHelper{
@@ -852,5 +868,94 @@ public class HyperHelper{
 		long fraction = (long)(range * aRandom.nextDouble());
 		int randomNumber =  (int)(fraction + aStart);
 		return randomNumber;
+	}
+
+	public static void createLinePlots(ArrayList<XYSeries> serieslist, String path, String name)
+	{
+		XYSeries series1 = new XYSeries("First");
+		XYSeriesCollection dataset = new XYSeriesCollection();
+//		series1.add(1.0, 1.0);
+//		series1.add(2.0, 4.0);
+//		series1.add(3.0, 3.0);
+//		series1.add(4.0, 5.0);
+//		series1.add(5.0, 5.0);
+//		series1.add(6.0, 7.0);
+//		series1.add(7.0, 7.0);
+//		series1.add(8.0, 8.0);
+		for(XYSeries series : serieslist) {
+			dataset.addSeries(series);
+		}
+		// create the chart...
+
+
+		final JFreeChart chart = ChartFactory.createXYLineChart(
+				name,      // chart title
+				"X",                      // x axis label
+				"Y",                      // y axis label
+				dataset,                  // data
+				PlotOrientation.VERTICAL,
+				true,                     // include legend
+				true,                     // tooltips
+				false                     // urls
+		);
+		chart.setBackgroundPaint(Color.white);
+		final XYPlot plot1 = chart.getXYPlot();
+		XYLineAndShapeRenderer renderer1 =
+				(XYLineAndShapeRenderer) plot1.getRenderer();
+		renderer1.setBaseShapesVisible(true);
+		Shape circle = new Ellipse2D.Double(-1, -1, 3, 3);
+		Color line = Color.BLUE;
+		renderer1.setSeriesShape(0, circle);
+		renderer1.setSeriesPaint(0, line);
+		renderer1.setBaseShapesFilled(true);
+		renderer1.setBaseStroke(new BasicStroke(6));
+		try {
+			ChartUtilities.saveChartAsPNG(new File(path + name + ".png"), chart, 700, 500);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void createBarPlots(ArrayList<XYSeries> serieslist, String path, String name)
+	{
+		XYSeriesCollection dataset = new XYSeriesCollection();
+		for(XYSeries series : serieslist) {
+			dataset.addSeries(series);
+		}
+		// create the chart...
+		//dataset.setIntervalWidth(1);
+		dataset.setAutoWidth(true);
+		//dataset.setIntervalWidth(20);
+		final JFreeChart chart = ChartFactory.createXYBarChart(
+				name,      // chart title
+				"X",                      // x axis label
+				false,
+				"Y",                      // y axis label
+				dataset,                  // data
+				PlotOrientation.VERTICAL,
+				true,                     // include legend
+				true,                     // tooltips
+				false                     // urls
+		);
+		XYPlot plot = (XYPlot) chart.getPlot();
+		//plot.getRangeAxis().setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+		//plot.getDomainAxis().setAutoRange(true);
+
+		//final XYBarRenderer renderer = (XYBarRenderer) plot.getRenderer();
+		ClusteredXYBarRenderer clusteredxybarrenderer = new ClusteredXYBarRenderer(2, true);
+		plot.setRenderer(clusteredxybarrenderer);
+		plot.setBackgroundPaint(Color.black);
+		clusteredxybarrenderer.setBarPainter(new StandardXYBarPainter());//setDefaultPainter(new StandardBarPainter());
+		//clusteredxybarrenderer.setDrawBarOutline(true);
+		///renderer.setDrawBarOutline(false);
+		clusteredxybarrenderer.setShadowVisible(false);
+		clusteredxybarrenderer.setMargin(0.1);
+		//renderer.setDefaultShadowsVisible(false);
+
+		try {
+			ChartUtilities.saveChartAsPNG(new File(path + name + ".png"), chart, 900, 700);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
