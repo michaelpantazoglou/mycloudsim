@@ -65,7 +65,7 @@ cd "`dirname \"$PRG\"`/.." >&-
 APP_HOME="`pwd -P`"
 cd "$SAVED" >&-
 
-CLASSPATH=$APP_HOME/lib/mycloudsim.jar:$APP_HOME/lib/commons-math3-3.3.jar
+CLASSPATH=$APP_HOME/lib/mycloudsim.jar:$APP_HOME/lib/commons-math3-3.3.jar:$APP_HOME/lib/jfreechart-1.0.19.jar:$APP_HOME/lib/jcommon-1.0.23.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

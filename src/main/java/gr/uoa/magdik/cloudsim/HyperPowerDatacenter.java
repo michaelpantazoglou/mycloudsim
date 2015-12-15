@@ -26,6 +26,8 @@ public class HyperPowerDatacenter extends Datacenter {
 
 	/** The power. */
 	private double power;
+    private double powerhours = 0;
+    int vc = 0;
 
 	/** The disable migrations. */
 	private boolean disableMigrations;
@@ -55,8 +57,26 @@ public class HyperPowerDatacenter extends Datacenter {
     int oldmigrationcount = 0;
     int oldhostonoffcount = 0;
     int oldvmcount = 0;
+
+    public int getHours() {
+        return hours;
+    }
+
     int hours = 0;
     XYSeries onhoststime;
+    XYSeries vmstime;
+    XYSeries energytime;
+    XYSeries switchoffs;
+
+    public XYSeries getSwitchoffs() {
+        return switchoffs;
+    }
+
+    public XYSeries getSwitchons() {
+        return switchons;
+    }
+
+    XYSeries switchons;
 
     public XYSeries getVmstime() {
         return vmstime;
@@ -82,8 +102,6 @@ public class HyperPowerDatacenter extends Datacenter {
         this.onhoststime = onhoststime;
     }
 
-    XYSeries vmstime;
-    XYSeries energytime;
 
     public int getMode() {
         return mode;
@@ -148,7 +166,8 @@ public class HyperPowerDatacenter extends Datacenter {
         onhoststime = new XYSeries("Active Hosts");
         vmstime = new XYSeries("VMs");
         energytime = new XYSeries("Power Consuption");
-
+        switchoffs = new XYSeries("Switch offs");
+        switchons = new XYSeries("Switch Ons");
 	}
 
 
@@ -344,6 +363,10 @@ public class HyperPowerDatacenter extends Datacenter {
     }
 
 
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
     /**
 	 * Updates processing of each cloudlet running in this PowerDatacenter. It is necessary because
 	 * Hosts and VirtualMachines are simple objects, not entities. So, they don't receive events and
@@ -355,30 +378,19 @@ public class HyperPowerDatacenter extends Datacenter {
 	@Override
 	protected void updateCloudletProcessing() {
         System.out.println("TIME :" + CloudSim.clock() + " - End of Period");
-        long power = 0;
-        power += (migrationCount - oldmigrationcount) * 20;
-        power += (hostonoffCount - oldhostonoffcount) * 100;
-        power += getVmList().size() * 5;
-        int newvms = getVmList().size() - oldvmcount;
-        oldvmcount = getVmList().size();
+
+        int newvms = 0;
+        if(oldvmcount > 0) newvms = getVmList().size() - oldvmcount;
+        vc += newvms;
+
         oldhostonoffcount = hostonoffCount;
         oldmigrationcount = migrationCount;
-
-
-        if(CloudSim.clock() - 3600 > hours * 3600)
-        {
-            hours++;
-            double kwpower = power/1000;
-            powertimelog.println(CloudSim.clock() + " " + kwpower);
-            energytime.add(CloudSim.clock(), kwpower);
-        }
-
-        vmstimelog.println(CloudSim.clock() + " " + getVmList().size());
-        vmstime.add(CloudSim.clock(), getVmList().size());
-
-        //log
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
-        for (Host h :  getHostList())//this. <HyperPowerHost> getHostList())
+
+
+
+
+        for (Host h : getHostList())//this. <HyperPowerHost> getHostList())
         {
             HyperPowerHost host = (HyperPowerHost) h;
 
@@ -415,26 +427,37 @@ public class HyperPowerDatacenter extends Datacenter {
 			double minTime = updateCloudetProcessingWithoutSchedulingFutureEventsForce();
 
 
+
             //removing vms
             int nohost = 0;
             int rvms = 0;
-            if(getVmList().size() > 100  && mode!=3){ // && newvms > 0) {
+
+            if(getVmList().size() > 0  && mode!=3){ // && newvms > 0) {
                 ArrayList<Vm> removeVms = new ArrayList<>();
                 if(mode == 1) {
-                    rvms = 240 - newvms;
+                    rvms = rate * 60 - newvms;
                     if(rvms > getVmList().size()) rvms = newvms;
+                    if(newvms <= 0) rvms = 0;
+
                 }
                 else if(mode == 2)
                 {
                     rvms = rate * 59;
-                    if(rvms > getVmList().size()) rvms = 0;
+                    if(rvms > getVmList().size()) rvms = getVmList().size();
                 }
                 int max = getVmList().size() - 1;
                 for (int idx = 0; idx < rvms; idx++) {
-                    Random random = new Random();
+                    Random random = new Random(max * 3219656);
                     int vmr = generateRandomInteger(0, max, random);
 
                     HyperPowerVm vm = (HyperPowerVm) getVmList().get(vmr);
+                    while(removeVms.contains(vm))
+                    {
+                        //random = new Random(max * 6675675);
+                        System.out.println("ff");
+                        vmr = generateRandomInteger(0, max, random);
+                        vm = (HyperPowerVm) getVmList().get(vmr);
+                    }
                     HyperPowerHost oldhost  = (HyperPowerHost) vm.getHost();
                     if(oldhost == null)
                     {
@@ -444,8 +467,40 @@ public class HyperPowerDatacenter extends Datacenter {
                     getVmAllocationPolicy().deallocateHostForVm(vm);
                     max-=1;
                 }
+                if(rvms > 0 && removeVms.size() != rvms) throw new IllegalArgumentException("UU " + rvms + "-" + removeVms.size());
                 getVmList().removeAll(removeVms);
+                vc -= removeVms.size();
             }
+
+            oldvmcount = getVmList().size();
+            System.out.println(vc);
+
+            long power = 0;
+            power += (migrationCount - oldmigrationcount) * 20;
+            power += (hostonoffCount - oldhostonoffcount) * 100;
+            power += getVmList().size() * 5;
+            powerhours += power;
+
+            if(CloudSim.clock() < 70 || CloudSim.clock() - 1800 > hours * 1800)
+            {
+                double kwpower = 0;
+                if(CloudSim.clock() > 70) {
+                    //hours++;
+                    kwpower = powerhours * 0.5 / 1000;
+                    powerhours = 0;
+                }
+                powertimelog.println(CloudSim.clock() + " " + kwpower);
+                energytime.add(hours, kwpower);
+                vmstime.add(hours, getVmList().size());
+                getSwitchons().add(hours, hostoncount);
+                getSwitchoffs().add(hours, hostoffcount);
+                onhoststime.add(hours, hp.getOnHosts().size());
+
+                setHostoffcount(0);
+                setHostoncount(0);
+            }
+
+            vmstimelog.println(CloudSim.clock() + " " + getVmList().size());
 
             if (!isDisableMigrations()) {
                 Log.write("Period: " + round++);
@@ -466,7 +521,7 @@ public class HyperPowerDatacenter extends Datacenter {
                 send(getId(), getSchedulingInterval(), HyperCloudSimTags.VM_DATACENTER_EVENT);
             }
 
-			setLastProcessTime(currentTime);
+            setLastProcessTime(currentTime);
 		}
         hp.tobeoffHosts.clear();
         hp.tobeonHosts.clear();
@@ -564,11 +619,10 @@ public class HyperPowerDatacenter extends Datacenter {
         Map<String, Object> migrate = (HashMap<String, Object>) tmp;
 
         Vm vm = (Vm) migrate.get("vm");
-        Host host = (Host) migrate.get("host");
+        HyperPowerHost host = (HyperPowerHost) migrate.get("host");
         Host oldhost = vm.getHost();
         HyperVmAllocationPolicy h = (HyperVmAllocationPolicy) getVmAllocationPolicy();
-        boolean evaluate = h.evaluatemigration(vm, host);
-        if(!evaluate)
+        if(host.getPowerState() == HyperPowerHost.PowerState.OFF)
         {
             Log.printLine("[Datacenter.processVmMigrate] VM migration to the destination host failed");
             vm.setInMigration(false);

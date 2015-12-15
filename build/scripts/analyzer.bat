@@ -69,7 +69,7 @@ set CMD_LINE_ARGS=%$
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\mycloudsim.jar;%APP_HOME%\lib\commons-math3-3.3.jar
+set CLASSPATH=%APP_HOME%\lib\mycloudsim.jar;%APP_HOME%\lib\commons-math3-3.3.jar;%APP_HOME%\lib\jfreechart-1.0.19.jar;%APP_HOME%\lib\jcommon-1.0.23.jar
 
 @rem Execute analyzer
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %ANALYZER_OPTS%  -classpath "%CLASSPATH%" gr.uoa.magdik.cloudsim.Main %CMD_LINE_ARGS%

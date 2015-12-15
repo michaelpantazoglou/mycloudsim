@@ -62,7 +62,7 @@ public class HostDynamicWorkload extends Host {
 	 */
 	@Override
 	public double updateVmsProcessing(double currentTime) {
-		double smallerTime = super.updateVmsProcessing(currentTime);
+		double smallerTime = Double.MAX_VALUE;//super.updateVmsProcessing(currentTime);
 		setPreviousUtilizationMips(getUtilizationMips());
 		setUtilizationMips(0);
 		double hostTotalRequestedMips = 0;

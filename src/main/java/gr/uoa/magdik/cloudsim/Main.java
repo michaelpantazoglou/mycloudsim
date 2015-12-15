@@ -27,6 +27,7 @@ public class Main {
         int initvms = 0;
         int rate = 0;
         int mode = 0;
+        String expname = "stable";
 
         if(args.length == 5)
         {
@@ -34,6 +35,7 @@ public class Main {
             hypercubesize = Integer.parseInt(args[1]);
             initvms = Integer.parseInt(args[2]);
             rate = Integer.parseInt(args[4]);
+            expname = args[5];
             mode = 1;
             if(args[3].equals("i"))
             {
@@ -50,18 +52,19 @@ public class Main {
         }
         else
         {
-            hours = 1;
-            hypercubesize = 9;
-            initvms = 20;
-            rate = 2;
+            hours = 9;
+            hypercubesize = 10;
+            initvms = 200;
+            rate = 1;
             mode = 1;
             //throw new IllegalArgumentException("Plese check the arguments provided");
         }
         System.out.println(hours);
         System.out.println(hypercubesize);
         System.out.println(initvms);
-        System.out.println(rate);
         System.out.println(mode);
+        System.out.println(rate);
+
         //System.exit(-1);
 
         PrintWriter gnuscript;
@@ -75,9 +78,6 @@ public class Main {
         boolean initread = false;
         boolean incomingread = false;
 
-
-
-        //System.exit(-2);
 
         try {
             HyperCloudSim.init(1, Calendar.getInstance(), false);
@@ -101,24 +101,28 @@ public class Main {
             datacenter.setRate(rate);
             vmList.addAll(createVmList(broker, initvms));
             int delayvms = 0;
-
+            int checkrandom0 = 0;
+            int checkrandom1 = 0;
             if(mode < 2) {
-                for (int j = 61; j < 29790; j++) //17200
+                for (int j = 61; j < hours * 3600; j++) //17200
                 {
                     if (j % 4 == 0 || j % 5 == 0) {
                         delayvms = 0;
                     }
                     if(mode == 1)
                     {
-                        if (Math.random() > 0.5) {
+                        if (Math.random() < 0.5) {
                             vmList.addAll(createVmsDelay(broker, rate, 1.0 * j));
-                            delayvms += 4;
+                            checkrandom0++;
+                        }
+                        else
+                        {
+                            checkrandom1++;
                         }
                     }
                     else
                     {
                         vmList.addAll(createVmsDelay(broker, 4, 1.0 * j));
-                        delayvms += 4;
                     }
                 }
             }
@@ -130,23 +134,11 @@ public class Main {
             int f = new File("logs-plots").list().length;
             Date date = new Date();
 
-            new File("logs-plots/" + f + "-"  + date).mkdir();
-            Log.writer = new PrintWriter("logs-plots/" + f + "-" + date + "/results ", "UTF-8");
-            datacenter.vmstimelog = new PrintWriter("logs-plots/" + f + "-" + date + "/vmstime.dat", "UTF-8");
-            datacenter.onhoststimelog = new PrintWriter("logs-plots/" + f + "-" + date + "/onhoststime.dat", "UTF-8");
-            datacenter.powertimelog = new PrintWriter("logs-plots/" + f + "-" + date + "/powertime.dat", "UTF-8");
-            gnuscript = new PrintWriter("logs-plots/" + f + "-" + date + "/gnuscript", "UTF-8");
-            gnuscript.println("set term png");
-            gnuscript.println("set output \"onhoststime.png\"");
-            gnuscript.println("plot \"onhoststime.dat\" using 1:2 w linesp");
-            gnuscript.println("set output \"vmstime.png\"");
-            gnuscript.println("plot \"vmstime.dat\" using 1:2 w linesp");
-            gnuscript.println("set output \"powertime.png\"");
-            gnuscript.println("plot \"powertime.dat\" using 1:2 w linesp");
-
-            gnuscript.close();
-            //Process p = Runtime.getRuntime().exec("gnuplot logs-plots/" + f + "-" + date + "/gnuscript");
-            //p.waitFor();
+            new File("logs-plots/" + f + "-"  + expname + "-" + date).mkdir();
+            Log.writer = new PrintWriter("logs-plots/" + f + "-" + expname + "-" + date + "/results ", "UTF-8");
+            datacenter.vmstimelog = new PrintWriter("logs-plots/" + f + "-" + expname + "-" + date + "/vmstime.dat", "UTF-8");
+            datacenter.onhoststimelog = new PrintWriter("logs-plots/" + f + "-" + expname + "-" + date + "/onhoststime.dat", "UTF-8");
+            datacenter.powertimelog = new PrintWriter("logs-plots/" + f + "-" + expname + "-" + date + "/powertime.dat", "UTF-8");
             CloudSim.terminateSimulation(hours * 3600);
 
             IncomingRequests incomingRequests = new IncomingRequests();
@@ -157,25 +149,17 @@ public class Main {
             ArrayList<XYSeries> plotseries = new ArrayList<>();
             plotseries.add(datacenter.getOnhoststime());
             plotseries.add(datacenter.getVmstime());
-
+            Log.setDisabled(true);
             double lastClock = HyperCloudSim.startSimulation();
             datacenter.vmstimelog.close();
             datacenter.powertimelog.close();
             datacenter.onhoststimelog.close();
-            createLinePlots(plotseries, "logs-plots/" + f + "-" + date + "/", "hosts+vms-time");
-            plotseries.remove(datacenter.getOnhoststime());
-            plotseries.add(datacenter.getEnergytime());
-            createLinePlots(plotseries, "logs-plots/" + f + "-" + date + "/", "energy+vms-time");
-            plotseries.clear();
-            plotseries.add(hv.getStateIDLE());
-            plotseries.add(hv.getStateOVER());
-            plotseries.add(hv.getStateOK());
-            plotseries.add(hv.getStateOFF());
-            plotseries.add(hv.getStateUNDER());
-
-            createBarPlots(plotseries, "logs-plots/" + f + "-" + date + "/", "hosts state");
+            createPlots(datacenter, hv, date, f, expname);
             List<Cloudlet> newList = broker.getCloudletReceivedList();
             Log.printLine("Received " + newList.size() + " cloudlets");
+            System.out.println("Simulation reached termination time");
+            System.out.println(checkrandom0);
+            System.out.println(checkrandom1);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -183,7 +167,33 @@ public class Main {
             System.exit(0);
         }
     }
+
+    private static void createPlots(HyperPowerDatacenter datacenter, HyperVmAllocationPolicy hv, Date date, int experimentcount, String expname)
+    {
+        ArrayList<XYSeries> plotseries = new ArrayList<>();;
+        plotseries.add(datacenter.getVmstime());
+        plotseries.add(datacenter.getOnhoststime());
+        createLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "hosts+vms-time");
+        plotseries.remove(datacenter.getOnhoststime());
+        plotseries.add(datacenter.getEnergytime());
+        createLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "energy+vms-time");
+        plotseries.clear();
+        plotseries.add(hv.getStateIDLE());
+        plotseries.add(hv.getStateOVER());
+        plotseries.add(hv.getStateOK());
+        plotseries.add(hv.getStateOFF());
+        plotseries.add(hv.getStateUNDER());
+        createBarPlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "hosts state");
+        plotseries.clear();
+        plotseries.add(datacenter.getSwitchoffs());
+        createLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "switchoffs");
+        plotseries.clear();
+        plotseries.add(datacenter.getSwitchons());
+        createLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "switchons");
+
+    }
 }
+
 
 
 

@@ -6,9 +6,7 @@ import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.power.*;
 import org.jfree.data.xy.XYSeries;
-
 import static gr.uoa.magdik.cloudsim.HyperPowerHost.*;
-
 import java.io.PrintWriter;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -17,87 +15,64 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * Created by tchalas on 1/22/15.
  */
 public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
-    int vmcount = 0;
+    int vmcounter = 0;
     public HyperVmAllocationPolicy(List<? extends Host> list) {
         super(list);
         tobeoffHosts = new ArrayList<>();
         tobeonHosts = new ArrayList<>();
         offHosts = new ArrayList<>();
         onHosts = new CopyOnWriteArrayList<>();
-        vmsplaced = false;
         stateOVER = new XYSeries("Overutilized Hosts");
         stateUNDER = new XYSeries("Underutilized Hosts");
         stateIDLE = new XYSeries("Idle Hosts");
         stateOK = new XYSeries("OK Hosts");
         stateOFF = new XYSeries("OFF Hosts");
-
     }
 
+    HyperPowerDatacenter datacenter;
     PrintWriter writer;
-    //LISTS FOR VISITED AND SWITCHED OFF HOSTS
     public List<Host> tobeoffHosts;
     public List<Host> tobeonHosts;
-
-    public CopyOnWriteArrayList<Host> getOnHosts() {
-        return onHosts;
-    }
-
-    public void setOnHosts(CopyOnWriteArrayList<Host> onHosts) {
-        this.onHosts = onHosts;
-    }
-
-    public CopyOnWriteArrayList<Host> onHosts;
-    public static List<Host> offHosts;
-    public HashMap <Integer, Integer> inithostsvm;
-
-    public HyperPowerDatacenter getDatacenter() {
-        return datacenter;
-    }
-
-    public void setDatacenter(HyperPowerDatacenter datacenter) {
-        this.datacenter = datacenter;
-    }
-
-    boolean vmsplaced;
-    HyperPowerDatacenter datacenter;
-    int round =  0;
-    private XYSeries stateOFF;
-
-    public XYSeries getStateOVER() {
-        return stateOVER;
-    }
-
-    public XYSeries getStateOFF() {
-        return stateOFF;
-    }
-
-    public XYSeries getStateIDLE() {
-        return stateIDLE;
-    }
-
-    public XYSeries getStateOK() {
-        return stateOK;
-    }
-
-    public XYSeries getStateUNDER() {
-        return stateUNDER;
-    }
-
     private XYSeries stateOVER;
     private XYSeries stateUNDER;
     private XYSeries stateIDLE;
     private XYSeries stateOK;
+    private XYSeries stateOFF;
+    public CopyOnWriteArrayList<Host> getOnHosts() {
+        return onHosts;
+    }
+    public CopyOnWriteArrayList<Host> onHosts;
+    public static List<Host> offHosts;
+    public HashMap <Integer, Integer> inithostsvm;
+    public HyperPowerDatacenter getDatacenter() {
+        return datacenter;
+    }
+    public void setDatacenter(HyperPowerDatacenter datacenter) {
+        this.datacenter = datacenter;
+    }
+
+    public XYSeries getStateOVER() {
+        return stateOVER;
+    }
+    public XYSeries getStateOFF() {
+        return stateOFF;
+    }
+    public XYSeries getStateIDLE() {
+        return stateIDLE;
+    }
+    public XYSeries getStateOK() {
+        return stateOK;
+    }
+    public XYSeries getStateUNDER() {return stateUNDER;}
+
 
     public boolean placeVminHost(Vm vm, Host host)
     {
-        vmcount++;
+        vmcounter++;
         HyperPowerHost hs = (HyperPowerHost) host;
         if(hs.getPowerState() == PowerState.OFF)
-        {
             return false;
-        }
         if(hwReqMet(hs,vm)) {
-
             if (host.vmCreate(vm))
             {
                 getVmTable().put(vm.getUid(), host);
@@ -110,16 +85,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             }
         }
         return false;
-    }
-
-    public boolean evaluatemigration(Vm vm, Host host)
-    {
-        HyperPowerHost hs = (HyperPowerHost) host;
-        if(hs.getPowerState() == PowerState.OFF)
-        {
-            return false;
-        }
-        return true;
     }
 
     public boolean newallocateHostForVm(HyperPowerVm vm, HyperPowerHost host)
@@ -230,8 +195,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
     @Override
     public boolean allocateHostForVm(Vm vm) {
         HyperPowerVm hvm = (HyperPowerVm) vm;
-
-        //initalize vm if we have plan
+        //initalize vm in hosts if we have plan
         if(inithostsvm != null && hvm.getDelay() == 0)
         {
             Iterator it = inithostsvm.entrySet().iterator();
@@ -249,6 +213,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 }
             }
         }
+        //otherwise choose a host as vm initiator
         int index = (int) (Math.random() * this.getOnHosts().size());
         return allocateHostForVm(vm, getOnHosts().get(index));
     }
@@ -285,32 +250,20 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         return getVmTable().get(Vm.getUid(userId, vmId));
     }
 
+    //check is a host meets the requirments for a vm
     public static boolean hwReqMet(Host host, Vm vm)
     {
         return host.isSuitableForVm(vm);
     }
 
-    /**
-     * Gets the over utilized hosts.
-     *
-     * @r+eturn the over utilized hosts
-     */
-    protected List<PowerHostUtilizationHistory> getOverUtilizedHosts() {
-        return null;
-    }
-
     public List<Map<String, Object>> synchronizeHosts()
     {
         int overhosts = 0; int underhosts = 0; int idlehosts = 0; int okhosts = 0;
-        Thread t = Thread.currentThread();
-        t.setName("Main Thread");
-        int partial = 0;
         List<Map<String, Object>> migrationMap = new ArrayList<>();
         int nvm = 0;
         double time = CloudSim.clock();
      //  monitorDatacenter();
       //  getDatacenter().onhoststimelog.println(CloudSim.clock() + "\t" + getOnHosts().size());
-        getDatacenter().getOnhoststime().add(CloudSim.clock(), getOnHosts().size());
         for (Host h : getOnHosts())
         {
             HyperPowerHost host = (HyperPowerHost) h;
@@ -318,15 +271,17 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
             {
                 Log.write(" --- HOST " + (host.getId()-2) + " : " + host.getVmList().size() + " VMs and Power " + host.getPower() + " ---");
             }
-            if(host.getPowerState() == PowerState.OK)
-                okhosts++;
-            else if(host.getPowerState() == PowerState.IDLE)
-                idlehosts++;
-            else if(host.getPowerState() == PowerState.OVERU)
-                overhosts++;
-            else if(host.getPowerState() == PowerState.UNDERU)
-                underhosts++;
-            host.buildpowermap();
+
+                if (host.getPowerState() == PowerState.OK)
+                    okhosts++;
+                else if (host.getPowerState() == PowerState.IDLE)
+                    idlehosts++;
+                else if (host.getPowerState() == PowerState.OVERU)
+                    overhosts++;
+                else if (host.getPowerState() == PowerState.UNDERU)
+                    underhosts++;
+
+            host.buildPowermap();
             nvm += host.getVmList().size();
             host.sortNeighbors();
             if(host.getPowerState() == PowerState.OFF)
@@ -359,7 +314,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                         }
                     }
                 }
-                partial++;
             }
             else if(host.getPowerState() == PowerState.UNDERU)
             {
@@ -384,22 +338,21 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 }
             }
         }
-        stateOVER.add(time, overhosts);
-        stateIDLE.add(time, idlehosts);
-        stateOK.add(time, okhosts);
-        stateUNDER.add(time, underhosts);
-        stateOFF.add(time, offHosts.size());
+        if(time < 70 || time - 1800 > datacenter.getHours() * 1800) {
+            //int hours = datacenter.getHours();
+            stateOVER.add(time, overhosts);
+            stateIDLE.add(time, idlehosts);
+            stateOK.add(time, okhosts);
+            stateUNDER.add(time, underhosts);
+            stateOFF.add(time, offHosts.size());
+            if(time > 70) {
+                datacenter.setHours(datacenter.getHours() + 1);
+            }
+        }
         return migrationMap;
     }
 
-    private void addHostState(PowerState ps, double time)
-    {
-       // if(ps == PowerState.OVERU)
-
-
-    }
-
-    public void monitorDatacenter()
+    /*public void monitorDatacenter()
     {
         List<Host> okHosts;
         List<Host> underHosts;
@@ -411,8 +364,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         idleHosts = new ArrayList<>();
         overHosts = new ArrayList<>();
         currentoffHosts = new ArrayList<>();
-        int nvm = 0;
-        int nh = 0;
         ArrayList<Host> tempon = new ArrayList<>();
         for (Host h : getOnHosts())
         {
@@ -423,12 +374,10 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         }
         getOnHosts().clear();
         getOnHosts().addAll(tempon);
-
         for (Host h : getOnHosts())//this. <HyperPowerHost> getHostList())
         {
             HyperPowerHost host = (HyperPowerHost) h;
-            host.buildpowermap();
-
+            host.buildPowermap();
             if(!offHosts.contains(host))
             {
                 Log.write(" --- HOST " + (host.getId()-2) + " : " + host.getVmList().size() + " VMs and Power " + host.getTempPower() + " ---");
@@ -438,7 +387,6 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 currentoffHosts.add(host);
                 continue;
             }
-            nvm += host.getVmList().size();
             HyperPowerHost.PowerState s = host.getPowerState();
             if(s == PowerState.UNDERU)
             {
@@ -457,5 +405,5 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 overHosts.add(host);
             }
         }
-    }
+    }*/
 }
