@@ -12,6 +12,8 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.NumberTickUnit;
 import org.jfree.chart.axis.TickUnitSource;
+import org.jfree.chart.labels.ItemLabelAnchor;
+import org.jfree.chart.labels.ItemLabelPosition;
 import org.jfree.chart.labels.StandardXYItemLabelGenerator;
 import org.jfree.chart.labels.XYItemLabelGenerator;
 import org.jfree.chart.plot.PlotOrientation;
@@ -869,7 +871,7 @@ public class HyperHelper{
 			throw new IllegalArgumentException("Start cannot exceed End.");
 		}
 		//get the range, casting to long to avoid overflow problems
-		long range = (long)aEnd - (long)aStart + 1;
+		long range = (long)aEnd - (long)aStart;// + 1;
 		// compute a fraction of the range, 0 <= frac < range
 		long fraction = (long)(aRandom.nextInt((int) range));//;nextDouble());
 		int randomNumber =  (int)(fraction + aStart);
@@ -894,16 +896,17 @@ public class HyperHelper{
 		// create the chart...
 
 
-		final JFreeChart chart = ChartFactory.createXYLineChart(
-				name,      // chart title
-				"Time",                      // x axis label
-				"Range",                      // y axis label
-				dataset,                  // data
-				PlotOrientation.VERTICAL,
-				true,                     // include legend
-				true,                     // tooltips
-				false                     // urls
-		);
+
+				final JFreeChart chart = ChartFactory.createXYLineChart(
+			name,      // chart title
+			"Time",                      // x axis label
+			"Range",                      // y axis label
+			dataset,                  // data
+			PlotOrientation.VERTICAL,
+			true,                     // include legend
+			true,                     // tooltips
+			false                     // urls
+	);
 		chart.setBackgroundPaint(Color.white);
 		//final XYPlot plot = chart.getXYPlot();
 		// set a few custom plot features
@@ -948,14 +951,72 @@ public class HyperHelper{
 						StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT,
 						format, format);
 		renderer.setBaseItemLabelGenerator(generator);
+		renderer.setBasePositiveItemLabelPosition(new ItemLabelPosition(ItemLabelAnchor.OUTSIDE12, TextAnchor.BASELINE_LEFT));
 		renderer.setBaseItemLabelsVisible(true);
 
 		//renderer1.setBaseStroke(new BasicStroke(6));
+		try {
+			ChartUtilities.saveChartAsPNG(new File(path + name + ".png"), chart, 900, 650);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void createDualLinePlots(ArrayList<XYSeries> serieslist, String path, String name)
+	{
+		ArrayList<XYSeriesCollection> datasets = new ArrayList();
+		//construct the plot
+		XYPlot plot = new XYPlot();
+		int i = 0;
+		Stroke stroke = new BasicStroke(
+				3f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL);
+
+		// label the points
+		NumberFormat format = NumberFormat.getNumberInstance();
+		format.setMaximumFractionDigits(2);
+		XYItemLabelGenerator generator =
+				new StandardXYItemLabelGenerator(
+						StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT,
+						format, format);
+
+		for(XYSeries series : serieslist) {
+			XYSeriesCollection dataset = new XYSeriesCollection();
+			dataset.addSeries(series);
+			datasets.add(dataset);
+			plot.setDataset(i, dataset);
+			XYLineAndShapeRenderer renderer =
+					new XYLineAndShapeRenderer(true, true);
+			plot.setRenderer(i, renderer);
+			NumberAxis range = new NumberAxis(series.getKey().toString());
+			TickUnitSource ticks = NumberAxis.createIntegerTickUnits();
+			range.setStandardTickUnits(ticks);
+			plot.setRangeAxis(i, range);
+			plot.setDomainAxis(new NumberAxis("Time"));
+			plot.mapDatasetToRangeAxis(i, i);
+			renderer.setBaseOutlineStroke(stroke);
+			renderer.setBaseItemLabelGenerator(generator);
+			if(i == 0) {
+				renderer.setBasePositiveItemLabelPosition(new ItemLabelPosition(ItemLabelAnchor.OUTSIDE12, TextAnchor.BASELINE_LEFT));
+			}
+			else
+			{
+				renderer.setBasePositiveItemLabelPosition(new ItemLabelPosition(ItemLabelAnchor.OUTSIDE3, TextAnchor.CENTER_LEFT));
+			}
+			renderer.setBaseItemLabelsVisible(true);
+			i++;
+		}
+
+		plot.setBackgroundPaint(new Color(0xffffe0));
+		plot.setDomainGridlinesVisible(true);
+		plot.setDomainGridlinePaint(Color.lightGray);
+		plot.setRangeGridlinePaint(Color.lightGray);
+		JFreeChart chart = new JFreeChart(name, Font.getFont("Dialog"), plot, true);		chart.setBackgroundPaint(Color.white);
 		try {
 			ChartUtilities.saveChartAsPNG(new File(path + name + ".png"), chart, 700, 500);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
 	}
 
 	public static void createBarPlots(ArrayList<XYSeries> serieslist, String path, String name)

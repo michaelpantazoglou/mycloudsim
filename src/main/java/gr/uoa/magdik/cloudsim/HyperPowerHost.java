@@ -397,7 +397,7 @@ public class HyperPowerHost extends PowerHost implements Comparable {
     public void sendmessagebypath() {
     }
 
-    public void sortNeighbors()
+    public void sortCachebyPower()
     {
         descendsortedneighbors = new TreeSet<>(
                 new Comparator<Map.Entry<HyperPowerHost, ArrayList<Integer>>>() {

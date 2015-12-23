@@ -27,16 +27,19 @@ public class Main {
         int initvms = 0;
         int rate = 0;
         int mode = 0;
-        String expname = "stable";
-
+        double samplerate = 0;
+            String expname = "Increase-LOWR";
+        Random random = null;
         if(args.length == 5)
         {
             hours = Integer.parseInt(args[0]);
             hypercubesize = Integer.parseInt(args[1]);
             initvms = Integer.parseInt(args[2]);
             rate = Integer.parseInt(args[4]);
+            samplerate = Double.parseDouble(args[6]);
             expname = args[5];
-            mode = 1;
+            mode = 0;
+
             if(args[3].equals("i"))
             {
                 mode = 0;
@@ -49,14 +52,22 @@ public class Main {
             {
                 mode = 3;
             }
+            else if(args[3].equals("r"))
+            {
+                mode = 4;
+                //random = new Random(4345353);
+            }
         }
         else
         {
-            hours = 9;
+            hours = 4;
             hypercubesize = 10;
-            initvms = 200;
-            rate = 1;
+            initvms = 5000;
+            rate =  2;
             mode = 1;
+            samplerate = 1800;
+            random = new Random(Double.doubleToLongBits(Math.random()));
+
             //throw new IllegalArgumentException("Plese check the arguments provided");
         }
         System.out.println(hours);
@@ -65,9 +76,6 @@ public class Main {
         System.out.println(mode);
         System.out.println(rate);
 
-        //System.exit(-1);
-
-        PrintWriter gnuscript;
         DatacenterBroker broker;
         List<Cloudlet> cloudletList;
         List<Vm> vmList;
@@ -78,17 +86,13 @@ public class Main {
         boolean initread = false;
         boolean incomingread = false;
 
-
         try {
             HyperCloudSim.init(1, Calendar.getInstance(), false);
             broker = createBroker();
             int brokerId = broker.getId();
             vmList = new ArrayList<Vm>();
             cloudletList = createCloudletList(brokerId, HyperConstants.NUMBER_OF_CLOUDLETS);
-            int vmsnumber = HyperConstants.NUMBER_OF_VMS;
 
-
-            //double log2base = Math.log(Math.exp(hypercubesize))/Math.log(2);
             hostList = createHostList((int) hypercubesize - 1);
             broker.submitCloudletList(cloudletList);
             datacenter = (HyperPowerDatacenter) createDatacenter(
@@ -99,19 +103,16 @@ public class Main {
 
             datacenter.setMode(mode);
             datacenter.setRate(rate);
+            datacenter.setSampletime(samplerate);
             vmList.addAll(createVmList(broker, initvms));
-            int delayvms = 0;
             int checkrandom0 = 0;
             int checkrandom1 = 0;
-            if(mode < 2) {
-                for (int j = 61; j < hours * 3600; j++) //17200
+            if(mode < 2 || mode == 4) {
+                for (int j = 61; j < (hours+1) * 3600; j++) //17200
                 {
-                    if (j % 4 == 0 || j % 5 == 0) {
-                        delayvms = 0;
-                    }
                     if(mode == 1)
                     {
-                        if (Math.random() < 0.5) {
+                            if(random.nextBoolean()){
                             vmList.addAll(createVmsDelay(broker, rate, 1.0 * j));
                             checkrandom0++;
                         }
@@ -120,9 +121,13 @@ public class Main {
                             checkrandom1++;
                         }
                     }
+                    else if(mode == 0)
+                    {
+                        vmList.addAll(createVmsDelay(broker, rate, 1.0 * j));
+                    }
                     else
                     {
-                        vmList.addAll(createVmsDelay(broker, 4, 1.0 * j));
+                        vmList.addAll(createVmsDelay(broker, generateRandomInteger(0, 10, random), 1.0 * j));
                     }
                 }
             }
@@ -139,7 +144,8 @@ public class Main {
             datacenter.vmstimelog = new PrintWriter("logs-plots/" + f + "-" + expname + "-" + date + "/vmstime.dat", "UTF-8");
             datacenter.onhoststimelog = new PrintWriter("logs-plots/" + f + "-" + expname + "-" + date + "/onhoststime.dat", "UTF-8");
             datacenter.powertimelog = new PrintWriter("logs-plots/" + f + "-" + expname + "-" + date + "/powertime.dat", "UTF-8");
-            CloudSim.terminateSimulation(hours * 3600);
+
+            CloudSim.terminateSimulation((hours )* 3600 + 200);
 
             IncomingRequests incomingRequests = new IncomingRequests();
             incomingRequests.setDatacenterBroker(broker);
@@ -173,10 +179,10 @@ public class Main {
         ArrayList<XYSeries> plotseries = new ArrayList<>();;
         plotseries.add(datacenter.getVmstime());
         plotseries.add(datacenter.getOnhoststime());
-        createLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "hosts+vms-time");
+        createDualLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "hosts+vms-time");
         plotseries.remove(datacenter.getOnhoststime());
         plotseries.add(datacenter.getEnergytime());
-        createLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "energy+vms-time");
+        createDualLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "energy+vms-time");
         plotseries.clear();
         plotseries.add(hv.getStateIDLE());
         plotseries.add(hv.getStateOVER());
@@ -190,7 +196,9 @@ public class Main {
         plotseries.clear();
         plotseries.add(datacenter.getSwitchons());
         createLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "switchons");
-
+        plotseries.clear();
+        plotseries.add(datacenter.getMigrations());
+        createLinePlots(plotseries, "logs-plots/" + experimentcount + "-" + expname + "-" + date + "/", "migrations");
     }
 }
 

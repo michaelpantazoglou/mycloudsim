@@ -52,6 +52,9 @@ public class Datacenter extends SimEntity {
 	/** The scheduling interval. */
 	private double schedulingInterval;
 
+	public int newcall = 0;
+
+
 	/**
 	 * Allocates a new PowerDatacenter object.
 	 * 
@@ -427,8 +430,10 @@ public class Datacenter extends SimEntity {
 	 */
 	protected void processVmCreate(SimEvent ev, boolean ack) {
 		Vm vm = (Vm) ev.getData();
+		newcall++;
 
         boolean result = getVmAllocationPolicy().allocateHostForVm(vm);
+		//if(!result) throw new IllegalArgumentException("res");
 
 		if (ack) {
 			int[] data = new int[3];

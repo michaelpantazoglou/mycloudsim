@@ -89,6 +89,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
     public boolean newallocateHostForVm(HyperPowerVm vm, HyperPowerHost host)
     {
+
         ArrayList<HyperPowerHost> okcache = new ArrayList<>();
         ArrayList<HyperPowerHost> undercache = new ArrayList<>();
         ArrayList<HyperPowerHost> idlecache = new ArrayList<>();
@@ -215,6 +216,8 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         }
         //otherwise choose a host as vm initiator
         int index = (int) (Math.random() * this.getOnHosts().size());
+        //System.out.println(index + " " + getOnHosts().size());
+        if(getOnHosts().size() == 0 && CloudSim.clock() > 10) return false;
         return allocateHostForVm(vm, getOnHosts().get(index));
     }
 
@@ -283,7 +286,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
 
             host.buildPowermap();
             nvm += host.getVmList().size();
-            host.sortNeighbors();
+            host.sortCachebyPower();
             if(host.getPowerState() == PowerState.OFF)
             {
                 continue;
@@ -338,7 +341,7 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
                 }
             }
         }
-        if(time < 70 || time - 1800 > datacenter.getHours() * 1800) {
+        if(time < 70 || time - datacenter.getSampletime() > datacenter.getHours() * datacenter.getSampletime()) {
             //int hours = datacenter.getHours();
             stateOVER.add(time, overhosts);
             stateIDLE.add(time, idlehosts);

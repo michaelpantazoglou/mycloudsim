@@ -6,286 +6,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65084740-5aad-4c19-98d5-4d268dde4bc5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/10-Mon Nov 23 12:21:46 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/10-Mon Nov 23 12:21:46 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/10-Mon Nov 23 12:21:46 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/10-Mon Nov 23 12:21:46 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/10-Mon Nov 23 12:21:46 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Mon Nov 23 12:22:40 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Mon Nov 23 12:22:40 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Mon Nov 23 12:22:40 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Mon Nov 23 12:22:40 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Mon Nov 23 12:22:40 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/12-Mon Nov 23 12:23:23 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/12-Mon Nov 23 12:23:23 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/12-Mon Nov 23 12:23:23 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/12-Mon Nov 23 12:23:23 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/12-Mon Nov 23 12:23:23 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-Mon Nov 23 12:25:02 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-Mon Nov 23 12:25:02 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-Mon Nov 23 12:25:02 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-Mon Nov 23 12:25:02 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-Mon Nov 23 12:25:02 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-Mon Nov 23 12:25:59 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-Mon Nov 23 12:25:59 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-Mon Nov 23 12:25:59 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-Mon Nov 23 12:25:59 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-Mon Nov 23 12:25:59 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-Mon Nov 23 12:44:07 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-Mon Nov 23 12:44:07 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-Mon Nov 23 12:44:07 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-Mon Nov 23 12:44:07 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-Mon Nov 23 12:44:07 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-Mon Nov 23 12:44:39 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-Mon Nov 23 12:44:39 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-Mon Nov 23 12:44:39 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-Mon Nov 23 12:44:39 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-Mon Nov 23 12:44:39 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/29-Mon Nov 23 16:22:00 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/29-Mon Nov 23 16:22:00 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/29-Mon Nov 23 16:22:00 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/29-Mon Nov 23 16:22:00 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/29-Mon Nov 23 16:22:00 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/29-Mon Nov 23 16:22:00 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/29-Mon Nov 23 16:22:00 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/30-Mon Nov 23 16:38:23 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/30-Mon Nov 23 16:38:23 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/30-Mon Nov 23 16:38:23 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/30-Mon Nov 23 16:38:23 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/30-Mon Nov 23 16:38:23 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/30-Mon Nov 23 16:38:23 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/30-Mon Nov 23 16:38:23 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/36-Thu Dec 03 00:58:01 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/36-Thu Dec 03 00:58:01 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/36-Thu Dec 03 00:58:01 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/36-Thu Dec 03 00:58:01 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/36-Thu Dec 03 00:58:01 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/36-Thu Dec 03 00:58:01 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/36-Thu Dec 03 00:58:01 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/36-Thu Dec 03 00:58:01 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/37-Thu Dec 03 00:59:07 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/37-Thu Dec 03 00:59:07 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/37-Thu Dec 03 00:59:07 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/37-Thu Dec 03 00:59:07 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/37-Thu Dec 03 00:59:07 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/37-Thu Dec 03 00:59:07 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/37-Thu Dec 03 00:59:07 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/37-Thu Dec 03 00:59:07 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/38-Thu Dec 03 01:01:10 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/38-Thu Dec 03 01:01:10 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/38-Thu Dec 03 01:01:10 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/38-Thu Dec 03 01:01:10 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/38-Thu Dec 03 01:01:10 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/38-Thu Dec 03 01:01:10 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/38-Thu Dec 03 01:01:10 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/38-Thu Dec 03 01:01:10 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/39-Thu Dec 03 01:02:31 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/39-Thu Dec 03 01:02:31 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/39-Thu Dec 03 01:02:31 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/39-Thu Dec 03 01:02:31 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/39-Thu Dec 03 01:02:31 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/39-Thu Dec 03 01:02:31 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/39-Thu Dec 03 01:02:31 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/39-Thu Dec 03 01:02:31 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/40-Thu Dec 03 01:03:29 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/40-Thu Dec 03 01:03:29 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/40-Thu Dec 03 01:03:29 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/40-Thu Dec 03 01:03:29 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/40-Thu Dec 03 01:03:29 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/40-Thu Dec 03 01:03:29 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/40-Thu Dec 03 01:03:29 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/40-Thu Dec 03 01:03:29 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/41-Thu Dec 03 01:05:06 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/41-Thu Dec 03 01:05:06 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/41-Thu Dec 03 01:05:06 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/41-Thu Dec 03 01:05:06 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/41-Thu Dec 03 01:05:06 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/41-Thu Dec 03 01:05:06 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/41-Thu Dec 03 01:05:06 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/41-Thu Dec 03 01:05:06 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/47-Wed Dec 02 21:59:23 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/47-Wed Dec 02 21:59:23 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/47-Wed Dec 02 21:59:23 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/47-Wed Dec 02 21:59:23 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/47-Wed Dec 02 21:59:23 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/47-Wed Dec 02 21:59:23 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/47-Wed Dec 02 21:59:23 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/47-Wed Dec 02 21:59:23 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/48-Wed Dec 02 22:00:27 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/48-Wed Dec 02 22:00:27 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/48-Wed Dec 02 22:00:27 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/48-Wed Dec 02 22:00:27 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/48-Wed Dec 02 22:00:27 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/48-Wed Dec 02 22:00:27 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/48-Wed Dec 02 22:00:27 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/48-Wed Dec 02 22:00:27 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/49-Wed Dec 02 23:57:39 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/49-Wed Dec 02 23:57:39 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/49-Wed Dec 02 23:57:39 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/49-Wed Dec 02 23:57:39 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/49-Wed Dec 02 23:57:39 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/49-Wed Dec 02 23:57:39 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/49-Wed Dec 02 23:57:39 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Thu Dec 03 00:11:05 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Thu Dec 03 00:11:05 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Thu Dec 03 00:11:05 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Thu Dec 03 00:11:05 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Thu Dec 03 00:11:05 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Thu Dec 03 00:11:05 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Thu Dec 03 00:11:05 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Thu Dec 03 00:11:05 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Wed Dec 02 21:48:42 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Wed Dec 02 21:48:42 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Wed Dec 02 21:48:42 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Wed Dec 02 21:48:42 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Wed Dec 02 21:48:42 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Wed Dec 02 21:48:42 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Wed Dec 02 21:48:42 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/50-Wed Dec 02 21:48:42 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/51-Thu Dec 03 00:12:16 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/51-Thu Dec 03 00:12:16 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/51-Thu Dec 03 00:12:16 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/51-Thu Dec 03 00:12:16 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/51-Thu Dec 03 00:12:16 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/51-Thu Dec 03 00:12:16 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/51-Thu Dec 03 00:12:16 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/51-Thu Dec 03 00:12:16 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/52-Thu Dec 03 00:15:13 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/52-Thu Dec 03 00:15:13 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/52-Thu Dec 03 00:15:13 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/52-Thu Dec 03 00:15:13 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/52-Thu Dec 03 00:15:13 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/52-Thu Dec 03 00:15:13 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/52-Thu Dec 03 00:15:13 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/52-Thu Dec 03 00:15:13 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/53-Thu Dec 03 00:16:56 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/53-Thu Dec 03 00:16:56 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/53-Thu Dec 03 00:16:56 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/53-Thu Dec 03 00:16:56 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/53-Thu Dec 03 00:16:56 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/53-Thu Dec 03 00:16:56 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/53-Thu Dec 03 00:16:56 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/53-Thu Dec 03 00:16:56 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/54-Thu Dec 03 00:21:44 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/54-Thu Dec 03 00:21:44 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/54-Thu Dec 03 00:21:44 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/54-Thu Dec 03 00:21:44 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/54-Thu Dec 03 00:21:44 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/54-Thu Dec 03 00:21:44 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/54-Thu Dec 03 00:21:44 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/54-Thu Dec 03 00:21:44 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/55-Thu Dec 03 00:23:07 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/55-Thu Dec 03 00:23:07 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/55-Thu Dec 03 00:23:07 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/55-Thu Dec 03 00:23:07 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/55-Thu Dec 03 00:23:07 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/55-Thu Dec 03 00:23:07 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/55-Thu Dec 03 00:23:07 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/55-Thu Dec 03 00:23:07 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Thu Dec 03 00:24:44 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Thu Dec 03 00:24:44 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Thu Dec 03 00:24:44 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Thu Dec 03 00:24:44 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Thu Dec 03 00:24:44 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Thu Dec 03 00:24:44 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Thu Dec 03 00:24:44 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Thu Dec 03 00:24:44 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Wed Dec 02 21:57:35 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Wed Dec 02 21:57:35 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Wed Dec 02 21:57:35 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Wed Dec 02 21:57:35 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Wed Dec 02 21:57:35 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Wed Dec 02 21:57:35 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Wed Dec 02 21:57:35 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/56-Wed Dec 02 21:57:35 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/57-Thu Dec 03 00:27:53 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/57-Thu Dec 03 00:27:53 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/57-Thu Dec 03 00:27:53 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/57-Thu Dec 03 00:27:53 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/57-Thu Dec 03 00:27:53 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/57-Thu Dec 03 00:27:53 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/57-Thu Dec 03 00:27:53 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/57-Thu Dec 03 00:27:53 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/58-Thu Dec 03 00:30:13 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/58-Thu Dec 03 00:30:13 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/58-Thu Dec 03 00:30:13 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/58-Thu Dec 03 00:30:13 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/58-Thu Dec 03 00:30:13 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/58-Thu Dec 03 00:30:13 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/58-Thu Dec 03 00:30:13 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/58-Thu Dec 03 00:30:13 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/59-Thu Dec 03 00:32:03 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/59-Thu Dec 03 00:32:03 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/59-Thu Dec 03 00:32:03 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/59-Thu Dec 03 00:32:03 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/59-Thu Dec 03 00:32:03 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/59-Thu Dec 03 00:32:03 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/59-Thu Dec 03 00:32:03 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/59-Thu Dec 03 00:32:03 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/6-Thu Nov 19 09:59:01 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/6-Thu Nov 19 09:59:01 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/6-Thu Nov 19 09:59:01 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/6-Thu Nov 19 09:59:01 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/60-Thu Dec 03 00:34:55 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/60-Thu Dec 03 00:34:55 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/60-Thu Dec 03 00:34:55 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/60-Thu Dec 03 00:34:55 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/60-Thu Dec 03 00:34:55 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/60-Thu Dec 03 00:34:55 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/60-Thu Dec 03 00:34:55 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/61-Thu Dec 03 00:52:41 EET 2015/energy+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/61-Thu Dec 03 00:52:41 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/61-Thu Dec 03 00:52:41 EET 2015/hosts state.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/61-Thu Dec 03 00:52:41 EET 2015/hosts+vms-time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/61-Thu Dec 03 00:52:41 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/61-Thu Dec 03 00:52:41 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/61-Thu Dec 03 00:52:41 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/61-Thu Dec 03 00:52:41 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/7-Thu Nov 19 09:59:54 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/7-Thu Nov 19 09:59:54 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/7-Thu Nov 19 09:59:54 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/7-Thu Nov 19 09:59:54 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/8-Thu Nov 19 10:02:30 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/8-Thu Nov 19 10:02:30 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/8-Thu Nov 19 10:02:30 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/8-Thu Nov 19 10:02:30 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/8-Thu Nov 19 10:02:30 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/9-Thu Nov 19 10:33:31 EET 2015/gnuscript" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/9-Thu Nov 19 10:33:31 EET 2015/onhoststime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/9-Thu Nov 19 10:33:31 EET 2015/onhoststime.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/9-Thu Nov 19 10:33:31 EET 2015/powertime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/9-Thu Nov 19 10:33:31 EET 2015/powertime.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/9-Thu Nov 19 10:33:31 EET 2015/results " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/9-Thu Nov 19 10:33:31 EET 2015/vmstime.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/9-Thu Nov 19 10:33:31 EET 2015/vmstime.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/HostDynamicWorkload.class" afterPath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/HostDynamicWorkload.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/energy+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/hosts state.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/hosts+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/switchoffs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/switchons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/11-Nothing-Tue Dec 15 01:22:11 EET 2015/vmstime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/energy+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/hosts state.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/hosts+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/switchoffs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/switchons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/13-stable-Tue Dec 15 02:24:10 EET 2015/vmstime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/energy+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/hosts state.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/hosts+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/switchoffs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/switchons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:09:34 EET 2015/vmstime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/energy+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/hosts state.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/hosts+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/switchoffs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/switchons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/14-stable-Tue Dec 15 03:20:42 EET 2015/vmstime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/energy+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/hosts state.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/hosts+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/switchoffs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/switchons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 04:56:36 EET 2015/vmstime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 05:35:23 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 05:35:23 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 05:35:23 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/16-stable-Tue Dec 15 05:35:23 EET 2015/vmstime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/17-stable-Tue Dec 15 05:36:18 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/17-stable-Tue Dec 15 05:36:18 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/17-stable-Tue Dec 15 05:36:18 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/17-stable-Tue Dec 15 05:36:18 EET 2015/vmstime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-stable-Tue Dec 15 17:10:46 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-stable-Tue Dec 15 17:10:46 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-stable-Tue Dec 15 17:10:46 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/18-stable-Tue Dec 15 17:10:46 EET 2015/vmstime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/energy+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/hosts state.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/hosts+vms-time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/onhoststime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/powertime.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/results " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/switchoffs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/switchons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs-plots/19-stable-Tue Dec 15 17:23:11 EET 2015/vmstime.dat" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/Datacenter.class" afterPath="$PROJECT_DIR$/build/classes/main/org/cloudbus/cloudsim/Datacenter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperHelper.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerHost$1.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerHost$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerHost$2.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerHost$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerHost$PowerState.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerHost$PowerState.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerHost.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperPowerHost.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/gr/uoa/magdik/cloudsim/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/gr/uoa/madgik/cloudsim/TestMain.class" afterPath="$PROJECT_DIR$/build/classes/test/gr/uoa/madgik/cloudsim/TestMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/distributions/analyzer.tar" afterPath="$PROJECT_DIR$/build/distributions/analyzer.tar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/distributions/analyzer.zip" afterPath="$PROJECT_DIR$/build/distributions/analyzer.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/mycloudsim.jar" afterPath="$PROJECT_DIR$/build/libs/mycloudsim.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" afterPath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/HostDynamicWorkload.java" afterPath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/HostDynamicWorkload.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java" afterPath="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperHelper.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerHost.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerHost.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/Main.java" afterPath="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/scripts/analyzer.bat" afterPath="$PROJECT_DIR$/build/scripts/analyzer.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/scripts/analyzer" afterPath="$PROJECT_DIR$/build/scripts/analyzer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mycloudsim.iws" />
@@ -350,7 +149,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+              <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HyperPowerVm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerVm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -359,19 +168,12 @@
       <file leaf-file-name="HyperPowerDatacenter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5492958">
-              <caret line="461" column="28" selection-start-line="461" selection-start-column="28" selection-end-line="461" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/SimEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="407" column="0" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.40375587">
+              <caret line="533" column="32" selection-start-line="533" selection-start-column="32" selection-end-line="533" selection-end-column="32" />
+              <folding>
+                <element signature="e#2160#2161#0" expanded="true" />
+                <element signature="e#2193#2194#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -380,8 +182,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="874" column="0" selection-start-line="874" selection-start-column="0" selection-end-line="874" selection-end-column="0" />
-              <folding />
+              <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -390,8 +194,152 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="342" column="0" selection-start-line="342" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
+              <caret line="349" column="48" selection-start-line="349" selection-start-column="48" selection-end-line="349" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HyperPowerHost.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerHost.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="559" column="4" selection-start-line="559" selection-start-column="4" selection-end-line="559" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#3031#3032#0" expanded="false" />
+                <element signature="e#3068#3069#0" expanded="false" />
+                <element signature="e#3128#3129#0" expanded="false" />
+                <element signature="e#3180#3181#0" expanded="false" />
+                <element signature="e#3220#3221#0" expanded="false" />
+                <element signature="e#3256#3257#0" expanded="false" />
+                <element signature="e#3315#3316#0" expanded="false" />
+                <element signature="e#3365#3366#0" expanded="false" />
+                <element signature="e#3410#3411#0" expanded="false" />
+                <element signature="e#3445#3446#0" expanded="false" />
+                <element signature="e#7401#7402#0" expanded="false" />
+                <element signature="e#7436#7437#0" expanded="false" />
+                <element signature="e#7478#7479#0" expanded="false" />
+                <element signature="e#7502#7503#0" expanded="false" />
+                <element signature="e#8096#8097#0" expanded="false" />
+                <element signature="e#8143#8144#0" expanded="false" />
+                <element signature="e#8201#8202#0" expanded="false" />
+                <element signature="e#8233#8234#0" expanded="false" />
+                <element signature="e#8927#8928#0" expanded="false" />
+                <element signature="e#8980#8981#0" expanded="false" />
+                <element signature="e#9613#9614#0" expanded="false" />
+                <element signature="e#9635#9636#0" expanded="false" />
+                <element signature="e#11422#11423#0" expanded="false" />
+                <element signature="e#11487#11488#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Host.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Host.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="159" column="16" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#15251#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#8802#8803#0" expanded="false" />
+                <element signature="e#8834#8835#0" expanded="false" />
+                <element signature="e#8947#8948#0" expanded="false" />
+                <element signature="e#8999#9000#0" expanded="false" />
+                <element signature="e#9096#9097#0" expanded="false" />
+                <element signature="e#9142#9143#0" expanded="false" />
+                <element signature="e#9626#9627#0" expanded="false" />
+                <element signature="e#9672#9673#0" expanded="false" />
+                <element signature="e#9953#9954#0" expanded="false" />
+                <element signature="e#10009#10010#0" expanded="false" />
+                <element signature="e#10196#10197#0" expanded="false" />
+                <element signature="e#10257#10258#0" expanded="false" />
+                <element signature="e#10387#10388#0" expanded="false" />
+                <element signature="e#10439#10440#0" expanded="false" />
+                <element signature="e#10541#10542#0" expanded="false" />
+                <element signature="e#10590#10591#0" expanded="false" />
+                <element signature="e#10718#10719#0" expanded="false" />
+                <element signature="e#10758#10759#0" expanded="false" />
+                <element signature="e#10894#10895#0" expanded="false" />
+                <element signature="e#10936#10937#0" expanded="false" />
+                <element signature="e#11080#11081#0" expanded="false" />
+                <element signature="e#11101#11102#0" expanded="false" />
+                <element signature="e#11179#11180#0" expanded="false" />
+                <element signature="e#11199#11200#0" expanded="false" />
+                <element signature="e#11443#11444#0" expanded="false" />
+                <element signature="e#11471#11472#0" expanded="false" />
+                <element signature="e#11634#11635#0" expanded="false" />
+                <element signature="e#11677#11678#0" expanded="false" />
+                <element signature="e#11796#11797#0" expanded="false" />
+                <element signature="e#11823#11824#0" expanded="false" />
+                <element signature="e#11980#11981#0" expanded="false" />
+                <element signature="e#12021#12022#0" expanded="false" />
+                <element signature="e#12132#12133#0" expanded="false" />
+                <element signature="e#12157#12158#0" expanded="false" />
+                <element signature="e#12298#12299#0" expanded="false" />
+                <element signature="e#12335#12336#0" expanded="false" />
+                <element signature="e#12506#12507#0" expanded="false" />
+                <element signature="e#12536#12537#0" expanded="false" />
+                <element signature="e#12699#12700#0" expanded="false" />
+                <element signature="e#12726#12727#0" expanded="false" />
+                <element signature="e#12913#12914#0" expanded="false" />
+                <element signature="e#12959#12960#0" expanded="false" />
+                <element signature="e#13075#13076#0" expanded="false" />
+                <element signature="e#13104#13105#0" expanded="false" />
+                <element signature="e#13205#13206#0" expanded="false" />
+                <element signature="e#13225#13226#0" expanded="false" />
+                <element signature="e#14557#14558#0" expanded="false" />
+                <element signature="e#14616#14617#0" expanded="false" />
+                <element signature="e#14735#14736#0" expanded="false" />
+                <element signature="e#14763#14764#0" expanded="false" />
+                <element signature="e#14890#14891#0" expanded="false" />
+                <element signature="e#14914#14915#0" expanded="false" />
+                <element signature="e#15061#15062#0" expanded="false" />
+                <element signature="e#15096#15097#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Datacenter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="435" column="10" selection-start-line="435" selection-start-column="10" selection-end-line="435" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#32274#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#28820#28821#0" expanded="false" />
+                <element signature="e#28876#28877#0" expanded="false" />
+                <element signature="e#29651#29652#0" expanded="false" />
+                <element signature="e#29709#29710#0" expanded="false" />
+                <element signature="e#29847#29848#0" expanded="false" />
+                <element signature="e#29876#29877#0" expanded="false" />
+                <element signature="e#30221#30222#0" expanded="false" />
+                <element signature="e#30250#30251#0" expanded="false" />
+                <element signature="e#30412#30413#0" expanded="false" />
+                <element signature="e#30457#30458#0" expanded="false" />
+                <element signature="e#30598#30599#0" expanded="false" />
+                <element signature="e#30630#30631#0" expanded="false" />
+                <element signature="e#30993#30994#0" expanded="false" />
+                <element signature="e#31022#31023#0" expanded="false" />
+                <element signature="e#31184#31185#0" expanded="false" />
+                <element signature="e#31229#31230#0" expanded="false" />
+                <element signature="e#31345#31346#0" expanded="false" />
+                <element signature="e#31370#31371#0" expanded="false" />
+                <element signature="e#31517#31518#0" expanded="false" />
+                <element signature="e#31554#31555#0" expanded="false" />
+                <element signature="e#31693#31694#0" expanded="false" />
+                <element signature="e#31723#31724#0" expanded="false" />
+                <element signature="e#31854#31855#0" expanded="false" />
+                <element signature="e#31881#31882#0" expanded="false" />
+                <element signature="e#32011#32012#0" expanded="false" />
+                <element signature="e#32043#32044#0" expanded="false" />
+                <element signature="e#32218#32219#0" expanded="false" />
+                <element signature="e#32269#32270#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -736,7 +684,6 @@
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperCloudSim.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperVmAllocationPolicy.java" />
         <option value="$PROJECT_DIR$/src/test/java/gr/uoa/madgik/cloudsim/TestMain.java" />
-        <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/GenerateCloudlets.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperCloudSimTags.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudslim/HyperConstants.java" />
@@ -754,10 +701,11 @@
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperDatacenterBroker.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/HostDynamicWorkload.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerHost.java" />
+        <option value="$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerHost.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java" />
       </list>
     </option>
@@ -809,6 +757,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -870,8 +820,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1390,12 +1338,23 @@
       <workItem from="1449937466372" duration="15816000" />
       <workItem from="1450025655808" duration="620000" />
       <workItem from="1450102700874" duration="31347000" />
-      <workItem from="1450191450382" duration="2409000" />
+      <workItem from="1450191450382" duration="3004000" />
+      <workItem from="1450197484299" duration="10170000" />
+      <workItem from="1450266147342" duration="3685000" />
+      <workItem from="1450273221929" duration="22474000" />
+      <workItem from="1450335917734" duration="14028000" />
+      <workItem from="1450363479709" duration="12819000" />
+      <workItem from="1450438598242" duration="6534000" />
+      <workItem from="1450539652493" duration="6866000" />
+      <workItem from="1450620128248" duration="8552000" />
+      <workItem from="1450779078436" duration="4330000" />
+      <workItem from="1450787798936" duration="9131000" />
+      <workItem from="1450808914328" duration="5023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1142380000" />
+    <option name="totallyTimeSpent" value="1246587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1421,13 +1380,13 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2962963" sideWeight="0.48636365" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23484848" sideWeight="0.49561402" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23484848" sideWeight="0.4122807" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.106818184" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23484848" sideWeight="0.42438272" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23484848" sideWeight="0.5877193" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23484848" sideWeight="0.50438595" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23484848" sideWeight="0.5420792" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37654322" sideWeight="0.48181817" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1477,13 +1436,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java</url>
-          <line>890</line>
+          <line>895</line>
           <properties />
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java</url>
-          <line>801</line>
+          <line>806</line>
           <properties />
           <option name="timeStamp" value="157" />
         </line-breakpoint>
@@ -1501,7 +1460,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperHelper.java</url>
-          <line>868</line>
+          <line>870</line>
           <properties />
           <option name="timeStamp" value="273" />
         </line-breakpoint>
@@ -1519,7 +1478,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java</url>
-          <line>118</line>
+          <line>119</line>
           <properties />
           <option name="timeStamp" value="455" />
         </line-breakpoint>
@@ -1531,37 +1490,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java</url>
-          <line>219</line>
+          <line>234</line>
           <properties />
           <option name="timeStamp" value="499" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java</url>
-          <line>225</line>
+          <line>240</line>
           <properties />
           <option name="timeStamp" value="500" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java</url>
-          <line>230</line>
+          <line>245</line>
           <properties />
           <option name="timeStamp" value="501" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java</url>
-          <line>236</line>
+          <line>251</line>
           <properties />
           <option name="timeStamp" value="502" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java</url>
-          <line>241</line>
+          <line>256</line>
           <properties />
           <option name="timeStamp" value="503" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java</url>
-          <line>448</line>
+          <line>453</line>
           <properties />
           <option name="timeStamp" value="566" />
         </line-breakpoint>
@@ -1578,22 +1537,40 @@
           <option name="timeStamp" value="585" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java</url>
-          <line>447</line>
+          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java</url>
+          <line>192</line>
           <properties />
-          <option name="timeStamp" value="592" />
+          <option name="timeStamp" value="602" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperHelper.java</url>
-          <line>874</line>
+          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java</url>
+          <line>169</line>
           <properties />
-          <option name="timeStamp" value="595" />
+          <option name="timeStamp" value="603" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java</url>
+          <line>504</line>
+          <properties />
+          <option name="timeStamp" value="606" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="607" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java</url>
+          <line>490</line>
+          <properties />
+          <option name="timeStamp" value="609" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="596" />
+      <option name="time" value="610" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1602,13 +1579,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cloudsim-examples/org/cloudbus/cloudsim/examples/power/RunnerAbstract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="10" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/gr.uoa.magdik.cloudslim.HyperPowerDatacenter">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -2097,13 +2067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerVm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cloudsim-examples/org/cloudbus/cloudsim/examples/CloudSimExample8.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.77907">
@@ -2115,14 +2078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6767442">
           <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33190578">
-          <caret line="903" column="19" selection-start-line="903" selection-start-column="19" selection-end-line="903" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2151,39 +2106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="514" column="0" selection-start-line="514" selection-start-column="0" selection-end-line="514" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25780#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#8838#8839#0" expanded="false" />
-            <element signature="e#8875#8876#0" expanded="false" />
-            <element signature="e#9617#9618#0" expanded="false" />
-            <element signature="e#9636#9637#0" expanded="false" />
-            <element signature="e#11764#11765#0" expanded="false" />
-            <element signature="e#11783#11784#0" expanded="false" />
-            <element signature="e#11930#11931#0" expanded="false" />
-            <element signature="e#11959#11960#0" expanded="false" />
-            <element signature="e#12152#12153#0" expanded="false" />
-            <element signature="e#12182#12183#0" expanded="false" />
-            <element signature="e#12343#12344#0" expanded="false" />
-            <element signature="e#12381#12382#0" expanded="false" />
-            <element signature="e#16240#16241#0" expanded="false" />
-            <element signature="e#16284#16285#0" expanded="false" />
-            <element signature="e#22801#22802#0" expanded="false" />
-            <element signature="e#22822#22823#0" expanded="false" />
-            <element signature="e#25429#25430#0" expanded="false" />
-            <element signature="e#25458#25459#0" expanded="false" />
-            <element signature="e#25618#25619#0" expanded="false" />
-            <element signature="e#25647#25648#0" expanded="false" />
-            <element signature="e#25755#25756#0" expanded="false" />
-            <element signature="e#25775#25776#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2257,14 +2179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerHost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="165" column="13" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/Synchronizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2293,14 +2207,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="342" column="0" selection-start-line="342" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/jre/lib/rt.jar!/sun/awt/X11/XToolkit.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.62608695">
@@ -2312,31 +2218,255 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="407" column="0" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21486#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2017#2018#0" expanded="false" />
+            <element signature="e#2035#2036#0" expanded="false" />
+            <element signature="e#2153#2154#0" expanded="false" />
+            <element signature="e#2169#2170#0" expanded="false" />
+            <element signature="e#3175#3176#0" expanded="false" />
+            <element signature="e#3214#3215#0" expanded="false" />
+            <element signature="e#4204#4205#0" expanded="false" />
+            <element signature="e#4243#4244#0" expanded="false" />
+            <element signature="e#4617#4618#0" expanded="false" />
+            <element signature="e#4652#4653#0" expanded="false" />
+            <element signature="e#4974#4975#0" expanded="false" />
+            <element signature="e#5009#5010#0" expanded="false" />
+            <element signature="e#5406#5407#0" expanded="false" />
+            <element signature="e#5463#5464#0" expanded="false" />
+            <element signature="e#5805#5806#0" expanded="false" />
+            <element signature="e#5840#5841#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
+            <element signature="e#6903#6904#0" expanded="false" />
+            <element signature="e#7934#7935#0" expanded="false" />
+            <element signature="e#7978#7979#0" expanded="false" />
+            <element signature="e#8370#8371#0" expanded="false" />
+            <element signature="e#8410#8411#0" expanded="false" />
+            <element signature="e#8750#8751#0" expanded="false" />
+            <element signature="e#8790#8791#0" expanded="false" />
+            <element signature="e#9627#9628#0" expanded="false" />
+            <element signature="e#9667#9668#0" expanded="false" />
+            <element signature="e#10243#10244#0" expanded="false" />
+            <element signature="e#10280#10281#0" expanded="false" />
+            <element signature="e#10431#10432#0" expanded="false" />
+            <element signature="e#10483#10484#0" expanded="false" />
+            <element signature="e#12009#12010#0" expanded="false" />
+            <element signature="e#12053#12054#0" expanded="false" />
+            <element signature="e#13789#13790#0" expanded="false" />
+            <element signature="e#13811#13812#0" expanded="false" />
+            <element signature="e#13959#13960#0" expanded="false" />
+            <element signature="e#13978#13979#0" expanded="false" />
+            <element signature="e#14089#14090#0" expanded="false" />
+            <element signature="e#14108#14109#0" expanded="false" />
+            <element signature="e#14515#14516#0" expanded="false" />
+            <element signature="e#14540#14541#0" expanded="false" />
+            <element signature="e#14630#14631#0" expanded="false" />
+            <element signature="e#14649#14650#0" expanded="false" />
+            <element signature="e#14771#14772#0" expanded="false" />
+            <element signature="e#14787#14788#0" expanded="false" />
+            <element signature="e#16750#16751#0" expanded="false" />
+            <element signature="e#16797#16798#0" expanded="false" />
+            <element signature="e#18191#18192#0" expanded="false" />
+            <element signature="e#18240#18241#0" expanded="false" />
+            <element signature="e#18931#18932#0" expanded="false" />
+            <element signature="e#18974#18975#0" expanded="false" />
+            <element signature="e#19568#19569#0" expanded="false" />
+            <element signature="e#19611#19612#0" expanded="false" />
+            <element signature="e#20979#20980#0" expanded="false" />
+            <element signature="e#21024#21025#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Host.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="159" column="16" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#15251#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#8802#8803#0" expanded="false" />
+            <element signature="e#8834#8835#0" expanded="false" />
+            <element signature="e#8947#8948#0" expanded="false" />
+            <element signature="e#8999#9000#0" expanded="false" />
+            <element signature="e#9096#9097#0" expanded="false" />
+            <element signature="e#9142#9143#0" expanded="false" />
+            <element signature="e#9626#9627#0" expanded="false" />
+            <element signature="e#9672#9673#0" expanded="false" />
+            <element signature="e#9953#9954#0" expanded="false" />
+            <element signature="e#10009#10010#0" expanded="false" />
+            <element signature="e#10196#10197#0" expanded="false" />
+            <element signature="e#10257#10258#0" expanded="false" />
+            <element signature="e#10387#10388#0" expanded="false" />
+            <element signature="e#10439#10440#0" expanded="false" />
+            <element signature="e#10541#10542#0" expanded="false" />
+            <element signature="e#10590#10591#0" expanded="false" />
+            <element signature="e#10718#10719#0" expanded="false" />
+            <element signature="e#10758#10759#0" expanded="false" />
+            <element signature="e#10894#10895#0" expanded="false" />
+            <element signature="e#10936#10937#0" expanded="false" />
+            <element signature="e#11080#11081#0" expanded="false" />
+            <element signature="e#11101#11102#0" expanded="false" />
+            <element signature="e#11179#11180#0" expanded="false" />
+            <element signature="e#11199#11200#0" expanded="false" />
+            <element signature="e#11443#11444#0" expanded="false" />
+            <element signature="e#11471#11472#0" expanded="false" />
+            <element signature="e#11634#11635#0" expanded="false" />
+            <element signature="e#11677#11678#0" expanded="false" />
+            <element signature="e#11796#11797#0" expanded="false" />
+            <element signature="e#11823#11824#0" expanded="false" />
+            <element signature="e#11980#11981#0" expanded="false" />
+            <element signature="e#12021#12022#0" expanded="false" />
+            <element signature="e#12132#12133#0" expanded="false" />
+            <element signature="e#12157#12158#0" expanded="false" />
+            <element signature="e#12298#12299#0" expanded="false" />
+            <element signature="e#12335#12336#0" expanded="false" />
+            <element signature="e#12506#12507#0" expanded="false" />
+            <element signature="e#12536#12537#0" expanded="false" />
+            <element signature="e#12699#12700#0" expanded="false" />
+            <element signature="e#12726#12727#0" expanded="false" />
+            <element signature="e#12913#12914#0" expanded="false" />
+            <element signature="e#12959#12960#0" expanded="false" />
+            <element signature="e#13075#13076#0" expanded="false" />
+            <element signature="e#13104#13105#0" expanded="false" />
+            <element signature="e#13205#13206#0" expanded="false" />
+            <element signature="e#13225#13226#0" expanded="false" />
+            <element signature="e#14557#14558#0" expanded="false" />
+            <element signature="e#14616#14617#0" expanded="false" />
+            <element signature="e#14735#14736#0" expanded="false" />
+            <element signature="e#14763#14764#0" expanded="false" />
+            <element signature="e#14890#14891#0" expanded="false" />
+            <element signature="e#14914#14915#0" expanded="false" />
+            <element signature="e#15061#15062#0" expanded="false" />
+            <element signature="e#15096#15097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/Datacenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="435" column="10" selection-start-line="435" selection-start-column="10" selection-end-line="435" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#32274#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#28820#28821#0" expanded="false" />
+            <element signature="e#28876#28877#0" expanded="false" />
+            <element signature="e#29651#29652#0" expanded="false" />
+            <element signature="e#29709#29710#0" expanded="false" />
+            <element signature="e#29847#29848#0" expanded="false" />
+            <element signature="e#29876#29877#0" expanded="false" />
+            <element signature="e#30221#30222#0" expanded="false" />
+            <element signature="e#30250#30251#0" expanded="false" />
+            <element signature="e#30412#30413#0" expanded="false" />
+            <element signature="e#30457#30458#0" expanded="false" />
+            <element signature="e#30598#30599#0" expanded="false" />
+            <element signature="e#30630#30631#0" expanded="false" />
+            <element signature="e#30993#30994#0" expanded="false" />
+            <element signature="e#31022#31023#0" expanded="false" />
+            <element signature="e#31184#31185#0" expanded="false" />
+            <element signature="e#31229#31230#0" expanded="false" />
+            <element signature="e#31345#31346#0" expanded="false" />
+            <element signature="e#31370#31371#0" expanded="false" />
+            <element signature="e#31517#31518#0" expanded="false" />
+            <element signature="e#31554#31555#0" expanded="false" />
+            <element signature="e#31693#31694#0" expanded="false" />
+            <element signature="e#31723#31724#0" expanded="false" />
+            <element signature="e#31854#31855#0" expanded="false" />
+            <element signature="e#31881#31882#0" expanded="false" />
+            <element signature="e#32011#32012#0" expanded="false" />
+            <element signature="e#32043#32044#0" expanded="false" />
+            <element signature="e#32218#32219#0" expanded="false" />
+            <element signature="e#32269#32270#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloudsim/org/cloudbus/cloudsim/core/CloudSim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="517" column="0" selection-start-line="517" selection-start-column="0" selection-end-line="517" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerHost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="559" column="4" selection-start-line="559" selection-start-column="4" selection-end-line="559" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3031#3032#0" expanded="false" />
+            <element signature="e#3068#3069#0" expanded="false" />
+            <element signature="e#3128#3129#0" expanded="false" />
+            <element signature="e#3180#3181#0" expanded="false" />
+            <element signature="e#3220#3221#0" expanded="false" />
+            <element signature="e#3256#3257#0" expanded="false" />
+            <element signature="e#3315#3316#0" expanded="false" />
+            <element signature="e#3365#3366#0" expanded="false" />
+            <element signature="e#3410#3411#0" expanded="false" />
+            <element signature="e#3445#3446#0" expanded="false" />
+            <element signature="e#7401#7402#0" expanded="false" />
+            <element signature="e#7436#7437#0" expanded="false" />
+            <element signature="e#7478#7479#0" expanded="false" />
+            <element signature="e#7502#7503#0" expanded="false" />
+            <element signature="e#8096#8097#0" expanded="false" />
+            <element signature="e#8143#8144#0" expanded="false" />
+            <element signature="e#8201#8202#0" expanded="false" />
+            <element signature="e#8233#8234#0" expanded="false" />
+            <element signature="e#8927#8928#0" expanded="false" />
+            <element signature="e#8980#8981#0" expanded="false" />
+            <element signature="e#9613#9614#0" expanded="false" />
+            <element signature="e#9635#9636#0" expanded="false" />
+            <element signature="e#11422#11423#0" expanded="false" />
+            <element signature="e#11487#11488#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="874" column="0" selection-start-line="874" selection-start-column="0" selection-end-line="874" selection-end-column="0" />
-          <folding />
+          <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperVmAllocationPolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="349" column="48" selection-start-line="349" selection-start-column="48" selection-end-line="349" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerVm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gr/uoa/magdik/cloudsim/HyperPowerDatacenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5492958">
-          <caret line="461" column="28" selection-start-line="461" selection-start-column="28" selection-end-line="461" selection-end-column="28" />
-          <folding />
+        <state vertical-scroll-proportion="0.40375587">
+          <caret line="533" column="32" selection-start-line="533" selection-start-column="32" selection-end-line="533" selection-end-column="32" />
+          <folding>
+            <element signature="e#2160#2161#0" expanded="true" />
+            <element signature="e#2193#2194#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

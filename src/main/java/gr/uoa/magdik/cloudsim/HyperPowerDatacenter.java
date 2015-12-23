@@ -29,6 +29,16 @@ public class HyperPowerDatacenter extends Datacenter {
     private double powerhours = 0;
     int vc = 0;
 
+    public double getSampletime() {
+        return sampletime;
+    }
+
+    public void setSampletime(double sampletime) {
+        this.sampletime = sampletime;
+    }
+
+    public double sampletime = 1800.00;
+
 	/** The disable migrations. */
 	private boolean disableMigrations;
 
@@ -67,6 +77,8 @@ public class HyperPowerDatacenter extends Datacenter {
     XYSeries vmstime;
     XYSeries energytime;
     XYSeries switchoffs;
+    XYSeries migrations;
+    XYSeries switchons;
 
     public XYSeries getSwitchoffs() {
         return switchoffs;
@@ -76,7 +88,9 @@ public class HyperPowerDatacenter extends Datacenter {
         return switchons;
     }
 
-    XYSeries switchons;
+    public XYSeries getMigrations() {
+        return migrations;
+    }
 
     public XYSeries getVmstime() {
         return vmstime;
@@ -168,6 +182,7 @@ public class HyperPowerDatacenter extends Datacenter {
         energytime = new XYSeries("Power Consuption");
         switchoffs = new XYSeries("Switch offs");
         switchons = new XYSeries("Switch Ons");
+        migrations = new XYSeries("VM migrations");
 	}
 
 
@@ -380,15 +395,11 @@ public class HyperPowerDatacenter extends Datacenter {
         System.out.println("TIME :" + CloudSim.clock() + " - End of Period");
 
         int newvms = 0;
-        if(oldvmcount > 0) newvms = getVmList().size() - oldvmcount;
+        if(CloudSim.clock() > 65) newvms = getVmList().size() - oldvmcount;
         vc += newvms;
 
-        oldhostonoffcount = hostonoffCount;
-        oldmigrationcount = migrationCount;
+
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
-
-
-
 
         for (Host h : getHostList())//this. <HyperPowerHost> getHostList())
         {
@@ -433,30 +444,49 @@ public class HyperPowerDatacenter extends Datacenter {
             int rvms = 0;
 
             if(getVmList().size() > 0  && mode!=3){ // && newvms > 0) {
+                Random random = new Random(Double.doubleToLongBits(Math.random()));
                 ArrayList<Vm> removeVms = new ArrayList<>();
                 if(mode == 1) {
                     rvms = rate * 60 - newvms;
-                    if(rvms > getVmList().size()) rvms = newvms;
+                    if(rvms > getVmList().size()) rvms = getVmList().size();
                     if(newvms <= 0) rvms = 0;
-
                 }
                 else if(mode == 2)
                 {
                     rvms = rate * 59;
                     if(rvms > getVmList().size()) rvms = getVmList().size();
                 }
-                int max = getVmList().size() - 1;
+                else if(mode == 4)
+                {
+                    rvms = generateRandomInteger(0, 550, random);
+                    if(rvms > getVmList().size()) rvms = getVmList().size();
+                }
+                int max = getVmList().size();
                 for (int idx = 0; idx < rvms; idx++) {
-                    Random random = new Random(max * 3219656);
+
                     int vmr = generateRandomInteger(0, max, random);
 
                     HyperPowerVm vm = (HyperPowerVm) getVmList().get(vmr);
+                    int r = 0;
                     while(removeVms.contains(vm))
                     {
                         //random = new Random(max * 6675675);
                         System.out.println("ff");
+                        if(r == 5)
+                        {
+                            for(Vm rvm : getVmList())
+                            {
+                                if(!removeVms.contains(rvm))
+                                {
+                                    vm = (HyperPowerVm) rvm;
+                                    break;
+                                }
+                            }
+                            break;
+                        }
                         vmr = generateRandomInteger(0, max, random);
                         vm = (HyperPowerVm) getVmList().get(vmr);
+                        r++;
                     }
                     HyperPowerHost oldhost  = (HyperPowerHost) vm.getHost();
                     if(oldhost == null)
@@ -479,23 +509,29 @@ public class HyperPowerDatacenter extends Datacenter {
             power += (migrationCount - oldmigrationcount) * 20;
             power += (hostonoffCount - oldhostonoffcount) * 100;
             power += getVmList().size() * 5;
-            powerhours += power;
+            power += hp.getOnHosts().size() * 160;
+            double powerperiod = power * 0.0166667/1000;
 
-            if(CloudSim.clock() < 70 || CloudSim.clock() - 1800 > hours * 1800)
+            powerhours += powerperiod;
+
+            if(CloudSim.clock() < 70 || CloudSim.clock() - sampletime > hours * sampletime)
             {
                 double kwpower = 0;
+                int temphours = hours;
                 if(CloudSim.clock() > 70) {
-                    //hours++;
-                    kwpower = powerhours * 0.5 / 1000;
+                    temphours++;
+                    kwpower = powerhours;// * 0.5 / 1000;
                     powerhours = 0;
                 }
                 powertimelog.println(CloudSim.clock() + " " + kwpower);
-                energytime.add(hours, kwpower);
-                vmstime.add(hours, getVmList().size());
-                getSwitchons().add(hours, hostoncount);
-                getSwitchoffs().add(hours, hostoffcount);
-                onhoststime.add(hours, hp.getOnHosts().size());
-
+                energytime.add(temphours, kwpower);
+                vmstime.add(temphours, getVmList().size());
+                getSwitchons().add(temphours, hostoncount);
+                getSwitchoffs().add(temphours, hostoffcount);
+                onhoststime.add(temphours, hp.getOnHosts().size());
+                migrations.add(temphours, migrationCount - oldmigrationcount);
+                oldhostonoffcount = hostonoffCount;
+                oldmigrationcount = migrationCount;
                 setHostoffcount(0);
                 setHostoncount(0);
             }
@@ -538,7 +574,71 @@ public class HyperPowerDatacenter extends Datacenter {
         return power;
     }
 
+    private void removeVms(int newvms)
+    {
+        //removing vms
+        int nohost = 0;
+        int rvms = 0;
 
+        if(getVmList().size() > 0  && mode!=3){ // && newvms > 0) {
+            Random random = new Random(Double.doubleToLongBits(Math.random()));
+            ArrayList<Vm> removeVms = new ArrayList<>();
+            if(mode == 1) {
+                rvms = rate * 60 - newvms;
+                if(rvms > getVmList().size()) rvms = getVmList().size();
+                if(newvms <= 0) rvms = 0;
+            }
+            else if(mode == 2)
+            {
+                rvms = rate * 59;
+                if(rvms > getVmList().size()) rvms = getVmList().size();
+            }
+            else if(mode == 4)
+            {
+                rvms = generateRandomInteger(0, 550, random);
+                if(rvms > getVmList().size()) rvms = getVmList().size();
+            }
+            int max = getVmList().size();
+            for (int idx = 0; idx < rvms; idx++) {
+
+                int vmr = generateRandomInteger(0, max, random);
+
+                HyperPowerVm vm = (HyperPowerVm) getVmList().get(vmr);
+                int r = 0;
+                while(removeVms.contains(vm))
+                {
+                    //random = new Random(max * 6675675);
+                    System.out.println("ff");
+                    if(r == 5)
+                    {
+                        for(Vm rvm : getVmList())
+                        {
+                            if(!removeVms.contains(rvm))
+                            {
+                                vm = (HyperPowerVm) rvm;
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    vmr = generateRandomInteger(0, max, random);
+                    vm = (HyperPowerVm) getVmList().get(vmr);
+                    r++;
+                }
+                HyperPowerHost oldhost  = (HyperPowerHost) vm.getHost();
+                if(oldhost == null)
+                {
+                    nohost +=1;
+                }
+                removeVms.add(vm);
+                getVmAllocationPolicy().deallocateHostForVm(vm);
+                max-=1;
+            }
+            if(rvms > 0 && removeVms.size() != rvms) throw new IllegalArgumentException("UU " + rvms + "-" + removeVms.size());
+            getVmList().removeAll(removeVms);
+            vc -= removeVms.size();
+        }
+    }
 
     public void wakeuphost(HyperPowerHost ph, HyperPowerVm pvm)
     {
