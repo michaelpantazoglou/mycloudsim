@@ -394,9 +394,20 @@ public class HyperPowerDatacenter extends Datacenter {
 	protected void updateCloudletProcessing() {
         System.out.println("TIME :" + CloudSim.clock() + " - End of Period");
 
+        double time = CloudSim.clock();
+        long iPart;
+        double fPart;
+        iPart = (long) time;
+        fPart = time - iPart;
+        //System.out.println("fpart " + fPart);
+        if(fPart < 0.095) return;
+
         int newvms = 0;
         if(CloudSim.clock() > 65) newvms = getVmList().size() - oldvmcount;
         vc += newvms;
+
+
+
 
 
         HyperVmAllocationPolicy hp = (HyperVmAllocationPolicy) getVmAllocationPolicy();
@@ -471,7 +482,6 @@ public class HyperPowerDatacenter extends Datacenter {
                     while(removeVms.contains(vm))
                     {
                         //random = new Random(max * 6675675);
-                        System.out.println("ff");
                         if(r == 5)
                         {
                             for(Vm rvm : getVmList())
@@ -595,7 +605,7 @@ public class HyperPowerDatacenter extends Datacenter {
             }
             else if(mode == 4)
             {
-                rvms = generateRandomInteger(0, 550, random);
+                rvms = generateRandomInteger(0, 500, random);
                 if(rvms > getVmList().size()) rvms = getVmList().size();
             }
             int max = getVmList().size();

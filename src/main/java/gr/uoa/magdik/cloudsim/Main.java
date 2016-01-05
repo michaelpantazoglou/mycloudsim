@@ -28,7 +28,7 @@ public class Main {
         int rate = 0;
         int mode = 0;
         double samplerate = 0;
-            String expname = "Increase-LOWR";
+        String expname = "LongStable-HighR";
         Random random = null;
         if(args.length == 5)
         {
@@ -60,10 +60,10 @@ public class Main {
         }
         else
         {
-            hours = 4;
+            hours = 10;
             hypercubesize = 10;
-            initvms = 5000;
-            rate =  2;
+            initvms = 10000;
+            rate =  10;
             mode = 1;
             samplerate = 1800;
             random = new Random(Double.doubleToLongBits(Math.random()));

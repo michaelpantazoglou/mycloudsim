@@ -1,0 +1,6 @@
+            hours = 4;
+            hypercubesize = 10;
+            initvms = 12099;
+            rate =  2;
+            mode = 2;
+            samplerate = 1800;

@@ -239,7 +239,11 @@ public class HyperVmAllocationPolicy extends PowerVmAllocationPolicyAbstract {
         HyperPowerHost host = (HyperPowerHost) getVmTable().remove(vm.getUid());
         if (host != null) {
             host.vmDestroy(vm);
-            if(host.getVmList().size() == 0) host.switchOff();
+            if(host.getVmList().size() == 0)
+            {
+                host.switchOff();
+                offHosts.add(host);
+            }
         }
     }
 

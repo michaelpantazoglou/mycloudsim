@@ -71,6 +71,17 @@ public class HyperPowerHost extends PowerHost implements Comparable {
         nodenew = new HashMap<HyperPowerHost, ArrayList<Integer>>();
         heartnodes = new HashMap<>();
         setName("HyperHost" + (getId() - 2));
+        descendsortedneighbors = new TreeSet<>(
+                new Comparator<Map.Entry<HyperPowerHost, ArrayList<Integer>>>() {
+                    @Override
+                    public int compare(Map.Entry<HyperPowerHost, ArrayList<Integer>> e1,
+                                       Map.Entry<HyperPowerHost, ArrayList<Integer>> e2) {
+                        int ord = Double.compare(e1.getKey().getPower(), e2.getKey().getPower());
+                        if (ord == 1)
+                            return -1;
+                        return 1;
+                    }
+                });
     }
 
     public double getStartsynchtime() {
@@ -399,7 +410,8 @@ public class HyperPowerHost extends PowerHost implements Comparable {
 
     public void sortCachebyPower()
     {
-        descendsortedneighbors = new TreeSet<>(
+
+        /*descendsortedneighbors = new TreeSet<>(
                 new Comparator<Map.Entry<HyperPowerHost, ArrayList<Integer>>>() {
                     @Override
                     public int compare(Map.Entry<HyperPowerHost, ArrayList<Integer>> e1,
@@ -409,7 +421,8 @@ public class HyperPowerHost extends PowerHost implements Comparable {
                             return -1;
                         return 1;
                     }
-                });
+                });*/
+        descendsortedneighbors.clear();
         descendsortedneighbors.addAll(nodesh.entrySet());
     }
 
@@ -592,7 +605,11 @@ public class HyperPowerHost extends PowerHost implements Comparable {
             hp.getVmTable().remove(vm.getUid());
             oldhost.vmDestroy(vm);
             oldhost.removeMigratingInVm(vm);
-            if(oldhost.getVmList().size() == 0) oldhost.switchOff();
+            if(oldhost.getVmList().size() == 0)
+            {
+                hp.offHosts.add(oldhost);
+                oldhost.switchOff();
+            }
         }
 
         setStorage(getStorage() - vm.getSize());
